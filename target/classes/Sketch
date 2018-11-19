@@ -1,0 +1,9 @@
+features
+
+-remove links with the following strings presant
+    -facebook, linked, twitter, youtube
+        -more specificly as the domain name if possible.
+
+-scan pdfs with malware detection
+
+-parse pdf to xml, parse xml to words, get tags from pdf.
