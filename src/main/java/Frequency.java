@@ -1,7 +1,7 @@
-public class Frequency {
+public class Frequency implements Comparable<Frequency> {
 
-    int tf = 0;
-    int df = 0;
+    private Integer tf = 0;
+    private Integer df = 0;
 
     public Frequency(){}
 
@@ -9,7 +9,7 @@ public class Frequency {
 
     }
 
-    public int getTf() {
+    public Integer getTf() {
         return tf;
     }
 
@@ -17,11 +17,15 @@ public class Frequency {
         this.tf = tf;
     }
 
-    public int getDf() {
+    public Integer getDf() {
         return df;
     }
 
     public void setDf(int df) {
         this.df = df;
+    }
+
+    public int compareTo(Frequency o) {
+        return tf.compareTo(o.getTf());
     }
 }

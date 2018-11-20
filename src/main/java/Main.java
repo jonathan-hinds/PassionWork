@@ -2,19 +2,21 @@ import com.gargoylesoftware.htmlunit.IncorrectnessListener;
 import com.gargoylesoftware.htmlunit.WebClient;
 import org.apache.commons.logging.LogFactory;
 
+import java.io.File;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
+//
         Scraper scraper = new Scraper("http://wstein.org/papers/icms/icms_2010.pdf", "tags.txt");
         //scraper.downloadPDF("http://www.uv.es/pla/Quixote/Kinematics2.pdf", "test", "/Users/jonathanhinds/Projects/hinds/PDF/");
         //scraper.getPDF("http://www.cs.ucr.edu/~nael/pubs/micro16.pdf", "somethingnew");
         String src = "/Users/jonathanhinds/Projects/hinds/PDF/";
         scraper.setFilter();
         scraper.disableLogs();
-        scraper.getTagsPDF(src);
+        //scraper.getTagsPDF(src);
+        scraper.downloadPDF("http://wstein.org/papers/icms/icms_2010.pdf", "TEST", "/Users/jonathanhinds/Projects/hinds/PDF/");
 
 
 

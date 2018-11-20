@@ -10,12 +10,17 @@ import edu.stanford.nlp.util.logging.RedwoodConfiguration;
 import com.google.re2j.Matcher;
 import com.google.re2j.Pattern;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
+import java.util.logging.Level;
 
 public class Scraper {
 
@@ -26,7 +31,7 @@ public class Scraper {
     private ArrayList<Tag>          tags    = new ArrayList<>();
     private ArrayList<String>       PDF     = new ArrayList<>();
 
-    private Map<String, Integer>    count   = new HashMap<>();
+    private Map<String, Frequency>  count   = new HashMap<>();
     private Map<String, Integer>    links   = new HashMap<>();
     private Map<String, String>     pos     = new HashMap<>();
 
@@ -181,7 +186,7 @@ public class Scraper {
         if(xml != null) {
             getLinksXML(xml);
             getPDFXML(xml);
-            Map<String, Integer> count = wordCount(xml);
+            Map<String, Frequency> count = wordCount(xml);
             this.count = count;
         } else {
             System.out.println("No page text found");
@@ -191,19 +196,19 @@ public class Scraper {
     public ArrayList<String> getTags(int topAmount){
         this.tags = new ArrayList<>();
         ArrayList<String> words = new ArrayList<>();
-        Map<String, Integer> replace = this.count;
+        Map<String, Frequency> replace = this.count;
         for(int i = 0; i < topAmount; i ++) {
             Tag tag = null;
             int max = 0;
             String result = "";
             for (String key : replace.keySet()) {
-                if (count.get(key) > max) {
-                    max = count.get(key);
+                if (count.get(key).getTf() > max) {
+                    max = count.get(key).getTf();
                     result = key;
                 }
             }
             if(this.count.size() > 0) {
-                tag = new Tag(result, parsePOS(findPOS(result)), replace.get(result));
+                tag = new Tag(result, parsePOS(findPOS(result)), replace.get(result).getTf());
                 words.add(result);
                 this.tags.add(tag);
                 replace.remove(result, replace.get(result));
@@ -215,29 +220,22 @@ public class Scraper {
     public ArrayList<String> getTags(int topAmount, String ... includes){
         if(this.count.size() > 0) {
             this.tags = new ArrayList<>();
-
-        /*
-        todo some sites are returning with less than 10 tags because its executing the same amount of iterations regardless of what is added to the final list.
-        todo cosider rewriting this method.
-        */
-
             ArrayList<String> words = new ArrayList<>();
-            Map<String, Integer> replace = this.count;
+            Map<String, Frequency> replace = this.count;
             while (words.size() < topAmount) {
                 Tag tag = null;
                 int max = 0;
                 String result = "";
                 for (String key : replace.keySet()) {
-                    if (count.get(key) > max) {
-                        max = count.get(key);
+                    if (count.get(key).getTf() > max) {
+                        max = count.get(key).getTf();
                         result = key;
                     }
                 }
-                //consider another function for filtering out bad POS below:
                 if (parsePOS(findPOS(result)) != null) {
                     for (String goodPOS : includes) {
                         if (parsePOS(findPOS(result)).equalsIgnoreCase(goodPOS)) {
-                            tag = new Tag(result, parsePOS(findPOS(result)), replace.get(result));
+                            tag = new Tag(result, parsePOS(findPOS(result)), replace.get(result).getTf());
                             words.add(result);
                             this.tags.add(tag);
                             break;
@@ -246,7 +244,6 @@ public class Scraper {
                 }
                 replace.remove(result, replace.get(result));
                 if(replace.size() == 0){ break; }
-
             }
         }
         return null;
@@ -341,18 +338,24 @@ public class Scraper {
         }
     }
 
-    public Map<String, Integer> wordCount(String XML){
-        Map<String, Integer> words = new HashMap<String, Integer>();
-        String text = parseHTML(XML);
-        String filtered = filter(text);
-        ArrayList<String> refineWords = getRegExList(filtered, "\\w+");
-        for(String words1 : refineWords){
-            if(!words.containsKey(words1)){
-                words.put(words1, 1);
-            } else {
-                Integer amount = words.get(words1);
-                amount ++;
-                words.put(words1, amount);
+    public Map<String, Frequency> wordCount(String XML){
+        Map<String, Frequency> words = new HashMap<>();
+        if(XML != null) {
+            String text = parseHTML(XML);
+            String filtered = filter(text);
+            ArrayList<String> refineWords = getRegExList(filtered, "\\w+");
+            for (String words1 : refineWords) {
+                if (!words.containsKey(words1)) {
+                    Frequency fq = new Frequency();
+                    fq.setTf(1);
+                    words.put(words1, fq);
+                } else {
+
+                    Integer amount = words.get(words1).getTf();
+                    amount++;
+                    words.get(words1).setTf(amount);
+                    words.put(words1, words.get(words1));
+                }
             }
         }
         return words;
@@ -418,6 +421,7 @@ public class Scraper {
     public void disableLogs(){
         LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
         RedwoodConfiguration.current().clear().apply();
+        Set<String> loggers = new HashSet<>(Arrays.asList("org.apache.http", "groovyx.net.http"));
     }
 
     public void downloadPDF(String input, String filename, String directory){
@@ -458,8 +462,16 @@ public class Scraper {
         File file = new File(saveDir + filename + ".pdf");
         PDDocument document = null;
         try {
+
             document = PDDocument.load(file);
+            //PDFRenderer renderer = new PDFRenderer(document);
+            //BufferedImage image = renderer.renderImage(0);
+            //ImageIO.write(image, "PNG", new File("/Users/jonathanhinds/Projects/hinds/PDF/" + filename + ".png"));
+            String text = getPDFString(document);
+            PrintWriter pw = new PrintWriter(new FileWriter(saveDir + filename + ".txt"));
+            pw.write(text);
             document.close();
+
             System.out.println(filename + ": properly formatted.");
         } catch (IOException e) {
             deleteFile(saveDir + filename);
@@ -468,6 +480,10 @@ public class Scraper {
 
     public ArrayList<Tag> tags(){
         return this.tags;
+    }
+
+    public boolean makeDirectory(String filename){
+        return new File("/Users/jonathanhinds/Projects/hinds/IMGs/" + filename).mkdirs();
     }
 
 
@@ -485,33 +501,56 @@ public class Scraper {
 
 
     public void getTagsPDF(String src) {
-
         File folder = new File(src);
-
         File[] fileEntry = folder.listFiles();
-
-        String text = getPDFString(fileEntry[0]);
-        count = wordCount(text);
-
-        for(File file : fileEntry){
-            Map<String, Integer> map = wordCount(getPDFString(file));
-            for(String word : count.keySet()){
-
+        for(File file : fileEntry) {
+            System.out.println("\n\n" + file.getName() + "\n\n");
+            String text = getPDFString(file);
+            count = wordCount(text);
+            for (File file2 : fileEntry) {
+                Map<String, Frequency> map = wordCount(getPDFString(file2));
+                for (String word : count.keySet()) {
+                    if (map.containsKey(word)) {
+                        int DF = count.get(word).getDf();
+                        DF++;
+                        count.get(word).setDf(DF);
+                    }
+                }
+            }
+            for (String key : count.keySet()) {
+                int tf = count.get(key).getTf();
+                int df = count.get(key).getTf();
+                double tfidf = tf * Math.log((double)fileEntry.length / (double)df);
+                if(tfidf > 15) {
+                    System.out.println(key + " - TF: " + count.get(key).getTf() + " DF: " + count.get(key).getDf() + " TF-IDF: " + tfidf);
+                }
             }
         }
     }
 
     public String getPDFString(File file){
         try {
-            PDDocument pdd = PDDocument.load(file);
-            PDFTextStripper stripper = new PDFTextStripper();
-            String text = stripper.getText(pdd);
-            return text;
+            if(!file.getName().equals(".DS_Store")) {
+                PDDocument pdd = PDDocument.load(file);
+                PDFTextStripper stripper = new PDFTextStripper();
+                String text = stripper.getText(pdd);
+                return text;
+            }
         }catch(IOException e){
 
         }
         return null;
     }
 
+    public String getPDFString(PDDocument doc){
+        String text = null;
+        try {
+            PDFTextStripper stripper = new PDFTextStripper();
+            text = stripper.getText(doc);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
 }
 
