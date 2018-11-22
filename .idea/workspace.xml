@@ -2,199 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a27f7bf9-72fe-4f7f-bd16-f33ac38c6394" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3a55e28f-1b63-4221-98af-13ba9c54f5e9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BADPDF/[http-www-o-cha-net-english-cup-pdf-29-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-bb09iv-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-berg_action-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-berg_thesis-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-berg_webwalker-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-journal_berg-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-kbbn09iccv-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-mb09iccv-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-mbm08cvpr-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-acberg-com-papers-trecvid06-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1310-1531-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1412-6856-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1504-08083-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1505-02496-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1506-00019-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1506-01497-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1507-02379-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1511-01870v1-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1511-06856-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1512-02167-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1512-04150-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-arxiv-org-pdf-1605-02688-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-biomed-nas-gov-ua-files-CodeEngl-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-dfedorov-spb-ru-python3-book-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-dirichlet-net-pdf-cv-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-file-ws-126-net-f2e-www-wlcbfw-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-file-ws-126-net-f2e-www-xuke2018-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-file-ws-126-net-f2e-www-ylzs_0224-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-innar-com-Andmekaevandamine_LIIV-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-kafka-fr-free-fr-cv_yves_bailly-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-kek-ksu-ru-eos-dm-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-mek-oszk-hu-13800-13882-13882-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-nitens-org-docs-wikidyn-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-peak-telecommunity-com-tut-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-people-cs-ubc-ca-poole-ci-ch1-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-places2-csail-mit-edu-PAMI_places-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-purl-org-tcl-home-doc-engManual-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-purl-org-tcl-home-doc-styleGuide-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-tamaraberg-com-papers-aaai2015-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-timothychow-net-consistent-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-tracedroid-few-vu-nl-thesis-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-twobits-net-pub-Kelty-TwoBits-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-users-utu-fi-harju-articles-morph-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-vvdveen-com-publications-newton-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-world-std-com-rjs-indinf56-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-worrydream-com-media-kiss_crows-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-wstein-org-papers-icms-icms_2010-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-brics-dk-mis-typeinf-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cnrs-fr-fr-pdf-jdc-Turing-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-cmu-edu-7Eandrewgw-GPatt-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-cmu-edu-7Eandrewgw-gwp-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-cmu-edu-7Eandrewgw-manet-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-cmu-edu-7Eandrewgw-typo-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-cmu-edu-7Eandrewgw-wplvm-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cs-ucr-edu-nael-pubs-micro16-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-cse-msu-edu-dl-SciencePaper-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-idsia-ch-juergen-ijcai2011-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-idsia-ch-juergen-nips2009-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-idsia-ch-juergen-tpami_2008-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jehps-net-Decembre2009-Borel-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jehps-net-Decembre2009-Gremy-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jehps-net-Decembre2009-Jordan-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jehps-net-Decembre2009-McLean-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jehps-net-Decembre2009-Moatti-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-jennwv-com-jenncv-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-kdd-org-formats-sample-ads-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-kdd-org-formats-sigkddExp-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-lcc-uma-es-jja-recidiva-042-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-nmt-edu-tcc-help-pubs-tkinter-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-pckswarms-ch-CV_2017-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-root-cz-data-letajici_cirkus-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-unicode-org-charts-PDF-U0A80-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-vdiscover-org-report-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[http-www-vinartus-net-spa-95c-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1308-4200v1-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1310-1531-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1311-2524-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1311-2901-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1407-3867-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1407-5035-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1408-5093-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1411-4389-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1502-05477-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1505-00487-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1507-00101v2-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1509-06461-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1511-05952-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1511-06581-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1511-06856-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1512-03385v1-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1512-04860-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1602-01783-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1603-02754-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1603-07285-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1604-07379-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1605-09782-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1608-05442-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1611-00336v2-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1611-01224-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1612-00222v1-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1702-05729-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1702-08892-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1703-01661-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1703-04389-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1703-07015-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1703-08769-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1704-05796-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1704-07333-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1704-08424-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1706-01427-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1706-10295-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1707-06347-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1707-06887-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1707-07397-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1709-07192-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1710-09829-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1711-00489-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1711-02456-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1711-05611-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1711-08496-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1712-01111-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1801-02381-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1801-03150-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1801-10277-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1802-08903-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1802-09723-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1802-10026-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1803-05407-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1803-06058-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1803-07179-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1804-01466-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1804-09843-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1805-12323-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-01261-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-01619-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-02891-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-02901-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-05594-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1806-11538-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1809-11165-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1810-05017-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1810-06784-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1810-12283-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-arxiv-org-pdf-1811-00796-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-core-ac-uk-download-pdf-16372293-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-eprint-iacr-org-2017-1082-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-peerj-com-articles-cs-93-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-peerj-com-preprints-1233-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-plone-org-plone-vpat-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-radimrehurek-com-phd_rehurek-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-syssec-flux-re-papers-sec-2016-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-vvdveen-com-publications-drammer-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-www-grc-com-sn-sn-667-notes-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/[https-www-nature-com-articles-6701369-pdf].pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDF/test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sketch02" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hinds.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandBox.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Frequency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HttpDownloadUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PDFSandBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SandBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Scraper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sketch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ToDo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tags2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Frequency.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/HttpDownloadUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Main2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/PDFSandBox.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/SandBox.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Scraper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Sketch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ToDo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tags2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BADPDF/[https-vvdveen-com-publications-drammer-pdf].pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BADPDF/[https-www-ftc-gov-sites-default-files-attachments-press-releases-ftc-staff-revises-online-advertising-disclosure-guidelines-130312dotcomdisclosures-pdf].pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BADPDF/[https-www-grc-com-sn-sn-667-notes-pdf].pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BADPDF/[https-www-nature-com-articles-6701369-pdf].pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BADPDF/[https-www-nature-com-articles-nature08835-pdf].pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TF-IDF.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Frequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frequency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Scraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Frequency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Frequency.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Scraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Scraper.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -235,21 +58,22 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Sketch" value="276" />
-          <entry key="java" value="22158" />
+          <entry key="java" value="37941" />
           <entry key="txt" value="154" />
           <entry key="xml" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="22158" />
+          <entry key="JAVA" value="37941" />
           <entry key="PLAIN_TEXT" value="430" />
           <entry key="XML" value="23" />
         </counts>
@@ -258,20 +82,23 @@
         <counts>
           <entry key="Sketch" value="2" />
           <entry key="Sketch02" value="1" />
-          <entry key="class" value="6" />
-          <entry key="java" value="30" />
+          <entry key="class" value="7" />
+          <entry key="java" value="38" />
+          <entry key="jpeg" value="1" />
+          <entry key="png" value="1" />
           <entry key="sql" value="2" />
-          <entry key="txt" value="9" />
-          <entry key="xml" value="1" />
+          <entry key="txt" value="25" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="30" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="CLASS" value="7" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="38" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="Scratch" value="2" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -279,11 +106,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="530">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
+                <element signature="e#0#6482#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -294,25 +131,83 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Scraper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <caret line="394" column="29" selection-start-line="394" selection-start-column="29" selection-end-line="394" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Scraper#0;class#Scraper#0" />
                 <element signature="method#findPOS#0;class#Scraper#0" />
                 <element signature="method#parsePOS#0;class#Scraper#0" />
                 <element signature="method#getPOS#0;class#Scraper#0" />
+                <element signature="method#getCountFromUrl#0;class#Scraper#0" />
+                <element signature="method#getTags#0;class#Scraper#0" />
+                <element signature="method#getTags#1;class#Scraper#0" />
                 <element signature="method#printTags#0;class#Scraper#0" />
                 <element signature="method#getXML#0;class#Scraper#0" />
                 <element signature="method#filter#0;class#Scraper#0" />
+                <element signature="method#getLinksXML#0;class#Scraper#0" />
                 <element signature="method#getClient#0;class#Scraper#0" />
                 <element signature="method#setFilter#0;class#Scraper#0" />
-                <element signature="e#10945#10962#0" expanded="true" />
+                <element signature="method#wordCount#0;class#Scraper#0" />
+                <element signature="method#getRegExList#0;class#Scraper#0" />
+                <element signature="e#15249#15257#0" expanded="true" />
                 <element signature="method#printOrderAsc#0;class#Scraper#0" />
                 <element signature="method#printLinksAsc#0;class#Scraper#0" />
+                <element signature="e#16844#16845#0" expanded="true" />
+                <element signature="e#16872#16873#0" expanded="true" />
                 <element signature="method#getPageSource#0;class#Scraper#0" />
                 <element signature="method#parseHTML#0;class#Scraper#0" />
                 <element signature="method#disableLogs#0;class#Scraper#0" />
                 <element signature="method#downloadPDF#0;class#Scraper#0" />
+                <element signature="method#getPDFXML#0;class#Scraper#0" />
+                <element signature="method#deleteFile#0;class#Scraper#0" />
+                <element signature="method#checkPDF2#0;class#Scraper#0" />
+                <element signature="method#test#0;class#Scraper#0" />
+                <element signature="e#23460#23461#0" expanded="true" />
+                <element signature="e#23492#23493#0" expanded="true" />
+                <element signature="method#getTagsPDF#0;class#Scraper#0" />
+                <element signature="method#getPDFString#0;class#Scraper#0" />
+                <element signature="method#getPDFString#1;class#Scraper#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HttpDownloadUtility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="38" column="179" selection-start-line="38" selection-start-column="179" selection-end-line="38" selection-end-column="179" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SandBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="47" column="13" selection-start-line="34" selection-start-column="12" selection-end-line="47" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PDFSandBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="45" column="101" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -321,17 +216,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Frequency.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="457">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
-                <element signature="e#49#50#0" expanded="true" />
-                <element signature="e#74#75#0" expanded="true" />
-                <element signature="e#107#108#0" expanded="true" />
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#751#752#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+                <element signature="e#1085#1086#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -348,13 +243,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>System</find>
-      <find>output</find>
-      <find>System.out.println</find>
-      <find>parsePOS</find>
-      <find>pw.</find>
-      <find>this.count =</find>
-      <find>getTags</find>
       <find>refreshHandler</find>
       <find>system.out.pr</find>
       <find>getClient</find>
@@ -374,10 +262,17 @@
       <find>does not exist</find>
       <find>seed</find>
       <find>the</find>
-      <find>.pdf</find>
       <find>getT</find>
       <find>getText</find>
       <find>outputStream</find>
+      <find>.p</find>
+      <find>PDFText</find>
+      <find>.pdf</find>
+      <find>SKIPPED</find>
+      <find>could not be</find>
+      <find>].pdf</find>
+      <find>client</find>
+      <find>this.output</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -396,11 +291,12 @@
         <option value="$PROJECT_DIR$/Sketch02" />
         <option value="$PROJECT_DIR$/src/main/java/HttpDownloadUtility.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Sketch" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/PDFSandBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main2.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Main2.java" />
+        <option value="$PROJECT_DIR$/TF-IDF.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Frequency.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Scraper.java" />
       </list>
     </option>
@@ -418,10 +314,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="725" />
+    <option name="height" value="724" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -429,12 +325,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="hinds" type="b2602c69:ProjectViewProjectNode" />
               <item name="hinds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hinds" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hinds" type="462c0819:PsiDirectoryNode" />
+              <item name="BADPDF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hinds" type="b2602c69:ProjectViewProjectNode" />
@@ -471,7 +373,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,7 +380,8 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/jonathanhinds/Projects/hinds/src/main/java/Main.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542669335911" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542916920270" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -488,9 +390,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/PDF" />
       <recent name="$PROJECT_DIR$/BADPDF" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -508,6 +410,13 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="hinds" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main2" />
       <module name="hinds" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -534,30 +443,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testStream.testParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hinds" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testStream" />
-      <option name="METHOD_NAME" value="testParser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.testStream.testParser" />
       <item itemvalue="Application.testStream" />
       <item itemvalue="Application.SandBox" />
       <item itemvalue="Application.PDFSandBox" />
+      <item itemvalue="Application.Main2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main2" />
         <item itemvalue="Application.PDFSandBox" />
         <item itemvalue="Application.SandBox" />
         <item itemvalue="Application.testStream" />
-        <item itemvalue="JUnit.testStream.testParser" />
       </list>
     </recent_temporary>
   </component>
@@ -573,7 +472,8 @@
       <updated>1542068579991</updated>
       <workItem from="1542068584154" duration="907000" />
       <workItem from="1542069559351" duration="57695000" />
-      <workItem from="1542256329743" duration="107162000" />
+      <workItem from="1542256329743" duration="140423000" />
+      <workItem from="1542773464956" duration="21528000" />
     </task>
     <servers />
   </component>
@@ -610,7 +510,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165764000" />
+    <option name="totallyTimeSpent" value="220553000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,10 +522,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="725" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="722" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18174475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27625203" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -634,16 +534,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328594" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49757674" weight="0.19589257" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49757674" weight="0.1015873" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25068492" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.14109589" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.041269843" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33333334" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024233" side_tool="true" weight="0.3958904" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.21484992" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.328594" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024233" side_tool="true" weight="0.37914693" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.76303315" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -690,18 +590,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Scraper.java</url>
-          <line>225</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/compare.txt" />
@@ -771,34 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#48#49#0" expanded="true" />
-            <element signature="e#75#76#0" expanded="true" />
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SandBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="47" column="13" selection-start-line="34" selection-start-column="12" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sketch02">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -827,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/2.0.12/pdfbox-2.0.12.jar!/org/apache/pdfbox/pdmodel/font/PDCIDFontType0.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -851,30 +704,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3a55e28f-1b63-4221-98af-13ba9c54f5e9/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HttpDownloadUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="38" column="179" selection-start-line="38" selection-start-column="179" selection-end-line="38" selection-end-column="179" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PDFSandBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="77" selection-start-line="28" selection-start-column="77" selection-end-line="28" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/Writer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-43">
@@ -886,10 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="217" column="19" selection-start-line="217" selection-start-column="19" selection-end-line="217" selection-end-column="19" />
-          <folding>
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5868#5869#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,10 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="1419" column="16" selection-start-line="1419" selection-start-column="16" selection-end-line="1419" selection-end-column="16" />
-          <folding>
-            <element signature="e#53615#53616#0" expanded="true" />
-            <element signature="e#53669#53670#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -939,29 +760,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/TEST.jpeg" />
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/tess4j/tess4j/4.3.0/tess4j-4.3.0.jar!/net/sourceforge/tess4j/Tesseract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/TEST.png" />
+    <entry file="file://$PROJECT_DIR$/PDF/TEST.txt" />
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[https-media-nature-com-original-nature-assets-nature-journal-v463-n7282-extref-nature08835-s1.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[https-arxiv-org.txt-1806-02901.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[https-static-content-springer-com-esm-art-3A10-1038-2Fs41598-017-17124-4-MediaObjects-41598_2017_17124_MOESM1_ESM.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[http-www-kdd-org-formats-sigkddExp.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[http-www-kdd-org-formats-sample-ads.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PDF/PDFText/[http-www-jehps-net-Decembre2009-Borel.txt].txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="149" column="5" selection-start-line="149" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/function/ToDoubleFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF-IDF.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="210">
+          <caret line="14" column="57" lean-forward="true" selection-end-line="10925" selection-end-column="63" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PDFSandBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="45" column="101" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Frequency.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="457">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
-            <element signature="e#49#50#0" expanded="true" />
-            <element signature="e#74#75#0" expanded="true" />
-            <element signature="e#107#108#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#6482#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SandBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="47" column="13" selection-start-line="34" selection-start-column="12" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HttpDownloadUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="38" column="179" selection-start-line="38" selection-start-column="179" selection-end-line="38" selection-end-column="179" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -969,25 +893,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Scraper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <caret line="394" column="29" selection-start-line="394" selection-start-column="29" selection-end-line="394" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Scraper#0;class#Scraper#0" />
             <element signature="method#findPOS#0;class#Scraper#0" />
             <element signature="method#parsePOS#0;class#Scraper#0" />
             <element signature="method#getPOS#0;class#Scraper#0" />
+            <element signature="method#getCountFromUrl#0;class#Scraper#0" />
+            <element signature="method#getTags#0;class#Scraper#0" />
+            <element signature="method#getTags#1;class#Scraper#0" />
             <element signature="method#printTags#0;class#Scraper#0" />
             <element signature="method#getXML#0;class#Scraper#0" />
             <element signature="method#filter#0;class#Scraper#0" />
+            <element signature="method#getLinksXML#0;class#Scraper#0" />
             <element signature="method#getClient#0;class#Scraper#0" />
             <element signature="method#setFilter#0;class#Scraper#0" />
-            <element signature="e#10945#10962#0" expanded="true" />
+            <element signature="method#wordCount#0;class#Scraper#0" />
+            <element signature="method#getRegExList#0;class#Scraper#0" />
+            <element signature="e#15249#15257#0" expanded="true" />
             <element signature="method#printOrderAsc#0;class#Scraper#0" />
             <element signature="method#printLinksAsc#0;class#Scraper#0" />
+            <element signature="e#16844#16845#0" expanded="true" />
+            <element signature="e#16872#16873#0" expanded="true" />
             <element signature="method#getPageSource#0;class#Scraper#0" />
             <element signature="method#parseHTML#0;class#Scraper#0" />
             <element signature="method#disableLogs#0;class#Scraper#0" />
             <element signature="method#downloadPDF#0;class#Scraper#0" />
+            <element signature="method#getPDFXML#0;class#Scraper#0" />
+            <element signature="method#deleteFile#0;class#Scraper#0" />
+            <element signature="method#checkPDF2#0;class#Scraper#0" />
+            <element signature="method#test#0;class#Scraper#0" />
+            <element signature="e#23460#23461#0" expanded="true" />
+            <element signature="e#23492#23493#0" expanded="true" />
+            <element signature="method#getTagsPDF#0;class#Scraper#0" />
+            <element signature="method#getPDFString#0;class#Scraper#0" />
+            <element signature="method#getPDFString#1;class#Scraper#0" />
           </folding>
         </state>
       </provider>

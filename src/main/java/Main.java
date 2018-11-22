@@ -1,9 +1,22 @@
-import com.gargoylesoftware.htmlunit.IncorrectnessListener;
-import com.gargoylesoftware.htmlunit.WebClient;
-import org.apache.commons.logging.LogFactory;
+//todo - "... list of 100 key terms from... " -  50,000  "... sites, you can present them to the user and let them click 5
+//todo - or something. Then you take those 5 and use cosine similaity WITH EACH OF THE KEY TERMS FOR EACH SITE and  you'll
+//todo - get a score beween 0 and 1, 1 being a perfect match and 0 meaning nothing is returned"
 
-import java.io.File;
-import java.util.*;
+//todo - consider converting the text to lemma using stanford NLP
+//todo - find a way to normalize the value of the TF-IDF score.
+
+//todo - research lemminization, cosine similarity,
+
+
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Main {
 
@@ -16,9 +29,57 @@ public class Main {
         scraper.setFilter();
         scraper.disableLogs();
         //scraper.getTagsPDF(src);
-        scraper.downloadPDF("http://wstein.org/papers/icms/icms_2010.pdf", "TEST", "/Users/jonathanhinds/Projects/hinds/PDF/");
+        //scraper.downloadPDF("http://wstein.org/papers/icms/icms_2010.pdf", "TEST", "/Users/jonathanhinds/Projects/hinds/PDF/");
+        ArrayList<Map<String, Map<String, Frequency>>> docStat = scraper.getTagsPDF(src);
 
 
+
+        for(Map<String, Map<String, Frequency>> map : docStat)
+        {
+            for(Map.Entry<String, Map<String, Frequency>> urlMap : map.entrySet())
+            {
+
+                String url = urlMap.getKey();
+                Map<String, Frequency> docMap = urlMap.getValue();
+                try{
+                    FileWriter fw = new FileWriter("TF-IDF.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    PrintWriter pw = new PrintWriter(bw);
+
+                    docMap.entrySet().stream()
+                            .sorted(Comparator.comparingDouble(o -> o.getValue().getTfidf()))
+                            .forEach(e -> {
+                                String word = e.getKey();
+                                double tfidf = e.getValue().getTfidf();
+                                double norm_tfidf = e.getValue().getNormalTFIDF();
+                                pw.printf("%-15s", java.time.LocalTime.now());
+                                pw.printf("%-50s %-30s %10.20f %10.20f \n", url, word, tfidf , norm_tfidf);
+                                pw.flush();
+
+                            });
+
+                    pw.printf("\n\n\n\n\n");
+                    pw.flush();
+                }catch(Exception e){
+
+                }
+            }
+        }
+
+        System.out.println("Total documents: " + docStat.size());
+
+
+
+
+
+
+
+
+
+
+
+        //scraper.printOrderAsc();
+        //3:50
 
 //        String[] href = {"https://en.wikipedia.org/wiki/Convolutional_neural_network",
 //                "https://en.wikipedia.org/wiki/Deep_learning",
