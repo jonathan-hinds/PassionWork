@@ -1,0 +1,3421 @@
+Asymptotics of the leading sample eigenvalues for a spiked covariance model
+Debashis Paul
+Department of Statistics, Stanford University
+390 Serra Mall, Stanford, CA 94305
+debashis@stat.stanford.edu
+Abstract : We consider a multivariate Gaussian observation model where the covariance matrix is
+diagonal and the diagonal entries are all equal to one except for a finite number which are bigger. We address
+the question of asymptotic behaviour of the eigenvalues of the sample covariance matrix when the sample
+size and the dimension of the observations both grow to infinity in such a way that their ratio converges to a
+positive constant. We establish almost sure limits of the largest few sample eigenvalues. We also show that
+when a population eigenvalue is above a certain threshold and of multiplicity one, the corresponding sample
+eigenvalue has a Gaussian limiting distribution. We also demonstrate a phase transition phenomenon of the
+sample eigenvectors in the same setting.
+Keywords : Principal component analysis, Eigenvalue distribution, Random matrix theory.
+1 Introduction
+Study of eigenvalues of sample covariance matrices has a long history. When the dimension N is
+fixed, the distributional aspects for both Gaussian and non-Gaussian observations have been dealt
+with at length by various authors. Anderson (1963), Muirhead (1982) and Tyler (1983) are among
+standard references. In fixed dimension scenario much of the study of the eigenstructure of sample
+covariance matrix utilizes the fact that it is a good approximation of the population covariance
+matrix when sample size is large. However this is no longer the case when Nn → γ ∈ (0,∞) as
+n → ∞, where n is the sample size. Under these circustances it is known (see Bai (1999) for a
+review) that, if the true covariance is the identity matrix, then the Empirical Spectral Distribution
+(ESD) converges almost surely to the Marchenko-Pastur distribution, henceforth denoted by Fγ .
+When γ ≤ 1, the support Fγ is the set [(1 −
+√
+γ)2, (1 +
+√
+γ)2] and when γ > 1 an isolated point
+zero is added to the support. It is known (Bai and Yin, 1993) that when the population covariance
+is identity, the largest and the smallest eigenvalues, when γ ≤ 1, converge almost surely to the
+respective boundaries of the support of Fγ . Johnstone (2001) and Soshnikov (2002) have derived
+asymptotic distribution for largest, second largest etc sample eigenvalues under the same setting.
+However, in recent years researchers in various fields have been using different versions of non-
+identity covariance matrices of growing dimension. Among these, a particularly interesting model
+is when all except a few of the eigenvalues equal one and the few that are not are well-separated
+1
+from the rest. This has been referred to as a “spiked population model” by Johnstone (2001). It
+has also been observed that for certain types of data e.g. in speech recognition (Buja et al., 1995),
+wireless communication (Telatar, 1999), statistical learning (Hoyle and Rattray, 2003, 2004), a few
+of the sample eigenvalues have limiting behaviour that is different from the behaviour under identity
+covariance scenario. This paper attempts to contribute towards understanding these phenomena.
+The literature on the asymptotics of sample eigenvalues for the non-identity covariance scenario
+is relatively recent. Silverstein and Choi (1995) derived almost sure limit of the ESD under fairly
+general conditions. Bai and Silverstein (2004) derived the asymptotic distribution of certain linear
+spectral statistics. However, a systematic study of the individual eigenvalues has been conducted
+only recently by Péché (2003), Baik, Ben Arous and Péché (2004) (henceforth Baik et al., 2004).
+These authors deal with the situation when the observations are complex Gaussian and the co-
+variance matrix is a finite rank perturbation of identity. When this paper was being written the
+author came to know about the work by Baik and Silverstein (2004), which studies the almost sure
+limits of sample eigenvalues, when the observations are either real or complex, and under fairly
+weak distributional assumptions. They give almost sure limits of the M largest and M smallest
+(non-zero) sample eigenvalues where M is the number of non-unit population eigenvalues.
+A crucial aspect of the work of last three sets of authors is the discovery of a phase transition
+phenomenon. Simply put, if the non-unit eigenvalues are close to one, then their sample versions
+will behave in roughly the same way as if the true covariance were identity. However, when the true
+eigenvalues are larger than 1 +
+√
+γ, the sample eigenvalues have a different asymptotic property.
+The results of Baik et al. (2004) show a n2/3 scaling for the asymptotic distribution when a non-
+unit population eigenvalue lies below the threshold 1 +
+√
+γ, and a n1/2 scaling for those above that
+threshold.
+In this paper we focus our attention on the case where we have independently and identically
+distributed real-valued observations X1, . . . , Xn from an N -variate normal distribution with mean
+zero and covariance matrix Σ = diag(`1, `2, . . . , `M , 1, . . . , 1) where `1 ≥ `2 ≥ . . . ≥ `M > 1. We
+treat the N × n matrix X = (X1 : . . . : Xn) as a double array indexed by both n and N = N(n)
+on the same probability space, such that N/n → γ, where γ is a positive constant. Throughout
+we shall assume that 0 < γ < 1 although much of the analysis can be extended to the case γ ≥ 1
+with a little extra work. Our aim is to study asymptotic behaviour of the large eigenvalues of the
+sample covariance matrix S = 1nXX
+T as n→∞. In this context we get the same almost sure limits
+for the M largest eigenvalues as those obtained by Baik and Silverstein (2004). However, while
+they derive these limits by studying the Stieltjes transform of the distribution which serves as the
+almost sure limit of the ESD, we rely on a matrix analysis approach and use properties of Gaussian
+distribution, including various concentration inequalities, as well as several known results about the
+limiting behaviour of the ESD for the null (or identity covariance) model. The advantage of this
+approach is that it gives a different perspective to the limits, in particular their identification as
+2
+certain linear functionals of the limiting Marchenko-Pastur law when the true eigenvalue is above
+1 +
+√
+γ. This analysis also allows us to derive distributional limits of the sample eigenvalues ̂̀ν
+when `ν > 1 +
+√
+γ. We do this only for the case when `ν has multiplicity one. A comprehensive
+study of all possible scenarios is beyond the scope of this paper. Another aspect of our approach is
+that it throws light on the behaviour of the eigenvectors associated with the M largest eigenvalues.
+We show that the sample eigenvectors also undergo a phase transition. We would like to emphasize
+that, even though our method is not suitable for analyzing the distributional limits for the case
+`ν ≤ 1 +
+√
+γ, it does afford a more probabilistic interpretation of the results in the other scenario,
+and may be applied to study similar problems in other contexts.
+The results derived in this paper contain two important messages about the inferential aspect
+of dealing with large dimensional multivariate data. First, and most notably, the phase transition
+phenomenon described in this paper means that some commonly used tests for the hypothesis Σ = I,
+like the largest root test (Roy, 1953), may not be able to detect comparatively small departures
+from idenitity covariance when the ratio N/n is significantly larger than zero. At the same time,
+our distributional convergence result (Theorem 3 ) can be used to approximate the power of the
+largest root test against alternatives where the departure from the null model of identity covariance
+is through perturbations by positive semidefinite matrices of finite rank. We discuss this further in
+Section 2.2. At a more practical level, these results show that exploratory data analytic techniques
+like “scree plot” to determine number of significant eigenvalues may be of rather limited use when
+dealing with certain types of near-isotropic high dimensional data. In such circumstances, even the
+somewhat more sophisticated technique of comparing the sample eigenvalues with the quantiles
+of the limiting Marchenko-Pastur law, as advocated by Wachter (1976), may not be particularly
+successful because of the phase transition. The second important consequence of our results is that
+it gives some insight as to why it might not be such a good idea to use Principal Component Analysis
+(PCA) for dimension reduction in a high dimensional setting, at least not in its standard form. This
+has already been observed by Johnstone and Lu (2004) who show that when N/n→ γ ∈ (0,∞), the
+sample principal components are inconsistent estimates of the population principal components.
+Theorem 4 says exactly how bad this inconsistency is. Moreover, our method of proof clearly
+demonstrates how this inconsistency originates.
+The rest of the paper is organized as follows. In Section 2 we describe the main results and
+point to their salient features. In Section 3 we define the key quantities and expressions that will
+help us derive the results. Section 4 is devoted to proving the almost sure limits of eigenvalues.
+In Section 5 we derive the asymptotic distribution result (Theorem 3 ). Section 6 describes the
+matrix perturbation analysis approach which is a key ingredient in the proof of Theorem 3 and
+Theorem 4. Proofs of some of the auxilliary results are given in the two appendices (Appendix A
+and Appendix B).
+3
+2 Main results
+In this section we describe the four main results of this paper. The first two pertain to the
+almost sure limits of sample eigenvalues, the third describes their asymptotic distribution under
+certain restrictions, while the fourth describes a result about the asymptotic behaviour of sample
+eigenvectors. We use ̂̀ν to denote the ν-th largest eigenvalue of S.
+2.1 Almost sure limit of M largest eigenvalues
+We have the following results about the almost sure limits of M largest sample eigenvalues. These
+were independently derived by Baik and Silverstein (2004) for non-Gaussian observations.
+Theorem 1 : Suppose `ν ≤ 1 +
+√
+γ, then with Nn → γ ∈ (0, 1) as n→∞ we have
+̂̀
+ν → (1 +
+√
+γ)2, almost surely as n→∞. (1)
+Theorem 2 : Suppose `ν > 1 +
+√
+γ, then with Nn → γ ∈ (0, 1) as n→∞ we have
+̂̀
+ν → `ν
+(
+1 +
+γ
+`ν − 1
+)
+, almost surely as n→∞. (2)
+Let us discuss a little about the limits appearing in (1) and (2). We shall denote the limit in (2) by
+ρν := `ν
+(
+1 + γ`ν−1
+)
+. It turns out, via Lemma B.1, that ρν appears as a solution to the following
+equation
+ρ = `(1 + γ
+∫
+x
+ρ− x
+dFγ(x)) (3)
+with ` = `ν . Since Fγ is supported on [(1 −
+√
+γ)2, (1 +
+√
+γ)2] for γ ≤ 1 (with a single isolated
+point added to the support for γ > 1), the function on the RHS is monotonically decreasing in
+ρ ∈ ((1 + √γ)2,∞) and the LHS is obviously increasing in ρ. So a solution to (3) exists only if
+`ν ≥ 1 + cγ , for some cγ > 0. That cγ =
+√
+γ is a part of Lemma B.1. Note that when `ν = 1 +
+√
+γ,
+ρν = (1 +
+√
+γ)2, the almost sure limit of the j-th largest eigenvalue (for j fixed) in the identity
+covariance case.
+2.2 Asymptotic normality of sample eigenvalues
+When a non-unit eigenvalue of Σ is simple, i.e. of multiplicity one, and above the critical value
+1 +
+√
+γ, we show that the corresponding sample eigenvalue is asymptotically normally distributed.
+While a generalization of this result for the multiplicity greater than one case seems interesting,
+we do not pursue it here. We note that for the complex Gaussian case a result in the analogous
+situation has been derived by Baik et al. (2004, Theorem 1.1(b)), where they showed that when the
+largest eigenvalue is greater than 1 +
+√
+γ and of multiplicity k, the largest sample eigenvalue, after
+4
+similar centering and scaling, converges in distribution to the distribution of the largest eigenvalue
+of a k× k GUE (Gaussian Unitary Ensemble). They also derived the limiting distributions for the
+case when a (non-unit) population eigenvalue is smaller than 1 +
+√
+γ. Distributional aspect of a
+sample eigenvalue for the real case in the latter situation is beyond the scope of this paper.
+Theorem 3 : Suppose `ν > 1 +
+√
+γ and of multiplicity 1. Then as n,N → ∞ so that Nn − γ =
+o(n−1/2),
+√
+n(̂̀ν − ρν) =⇒ N(0, σ2(`ν)), (4)
+where for ` > 1 +
+√
+γ, and with ρ(`) = `(1 + γ`−1),
+σ2(`) =
+2`ρ(`)
+1 + `γ
+∫
+x
+(ρ(`)−x)2dFγ(x)
+=
+2`ρ(`)
+1 + `γ
+(`−1)2−γ
+= 2`2(1− γ
+(`− 1)2
+) (5)
+In the fixed N case, when the ν-th eigenvalue has multiplicity 1, the ν-th sample eigenvalue is
+asymptoctically N(`ν , 1n2`
+2
+ν). This is a special case of a more general result by Anderson (1963).
+Thus the fact that the dimension to sample size ratio is positive, contributes towards the bias
+and a reduction in variance. However, if γ is much smaller compared to `ν , the variance σ2(`ν) is
+approximately 2`2ν which is the asymptotic variance in the fixed N case. This is what we expect
+intuitively, since the eigenvector associated with this sample eigenvalue, looking to maximize the
+quadratic from invovling S (under orthogonality restrictions), will tend to put more mass on the
+ν-th coordinate. This is demonstrated even more clearly by Theorem 4 that we state later. But
+before that, we give a brief account of the importance of Theorem 1-3 from a statistical perspective.
+As we already noted in Section 1, one possible application of Theorem 3 is in the calculation of
+asymptotic power for the largest root test. The latter refers to the testing problem where the null
+hypothesis says that the covariance matrix is identity. And the test rejects the null hypothesis at
+level α ∈ (0, 1) if the largest eigenvalue of S is above a critical level cn,N,α, say. Johnstone (2001)
+proposed a conservative test of this type for large (n,N) data based on the quantiles of Tracy-
+Widom distribution. His proposal means that the cutoff value, for large n, can be approximated
+as
+cn,N,α ≈ (1 +
+√
+N
+n
+)2 +N−1/6n−1/2(1 +
+√
+N
+n
+)4/3τα, for α ∈ (0, 1)
+where τα is the (1− α) quantile of Tracy-Widom law of order 1.
+Now suppose we consider the alternative hypothesis that the population covariance matrix is
+Σ = diag(`1, . . . , `M , 1, . . . , 1) with `1 ≥ . . . ≥ `M > 1. If `1 > 1 +
+√
+γ, Theorem 2 shows that
+the largest root test is asymptotically consistent. For the special case when `1 is of multiplicity
+one, Theorem 3 immediately gives an expression for the asymptotic power function, assuming that
+N
+n converges to γ fast enough, as n → ∞. But one has to view this in proper context, since our
+result is derived under the assumption that `1, . . . , `M are all fixed and we do not have a rate of
+5
+convergence for the distribution of ̂̀1 towards normality. A detailed analysis of power properties
+against local alternatives is beyond the scope of this paper. However, Theorem 1 indicates that
+the largest root test may fail to detect a departure from the null model of identity covariance if `1
+is less than 1 +
+√
+γ.
+It is important to point to a potential advantage of such a test as compared to some other
+well-known tests for the same hypothesis. Ledoit and Wolf (2002) give a nice overview of different
+tests of sphericity used in high-dimensional setting. They consider tests based on statistics U , and
+W given below.
+U =
+1
+N
+trace
+( S
+1
+N trace(S)
+− I
+)2 , W = 1
+N
+trace[(S− I)2]− N
+n
+[
+1
+N
+trace(S)
+]2
++
+N
+n
+The statistic U is used to test sphericity, i.e. Σ = cI for some c > 0 unknown. Their results
+(Ledoit and Wolf, 2002, Proposition 1-7) show that if βN = 1N trace(Σ) and θ
+2
+N =
+1
+N trace(Σ− I)
+2
+are fixed, at values β > 0 and θ, say, as Nn → γ ∈ (0,∞), then the test based on W is consistent
+for testing H0 : (β − 1)2 + θ2 = 0 against HA : (β − 1)2 + θ2 > 0. Whereas the test based on U
+is consistent for H0 : θ2/β2 = 0 against HA : θ2/β2 > 0. Their results can be easily extended to
+the case where βN → β and θN → θ rather than being fixed quantities. Notice that even when Σ
+is a finite rank perturbation of identity, β = 1 and θ = 0. Under this setting these tests cannot
+distinguish between H0 and HA. We expect similar sort of asymptotic behvaiour from any test that
+relies upon traces of powers of S and statistics derived from them. In contrast the test described in
+the previous paragraph can separate the null from the alternative in the same scenario under the
+rather mild requirement that λ1(Σ) > 1 +
+√
+γ. We treat this comparison as a way of emphasizing
+the following point: our results show that for signal detection problems in high dimension, when the
+signal is rather feeble, leaning on tests based on the extreme eigenvalues may be more meaningful
+than depending on tests which are based on the bulk of the eigenvalue specturm.
+2.3 Angle between true and estimated eigenvectors
+Hoyle and Rattray (2004) mention about a phase transition phenomenon in the asymptotic be-
+haviour of the angle between the true and estimated eigenvector associated with a non-unit eigen-
+value `ν . They term this “the phenomenon of retarded learning”. They derived this result at a
+physical level of rigour. Their result can be rephrased in our context to mean that if 1 < `ν ≤ 1+
+√
+γ
+is a simple eigenvalue, then the cosine of the angle between the corresponding true and estimated
+eigenvectors almost surely converges to zero, whereas one gets strictly positive limit if `ν > 1 +
+√
+γ.
+Part (a) of Theorem 4, stated below and proved in Section 6, is a precise statement of the latter
+part of their result. This also readily proves a stronger version of the result regarding inconsistency
+of sample eigenvectors as stated in Johnstone and Lu (2004).
+6
+Theorem 4 : Let ẽν denote the N × 1 vector with 1 in the ν-th coordinate and zeros elsewhere,
+and pν denote the eigenvector of S associated with the eigenvalue ̂̀ν .
+(a) If `ν > 1 +
+√
+γ and of multiplicity one,
+|〈pν , ẽν〉|
+a.s.→
+√(
+1− γ
+(`ν − 1)2
+)
+/
+(
+1 +
+γ
+`ν − 1
+)
+as n→∞. (6)
+(b) If `ν ≤ 1 +
+√
+γ,
+〈pν , ẽν〉
+a.s.→ 0 as n→∞. (7)
+In order to prove this result we use a specific decmposition of the eigenvectors as explained in
+Section 3. Proceeding along this line it is possible to study the behaviour of the sample eigenvectors
+in more detail. But we shall give it a full treatment elsewhere and hence do not deal with this issue
+in the current paper.
+3 Representation of the eigenvalues of S
+Throughout we assume that n is large enough so that Nn < 1. In order to proceed further we
+introduce some notations that will help us in later stages. First we partition the matrix S as
+S =
+[
+SAA SAB
+SBA SBB
+]
+where the suffix A corresponds to the set of coordinates {1, . . . ,M} and B corresponds to the set
+{M + 1, . . . , N}. As before we use ̂̀ν and pν to denote the ν-th largest sample eigenvalue and the
+correpsonding sample eigenvector. We shall follow the convention that the ν-th element of pν is
+nonnegative to avoid any ambiguity. We shall write pν as pTν = (p
+T
+A,ν , p
+T
+B,ν) and denote the norm
+‖ pB,ν ‖ by Rν . Then almost surely 0 < Rν < 1.
+With this setting in place, now we can express the first M eigenequations for S as
+SAApA,ν + SABpB,ν = ̂̀νpA,ν , ν = 1, . . . ,M, (8)
+SBApA,ν + SBBpB,ν = ̂̀νpB,ν , ν = 1, . . . ,M, (9)
+pTA,νpA,ν′ + p
+T
+B,νpB,ν′ = δν,ν′ , 1 ≤ ν, ν ′ ≤M. (10)
+Here δνν′ is the Kronecker symbol. Now denote the vector pA,ν/ ‖ pA,ν ‖= pA,ν/
+√
+1−R2ν by bν .
+Thus ‖ bν ‖= 1. Similarly define qν := pB,ν/Rν and again ‖ qν ‖= 1.
+With all the relevant quantities about the problem now defined we can express the eigenequa-
+tions in a more suitable form that will allow us to make useful observations about the relationship
+7
+among the empirical eigenvalues ̂̀1, . . . , ̂̀M . First, changing sides in (9) to collect terms involving
+qν , and noticing that almost surely 0 < Rν < 1, and ̂̀νI − SBB is invertible,
+qν =
+√
+1−R2ν
+Rν
+(̂̀νI − SBB)−1SBAbν (11)
+Now, dividing both sides of (8) by
+√
+1−R2ν and substituting the expression for qν , we get
+(SAA + SAB(̂̀νI − SBB)−1SBA)bν = ̂̀νbν , ν = 1, . . . ,M. (12)
+This equation is quite remarkable since it shows that ̂̀ν is an eigenvalue of the matrix K(̂̀ν) where
+K(x) = SAA + SAB(xI − SBB)−1SBA
+with corresponding eigenvector bν . This particular observation will be the building block for all
+our analysis. However, we shall find it more convenient to express the quantities in terms of the
+spectral elements of the data matrix X.
+Let Λ denote the diagonal matrix diag(`1, . . . , `M ). Because of normality assumption, the
+observation matrix X can be reexpressed as
+XT = [ZTAΛ
+1/2 : ZTB], ZA is M × n, ZB is (N −M)× n,
+and the entries of ZA and ZB are i.i.d. N(0, 1), and ZA and ZB are mutually independent. We can
+also assume that ZA and ZB are defined on the same probability space.
+Let the singular value decomposition of 1√
+n
+ZB be given as
+1√
+n
+ZB = VM1/2HT (13)
+whereM is the (N −M)× (N −M) diagonal matrix of the eigenvalues of SBB in decreasing order,
+V is the (N−M)×(N−M) matrix of eigenvectors of SBB and H is the n×(N−M) matrix of right
+singular vectors. We shall denote the diagonal elements of M by µ1 > . . . > µN−M , suppressing
+the dependence on n.
+Let the columns of V be denoted by v1, . . . , vN−M and the columns of H be denoted by
+h1, . . . , hN−M . Note that {v1, . . . , vN−M} is a complete orthonormal basis for RN−M , whereas
+h1, . . . , hN−M form an orthonormal basis of an (N −M) dimensional subspace (viz. the rowspace
+of ZB) of Rn.
+Observe that qν = V ζν =
+∑N−M
+j=1 ζνjvj for some unit vector ζν . Also, define by T the matrix
+1√
+n
+HTZTA. T is an (N − M) × M matrix and let its columns be denoted by t1, . . . , tM . The
+most important property about T that we shall use repeatedly is that the vectors t1, . . . , tM are
+distributed as i.i.d. N(0, 1nIN−M ) and are independent of ZB. This is because the columns of H
+form an orthonormal set of vectors and the rows of ZA are i.i.d. Nn(0, I) vectors, and moreover,
+ZA and ZB are independently distributed.
+8
+Thus, we obtain the following equations by simple linear transformations of (11) and (12),
+respectively.
+ζν =
+√
+1−R2ν
+Rν
+(̂̀νI −M)−1M1/2TΛ1/2bν , ν = 1, . . . ,M. (14)
+(SAA + Λ1/2T TM(̂̀νI −M)−1TΛ1/2)bν = ̂̀νbν , ν = 1, . . . ,M. (15)
+Also note that K(x) can be expressed as
+K(x) = SAA + Λ1/2T TM(xI −M)−1TΛ1/2 (16)
+We conclude this section by rewriting equation (10) in terms of the vectors {bν : ν = 1, . . . ,M} as
+bTν [I + Λ
+1/2T T (̂̀νI −M)−1M(̂̀ν′I −M)−1TΛ1/2]bν′ = 11−R2ν δνν′ , 1 ≤ ν, ν ′ ≤M, (17)
+which is same as
+bTν [I + SAB(̂̀νI − SBB)−1(̂̀ν′I − SBB)−1SBA]bν′ = 11−R2ν δνν′ , 1 ≤ ν, ν ′ ≤M. (18)
+4 Almost sure limits
+In this section we prove Theorem 1 and Theorem 2. Proofs of these two theorems depend heavily
+on the asymptotic behaviour of the largest eigenvalue of a Wishart matrix in the null (i.e. identity
+covariance) case, as well as on the limiting behaviour of the Empirical Spectral Distribution of
+Wishart matrices. Throughout, the ESD of SBB is denoted by F̂n,N−M . Then we know that (cf.
+Bai, 1999)
+F̂n,N−M =⇒ Fγ , almost surely as n→∞
+where =⇒ denotes distributional convergence.
+Our proof relies upon essentially showing the following fact
+tTjM(̂̀νI −M)−1tk → 0, almost surely 1 ≤ j 6= k ≤M,
+tTjM(̂̀νI −M)−1tj → γ ∫ xρν − xdFγ(x), almost surely.
+The rest of the section is organized as follows. We shall establish first Theorem 2 and then
+Theorem 1. The proofs of these two results use the same technique in that they use the interlacing
+inequality for eigenvalues of symmetric matrices to derive upper and lower bounds for ̂̀ν which
+may fail to hold with negligible probability.
+However, it turns out that the derivation of the lower bound for ̂̀ν in the proof of Theorem 2
+becomes much easier if one has a suitable preliminary lower bound on ̂̀ν . To be more specific, one
+9
+needs to ensure that the set Cν = {̂̀ν > µ1} has very high probability when `ν > 1 +√γ. This is
+comparatively a lot easier in the case when `ν is in fact greater than (1 +
+√
+γ)2. This is established
+via Proposition 1 and Proposition 2. Incidentally, Proposition 2 gives a general purpose bound for
+the j-th eigenvalue µj of SBB for every fixed j. However, in the general case (i.e. when simply
+`ν > 1 +
+√
+γ), we explicitly construct a lower bound for ̂̀ν using equations (14) and (15). This
+requires a lot more work and to keep the exposition simpler we have deferred this result (Proposition
+B.2 ) till Appendix B.
+It is comparatively easier to derive sharp upper bounds for ̂̀ν and the same technique can be
+used to derive bounds for the cases when `ν > 1 +
+√
+γ and when 1 < `ν ≤ 1 +
+√
+γ. For the time
+being we assume that either `ν ≤ 1 +
+√
+γ or `ν > (1 +
+√
+γ)2.
+4.1 Bounds on the eigenvalues ̂̀ν
+We make use of the interlacing inequality for eigenvalues of symmetric matrices, (see e.g. Section
+1f of Rao, 1973). We introduce some notations for later use.
+4.1.1 Notations
+We denote the quantity (1 +
+√
+γ)2 by κγ . Throughout, unless otherwise specified, λj(C) for any
+symmetric matrix C will denote the j-th largest eigenvalue of C. For any m × m matrix C , if
+G ⊂ {1, . . . ,m}, then by CG we shall denote the submatrix of C deleting the rows and columns
+that are in G. Also, we shall use ‖ ‖ to denote both l2 norm of vectors, as well as the 2-norm, or
+the largest singular value, of matrices. ‖ ‖HS will mean the Hilbert-Schmidt norm for matrices.
+For ρ > κγ , we define
+ΛG(ρ) = (1 + γ
+∫
+x
+ρ− x
+dFγ(x))ΛG (19)
+4.1.2 Interlacing inequalities
+By the interlacing inequality we have
+λ1(SG) ≥ λ|G|+1(S) and λk(S) ≥ λk(SG), for all G ⊂ {1, . . . , N}, all k (20)
+Define Γν = {1, . . . , ν} and Γν = {ν + 1, . . . ,M} for 1 ≤ ν ≤ M and Γ0 = φ = ΓM . Then (20)
+implies
+λ1(SΓν−1) ≥ ̂̀ν ≥ λν(SΓν ) (21)
+10
+4.1.3 Eigenvalues of submatrices
+Observe that λ1(SΓν−1) and λν(SΓν ) are some eigenvalues of KΓν−1(λ1(SΓν−1)) and KΓν (λν(SΓν )),
+respectively, where
+KG(x) = SAA,G + Λ
+1/2
+G T
+T
+GM(xI −M)−1TGΛ
+1/2
+G , for G ⊂ {1, . . . ,M}. (22)
+Here by TG we denote the submatrix of T with all columns in set G deleted. This follows by noting
+that for G ⊂ {1, . . . ,M},
+SG =
+[
+SAA,G SAB,G
+SBA,G SBB
+]
+, with SAB,G =
+1
+n
+Λ1/2G ZA,GZ
+T
+B, SAA,G =
+1
+n
+Λ1/2G ZA,GZ
+T
+A,GΛ
+1/2
+G ,
+and SBA,G = STAB,G, where ZA,G denotes the submatrix of ZA with rows in the set G deleted.
+4.1.4 Preliminary bounds
+To begin with let us assume that `ν > (1 +
+√
+γ)2. This situation is simpler to deal with. In the
+following SAA,ν denotes the submatrix of SAA consisting of only the first ν rows and ν columns.
+We show that the eigenvalues of SAA,ν concentrate around their population counterparts, and by
+the interlacing inequalities we directly have
+λν(SΓν ) ≥ λν(SAA,ν), (23)
+Therefore the required lower bound for ̂̀ν is easily obtained if we apply (21). We formally state
+the following:
+Proposition 1 : Let κγ = (1+
+√
+γ)2 and 0 <  < `1ν2 be any number such that `ν > κγ +2. Then,
+P(λν(SΓν ) ≤ κγ + ) ≤ 2ν exp
+(
+− n
+2
+6`21ν2
+)
++ ν(ν − 1) exp
+(
+− n
+2
+3`21ν2
+)
+(24)
+Proof : In view of (23) we only need to establish the inequality for λν(SAA,ν). Let Λν =
+diag(`1, . . . , `ν). Then for ν ′ = 1, . . . , ν,
+|λν′(SAA,ν)− `ν′ | ≤‖ SAA,ν − Λν ‖ (25)
+In certain circumstances this upper bound can be improved with a more careful analysis, but we
+do not need that here. The bound appearing on the RHS can be majorized by the Hilbert-Schmidt
+norm:
+‖ SAA,ν − Λν ‖HS=
+√√√√ ν∑
+k=1
+|skk − `k|2 +
+ν∑
+j 6=k
+|sjk|2
+where sjk is the (j, k)-th element of SAA, 1 ≤ j, k ≤ M . In order to bound the terms appearing
+inside square roots we use large deviation inequalities for quadratic forms of Gaussian random
+11
+variables. Observe that sjk =
+√
+`j`k
+1
+nZ
+T
+A,jZA,k where Z
+T
+A,j is the j-th row of ZA. Taking X = ZA,j ,
+Y = ZA,k, C(Z) = I and L = 1 in Lemma A.1 we get
+P(|skj | >
+√
+`j`kt) ≤ 2 exp(−
+(1− δ)nt2
+2
+), 0 < t <
+δ
+1− δ
+(26)
+Similarly, applying Lemma A.2 with X = ZA,k, C(Z) = I and L = 1 we get
+P(|skk − `k| > `kt) ≤ 2 exp(−
+(1− δ)nt2
+4
+), 0 < t <
+2δ
+1− δ
+(27)
+Thus, taking δ = 13 in (26) and (27) and setting t =
+
+`1ν
+, since 0 <  < `1ν2 we get, after using (25)
+and the expression for ‖ SAA,ν − Λν ‖HS
+P(|λν(SAA,ν)− `ν | > ) ≤ 2ν exp
+(
+− n
+2
+6`21ν2
+)
++ ν(ν − 1) exp
+(
+− n
+2
+3`21ν2
+)
+(28)
+From this (24) follows.
+Next we state a result about the concentration of largest few eigenvalues of SBB around κγ . This
+is proved in Appendix A.
+Proposition 2 : For any 0 < δ < κγ/2,
+P(|µ1 − κγ | ≥ δ) ≤ 2 exp
+(
+− nδ
+2
+32κγ
+)
+, for n ≥ n0(γ, δ) (29)
+where n0(γ, δ) is an integer large enough such that |Median(µ1)− κγ | ≤ δ4 for n ≥ n0(γ, δ).
+Remark : The proof relies on the asymptotic distribution of the largest eigenvalue of a sample
+covariance matrix in the identity covariance case (Johnstone, 2001) and a concentration inequality
+for singular values of Gaussian random matrices. Soshnikov (2002) proved that when centered and
+scaled by the same numbers, a similar type of limiting law holds for any leading eigenvalue (i.e.
+any µj with j fixed). The details of these distributions can be found in Tracy and Widom (1994),
+(1996). So the same proposition applies to any µj for j fixed.
+4.2 Upper bound for ̂̀ν
+First we derive a tight upper bound for ̂̀ν . Our strategy is to utilize the upper bound in (21). For
+this we do not need (24). However, we need the bound (29). For simplicity of notations, we shall
+use λ̂1,ν to mean λ1(SΓν−1). Our aim is to prove the following:
+Proposition 3 : Let `ν > 1 +
+√
+γ for some 1 ≤ ν ≤M . Then given  > 0 there exists n1(ν, ,Λ, γ)
+large enough such that, for n ≥ n1(ν, ,Λ, γ),
+P(̂̀ν > ρν + , µ1 < κγ + /2) ≤ (M − ν + 1)ε1(n, ,Λ, γ) + (M − ν)(M − ν + 1)ε2(n, ,Λ, γ),
+(30)
+12
+where ε1 and ε2 are the terms appearing on the RHS of equations (47) and (39), respectively.
+Proof : First, from (21) we have
+P(̂̀ν > ρν + , µ1 < κγ + /2) ≤ P(λ̂1,ν > ρν + , µ1 < κγ + /2)
+Since λ̂1,ν is an eigenvalue of KΓν−1(λ̂1,ν) where KG(·) is defined through (22),
+λ̂1,ν ≤ λ1(KΓν−1(ρν + )) on the set J1,ν := {λ̂1,ν > ρν + , µ1 < κγ + /2} (31)
+To verify (31) observe that on J1,ν the inequalities
+µj
+λ̂1,ν−µj
+≤ µjρν+−µj hold for all j = 1, . . . , N−M .
+This implies the inequality for positive semidefinite matrices: KΓν−1(λ̂1,ν) ≤ KΓν−1(ρν + ) (since,
+for any a ∈ RM−|G|, aTKG(x)a = aTSAA,Ga+
+∑N−M
+j=1 c
+2
+jµj(x− µj)−1 where c = TGΛ
+1/2
+G a).
+Let ΛG(ρ) be defined through (19). Then by (31) and a simple inequality for eigenvalues of
+symmetric matrices, on the set J1,ν ,
+λ̂1,ν ≤ `ν(1 + γ
+∫
+x
+ρν + − x
+dFγ(x))+ ‖ KΓν−1(ρν + )− ΛΓν−1(ρν + ) ‖HS (32)
+since `ν(1 + γ
+∫
+x
+ρν+−xdFγ(x)) is the largest eigenvalue of ΛΓν−1(ρν + ).
+Now, let δ := δ() > 0 be such that
+`ν(1 + γ
+∫
+x
+ρν + − x
+dFγ(x)) + δ = ρν +  (33)
+Indeed we can find such a δ because if we define `ν, to be `ν, = (ρν + )(1 + γ
+∫
+x
+ρν+−xdFγ(x))
+−1,
+then we have `ν, > `ν (since, by definition, ρν is the solution to equation (3)), and hence
+`ν(1 + γ
+∫
+x
+ρν + − x
+dFγ(x)) =
+`ν
+`ν,
+(ρν + ) < ρν + 
+Denote the matrix appearing inside ‖ ‖HS on the RHS of (32) by D̃ν = ((D̃ν,jk))M−ν+1j,k=1 . From
+our construction, if
+|D̃ν,jk| < δjk, 1 ≤ j, k ≤M − ν + 1, where δjk > 0, ∀ j, k, and
+M−ν+1∑
+j=1
+M−ν+1∑
+k=1
+δ2jk ≤ δ2,
+then from (32) we get, on J1,ν , λ̂1,ν < ρν +  which is an impossibility. Hence after taking the union
+bound,
+P(J1,ν) ≤
+M−ν+1∑
+j=1
+P(|D̃ν,jj | ≥ δjj , µ1 < κγ + /2) +
+M−ν+1∑
+j<k
+P(|D̃ν,jk| ≥ δjk, µ1 < κγ + /2) (34)
+We set δjj = `j+ν−1δ̃1, j = 1, . . . ,M − ν + 1 and δjk =
+√
+`j+ν−1`k+ν−1 δ̃2, 1 ≤ j < k ≤M − ν + 1
+where δ̃1, δ̃2 > 0 are such that δ2 = δ̃21
+∑M
+j=ν `
+2
+j + δ̃
+2
+2(
+∑M
+j=ν `j)
+2. To be specific, we take δ̃2 =
+δ√
+2
+(
+∑M
+j=ν `j)
+−1 and δ̃1 = δ√2(
+∑M
+j=ν `
+2
+j )
+−1/2.
+13
+Remark : Notice that the bound we are using here is rather crude. In specific situations, e.g.
+when `1, . . . , `ν are distinct, one may be able to get better bounds.
+Observe that for j = 1, . . . ,M − ν + 1,
+D̃ν,jj = `j+ν−1(
+1
+n
+ZTA,j+ν−1ZA,j+ν−1 − 1)
++`j+ν−1(tTj+ν−1M((ρν + )I −M)−1tj+ν−1 −
+1
+n
+trace (M((ρν + )I −M)−1))
++`j+ν−1(
+1
+n
+trace (M((ρν + )I −M)−1)− γ
+∫
+x
+ρν + − x
+dFγ(x)) (35)
+whereas, for 1 ≤ j 6= k ≤M − ν + 1,
+D̃ν,jk =
+√
+`j+ν−1`k+ν−1[
+1
+n
+ZTA,j+ν−1ZA,k+ν−1 + t
+T
+j+ν−1M((ρν + )I −M)−1tk+ν−1] (36)
+Define Jγ() := {µ1 ≤ κγ + }. Then to bound P(|D̃ν,jk| ≥ δjk, Jγ(/2)), for j 6= k, observe that
+from (26) we have
+P(| 1
+n
+ZTA,j+ν−1ZA,k+ν−1| ≥ δ̃2/2) ≤ 2 exp
+(
+−nδ̃
+2
+2
+12
+)
+, for 0 < δ̃2 < 1 (37)
+Since
+√
+ntj ∼ N(0, IN−M ) for j = 1, . . . ,M , and
+‖ M((ρν + )I −M)−1 ‖=
+µ1
+ρν + − µ1
+≤ κγ + /2
+ρν + /2− κγ
+on Jγ(/2), we can apply Lemma A.1 to conclude that (taking δ = 13 in the lemma), for j 6= k,
+P(|tTj+ν−1M((ρν + )I −M)−1tk+ν−1| ≥ δ̃2/2, Jγ(/2))
+= 2 exp
+(
+− n
+N −M
+(ρν + /2− κγ)2nδ̃22
+12(κγ + /2)2
+)
+= 2 exp
+(
+−1
+γ
+(ρν + /2− κγ)2nδ̃22
+12(κγ + /2)2
+(1 + o(1))
+)
+, for 0 < δ̃2 <
+κγ + /2
+ρν + /2− κγ
+(38)
+Combining (36), (37) and (38), for 0 < δ̃2 < min{1, κγ+/2ρν+/2−κγ },
+P(|D̃ν,jk| ≥ δjk, µ1 < κγ + /2) ≤ 2 exp
+(
+−nδ̃
+2
+2
+12
+)
++ 2 exp
+(
+− n
+N −M
+(ρν + /2− κγ)2nδ̃22
+12(κγ + /2)2
+)
+(39)
+for all 1 ≤ j < k ≤M − ν + 1
+In order to obtain a similar bound for D̃ν,jj , first observe that from (27),
+P(| 1
+n
+ZTA,j+ν−1ZA,j+ν−1 − 1| ≥ δ̃1/4) ≤ 2 exp
+(
+−nδ̃
+2
+1
+96
+)
+, for 0 < δ̃1 < 4 (40)
+14
+Again, argument silimlar to that leading to (38) implies (this time using Lemma A.2 ),
+P(|tTj+ν−1M((ρν + )I −M)−1tj+ν−1 −
+1
+n
+trace (M((ρν + )I −M)−1)| ≥ δ̃1/4, Jγ(/2))
+≤ 2 exp
+(
+− n
+N −M
+(ρν + /2− κγ)2nδ̃21
+96(κγ + /2)2
+)
+= 2 exp
+(
+−1
+γ
+(ρν + /2− κγ)2nδ̃21
+96(κγ + /2)2
+(1 + o(1))
+)
+, for 0 < δ̃1 <
+4(κγ + /2)
+ρν + /2− κγ
+(41)
+To provide a bound for the remaining terms, we observe that on Jγ(/2),
+trace (M((ρν + )I −M)−1) + (N −M) = (ρν + ) trace (((ρν + )I −M)−1)
+= (ρν + ) trace G1(SBB; ρν + , γ, /2),
+where the function G1(·; ·, ·, ·) is defined through (90) in Appendix A. Therefore we can apply
+Proposition A.1 (in the Appendix ) to get
+P(| 1
+n
+trace (M((ρν + )I −M)−1)−
+E(
+1
+n
+(ρν + ) trace G1(SBB; ρν + , γ, /2)) +
+N −M
+n
+| > δ̃1/4, Jγ(/2))
+= P(| 1
+n
+trace G1(SBB; ρν + , γ, /2)− E(
+1
+n
+trace G1(SBB; ρν + , γ, /2))|
+> (ρν + )−1δ̃1/4, Jγ(/2))
+≤ 2 exp
+(
+− n
+n+N −M
+n2δ̃21
+2
+(ρν + /2− κγ)4
+64(ρν + )2(κγ + /2)
+)
+= 2 exp
+(
+− n
+2δ̃21
+2(1 + γ)
+(ρν + /2− κγ)4
+64(ρν + )2(κγ + /2)
+(1 + o(1))
+)
+(42)
+Now to tackle the remainder we notice that
+E(
+1
+n
+trace G1(SBB; ρν + , γ, /2)) =
+N −M
+n
+E
+∫
+G1(x; ρν + , γ, /2)dF̂n,N−M (x)
+where F̂n,N−M denotes the ESD of the matrix SBB. Note thatG1 is bounded above and monotone in
+its first argument. Further, defining Fn,N−M to be the expected ESD, by linearity of expectation,
+E
+∫
+G1(x; ρν + , γ, /2)dF̂n,N−M (x) =
+∫
+G1(x; ρν + , γ, /2)dFn,N−M (x). It is well-known that
+Fn,N−M =⇒ Fγ as n → ∞, where Fγ is the Marchenko-Pastur law with parameter γ. Bai (1993)
+proved under fairly weak conditions that (Bai, 1993, Theorem 3.2) if θ1 ≤ pn ≤ θ2 where 0 < θ1 <
+1 < θ2 <∞, then
+‖ Fn,p − Fp/n ‖∞≤ C1(θ1, θ2)n−5/48. (43)
+When 0 < θ1 < θ2 < 1, he also showed (Bai, 1993, Theorem 3.1) that
+‖ Fn,p − Fp/n ‖∞≤ C2(θ1, θ2)n−1/4. (44)
+15
+Here ‖ · ‖∞ means the sup-norm and C1, C2 are constants with values depending on θ1, θ2.
+Then utilizing the fact that Fγ has bounded support, G1(·; ρν + , γ, /2) is bounded, nonde-
+creasing and differentiable everywhere except at x = κγ + /2 with G′1(x) ≡ 0 on (κγ + /2,∞),
+and integrating by parts, we get from (43), for any 0 < θ1 < 1,
+|
+∫
+G1(x; ρν + , γ, /2)dFn,N−M (x)−
+∫
+G1(x; ρν + , γ, /2)dFγ(x)|
+≤ |
+∫
+G1(x; ρν + , γ, /2)dFn,N−M (x)−
+∫
+G1(x; ρν + , γ, /2)dF(N−M)/n(x)|
++ |
+∫
+G1(x; ρν + , γ, /2)dF(N−M)/n(x)−
+∫
+G1(x; ρν + , γ, /2)dFγ(x)|
+≤ C3(θ1)(n−5/48+ ‖ F(N−M)/n − Fγ ‖∞)
+∫ κγ+/2
+0
+|G′1(x; ρν + , γ, /2)|dx
+≤ C ′3(θ1)(n−5/48 + C4(
+N −M
+n
+− γ)) (κγ + /2)
+(ρν + /2− κγ)2
+(45)
+uniformly in θ1 ≤ N−Mn ≤ 1, where C3, C
+′
+3 are constants depending on θ1 and C4(·) is a nonnegative
+function converging to 0 at 0. Observe that∫
+G1(x; ρν + , γ, /2)dFγ(x) =
+∫
+1
+ρν + − x
+dFγ(x)
+Therefore ∃ n1(ν, ,Λ, γ) ≥ 1 such that for n ≥ n1(ν, ,Λ, γ),
+|(ρν + )E(
+1
+n
+trace G1(SBB; ρν + , γ, /2))−
+N −M
+n
+− γ
+∫
+x
+ρν + − x
+dFγ(x)| ≤ δ̃1/4 (46)
+Combining (40), (41), (42) and (46), for δ̃1 < 4 min{1, κγ+/2ρν+/2−κγ },
+P(|D̃ν,jj | ≥ δjj , µ1 < κγ + /2)
+≤ 2 exp
+(
+−nδ̃
+2
+1
+96
+)
++ 2 exp
+(
+− n
+N −M
+(ρν + /2− κγ)2nδ̃21
+96(κγ + /2)2
+)
++2 exp
+(
+− n
+n+N −M
+n2δ̃21
+2
+(ρν + /2− κγ)4
+64(ρν + )2(κγ + /2)
+)
+for 1 ≤ j ≤M − ν + 1 (47)
+for all n ≥ n1(ν, ,Λ, γ).
+Remark : Since the upper bounds in (39) and (47) involve quantities δ̃2 and δ̃1, respectively, it is
+important to clarify their behaviour vis-a-vis  when  → 0. Since δ̃1, δ̃2 are proportional to δ(),
+defined by (33), we study the latter. From (33), we get
+dδ()
+d
+= 1 + `νγ
+∫
+x
+(ρν + − x)2
+dFγ(x)→ 1 +
+`νγ
+(`ν − 1)2 − γ
+as → 0,
+by Lemma B.2. This shows that ∃ 0 < c1 < c2 <∞ such that c1 ≤ δ() ≤ c2 for  small enough.
+16
+4.3 Lower bound for ̂̀ν
+Now, we derive a sharp lower bound for ̂̀ν under the restriction that {̂̀ν > κγ + /2 > µ1} for
+ > 0 small enough so that κγ + 2 < ρν . Then utilizing the lower bound in (21) in a way very
+similiar to the proof of Proposition 3, we obtain :
+Proposition 4 : Let `ν > 1 +
+√
+γ for some 1 ≤ ν ≤M . Let  > 0 be such that ρν > κγ + 2. Then
+there exists n2(ν, ,Λ, γ) large enough such that, for n ≥ n2(ν, ,Λ, γ),
+P(̂̀ν < ρν − , µ1 < κγ + /2, λν(SΓν ) > κγ + /2) ≤ νε̃1(n, ,Λ, γ) + ν(ν − 1)ε̃2(n, ,Λ, γ) (48)
+where ε̃1 and ε̃2 are given by the RHS of (53) and (52), respectively.
+Proof : Define λ̂ν,ν = λν(SΓν ). From (21) we have
+P(̂̀ν < ρν − , µ1 < κγ + /2, λ̂ν,ν > κγ + /2) ≤ P(λ̂ν,ν < ρν − , µ1 < κγ + /2, λ̂ν,ν > κγ + /2)
+Since λ̂ν,ν is an eigenvalue of KΓν (λ̂ν,ν),
+λ̂ν,ν ≥ λν(KΓν (ρν − )) on the set Jν,ν := {κγ + /2 < λ̂ν,ν < ρν − , µ1 < κγ + /2} (49)
+Then, with ΛG(ρ) defined through (19), on the set Jν,ν ,
+λ̂ν,ν ≥ `ν(1 + γ
+∫
+x
+ρν − − x
+dFγ(x))− ‖ KΓν (ρν − )− ΛΓν (ρν − ) ‖HS (50)
+since `ν(1 + γ
+∫
+x
+ρν−−xdFγ(x)) is the smallest eigenvalue of ΛΓν (ρν − ).
+Now, let δ := δ() > 0 be such that `ν(1 + γ
+∫
+x
+ρν−−xdFγ(x)) − δ = ρν − . We can find such
+a δ because if we define `ν, to be `ν, = (ρν − )(1 + γ
+∫
+x
+ρν−−xdFγ(x))
+−1, then we have `ν, < `ν
+(since, by definition, ρν is the solution to equation (3)), and hence
+`ν(1 + γ
+∫
+x
+ρν − − x
+dFγ(x)) =
+`ν
+`ν,
+(ρν − ) > ρν − 
+Note also that δ ↓ 0 as  ↓ 0. Denote the matrix appearing inside ‖ ‖HS on the RHS of (50) by
+Dν = ((Dν,jk))νj,k=1. From our construction, if
+|Dν,jk| ≤ δjk, 1 ≤ j, k ≤ ν, where δjk > 0, ∀ j, k, and
+ν∑
+j=1
+ν∑
+k=1
+δ
+2
+jk ≤ δ
+2
+,
+then from (50) we get, on Jν,ν , λ̂ν,ν > ρν −  which is impossible. Hence after taking the union
+bound,
+P(Jν,ν) ≤
+ν∑
+j=1
+P(|Dν,jj | ≥ δjj , µ1 < κγ + /2) +
+ν∑
+j<k
+P(|Dν,jk| ≥ δjk, µ1 < κγ + /2) (51)
+17
+We set δjj = `j δ̃3, j = 1, . . . , ν and δjk =
+√
+`j`k δ̃4, 1 ≤ j < k ≤ ν where δ̃3, δ̃4 > 0 are
+such that δ2 = δ̃23
+∑ν
+j=1 `
+2
+j + δ̃
+2
+4(
+∑ν
+j=1 `j)
+2. To be specific, we take δ̃4 = δ√2(
+∑ν
+j=1 `j)
+−1 and δ̃3 =
+δ√
+2
+(
+∑ν
+j=1 `
+2
+j )
+−1/2.
+Therefore by derivations similar to (39), we have for 0 < δ̃4 < min{1, κγ+/2ρν−3/2−κγ },
+P(|Dν,jk| ≥ δjk, µ1 < κγ + /2) ≤ 2 exp
+(
+−nδ̃
+2
+4
+12
+)
++ 2 exp
+(
+− n
+N −M
+(ρν − 3/2− κγ)2nδ̃24
+12(κγ + /2)2
+)
+(52)
+for all 1 ≤ j < k ≤ ν
+Similarly, ∃ n2(ν, ,Λ, γ) such that for δ̃3 < 4 min{1, κγ+/2)ρν−3/2−κγ },
+P(|Dν,jj | ≥ δjj , µ1 < κγ + /2)
+≤ 2 exp
+(
+−nδ̃
+2
+3
+96
+)
++ 2 exp
+(
+− n
+N −M
+(ρν − 3/2− κγ)2nδ̃23
+96(κγ + /2)2
+)
++2 exp
+(
+− n
+n+N −M
+n2δ̃23
+2
+(ρν − 3/2− κγ)4
+64(ρν − )2(κγ + /2)
+)
+for 1 ≤ j ≤ ν (53)
+for all n ≥ n2(ν, ,Λ, γ).
+Proof of Theorem 2 : The remark following Proposition 3 remains valid for Proposition 4 as well
+(possibly with different constants). And so, the proof in the case when `ν > (1 +
+√
+γ)2 now follows
+easily by combining Proposition 1, Proposition 2, Proposition 3 and Proposition 4 and applying
+first Borel-Cantelli lemma.
+Proof for the general case is deduced by combining Proposition 2, Proposition 3 and Proposition
+B.2 and then applying first Borel-Cantelli lemma.
+4.4 Proof of Theorem 1
+By interlacing inequality, it follows that ̂̀ν ≥ µν . Proposition 2 and the remark following that
+ensure that µν concentrates around κγ . In view of this we only need to show that for every  > 0
+the probability P(̂̀ν > κγ + ) is summable over n, so that an Application of Borel-Cantelli lemma
+will complete the proof.
+We take essentially the same approach as in proving Proposition 3. As before, we denote
+λ1(SΓν−1) by λ̂1,ν and use (21). So we only need to ensure that P(λ̂1,ν > κγ + , µ1 < κγ + /2) is
+summable. As before, consider the set J̃1,ν := {λ̂1,ν > κγ + , µ1 < κγ + /2}. Then, since λ̂1,ν is
+an eigenvalue of KΓν−1(λ̂1,ν), with KG(·) defined by (22), we have
+λ̂1,ν ≤ λ1(KΓν−1(κγ + )) on the set J̃1,ν . (54)
+Then on the set J̃1,ν ,
+λ̂1,ν ≤ `ν(1 + γ
+∫
+x
+κγ + − x
+dFγ(x))+ ‖ KΓν−1(κγ + )− ΛΓν−1(κγ + ) ‖HS (55)
+18
+since `ν(1 + γ
+∫
+x
+κγ+−xdFγ(x)) is the largest eigenvalue of ΛΓν−1(κγ + ), where the last quantity
+is defined through (19).
+∃ δ := δ() > 0 such that
+`ν(1 + γ
+∫
+x
+κγ + − x
+dFγ(x)) + δ = κγ +  (56)
+This is because, if we define κγ, = (κγ + )(1 +γ
+∫
+x
+κγ+−xdFγ(x))
+−1, then κγ, > 1 +
+√
+γ ≥ `ν since
+whenever ρ > κγ , ∃ a unique ` > 1 +
+√
+γ which solves the equation (3), so that
+`ν(1 + γ
+∫
+x
+κγ + − x
+dFγ(x)) =
+`ν
+κγ,
+(κγ + ) < κγ + 
+As should be clear by now, the proof of Proposition 3 can now be followed verbatim just by replacing
+the quantity ρν +  by κν + , and replacing J1,ν by J̃1,ν . Thus, skipping all the details we simply
+present the final result :
+Proposition 5 : Let `ν ≤ 1 +
+√
+γ. With δ̃1 and δ̃2 having the same definition as in the proof of
+Proposition 3, and δ = δ() defined through (56) sufficiently small, ∃ n3(ν, ,Λ, γ) large enough so
+that for n ≥ n3(ν, ,Λ, γ)
+P(̂̀ν > κγ + , µ1 < κγ + /2) ≤ (M − ν + 1)ε1(n, ,Λ, γ) + (M − ν)(M − ν + 1)ε2(n, ,Λ, γ, )
+(57)
+where
+ε1 = 2 exp
+(
+−nδ̃
+2
+1
+96
+)
++ 2 exp
+(
+− n
+N −M
+nδ̃21
+2
+384(κγ + /2)2
+)
++ 2 exp
+(
+− n
+n+N −M
+n2δ̃21
+2
+4
+1024(κγ + )2(κγ + /2)
+)
+ε2 = 2 exp
+(
+−nδ̃
+2
+2
+12
+)
++ 2 exp
+(
+− n
+N −M
+nδ̃22
+2
+48(κγ + /2)2
+)
+Remark : It is important to take note of the behaviour of δ(). When `ν < 1 +
+√
+γ, (56) implies
+that as  ↓ 0, δ()→ κγ− `ν(1 +γ
+∫
+x
+κγ−xdFγ(x)), by Monotone Convergence Theorem. By Lemma
+B.1, the limit equals κγ − `ν(1 +
+√
+γ) > 0. This shows that δ() is bounded below, and so the same
+is true for δ̃1 and δ̃2. However, if `ν = 1 +
+√
+γ then δ()→ 0 as  ↓ 0 and therefore we need to do a
+more careful analysis to ensure that the bound in (57) is meaningful. Again using Lemma B.1, we
+19
+can write, for 0 <  < 2γ,
+δ() = + (1 +
+√
+γ)γ
+[∫
+x
+κγ − x
+dFγ(x)−
+∫
+x
+κγ + − x
+dFγ(x)
+]
+= + (1 +
+√
+γ)γ
+∫ κγ
+(1−√γ)2
+x
+(κγ + − x)(κγ − x)
+1
+2πγx
+√
+(κγ − x)(x− (1−
+√
+γ)2)dx
+> +
+(1 +
+√
+γ)
+2π
+∫ κγ
+κγ−
+√
+κγ − − (1−
+√
+γ)2
+(κγ + − x)
+√
+κγ − x
+dx
+> +
+(1 +
+√
+γ)
+2π
+·  ·
+√
+4γ − 
+2
+√
+
+>
+√
+
+[√
++
+(1 +
+√
+γ)
+√
+γ
+2
+√
+2π
+]
+Which means that for 0 <  < 0, say, δ() > c
+√
+ for some constant c > 0 and so the bound (57)
+is strong enough.
+Thus the proof of summability of P(̂̀ν > κγ + ) is completed by combining Proposition 5 with
+Proposition 2.
+5 Proof of Theorem 3
+The proof involves several parts. The first step is to utilize the eigen-equation (15) to get
+̂̀
+ν = bTν (SAA + Λ
+1/2T TM(̂̀νI −M)−1TΛ1/2)bν (58)
+Next step is to show that
+bν − eν = −[Rν(K(ρν)−
+ρν
+`ν
+Λ)eν + (ρν − ̂̀ν)RνKν(ρν)eν ] + (̂̀ν − ρν)2OP (1) + oP (n−1/2) (59)
+where K(x) is defined by (16), Rν is a deterministic diagonal matrix, and K(ρν) is a stochastic
+matrix with norm OP (n−1/2). This is done in Section 6. Then we can write (see Section 6.1 ), after
+expanding K(̂̀ν) appearing in (58) around ρν , using (59), changing sides, and finally multiplying
+by
+√
+n,
+√
+n(̂̀ν − ρν)(1 + `νtTνM(ρνI −M)−2tν + dν) = √n(sνν + `νtTνM(ρνI −M)−1tν − ρν) + oP (1)
+(60)
+where dν = −`ν(̂̀ν −ρν)(tTνM(ρνI−M)−2(̂̀νI−M)−1tν +OP (1)) and sνν is the (ν, ν)-th element
+of S. It readily follows that dν = oP (1). We first show that the term on the RHS of (60) converges
+in distribution to a Gaussian random variable with zero mean and variance given by
+2`νρν
+(
+1 + `νγ
+∫
+x
+(ρν − x)2
+dFγ(x)
+)
+(61)
+Next, from Proposition 6 stated below, it follows that
+tTνM(ρνI −M)−2tν
+a.s.−→ γ
+∫
+x
+(ρν − x)2
+dFγ(x) (62)
+20
+Hence (4), with σ2(`) given by the first expression in (5), follows from (61), (62) and (60) once we
+apply Slutsky’s theorem. Application of (99) gives the second equality in (5) and the third follows
+from simple algebra.
+Proposition 6 : Suppose Nn → γ ∈ (0, 1) as n→∞. Let δ,  > 0 be such that δ <
+16(κγ+/2)
+2
+, and
+ρ ≥ κγ + . Then ∃ n4(ρ, δ, , γ) such that for all n ≥ n4(ρ, δ, , γ),
+P(|tTjM(ρI −M)−2tj − γ
+∫
+x
+(ρ− x)2
+dFγ(x)| > δ, µ1 < κγ + /2)
+≤ 2 exp
+(
+− n
+N −M
+n(δ/4)2(ρ− κγ − /2)4
+6(κγ + /2)2
+)
++ 2 exp
+(
+− n
+n+N −M
+n2(δ/4)2
+2
+(ρ− κγ − /2)6
+16ρ2(κγ + /2)
+)
++2 exp
+(
+− n
+n+N −M
+n2(δ/4)2
+2
+(ρ− κγ − /2)4
+4(κγ + /2)
+)
+, 1 ≤ j ≤M,
+The proof of this proposition is given in Appendix B.
+The main term on the RHS of (60) can be expressed as Wn +W ′n, where
+Wn =
+√
+n(sνν − (1− γ)`ν + `νtTνM(ρνI −M)−1tν − `νρν
+1
+n
+trace((ρνI −M)−1))
+and
+W ′n =
+√
+n`ν(ρν
+1
+n
+trace((ρνI −M)−1)−
+γ`ν
+`ν − 1
+)
+Note that by (97),
+γ`ν
+`ν − 1
+= γ(1 +
+1
+`ν − 1
+) = γ
+∫
+ρν
+ρν − x
+dFγ(x)
+On the other hand
+ρν
+1
+n
+trace((ρνI −M)−1) =
+N −M
+n
+∫
+ρν
+ρν − x
+F̂n,N−M (x)
+Since the function 1ρν−z is analytic in an open set containing the interval [(1−
+√
+γ)2, (1+
+√
+γ)2], from
+Bai and Silverstein (2004, Theorem 1.1) the sequence W ′n = oP (1) once we invoke
+N
+n −γ = o(n
+−1/2).
+Remark : The result of Bai and Silverstein (2004) is actually much stronger than what we need.
+They also show the result under fairly weak conditions. From their result one can deduce asymptotic
+normality of the sequence
+√
+nW ′n if we replace γ by
+N−M
+n . However, for our purpose we only need
+that W ′n = oP (1).
+5.1 Asymptotic normality of Wn
+First we recall that by definition of T , tν = 1√nH
+TZA,ν where ZTA,ν is the ν-th row of ZA. Since
+N −M < n, and columns of H are orthonormal, we can extend them to form an orthonormal basis
+21
+of Rn given by the matrix H̃ = [H : Hc] where Hc is n× (n−N +M). Thus, H̃H̃T = H̃T H̃ = In.
+Then writing
+sνν = `ν
+1
+n
+ZTA,νZA,ν = `ν
+1
+n
+ZTA,νH̃H̃
+TZA,ν = `ν(‖
+1√
+n
+HTZA,ν ‖2 + ‖
+1√
+n
+HTc ZA,ν ‖2)
+= `ν(‖ tν ‖2 + ‖ wν ‖2)
+with wν := 1√nH
+T
+c ZA,ν , we have wν ∼ N(0, 1nIn−N+M ), tν ∼ N(0,
+1
+nIN−M ), and these are mutu-
+ally independent and independent of ZB (since H̃ is an orthonormal basis and ZA,ν ∼ N(0, In)).
+Therefore we can decompose Wn as a sum of two independent random variables W1,n and W2,n
+where
+W1,n = `ν
+√
+n(‖ wν ‖2 −(1− γ)), and W2,n = `νρν
+√
+n(tTν (ρνI −M)−1tν −
+1
+n
+trace((ρνI −M)−1))
+Since n ‖ wν ‖2∼ χ2n−N+M and
+N
+n − γ = o(n
+−1/2), we get W1,n =⇒ N(0, 2`2ν(1 − γ)). In Section
+5.2 we prove that
+W2,n =⇒ N(0, 2`2νγ
+∫
+ρ2ν
+(ρν − x)2
+dFγ(x)). (63)
+The asymptotic normality of Wn is therefore established. Since W ′n = oP (1) this implies asymptotic
+normality of the RHS of (60). The expression (61) for asymptotic variance is then deduced as
+follows:∫
+ρ2ν
+(ρν − x)2
+dFγ(x) = 1 + 2
+∫
+x
+(ρν − x)
+dFγ(x) +
+∫
+x2
+(ρν − x)2
+dFγ(x)
+= 1 + 2
+∫
+x
+ρν − x
+dFγ(x) + ρν
+∫
+x
+(ρν − x)2
+dFγ(x)−
+∫
+x
+ρν − x
+dFγ(x)
+= 1 +
+1
+`ν − 1
++ ρν
+∫
+x
+(ρν − x)2
+dFγ(x)
+where in the last step we used (97). Therefore the asymptotic variance of Wn is
+2`2ν(1− γ) + 2`2νγ
+∫
+ρ2ν
+(ρν − x)2
+dFγ(x) = 2`2ν(1 +
+γ
+`ν − 1
+) + 2`2νρνγ
+∫
+x
+(ρν − x)2
+dFγ(x),
+from which (61) follows since `ν(1 + γ`ν−1) = ρν .
+5.2 Proof of (63)
+Let tν = (tν,1, . . . , tν,N−M )T . tν,j
+i.i.d.∼ N(0, 1n) and independent of M. Hence defining yj =
+√
+ntν,j ,
+we have
+W2,n = `νρν
+1√
+n
+N−M∑
+j=1
+1
+ρν − µj
+y2j −
+N−M∑
+j=1
+1
+ρν − µj
+ , where {yj}N−Mj=1 i.i.d.∼ N(0, 1),
+22
+and {yj}N−Mj=1 are independent of M. Thus, given M, W2,n is a weighted sum of i.i.d. mean 0
+random variables. To establish (63) we need to show that
+φW2,n(t) := E exp(itW2,n)→ φσ̃2(`ν)(t) := exp
+(
+− t
+2σ̃2(`ν)
+2
+)
+, for all t ∈ R, as n→∞
+where σ̃2(`) = 2`2γ
+∫ ρ2(`)
+(ρ2(`)−x)2dFγ(x) for ` > 1 +
+√
+γ. It is enough to show that
+E
+∣∣∣∣E(eitW2,n | M) exp( t2σ̃2(`ν)2
+)
+− 1
+∣∣∣∣→ 0, for all t ∈ R, as n→∞
+where the outer expectation is with respect to the distribution of M. We break this expectation
+into two parts, one over the set Jγ(δ) := {µ1 ≤ κγ + δ} where δ > 0 is any number such that
+ρν > κγ + 2δ, and the complementary part over the set Jcγ(δ) = {µ1 > κγ + δ}. Note that Jγ(δ) is
+a measurable set that depends on n and P(Jγ(δ))→ 1 as n→∞. Since the inner expectation is a
+bounded r.v., the second term converges to zero. Thus we only need to establish that
+E
+[∣∣∣∣E(eitW2,n | M) exp( t2σ̃2(`ν)2
+)
+− 1
+∣∣∣∣ , µ1 ≤ κγ + δ]→ 0, for all t ∈ R, as n→∞
+(64)
+Since characteristic function of a χ21 random variable at any point t is given by ψ(t) :=
+1√
+1−2it , on
+the set {µ1 ≤ κγ + δ} the inner conditional expectation is
+N−M∏
+j=1
+ψ
+(
+t`νρν√
+n(ρν − µj)
+)
+exp
+− it`νρν√
+n
+N−M∑
+j=1
+1
+ρν − µj
+
+=
+N−M∏
+j=1
+(
+1− 2it`νρν√
+n(ρν − µj)
+)−1/2
+exp
+− it`νρν√
+n
+N−M∑
+j=1
+1
+ρν − µj
+ (65)
+Denoting by log z (z ∈ C) the principal branch of the complex logarithm we have(
+1− 2it`νρν√
+n(ρν − µj)
+)−1/2
+= exp
+(
+−1
+2
+log
+(
+1− 2it`νρν√
+n(ρν − µj)
+))
+Recalling the Taylor series expansion of log(1+z) (valid for |z| < 1), we can write, for n ≥ n∗(ν, γ, δ),
+large enough so that |t|`νρν√
+n(ρν−κγ−δ) <
+1
+2 , the conditional expectation (65) as
+exp
+1
+2
+N−M∑
+j=1
+∞∑
+k=1
+1
+k
+(
+2it`νρν√
+n
+1
+ρν − µj
+)k
+− it`νρν√
+n
+N−M∑
+j=1
+1
+ρν − µj
+
+The inner sum is dominated by a geometric series and hence finite for n ≥ n∗(ν, γ, δ) on the set
+Jγ(δ). Interchanging the order of summations, on Jγ(δ), the term within exponent becomes
+1
+2
+∞∑
+k=2
+1
+k
+(
+2it`νρν√
+n
+)k N−M∑
+j=1
+1
+(ρν − µj)k
+= − t
+2
+2
+2`2νρ2ν 1n
+N−M∑
+j=1
+1
+(ρν − µj)2
++ 1
+2
+∞∑
+k=3
+1
+k
+(
+2it`νρν√
+n
+)k N−M∑
+j=1
+1
+(ρν − µj)k
+(66)
+23
+Denoting the first term of (66) by an(t) and the second term by r̃n(t), for n ≥ n∗(ν, γ, δ), on Jγ(δ),
+|r̃n(t)| ≤
+t2
+3
+2`2νρ2ν 1n
+N−M∑
+j=1
+1
+(ρν − µj)2
+ ∞∑
+k=1
+(
+2|t|`νρν√
+n(ρν − κγ − δ)
+)k
+=
+t2
+3
+2`2νρ2ν 1n
+N−M∑
+j=1
+1
+(ρν − µj)2
+( 2|t|`νρν√
+n(ρν − κγ − δ)
+)(
+1− 2|t|`νρν√
+n(ρν − κγ − δ)
+)−1
+(67)
+Let G2(· ; ρ, γ, δ) to be the bounded function (defined for ρ > κγ + δ) defined through (90) in the
+appendix. Then on Jγ(δ), 1n
+∑N−M
+j=1
+1
+(ρν−µj)2 =
+N−M
+n
+∫
+G2(x; ρν , γ, δ)dF̂n,N−M (x) and the quantity
+on the RHS converges almost surely to γ
+∫
+G2(x; ρν , γ, δ)dFγ(x) = γ
+∫
+1
+(ρν−x)2dFγ(x). Moreover, on
+Jγ(δ), an(t) and r̃n(t) are bounded for n ≥ n∗(ν, γ, δ). Therefore, from this observation and (65)
+and (66),
+E
+[∣∣∣∣E(eitW2,n | M) exp( t2σ̃2(`ν)2
+)
+− 1
+∣∣∣∣ , Jγ(δ)] = E [| exp(an(t) + r̃n(t) + t2σ̃2(`ν)2
+)
+− 1|IJγ(δ)
+]
+≤ E
+[
+exp
+(
+an(t) +
+t2σ̃2(`ν)
+2
+)
+(exp (|r̃n(t)|)− 1) IJγ(δ)
+]
++ E
+[
+| exp
+(
+an(t) +
+t2σ̃2(`ν)
+2
+)
+− 1| IJγ(δ)
+]
+→ 0 + 0, as n→∞
+by bounded convergence theorem. Since t ∈ R is arbitrary, (64) follows.
+6 Approximation to the eigenvectors
+In this section we derive a first order asymptotic expansion of the vector bν associated with the
+eigenvalue ̂̀ν , when `ν is greater than 1 +√γ and has multiplicity 1. This expansion has already
+been used in the proof of Theorem 3. We proceed with the standard perturbation analysis approach.
+Our construction follows Kneip and Utikal (2001), (see also Kato, 1980, Chapter 2). First observe
+that ρν is the eigenvalue of ρν`ν Λ associated with the eigenvector eν . Define
+Rν =
+M∑
+k 6=ν
+`ν
+ρν(`k − `ν)
+ekeTk (68)
+Note that Rν is the resolvent of ρν`ν Λ “evaluated” at ρν . Then utilizing the defining equation (15)
+we can express
+(
+ρν
+`ν
+Λ− ρνI)bν = −(K(̂̀ν)− ρν
+`ν
+Λ)bν + (̂̀ν − ρν)bν
+Defining Dν = K(̂̀ν)− ρν`ν Λν , premultiplying both sides by Rν and observing that Rν(ρν`ν Λ−ρνI) =
+IM − eνeTν := P⊥ν we get,
+P⊥ν bν = −RνDνbν + (̂̀ν − ρν)Rνbν (69)
+24
+As a convention let us suppose 〈eν , bν〉 ≥ 0. Then expressing bν = 〈eν , bν〉eν +P⊥ν bν and observing
+that Rνeν = 0, we get
+bν − eν = −RνDνeν + rν (70)
+where
+rν = −(1− 〈eν , bν〉)eν −RνDν(bν − eν) + (̂̀ν − ρν)Rν(bν − eν)
+Now, define
+αν =‖ RνDν ‖ +|̂̀ν − ρν | ‖ Rν ‖ and βν =‖ RνDνeν ‖ (71)
+Lemma 1 : rν satisfies
+‖ rν ‖ ≤
+βν
+(
+αν(1+αν)
+1−αν(1+αν) +
+βν
+(1−αν(1+αν))2
+)
+if αν <
+√
+5−1
+2
+α2ν + 2αν always
+(72)
+Proof : Rewriting (69) we get
+P⊥ν bν = −RνDνeν −RνDν(bν − eν) + (̂̀ν − ρν)Rν(bν − eν) (73)
+From this
+yν :=‖ P⊥ν bν ‖ ≤ ‖ RνDνeν ‖ +(‖ RνDν ‖ +|̂̀ν − ρν | ‖ Rν ‖) ‖ bν − eν ‖= βν + αν ‖ bν − eν ‖
+(74)
+On the other hand, from the decomposition bν = 〈eν , bν〉eν + P⊥ν bν , and observing that
+1− 〈eν , bν〉 = 1−
+√
+1− ‖ P⊥ν bν ‖2 ≤‖ P⊥ν bν ‖2,
+we also have
+‖ bν − eν ‖ ≤ ‖ P⊥ν bν ‖ (1+ ‖ P⊥ν eν ‖) = yν(1 + yν) ≤ yν(1 + αν)
+where the last inequality is a result of the fact that from (69) one gets ‖ P⊥ν bν ‖≤ αν . Substituting
+this in (74) we get yν ≤ βν + αν(1 + αν)yν implying that yν ≤ βν1−αν(1+αν) whenever αν <
+√
+5−1
+2 .
+Therefore, if αν <
+√
+5−1
+2 then ‖ bν − eν ‖ ≤
+βν(1+αν)
+1−αν(1+αν) . Substituting this in the general bound
+‖ rν ‖ ≤ ‖ P⊥ν bν ‖2 +αν ‖ bν − eν ‖ (75)
+and using the last two relationships, we get the first inequality in (72). The second inequality is a
+trivial consequence of (75).
+25
+Next task is to establish that βν = oP (1) and αν = oP (1). First, consider the following
+decomposition.
+Dν = (SAA − Λ) + Λ1/2
+(
+T TM(ρνI −M)−1T −
+1
+n
+trace(M(ρνI −M)−1)I
+)
+Λ1/2
++
+(
+1
+n
+trace(M(ρνI −M)−1)− γ
+∫
+x
+ρν − x
+dFγ(x)
+)
+Λ
++ (ρν − ̂̀ν)Λ1/2T TM(ρνI −M)−1(̂̀νI −M)−1TΛ1/2 (76)
+Since ̂̀ν a.s.→ ρν > κγ and µ1 a.s.→ κγ , in view of the analysis carried out in Section 4, it is straightfor-
+ward to see that ‖ Dν ‖
+a.s.→ 0. Therefore, αν
+a.s.→ 0 and βν
+a.s.→ 0 from the definition (71). However,
+because of the special structure, we can get a much better bound for βν . For that we need to look
+at the term RνDνeν more closely, which we do now.
+Define V (i,ν) := T TM(ρνI −M)−iT − 1n trace(M(ρνI −M)
+−i)I for i = 1, 2. Expanding Dν
+upto second order around ρν , and observing that Rν∆eν = 0 for any diagonal matrix ∆, we have
+RνDνeν = Rν(SAA − Λ)eν +RνΛ1/2V (1,ν)Λ1/2eν + (ρν − ̂̀ν)RνΛ1/2V (2,ν)Λ1/2eν
++ (ρν − ̂̀ν)2 [RνΛ1/2T TM(ρνI −M)−2(̂̀νI −M)−1TΛ1/2eν] (77)
+= Rν(K(ρν)−
+ρν
+`ν
+Λ)eν + (ρν − ̂̀ν)RνK(ρν)eν + (̂̀ν − ρν)2rν
+where K(ρν) = Λ1/2V (2,ν)Λ1/2 and rν is the vector appearing inside square brackets the second line.
+From this expansion and the observations (i) all except the diagonal of the matrix Λ1/2T TM(ρνI−
+M)−iTΛ1/2eν is OP (n−1/2) for i = 1, 2 (obtained through an inequality similar to (38)), (ii) all
+except the diagonal of SAA is OP (n−1/2), and (iii) Rν is diagonal with (ν, ν)-th entry equal to 0, it
+easily follows that
+βν = OP (n−1/2) + (̂̀ν − ρν)2OP (1). (78)
+Remark : The proof of (78) is somewhat long winded and deliberately so. Note that if we use (i)
+and (ii) above, the condition Nn − γ = o(n
+−1/2), and a decomposition similar to the decomposition
+of (ν, ν)-th element of
+√
+n(K(ρν) − ρν`ν Λ) as Wn + W
+′
+n, as in the proof of Theorem 3, then by Bai
+and Silverstein (2004, Theorem 1.1) we immediately get ‖ Dν ‖= OP (n−1/2) + (̂̀ν − ρν)OP (1) by
+considering a second order expansion of Dν in the spirit of (76). However, the way we have done it,
+the bound in (78) is actually a concentration bound and does not depend on the asymptotic limit
+theorem of Bai and Silverstein (2004).
+As a simple consequence of (78), Lemma 1 and Theorem 3 we get the following:
+Corollary 1: When `ν > 1 +
+√
+γ and of multiplicity one, bν = eν +OP (n−1/2).
+26
+6.1 Explanation for expansion (60)
+RHS of (58) can be written as
+eTνK(̂̀ν)eν + 2eTνK(̂̀ν)(bν − eν) + (bν − eν)TK(̂̀ν)(bν − eν) (79)
+First term in (79) is the major contributor in (60), since it can be written as
+sνν + `νtTνM(ρνI −M)−1tν + (ρν − ̂̀ν)`νtTνM(ρνI −M)−2tν
++ (ρν − ̂̀ν)2`νtTνM(ρνI −M)−2(̂̀νI −M)−1tν
+Again, by (70), (71), (72) and (78),
+(bν − eν)TK(̂̀ν)(bν − eν) = ‖ bν − eν ‖2 OP (1)
+= β2ν OP (1) = OP (n
+−1) + (̂̀ν − ρν)2OP (n−1/2) + (̂̀ν − ρν)4OP (1)
+Finally, to check the negligibility of the second term in (79), we observe that by (70),
+eTνK(̂̀ν)(bν −eν) = −eTνDνRνDνeν + eTνK(̂̀ν)rν = −eTνDνRνDνeν + oP (n−1/2) + (̂̀ν −ρν)2oP (1),
+where in the last step we used (72) together with (78). Expanding Dνeν as in (77), and using the
+definition of Rν we get the expression
+eTνDνRνDνeν =
+M∑
+j=1
+(Rν)jj [(Dνeν)j ]2
+=
+M∑
+j 6=ν
+`ν
+ρν
+(
+`j`ν
+`j − `ν
+)[
+sjν√
+`j`ν
++ V (1,ν)jν + (ρν − ̂̀ν)V (2,ν)jν + (ρν − ̂̀ν)2Ṽ (3,ν)jν
+]2
+where Ṽ (3,ν) = T TM(ρνI −M)−2(̂̀νI −M)−1T . Observe that for j 6= ν, each of the terms sjν ,
+V
+(1,ν)
+jν and V
+(2,ν)
+jν is OP (n
+−1/2) and Ṽ (3,ν)jν = OP (1). It follows that
+eTνDνRνDνeν = OP (n−1) + (̂̀ν − ρν)2OP (n−1/2) + (̂̀ν − ρν)4OP (1)
+6.2 Proof of Theorem 4
+Part (a) : As a convention we choose 〈pν , ẽν〉 ≥ 0. First note that with pA,ν as in (8)
+〈pν , ẽν〉 = 〈pA,ν , eν〉 =
+√
+1−R2ν 〈bν , eν〉
+Since βν
+a.s.→ 0, αν
+a.s.→ 0, from (70) and (72), 〈bν , eν〉
+a.s.→ 1. Therefore, from (17), (62), Theorem 2
+and above display, we have
+1
+1−R2ν
+a.s.→ 1 + `νγ
+∫
+x
+(ρν − x)2
+dFγ(x)
+27
+from which we get (6) after invoking Lemma B.2.
+Part (b) : From (17) it is clear that in order that (7) holds, we need either bTν Λ
+1/2T TM(̂̀νI −
+M)−2TΛ1/2bν
+a.s.→ ∞ or 〈bν , eν〉
+a.s.→ 0. Clearly, we can no longer use the perturbation analysis
+argument to study the behaviour of bν , since in this case ̂̀ν a.s.→ κγ . However we shall show that
+the smallest eigenvalue of the matrix E := T TM(̂̀νI −M)−2T diverges to infinity almost surely.
+This will prove the result.
+Our approach will be to show that given  > 0, we can find a C > 0 such that the probability
+P(λmin(E) ≤ C) is summable over n and that C →∞ as → 0.
+First, denote the rows of T by tTj , j = 1, . . . , N −M (treated as an 1×M vector). tj ’s are to
+be distinguished from the vectors t1, . . . , tM , the columns of T . In fact tTj = (tj1, . . . , tjM ). Then
+E =
+N−M∑
+j=1
+µj
+(̂̀ν − µj)2 tjtTj ≥
+N−M∑
+j=ν
+µj
+(̂̀ν − µj)2 tjtTj =: Eν , say,
+in the sense of inequalities between positive semi-definite matrices. Thus λmin(E) ≥ λmin(Eν).
+Then on the set J1,ν := {̂̀ν < κγ + , µ1 < κγ + /2}, we have
+Eν ≥
+N−M∑
+j=ν
+µj
+(κγ + − µj)2
+tjtTj =: Eν
+since by interlacing inequality ̂̀ν ≥ µν . Thus, in view of Proposition 5, we only need to provide a
+lower bound for the smallest eigenvalue of Eν . However, it will be more convenient to work with
+the matrix
+E =
+N−M∑
+j=1
+µj
+(κγ + − µj)2
+tjtTj = T
+TM((κγ + )I −M)−2T (80)
+Proving summability of P(λmin(E) ≤ C, J1,ν) suffices because it is easy to see that ‖ Eν−E ‖
+a.s.→ 0
+as n→∞.
+By Proposition 6, and calculations similar to those in deriving (38), respectively, given δ > 0,
+such that δ < 16(κγ+/2)
+2
+, ∃ n5(δ, , γ) such that for all n ≥ n5(δ, , γ),
+P(|tTjM((κγ + )I −M)−2tj − γ
+∫
+x
+(κγ + − x)2
+dFγ(x)| > δ, J1,ν)
+≤ 2 exp
+(
+− n
+N −M
+n(δ/4)2(/2)4
+6(κγ + /2)2
+)
++ 2 exp
+(
+− n
+n+N −M
+n2(δ/4)2
+2
+(/2)6
+16(κγ + )2(κγ + /2)
+)
++2 exp
+(
+− n
+n+N −M
+n2(δ/4)2
+2
+(/2)4
+4(κγ + /2)
+)
+, 1 ≤ j ≤M, (81)
+and
+P(|tTjM((κγ + )I −M)−2tk| > δ, J1,ν) ≤ 2 exp
+(
+− n
+N −M
+nδ2(/2)4
+3(κγ + /2)2
+)
+, 1 ≤ j 6= k ≤M.
+(82)
+28
+If a symmetric matrix A is written as A = B + C where B is a diagonal matrix with the same
+diagonal as A, then |λmin(A)− λmin(B)| ≤‖ C ‖HS . If we denote the RHS of (81) and (82) by ε5
+and ε6, respectively, then similar decomposition of the matrix E yields
+P(λmin(E) ≤
+∫
+x
+(κγ + − x)2
+dFγ(x)− δ(1 +
+√
+M(M − 1)), J1,ν) ≤Mε5 +
+M(M − 1)
+2
+ε6 (83)
+for 0 < δ < 16(κγ+/2)
+2
+, and for all n ≥ n5(δ, , γ).
+On the other hand, observe that if 0 <  < 2γ, then∫
+x
+(κγ + − x)2
+dFγ(x) >
+∫ κγ−/2
+κγ−
+x
+(κγ + − x)2
+fγ(x)dx
+=
+1
+2πγ
+∫ κγ−/2
+κγ−
+√
+(κγ − x)(x− (1−
+√
+γ)2)
+(κγ + − x)2
+dx >
+1
+2πγ
+[
+1
+(2)2
+√
+
+2
+√
+κγ − − (1−
+√
+γ)2
+]
+
+2
+=
+1
+16
+√
+2πγ
+√
+4γ − √
+
+>
+1
+16
+√
+γπ
+1√
+
+Therefore set δ = (1 +
+√
+M(M − 1))−1 and choose  small enough so that
+√
+γ
+16π
+1√
+
+−  > 0. Call
+the last quantity C and observe that C satisfies the requirement : C →∞ as → 0. By (83) the
+result follows.
+7 Appendix A
+7.1 Weak concentration inequalities for random quadratic forms
+The following two lemmas will be referred to as weak concentration inequalities.
+Suppose C : X → Rn×n is a measureable function. Let Z be a random variable taking values
+in X . Let ‖ C ‖ denote the operator norm of C, i.e., the largest singular value of K.
+Lemma A.1 : Suppose X and Y are i.i.d. Nn(0, I) independent of Z. Then for every L > 0 and
+0 < δ < 1,
+P(
+1
+n
+|XTC(Z)Y | > t, ‖ C(Z) ‖≤ L) ≤ 2 exp
+(
+−(1− δ)nt
+2
+2L2
+)
+, for 0 < t <
+δ
+1− δ
+L (84)
+Lemma A.2 : Suppose X is distributed as Nn(0, I) independent of Z. Also let C(z) = CT (z)
+for all z ∈ X . Let trace(B) denote the trace of a square matrix B. Then, for every L > 0 and
+0 < δ < 1,
+P(
+1
+n
+|XTC(Z)X − trace(C(Z))| > t, ‖ C(Z) ‖≤ L) ≤ 2 exp
+(
+−(1− δ)nt
+2
+4L2
+)
+, for 0 < t <
+2δ
+1− δ
+L
+(85)
+29
+Proof of Lemma A.1 : In the proof for convenience we occassionally write C instead of C(Z).
+Let 0 < λ < δL . Then if Z ∈ DL with DL := {z :‖ C(z) ‖≤ L},
+P(
+1
+n
+XTC(Z)Y > t|Z) ≤ e−nλtE
+[
+eλX
+TC(Z)Y |Z
+]
+= e−nλtE
+[
+exp
+(
+λ2
+2
+‖ CY ‖2
+)
+|Z
+]
+= e−nλt(2π)−n/2
+∫
+Rn
+exp
+(
+−1
+2
+yT (I − λ2CTC)y
+)
+dy
+= e−nλt det(I − λ2CTC)−1/2 (86)
+The last step is justified by the fact that λ2 ‖ CTC ‖≤ λ2L2 < 1 (by choice of λ) so the matrix
+I − λ2CTC is positive definite on DL. Now, use the fact that log det(I − λ2CTC) =
+∑n
+i=1 log(1−
+λ2σ2i (C)), where σi(C) is the i-th largest singular value of C. Thus, since Z ∈ DL,
+− log det(I−λ2CTC) =
+n∑
+i=1
+∞∑
+k=1
+1
+k
+(λ2σ2i (C))
+k ≤ λ2(
+n∑
+i=1
+σ2i (C))
+∞∑
+k=1
+1
+k
+(λL)2(k−1) < nλ2L2
+∞∑
+k=0
+(λ2L2)k
+The geometric series in the last term converges for λ < 1L and hence combining with (86) we get,
+for 0 < δ < 1,
+P(
+1
+n
+XTC(Z)Y > t|Z) ≤ inf
+0<λ< δ
+L
+e
+−nλt+ 1
+2(1−δ2)
+nλ2L2
+< inf
+0<λ< δ
+L
+e
+−nλt+ 1
+2(1−δ)nλ
+2L2 (87)
+The function ft(λ) := −nλt + 12(1−δ)nλ
+2L2 achieves its global minimum at λt =
+t(1−δ)
+L2
+. Therefore
+if t < δL1−δ then λt <
+δ
+L so that we get the upper bound exp(ft(λt)) = −
+(1−δ)nt2
+2L2
+in (87) for Z ∈ DL.
+By symmetry, the same upper bound holds for P( 1nX
+TC(Z)Y < −t|Z) and combining these two
+and then taking expectation w.r.t. the distribution of Z over the set DL we get (84).
+Proof of Lemma A.2 : As in the proof of Lemma A.1, for Z ∈ DL, 0 < λ < δL , and t > 0,
+P(
+1
+n
+(XTC(Z)X − trace(C(Z))) > t|Z) ≤ e−
+λ
+2
+(nt+trace(C(Z)))E
+[
+e
+λ
+2
+XTC(Z)X |Z
+]
+= e−
+λ
+2
+(nt+trace(C)) det(I − λC)−1/2, (88)
+where in the second step we use the fact that I − λC is positive definite. Denoting the eigenvalues
+of C(Z) in decreasing order by µi(C), we have (since by assumption ‖ C ‖≤ L < 1λ)
+− log det(I − λC)− λ trace(C) =
+n∑
+i=1
+∞∑
+k=1
+1
+k
+(λµi(C))k − λ trace(C) =
+∞∑
+k=2
+1
+k
+λk
+n∑
+i=1
+(µi(C))k
+≤ nλ
+2L2
+2
+∞∑
+k=2
+2
+k
+(λL)k−2 ≤ nλ
+2L2
+2
+∞∑
+k=0
+(λL)k,
+where the inequality in the third step is by ‖ C(Z) ‖ = max{|µ1|, |µn|}. Now the rest of the proof
+simply retraces the argument of the proof of Lemma A.1 and is therefore omitted.
+30
+7.2 Concentration inequalities for Lipschitz functionals of random matrices
+We restate Corollary 1.8(b) of Guionnet and Zeitouni (2000) in our context.
+Lemma A.3 : Suppose Y is an m× n matrix, m ≤ n, with independent (real or complex) entries
+Ykl following law Pkl, 1 ≤ k ≤ m, 1 ≤ l ≤ n. Let S∆ = Y∆Y∗ be a generalized Wishart matrix
+where ∆ is a diagonal matrix with real, nonnegative diagonal entries and spectral radius φ∆ > 0.
+Suppose the family {Pkl : 1 ≤ k ≤ m, 1 ≤ l ≤ n} satisfies the logarithmic Sobolev inequality with
+uniformly bounded constant c. Then for any function f such that g(x) := f(x2) is Lipschitz, for
+any δ > 0,
+P
+(
+| 1
+m
+trace f(
+1
+m+ n
+S∆)− E(
+1
+m
+trace f(
+1
+m+ n
+S∆))| > δ
+)
+≤ 2 exp
+(
+− m
+2δ2
+2cφ∆|g|2L
+)
+(89)
+where |g|L is the Lipschitz norm of g.
+In order to apply this result to our context we take m = N −M , Y = ZB and ∆ = m+nn In,
+and recall that N(0, 1) satisfies logarithmic Sobolev inequality with constant c = 1 (Bogachev,
+1998, Theorem 1.6.1). Then define fk(x) = Gk(x; ρ, γ, ), k = 1, 2, where Gk(x; ρ, γ, ) is defined
+in (90), and gk(x) = fk(x2), and notice that gk(x) is Lipschitz with |gk|L = 2k(κγ+)
+1/2
+(ρ−κγ−)k+1 . Further,
+φ∆ = m+nn and S∆ = (m+ n)SBB.
+Gk(x; ρ, γ, ) =
+
+1
+(ρ−x)k x ≤ κγ + 
+1
+(ρ−κγ−)k x > κγ + 
+where ρ > κγ + , k = 1, 2, . . . (90)
+Therefore, applying Lemma A.3 we get the following :
+Proposition A.1 : For k = 1, 2, and any δ > 0,
+P
+(
+| 1
+n
+trace Gk(SBB; ρ, γ, )− E(
+1
+n
+trace Gk(SBB; ρ, γ, ))| > δ
+)
+≤ 2 exp
+(
+− n
+n+N −M
+n2δ2
+2
+(ρ− κγ − )2(k+1)
+4k2(κγ + )
+)
+= 2 exp
+(
+− n
+2δ2
+2(1 + γ)
+(ρ− κγ − )2(k+1)
+4k2(κγ + )
+(1 + o(1))
+)
+(91)
+7.3 Proof of Proposition 2
+If we denote the singular values of ZB by σ1(ZB) > σ2(ZB) > . . . > σN−M (ZB). Using a concen-
+tration inequality for singular values of random matrices (Ledoux, 2001),
+P(|σi(ZB)−m(σi(ZB))| > r) ≤ 2e−
+r2
+4 , r > 0, 1 ≤ i ≤ N −M (92)
+where m(σi(ZB)) is a median of σi(ZB). In this case, since N −M < n (at least for sufficiently
+large n), the distribution of σi(ZB) is continuous so that the median is unique.
+31
+Now, since µi := λi(SBB) = 1n(σi(ZB))
+2 and σi(ZB) ≥ 0 so that
+m(µi) := m(λi(SBB)) = m(σi(SBB)) =
+1
+n
+m(σi(ZB))2,
+it follows that for r > 0 and every i = 1, . . . , N −M ,
+2e−
+nr2
+4 ≥ P(| 1√
+n
+σi(ZB)−
+1√
+n
+m(σi(ZB))| > r) ≥ P(|µi −m(µi)| > r(2
+√
+m(µi) + r)) (93)
+The last inequality follows from the fact that for real numbers x, y ∈ R+, on the set |x− y| ≤ r, we
+have |x2− y2| = |x− y|(x+ y) ≤ r(2y+ r), and then taking x = 1√
+n
+σi(ZB) and y = 1√nm(σi(ZB)).
+Denoting m(µi) by mi for convenience, set s = r(2
+√
+mi + r) = (r +
+√
+mi)2 −mi. Then solving
+for r we get for s > 0, r =
+√
+s+mi −
+√
+mi. Substituting in the last display we get
+P(|µi −mi| > s) ≤ 2e−
+n
+4
+(
+√
+s+mi−
+√
+mi)
+2
+, s > 0, i = 1, . . . , N −M. (94)
+The next step in the proof of Proposition 2 is to use the following results on the weak convergence
+of the largest eigenvalue in the identity covariance case. The limiting distribution F1 is the so-called
+Tracy-Widom law of order 1.
+Result [Johnstone (2001a)] : When Nn → γ ∈ (0, 1), under the assumption of normality
+γ−1/2(1 +
+√
+γ)−4/3(N −M)2/3
+µ1 −(1 +√N −M
+n
+)2 =⇒ F1. (95)
+By (95) it follows that γ−1/2(1 +
+√
+γ)−4/3N2/3(m1 − (1 +
+√
+N−M
+n )
+2)→ m(F1) where m(F1) is the
+median of F1. In particular,
+m1 − κγ = O(|
+N
+n
+− γ|) +O(n−2/3) (96)
+Now to complete the proof of Proposition 2 observe that
+√
+s+m1 −
+√
+m1 =
+s√
+s+m1 +
+√
+m1
+≥ s
+2
+√
+m1
+>
+s
+2
+√
+κγ + δ/4
+for n ≥ n0(γ, δ). Now since δ < κγ/2 implies κγ + δ4 <
+9
+8κγ , for n ≥ n0(γ, δ) we have
+√
+s+m1 −
+√
+m1 >
+√
+2s
+3
+√
+κγ
+. Therfore, choosing s = 3δ4 and substituting in (94) we get the result after applying
+the condition |m1 − κγ | ≤ δ4 . Note also that by (96) we also get the rate at which n0(γ, δ) should
+grow as δ ↓ 0.
+8 Appendix B
+8.1 Expression for ρν
+Lemma B.1 : For `ν ≥ 1 +
+√
+γ, ρν = `ν
+(
+1 + γ`ν−1
+)
+solves (3).
+32
+Proof : We prove this by showing that for any ` > 1 +
+√
+γ we have∫
+x
+ρ(`)− x
+fγ(x)dx =
+1
+`− 1
+(97)
+where ρ(`) = `
+(
+1 + γ`−1
+)
+, and fγ(x) is the density of Marchenko-Pastur law with parameter γ(≤ 1)
+and is given by
+fγ(x) =
+1
+2πγx
+√
+(b(γ)− x)(x− a(γ))I(a(γ) ≤ x ≤ b(γ)), where a(γ) = (1−√γ)2, b(γ) = (1+√γ)2
+The LHS of (97) is equal to
+1
+2πγ
+∫ b(γ)
+a(γ)
+√
+(b(γ)− x)(x− a(γ))
+ρ(`)− x
+dx
+=
+1
+2πγ
+∫ 2√γ
+−2√γ
+√
+(2
+√
+γ − y)(y + 2√γ)
+ρ(`)− (1 + γ)− y
+dy, (setting y = x− (1 + γ))
+Since ρ(`)− (1 + γ) = (`− 1) + γ`−1 , setting K = `− 1 we can rewrite the last expression as
+K
+2πγ
+∫ 2√γ
+−2√γ
+√
+4γ − y2
+K2 + γ −Ky
+dy
+=
+2K
+π
+∫ 1
+−1
+√
+1− z2
+K2 + γ − 2K√γz
+dz, (setting z =
+y
+2
+√
+γ
+)
+=
+2K
+π
+[∫ 1
+0
+√
+1− z2
+(
+1
+K2 + γ − 2K√γz
++
+1
+K2 + γ + 2K
+√
+γz
+)
+dz
+]
+=
+4K(K2 + γ)
+π
+∫ 1
+0
+√
+1− z2
+(K + γ)2 − 4K2γz2
+dz
+=
+4K(K2 + γ)
+π
+∫ π/2
+0
+cos2 θ
+(K + γ)2 − 4K2γ sin2 θ
+dθ, (setting sin θ = z)
+=
+(
+K2 + γ
+Kγ
+)
+1
+π
+∫ π/2
+0
+(K2 + γ)2 − 4K2γ sin2 θ − ((K2 + γ)2 − 4K2γ)
+(K2 + γ)2 − 4K2γ sin2 θ
+dθ
+Substituting the formula for indefinite integral (for a2 > b2)∫
+dx
+a2 − b2 sin2 cx
+=
+1
+ac
+√
+a2 − b2
+tan−1
+(√
+a2 − b2 tan cx
+a
+)
+(98)
+and then using the fact that tan 0 = 0 and tan π2 =∞, the last expression equals(
+K2 + γ
+Kγ
+)
+1
+π
+[
+π
+2
+− (K
+2 − γ)2
+(K2 + γ)(K2 − γ)
+π
+2
+]
+=
+1
+2
+(
+K2 + γ
+Kγ
+)
+(K2 + γ)− (K2 − γ)
+K2 + γ
+=
+1
+K
+thus completing the proof for the case ` > 1 +
+√
+γ. The case ` = 1 +
+√
+γ follows from this by
+applying Monotone convergence theorem to the nonnegative functions { xρ(`)−xI(a(γ) < x < b(γ)) :
+` ≥ 1 +√γ}, since ρ(`) is monotonically increasing in ` ∈ [1 +√γ,∞).
+33
+Lemma B.2 : For ` > 1 +
+√
+γ,∫
+x
+(ρ(`)− x)2
+dFγ(x) =
+1
+(`− 1)2 − γ
+(99)
+Proof : Just as in the proof of Lemma B.1, after substituting z = (2
+√
+γ)−1(x − (1 + γ)), and
+letting K = `− 1 we get∫
+x
+(ρ(`)− x)2
+dFγ(x)
+=
+2K2
+π
+∫ 1
+−1
+√
+1− z2
+(K2 + γ − 2K√γz)2
+dz
+=
+2K2
+π
+∫ 1
+0
+√
+1− z2
+(
+1
+(K2 + γ − 2K√γz)2
++
+1
+(K2 + γ + 2K
+√
+γz)2
+)
+dz
+=
+2K2
+π
+∫ 1
+0
+2((K2 + γ)2 + 4K2γz2)
+√
+1− z2
+((K2 + γ)2 − 4K2γz2)2
+dz
+=
+4K2
+π
+∫ 1
+0
+2(K2 + γ)2
+√
+1− z2
+((K2 + γ)2 − 4K2γz2)2
+dz − 4K
+2
+π
+∫ 1
+0
+√
+1− z2
+(K2 + γ)2 − 4K2γz2
+dz
+=
+8K2(K2 + γ)2
+π
+∫ π/2
+0
+cos2 θdθ
+((K2 + γ)2 − 4K2γ sin2 θ)2
+− 1
+K2 + γ
+, setting sin θ = z and by (97)
+=
+8K2(K2 + γ)2
+π
+1
+4K2γ
+∫ π/2
+0
+(K2 + γ)2 − 4K2γ sin2 θ − ((K2 + γ)2 − 4K2γ)
+((K2 + γ)2 − 4K2γ sin2 θ)2
+dθ − 1
+K2 + γ
+=
+2(K2 + γ)2
+πγ
+[∫ π/2
+0
+dθ
+(K2 + γ)2 − 4K2γ sin2 θ
+−
+∫ π/2
+0
+(K2 − γ)2dθ
+((K2 + γ)2 − 4K2γ sin2 θ)2
+]
+− 1
+K2 + γ
+=
+2(K2 + γ)2
+πγ
+1
+(K2 + γ)(K2 − γ)
+π
+2
+− 1
+2(K2 + γ)
+− 2(K
+4 − γ2)2
+πγ
+∫ π/2
+0
+dθ
+((K2 + γ)2 − 4K2γ sin2 θ)2
+,
+=
+1
+γ
+(
+K2 + γ
+K2 − γ
+)
+− 1
+K2 + γ
+− (K
+4 − γ2)2
+πγ
+∫ π
+0
+dφ
+(K4 + γ2 + 2K2γ cosφ)2
+(100)
+where eighth equality is due to (98) and in the last step we used cos 2θ = 1− 2 sin2 θ before setting
+φ = 2θ. Since for a > b we have∫
+dx
+(a+ b cosx)2
+= − b sinx
+(a2 − b2)(a+ b cosx)
++
+a
+a2 − b2
+∫
+dx
+a+ b cosx
+= − b sinx
+(a2 − b2)(a+ b cosx)
++
+2a
+(a2 − b2)3/2
+tan−1
+(√
+a2 − b2 tan x2
+a+ b
+)
+setting a = K4 + γ2 and b = 2K2γ we get
+(K4 − γ2)2
+πγ
+∫ π
+0
+dφ
+(K4 + γ2 + 2K2γ cosφ)2
+=
+(K4 − γ2)2
+πγ
+2(K4 + γ2)
+((K4 + γ2)2 − 4K4γ2)3/2
+π
+2
+=
+1
+γ
+(
+K4 + γ2
+K4 − γ2
+)
+34
+Substituting the last expression in (100) we get∫
+x
+(ρ(`)− x)2
+dFγ(x) =
+1
+γ
+(
+K2 + γ
+K2 − γ
+)
+− 1
+K2 + γ
+− 1
+γ
+(
+K4 + γ2
+K4 − γ2
+)
+=
+(K2 + γ)2 − γ(K2 − γ)− (K4 + γ2)
+γ(K2 − γ)(K2 + γ)
+=
+1
+K2 − γ
+8.2 Lower bound on eigenvalues in the general case
+In this section we provide a lower bound for the sample eigenvalues ̂̀ν which holds with high
+probability when `ν > 1 +
+√
+γ. It will be more useful to provide a lower bound for λ̂ν,ν = λν(SΓν ).
+We do that using equations (14) and (15) and the observation that for any ν ≥ 1
+ν∑
+k=1
+λk(SΓν ) = maxL∈Oν,N−M+ν
+trace (LTSΓνL) (101)
+where Oν,N−M+ν is the set of (N −M + ν)× ν matrices whoses columns are orthonormal. Thus,
+our approach is to construct an appropriate Lν for every ν with `ν > 1 +
+√
+γ such that the lower
+bound trace (LTν SΓνLν) is close to
+∑ν
+k=1 ρk.
+Thereafter by utilizing (21) we have
+ν−1∑
+k=1
+λ1(SΓk−1) + λν(SΓν ) ≥
+ν−1∑
+k=1
+̂̀
+k + λν(SΓν ) ≥
+ν∑
+k=1
+λk(SΓν ) (102)
+We construct the (N −M + ν)× ν matrix Lν as follows. Let R̃k, k = 1, . . . , ν be numbers between
+0 and 1 to be specified. Write
+Lν =
+[
+LA,ν
+LB,ν
+]
+where LA,ν = diag(
+√
+1− R̃21, . . . ,
+√
+1− R̃2ν)
+and LB,ν = V Ξ̃D̃ where D̃ = diag(R̃1, . . . , R̃ν), V is as in (13) and the matrix Ξ̃ = (ζ̃1 : . . . : ζ̃ν)
+is obtained by Gram-Schmidt orthonormalization of the matrix Ξ whose columns are ζk/ ‖ ζk ‖
+where
+ζk =
+√
+`kM1/2(ρkI −M)−1tk, k = 1, . . . , ν (103)
+To be specific, we set ζ̃ν = ζν/ ‖ ζν ‖ and assume that the orthonormalization is carried out
+backwards (w.r.t. the columns of Ξ). First thing to notice is that
+‖ ζk ‖2= `ktTkM(ρkI −M)−2tk
+and
+ζ
+T
+j ζk =
+√
+`j`kt
+T
+jM(ρkI −M)−1(ρjI −M)−1tk, for 1 ≤ j 6= k ≤ ν
+35
+With Jγ() = {µ1 < κγ + }, we have, due to Lemma A.1 (taking δ = 13 in the lemma),
+P(ζTj ζk ≥
+√
+`j`kδ0, Jγ(/2))
+= 2 exp
+(
+− n
+N −M
+(ρj − /2− κγ)2(ρk − /2− κγ)2nδ20
+12(κγ + /2)2
+)
+= 2 exp
+(
+−1
+γ
+(ρj − /2− κγ)2(ρk − /2− κγ)2nδ20
+12(κγ + /2)2
+(1 + o(1))
+)
+,
+for 0 < δ0 <
+2(κγ + /2)
+(ρj − /2− κγ)(ρk − /2− κγ)
+for 1 ≤ j 6= k ≤ ν (104)
+We now choose R̃k as
+R̃k =
+‖ ζk ‖√
+1+ ‖ ζk ‖2
+or
+√
+1− R̃2k =
+1√
+1+ ‖ ζk ‖2
+(105)
+Our aim is to prove the following proposition.
+Proposition B.1 : With this choice of Lν , given  > 0, ∃ n6(,Λ, γ) such that for n ≥ n6(,Λ, γ),
+P(trace(LTν SΓνLν) ≤
+ν∑
+k=1
+ρk − /2, µ1 < κγ + /2) ≤ ε7(n, ,Λ, γ) (106)
+where
+∑∞
+n=n6(,Λ,γ)
+ε7(n, ,Λ, γ) <∞.
+Once we have this result, we apply Proposition 3 (with ρν +  replaced by ρk + /(2ν) and ̂̀ν
+replaced by λ1(SΓk−1), k = 1, . . . , ν − 1; the validity of this is readily cheked by following the first
+step of the proof), utilize (101), (102), and the inequality ̂̀ν ≥ λν(SΓν ), in combination with (106)
+to prove the following.
+Proposition B.2 : Given  > 0, ∃ n7(,Λ, γ) such that for n ≥ n7(,Λ, γ),
+P(̂̀ν ≤ ρν − , µ1 < κγ + /2) ≤ ε8(n, ,Λ, γ)
+where
+∑∞
+n=n7(,Λ,γ)
+ε8(n, ,Λ, γ) <∞, provided  is small enough so that ρν > κγ + 2.
+The rest of the section is devoted to giving an outline of the proof of Proposition B.1. First step
+in that direction is to express trace(LTν SΓνLν) as
+trace(LTν SΓνLν) = trace(L
+T
+A,νSAA,νLA,ν) + 2 trace(L
+T
+A,νSAB,νLB,ν) + trace(L
+T
+B,νSBBLB,ν)
+(107)
+Here, as before, SAA,ν denotes the submatrix of SAA consisting of first ν rows and first ν columns.
+SAB,ν is analogously defined. By definition of LA,ν ,
+trace(LTA,νSAA,νLA,ν) =
+ν∑
+k=1
+(1− R̃2k)skk =
+ν∑
+k=1
+(1− R̃2k)`k
+1
+n
+‖ ZA,k ‖2 (108)
+36
+Next,
+trace(LTA,νSAB,νLB,ν) = trace(L
+T
+A,νΛ
+1/2
+ν T
+T
+ν M1/2Ξ̃D̃) =
+ν∑
+k=1
+R̃k
+√
+1− R̃2k
+√
+`kt
+T
+kM1/2ζ̃k (109)
+Finally,
+trace(LTB,νSBBLB,ν) = trace(D̃Ξ̃
+TMΞ̃D̃) =
+ν∑
+k=1
+R̃2kζ̃
+T
+kMζ̃k (110)
+Now let us find an expression for ζ̃k. By definition, ζ̃ν = ζν/ ‖ ζν ‖ and
+ζ̃j =
+ ζj
+‖ ζj ‖
+−
+ν∑
+k=j+1
+cjkζ̃k
+ / ‖ ζj
+‖ ζj ‖
+−
+ν∑
+k=j+1
+cjkζ̃k ‖, j = ν − 1, ν − 2, . . . , 1, (111)
+where cjk are determined from the orthogonality relations. Therefore,
+cjk =
+〈ζj , ζ̃k〉
+‖ ζj ‖
+, for ν ≥ k > j.
+Thus we can express Ξ̃ as Ξ∆ where ∆ is a lower triangular matrix whose entries are given as
+follows:
+∆jk =
+0 if 1 ≤ k ≤ j − 1−cjk∆jj if j + 1 ≤ k ≤ ν with ∆jj =
+‖ ζj
+‖ ζj ‖
+−
+ν∑
+k=j+1
+cjkζ̃k ‖
+−1
+Note that
+∆−2jj =
+‖ ζk ‖2
+‖ ζk ‖2
+− 2
+∑
+k>j
+cjk
+〈ζj , ζ̃k〉
+‖ ζj ‖
++
+∑
+k>j
+c2jk = 1−
+∑
+k>j
+c2jk
+This implies that for k > j,
+cjk =
+〈ζj , ζ̃k〉
+‖ ζj ‖
+=
+∑
+k′≥k
+〈ζj , ζk′〉
+‖ ζj ‖ · ‖ ζk′ ‖
+∆kk′
+= ∆kk
+(
+〈ζj , ζk〉
+‖ ζj ‖ · ‖ ζk ‖
+−
+∑
+k′>k
+〈ζj , ζk′〉
+‖ ζj ‖ · ‖ ζk′ ‖
+ckk′
+)
+= ∆kk(τjk −
+∑
+k′>k
+τjk′ckk′) (112)
+where τjk =
+〈ζj ,ζk〉
+‖ζj‖·‖ζk‖
+. Moreover,
+|1−∆kk| =
+∣∣∣∣∣∣1− 1√1−∑k′>k c2kk′
+∣∣∣∣∣∣ ≤
+∑
+k′>k c
+2
+kk′
+1−
+∑
+k′>k c
+2
+kk′
+=⇒ ∆kk ≤
+1
+1−
+∑
+k′>k c
+2
+kk′
+(113)
+37
+We aim to show that ζ̃j is close to
+ζj
+‖ζj‖
+. The following lemma helps us make such a statement.
+Lemma B.3 : Let A > 1 be arbitrary. Suppose δ > 0 is such that δ < A−1
+νA2
+. If |τjk| ≤ δ for all
+ν ≥ k > j ≥ 1, then
+|cjk| ≤ Aδ, and ∆jj ≤
+1
+1− (ν − j)A2δ2
+, ν ≥ k > j ≥ 1. (114)
+Proof : We prove the result by backward induction on j, k. First note that cjν = τjν for j =
+1, . . . , ν − 1. Thus |cjν | ≤ δ for j = 1, . . . , ν − 1. And by (113), ∆ν−1,ν−1 ≤ 11−δ2 . So the induction
+hypothesis is satisfied for j = ν − 1, k = ν. Suppose the hypothesis holds for all ν ≥ k > j ≥ J + 1
+where J ≥ 1. Want to show that the same holds for j = J . Evidently |cJν | ≤ δ. From (112) we
+have, for k = J + 1, . . . , ν − 1
+|cJk| ≤ ∆kk(|τJk|+
+∑
+k′>k
+|τJk||ckk′ |) ≤
+1
+1− (ν − k)A2δ2
+(δ +
+ν∑
+k′=k+1
+δ ·Aδ) (by hypothesis)
+=
+δ(1 + (ν − k)Aδ)
+1− (ν − k)A2δ2
+≤ δ(1 + (ν − k)Aδ)
+1− (ν − k)2A2δ2
+=
+δ
+1− (ν − k)Aδ
+≤ Aδ
+Here the last inequality follows from the fact
+1
+1− (ν − k)Aδ
+≤ A ⇔ 1− 1
+A
+≥ (ν − k)Aδ ⇔ δ ≤ A− 1
+(ν − k)A2
+and the last condition holds since δ < A−1
+νA2
+. The assertion about ∆JJ follows easily from this and
+(113).
+We are now in a position to finish the proof of Proposition B.1. We avoid all the messy details
+since most of it is mere repitition of the analysis we carried out in Section 4. We just show how
+the three terms behave asymptotically as n → ∞. Proposition 6 shows that for large n, ‖ ζk ‖2
+concentrates around `kγ
+∫
+x
+(ρk−x)2
+dFγ(x) = `kγ(`k−1)2−1 . This and (104) imply that for every pair
+j 6= k, τjk concentrates about 0. Therefore by Lemma B.3 we see that ζ̃j − ζj/ ‖ ζj ‖ is a
+vector whose norm concentrates around zero. With this piece of information, we can strip off the
+insignificant terms in (109) and (110) to claim that
+trace(LTA,νSAB,νLB,ν) ∼
+ν∑
+k=1
+1
+‖ ζk ‖
+R̃k
+√
+1− R̃2k
+√
+`kt
+T
+kM1/2ζk
+and trace(LTB,νSBBLB,ν) ∼
+ν∑
+k=1
+1
+‖ ζk ‖2
+R̃2kζ
+T
+kMζk
+where ∼ means that the difference between the LHS and RHS concentrates around 0 as n → ∞.
+Recalling (103) and (105), and using Proposition 6 and parts of the proof of Proposition 3, it is
+easy to show that
+trace(LTA,νSAA,νLA,ν) ∼
+ν∑
+k=1
+1
+1+ ‖ ζk ‖2
+`k ∼
+ν∑
+k=1
+`k
+(
+1 +
+`kγ
+(`k − 1)2 − γ
+)−1
+(115)
+38
+trace(LTA,νSAB,νLB,ν) ∼
+ν∑
+k=1
+1
+1+ ‖ ζk ‖2
+`kt
+T
+kM(ρkI −M)−1tk
+∼
+ν∑
+k=1
+`kγ
+`k − 1
+(
+1 +
+`kγ
+(`k − 1)2 − γ
+)−1
+(116)
+trace(LTA,νSAB,νLB,ν) ∼
+ν∑
+k=1
+1
+1+ ‖ ζk ‖2
+`kt
+T
+kM2(ρkI −M)−2tk
+∼
+ν∑
+k=1
+`kγ
+(
+1 +
+`kγ
+(`k − 1)2 − γ
+)−1 [ ρk
+(`k − 1)2 − 1
+− 1
+`k − 1
+]
+(117)
+Substituing (115), (116) and (117) in (107), after some simplification we get
+trace(LTν SΓνLν) ∼
+ν∑
+k=1
+ρk
+Formalizing this argument we can prove (106).
+8.3 Proof of Proposition 6
+We simply give an outline. First consider the expansion
+tTjM(ρI −M)−2tj − γ
+∫
+x
+(ρ− x)2
+dFγ(x)
+=
+[
+tTjM(ρI −M)−2tj −
+1
+n
+trace(M(ρI −M)−2)
+]
++
+[
+1
+n
+trace(M(ρI −M)−2)− γ
+∫
+x
+(ρ− x)2
+dFγ(x)
+]
+For the first square-bracketed term use Lemma A.1 restricting to the set {µ1 < κγ+/2}. Subdivide
+the second term further as
+ρ
+[
+1
+n
+trace((ρI −M)−2)− γ
+∫
+1
+(ρ− x)2
+dFγ(x)
+]
+−
+[
+1
+n
+trace((ρI −M)−1)− γ
+∫
+1
+ρ− x
+dFγ(x)
+]
+= I − II, say.
+Bounds for I and II on the set {µ1 < κγ + /2} are derived by imitating the arguments leading to
+(47) and (45). Only notable difference is that for I we need to use the functionG2(·; ρ, γ, /2) instead
+of G1(·; ρ, γ, /2). Keeping track of the constants we derive the upper bound in the statement of
+Proposition 6.
+Acknowledgement
+I wish to thank Professor Iain Johnstone, who is my thesis advisor, for his support and thoughtful
+discussions, and also for bringing to my notice two important references. I would also like to thank
+Dr. Jinho Baik for some helpful communications.
+39
+Reference
+1. Anderson, T. W. (1963) : Asymptotic theory of principal component analysis, Annals of
+Mathematical Statistics, 34, p. 122-148.
+2. Bai, Z. D. (1993) : Convergence rate of expected spectral distributions of large random
+matrices. Part II. Sample covariance matrices, Annals of Probability, 21, 649-672.
+3. Bai, Z. D. (1999) : Methodologies in spectral analysis of large dimensional random matrices,
+a review, Statistica Sinica, 9, 611-677.
+4. Bai, Z. D. & Silvertein, J. W. (1999) : Exact separation of eigenvalues of large dimensional
+sample covariance matrices, Annals of Probability, 27, 1536-1555.
+5. Bai, Z. D. & Silvertein, J. W. (2004) : CLT for linear spectral statistics of large dimensional
+sample covariance matrix, (to appear in the Annals of Probability).
+6. Bai, Z. D. & Yin, Y. Q. (1993) : Limit of the smallest eigenvalue of a large dimensional
+sample covariance matrix, Annals of Probability, 21, 1275-1294.
+7. Baik, J., Ben Arous, G. & Péché (2004) : Phase transition of the largest eigenvalue for
+non-null complex covariance matrices, arXiv:math.PR/0403022 v1.
+8. Baik, J. & Silverstein, J. W. (2004) : Eigenvalues of large sample covariance matrices of
+spiked population models, arXiv:math.ST/048165 v1.
+9. Bogachev, V. I. (1998) : Gaussian Measures, American Mathematical Society.
+10. Buja, A., Hastie, T. & Tibshirani, R. (1995) : Penalized discriminant analysis, Annals of
+Statistics, 23, 73-102.
+11. Guionnet, A. & Zeitouni, O. (2000) : Concentration of the spectral measure for large matrices,
+Electronic Communications in Probability, 5, 119-136.
+12. Hoyle, D. & Rattray, M. (2003) : Limiting form of the sample covariance eigenspectrum in
+PCA and kernel PCA, Advances in Neural Information Processing Systems (NIPS 16).
+13. Hoyle, D. & Rattray, M. (2004) : Principal component analysis eigenvalue spectra from data
+with symmetry breaking structure, Physical Review E, 69, 026124.
+14. Johnstone, I. M. (2001) : On the distribution of the largest principal component, Annals of
+Statistics, 29, 295-327.
+15. Johnstone, I. M. & Lu, A. Y. (2004) : Sparse principal component analysis, (to appear in
+Journal of American Statistical Association).
+40
+16. Kneip, A. & Utikal, K. J. (2001) : Inference for density families using functional principal
+component analysis. Journal of American Statistical Association, 96, 519-542.
+17. Kato, T. (1980) : Perturbation theory of linear operators, Springer-Verlag.
+18. Ledoit, O. & Wolf, M. (2002) : Some hypothesis test for the covariance matrix when the
+dimension is large compared to the sample size, Annals of Statistics, 30, 1081-1102.
+19. Ledoux, M. (2001) : The concentration of measure phenomenon, Mathematical Surveys and
+Monographs 89, American Mathematical Society.
+20. Muirhead, R. J. (1982) : Aspects of multivariate statistical theory, John Wiley & Sons, Inc.
+21. Péché, S. (2003) : Universality of local eigenvalue statistics for random sample covariance
+matrices. Ph. D. Thesis, Ecole Polytechnique Fédérale de Lausanne.
+22. Rao, C. R. (1973) : Linear statistical inference and its applications, Wiley Eastern.
+23. Reimann, P., Van den Broeck, C. & Bex, G. J. (1996) : A Gaussian scenario for unsupervised
+learning, Journal of Physics A : Mathematical and General, 29, 3521-3535.
+24. Roy, S. N. (1953) : On a heuristic method of test construction and its use in Multivariate
+analysis, Annals of Mathematical Statistics, 24, 220-238.
+25. Silverstein, J. W. & Choi, S. (1995) : Analysis of the limiting spectral distribution of large
+dimensional random matrices, Journal of Multivariate Analysis, 54, 295-309.
+26. Soshnikov, A. (2002) : A note on universality of the distribution of the largest eigenvalues
+in certain sample covariance matrices, Journal of Statistical Physics, 108(5/6), 1033-1056.
+(Also arXiv:math.PR/0104113 v2 ).
+27. Telatar, E. (1999) : Capacity of multi-antenna Gaussian channels, European Transactions on
+Telecommunications, 10, 585-595.
+28. Tracy, C. & Widom, H. (1994) : Level-spacing distribution and Airy kernel, Communications
+in Mathematical Physics, 159, 151-174.
+29. Tracy, C. & Widom, H. (1996) : On orthogonal and symplectic matrix ensembles, Commu-
+nicat

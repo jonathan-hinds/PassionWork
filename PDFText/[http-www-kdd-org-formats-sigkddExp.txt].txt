@@ -1,0 +1,182 @@
+A Sample ACM SIGKDD Explorations article in LaTeX
+Ben Trovato
+Institute for Clarity in
+Documentation
+1932 Wallamaloo Lane
+Wallamaloo, New Zealand
+trovato@corporation.com
+G.K.M. Tobin
+Institute for Clarity in
+Documentation
+P.O. Box 1212
+Dublin, Ohio 43017-6221
+webmaster@marysville-
+ohio.com
+Lars Thørväld
+∗
+The Thørväld Group
+1 Thørväld Circle
+Hekla, Iceland
+larst@affiliation.org
+ABSTRACT
+This paper provides a sample of a LaTeX document for final
+submission to Sigkdd Explorations, the official newsletter
+of ACM Sigkdd. This is a modified version of the ACM
+Proceedings sample file.
+The developers have tried to include every imaginable sort
+of “bells and whistles”, such as a subtitle, footnotes on title,
+subtitle and authors, as well as in the text, and every op-
+tional component (e.g. Acknowledgements, Additional Au-
+thors, Appendices), not to mention examples of equations,
+theorems, tables and figures.
+To make best use of this sample document, run it through
+LATEX and BibTeX, and compare this source code with the
+printed output produced by the dvi file.
+1. INTRODUCTION
+The proceedings are the records of a conference. ACM seeks
+to give these conference by-products a uniform, high-quality
+appearance. To do this, ACM has some rigid requirements
+for the format of the proceedings documents: there is a spec-
+ified format (balanced double columns), a specified set of
+fonts (Arial or Helvetica and Times Roman) in certain spec-
+ified sizes (for instance, 9 point for body copy), a specified
+live area (18 × 23.5 cm [7” × 9.25”]) centered on the page,
+specified size of margins (2.54cm [1”] top and bottom and
+1.9cm [.75”] left and right; specified column width (8.45cm
+[3.33”]) and gutter size (.083cm [.33”]).
+The good news is, with only a handful of manual settings1,
+the LATEX document class file handles all of this for you.
+The remainder of this document is concerned with showing,
+in the context of an “actual” document, the LATEX com-
+mands specifically available for denoting the structure of a
+proceedings paper, rather than with giving rigorous descrip-
+tions or explanations of such commands.
+2. THE BODY OF THE PAPER
+∗This author is the one who did all the really hard work.
+1Two of these, the \numberofauthors and \alignauthor
+commands, you have already used; another,
+\balancecolumns, will be used in your very last run
+of LATEX to ensure balanced column heights on the last
+page.
+Typically, the body of a paper is organized into a hierar-
+chical structure, with numbered or unnumbered headings
+for sections, subsections, sub-subsections, and even smaller
+sections. The command \section that precedes this para-
+graph is part of such a hierarchy.2 LATEX handles the num-
+bering and placement of these headings for you, when you
+use the appropriate heading commands around the titles of
+the headings. If you want a sub-subsection or smaller part
+to be unnumbered in your output, simply append an aster-
+isk to the command name. Examples of both numbered and
+unnumbered headings will appear throughout the balance of
+this sample document.
+Because the entire article is contained in the document
+environment, you can indicate the start of a new paragraph
+with a blank line in your input file; that is why this sentence
+forms a separate paragraph.
+2.1 Type Changes and Special Characters
+We have already seen several typeface changes in this sam-
+ple. You can indicate italicized words or phrases in your
+text with the command \textit; emboldening with the com-
+mand \textbf and typewriter-style (for instance, for com-
+puter code) with \texttt. But remember, you do not have
+to indicate typestyle changes when such changes are part
+of the structural elements of your article; for instance, the
+heading of this subsection will be in a sans serif3 typeface,
+but that is handled by the document class file. Take care
+with the use of4 the curly braces in typeface changes; they
+mark the beginning and end of the text that is to be in the
+different typeface.
+You can use whatever symbols, accented characters, or non-
+English characters you need anywhere in your document;
+you can find a complete list of what is available in the LATEX
+User’s Guide[?].
+2.2 Math Equations
+You may want to display math equations in three distinct
+styles: inline, numbered or non-numbered display. Each of
+the three are discussed in the next sections.
+2This is the second footnote. It starts a series of three foot-
+notes that add nothing informational, but just give an idea
+of how footnotes work and look. It is a wordy one, just so
+you see how a longish one plays out.
+3A third footnote, here. Let’s make this a rather short one
+to see how it looks.
+4A fourth, and last, footnote.
+2.2.1 Inline (In-text) Equations
+A formula that appears in the running text is called an inline
+or in-text formula. It is produced by the math environment,
+which can be invoked with the usual \begin. . .\end
+construction or with the short form $. . .$. You can use
+any of the symbols and structures, from α to ω, available
+in LATEX[?]; this section will simply show a few examples
+of in-text equations in context. Notice how this equation:
+limn→∞ x = 0, set here in in-line math style, looks slightly
+different when set in display style. (See next section).
+2.2.2 Display Equations
+A numbered display equation – one set off by vertical space
+from the text and centered horizontally – is produced by the
+equation environment. An unnumbered display equation is
+produced by the displaymath environment.
+Again, in either environment, you can use any of the symbols
+and structures available in LATEX; this section will just give
+a couple of examples of display equations in context. First,
+consider the equation, shown as an inline equation above:
+lim
+n→∞
+x = 0 (1)
+Notice how it is formatted somewhat differently in the dis-
+playmath environment. Now, we’ll enter an unnumbered
+equation:
+∞∑
+i=0
+x + 1
+and follow it with another numbered equation:
+∞∑
+i=0
+xi =
+∫ π+2
+0
+f (2)
+just to demonstrate LATEX’s able handling of numbering.
+2.3 Citations
+Citations to articles [?; ?; ?; ?], conference proceedings [?]
+or books [?; ?] listed in the Bibliography section of your
+article will occur throughout the text of your article. You
+should use BibTeX to automatically produce this bibliogra-
+phy; you simply need to insert one of several citation com-
+mands with a key of the item cited in the proper location in
+the .tex file [?]. The key is a short reference you invent to
+uniquely identify each work; in this sample document, the
+key is the first author’s surname and a word from the title.
+This identifying key is included with each item in the .bib
+file for your article.
+The details of the construction of the .bib file are beyond
+the scope of this sample document, but more information
+can be found in the Author’s Guide, and exhaustive details
+in the LATEX User’s Guide[?].
+So far, this article has shown only the plainest form of the
+citation command, using \cite.
+2.4 Tables
+Because tables cannot be split across pages, the best place-
+ment for them is typically the top of the page nearest their
+initial cite. To ensure this proper “floating” placement of
+tables, use the environment table to enclose the table’s con-
+tents and the table caption. The contents of the table itself
+must go in the tabular environment, to be aligned properly
+Table 1: Frequency of Special Characters
+Non-English or Math Frequency Comments
+Ø 1 in 1,000 For Swedish names
+π 1 in 5 Common in math
+$ 4 in 5 Used in business
+Ψ21 1 in 40,000 Unexplained usage
+in rows and columns, with the desired horizontal and verti-
+cal rules. Again, detailed instructions on tabular material
+is found in the LATEX User’s Guide.
+Immediately following this sentence is the point at which
+Table 1 is included in the input file; compare the placement
+of the table here with the table in the printed dvi output of
+this document.
+To set a wider table, which takes up the whole width of
+the page’s live area, use the environment table* to en-
+close the table’s contents and the table caption. As with
+a single-column table, this wide table will ”float” to a lo-

@@ -4,24 +4,18 @@
 
 //todo - consider converting the text to lemma using stanford NLP
 //todo - find a way to normalize the value of the TF-IDF score.
-
 //todo - research lemminization, cosine similarity,
-
-
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.Map;
 
 public class Main {
 
     public static void main(String[] args) {
-//
         Scraper scraper = new Scraper("http://wstein.org/papers/icms/icms_2010.pdf", "tags.txt");
         //scraper.downloadPDF("http://www.uv.es/pla/Quixote/Kinematics2.pdf", "test", "/Users/jonathanhinds/Projects/hinds/PDF/");
         //scraper.getPDF("http://www.cs.ucr.edu/~nael/pubs/micro16.pdf", "somethingnew");
@@ -31,41 +25,35 @@ public class Main {
         //scraper.getTagsPDF(src);
         //scraper.downloadPDF("http://wstein.org/papers/icms/icms_2010.pdf", "TEST", "/Users/jonathanhinds/Projects/hinds/PDF/");
         ArrayList<Map<String, Map<String, Frequency>>> docStat = scraper.getTagsPDF(src);
-
-
-
         for(Map<String, Map<String, Frequency>> map : docStat)
         {
             for(Map.Entry<String, Map<String, Frequency>> urlMap : map.entrySet())
             {
-
                 String url = urlMap.getKey();
                 Map<String, Frequency> docMap = urlMap.getValue();
                 try{
                     FileWriter fw = new FileWriter("TF-IDF.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
-
                     docMap.entrySet().stream()
                             .sorted(Comparator.comparingDouble(o -> o.getValue().getTfidf()))
                             .forEach(e -> {
                                 String word = e.getKey();
+                                String POS = scraper.parsePOS(scraper.findPOS(word));
                                 double tfidf = e.getValue().getTfidf();
                                 double norm_tfidf = e.getValue().getNormalTFIDF();
-                                pw.printf("%-15s", java.time.LocalTime.now());
-                                pw.printf("%-50s %-30s %10.20f %10.20f \n", url, word, tfidf , norm_tfidf);
-                                pw.flush();
-
+                                if(norm_tfidf > .1) {
+                                    pw.printf("%-15s", java.time.LocalTime.now());
+                                    pw.printf("%-50s %-30s %-25s %10.20f %10.20f \n", url, word, POS, tfidf, norm_tfidf);
+                                    pw.flush();
+                                }
                             });
-
+                    System.out.println("End of doc " + url);
                     pw.printf("\n\n\n\n\n");
                     pw.flush();
-                }catch(Exception e){
-
-                }
+                }catch(Exception e){}
             }
         }
-
         System.out.println("Total documents: " + docStat.size());
 
 

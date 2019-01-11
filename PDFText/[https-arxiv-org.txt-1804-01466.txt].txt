@@ -1,0 +1,1205 @@
+Gaussian Process Subset Scanning for Anomalous Pattern Detection
+in Non-iid Data
+William Herlands Edward McFowland III Andrew G. Wilson Daniel B. Neill
+Carnegie Mellon University University of Minnesota Cornell University Carnegie Mellon University
+Abstract
+Identifying anomalous patterns in real-world
+data is essential for understanding where,
+when, and how systems deviate from their
+expected dynamics. Yet methods that sepa-
+rately consider the anomalousness of each in-
+dividual data point have low detection power
+for subtle, emerging irregularities. Addi-
+tionally, recent detection techniques based
+on subset scanning make strong indepen-
+dence assumptions and suffer degraded per-
+formance in correlated data. We introduce
+methods for identifying anomalous patterns
+in non-iid data by combining Gaussian pro-
+cesses with novel log-likelihood ratio statis-
+tic and subset scanning techniques. Our ap-
+proaches are powerful, interpretable, and can
+integrate information across multiple data
+streams. We illustrate their performance on
+numeric simulations and three open source
+spatiotemporal datasets of opioid overdose
+deaths, 311 calls, and storm reports.
+1 Introduction
+Anomalous pattern detection is the task of identifying
+subsets of data points that systematically differ from
+the underlying model. Identifying anomalous patterns
+in real-world data is critical for understanding how
+people and systems deviate from expected behavior.
+In the spatiotemporal domain, timely identification
+of such patterns can allow for effective interventions.
+For example, detecting anomalous increases in opioid
+deaths can enable health care workers to effectively
+target overdose prevention programs. Similarly, pat-
+terns of increased 311 calls can help cities to better
+target services and allocate resources.
+Proceedings of the 21st International Conference on Ar-
+tificial Intelligence and Statistics (AISTATS) 2018, Lan-
+zarote, Spain. PMLR: Volume 84. Copyright 2018 by the
+author(s).
+To detect these anomalous patterns, we will address
+three key challenges. First, real-world data is ex-
+tremely complex with non-trivial correlations across
+space, time, and other features. Treating data points
+as iid ignores important covariance structure and will
+substantially overestimate the anomalousness of de-
+tected patterns. Second, an event of interest often af-
+fects multiple nearby points. Simply considering how
+anomalous is each individual point loses power to de-
+tect subtle anomalies. Third, anomalous patterns are
+often irregularly shaped or discontiguous due to la-
+tent demographic or geographic features. Searching
+for these complex patterns is important for precision
+and detection power, yet exhaustive methods are com-
+putationally intractable and may result in overfitting.
+A sensible approach to this problem is model-based
+anomaly detection, where a distribution is fit to model
+“regular” data. Points with a low likelihood under
+this distribution are identified as anomalous (Chan-
+dola et al., 2009; Hodge and Austin, 2004). To ad-
+dress the complex correlations in real-world systems,
+Gaussian processes (GPs) provide a natural means of
+learning covariance structure from data. However, GP
+anomaly detection has been typically used to clas-
+sify individual points as outliers (Smith et al., 2014;
+Kowalska and Peel, 2012; Stegle et al., 2008). Such
+approaches have difficulty when confronted with sub-
+tle anomalies, where each individual data point may
+seem to conform to the underlying distribution, yet
+when taken as a group, they form a collectively anoma-
+lous pattern. Thus anomalous pattern detection is a
+conceptually and statistically different problem than
+anomaly or outlier detection.
+A few recent GP models consider anomalous inter-
+vals (Reece et al., 2015) and sophisticated change
+points (Saatçi et al., 2010; Herlands et al., 2016) to
+detect intervals of anomalous points. However, these
+methods (the first two of which are applied exclusively
+to one-dimensional data) are limited to contiguous in-
+tervals in the input domain and cannot model the ir-
+regularly shaped anomalies we expect in complex data.
+Cheng et al. (2015) recently developed an anomalous
+ar
+X
+iv
+:1
+80
+4.
+01
+46
+6v
+1 
+ [
+st
+at
+.M
+L
+] 
+ 4
+ A
+pr
+ 2
+01
+8
+Gaussian Process Subset Scanning for Anomalous Pattern Detection in Non-iid Data
+pattern detection technique for spatiotemporal data.
+However, this approach requires a corpus of anomaly-
+free training data, can only detect contiguous anoma-
+lous patterns, and is specific to video data.
+In the statistics literature, spatial and subset scan-
+ning methods are commonly used to identify collec-
+tively anomalous subsets of data (Kulldorff, 1997;
+Neill, 2012). By combining information across a sub-
+set of data elements, they generate a strong signal of
+anomalous behavior. These approaches compute a log-
+likelihood ratio (LLR) of subsets being drawn from a
+null or anomalous distribution. The LLR is a power-
+ful statistic that measures how much evidence exists
+in the data to conclude if the subset exhibits abnor-
+mal behavior (Kulldorff, 1997; Neill et al., 2005). A
+core challenge of subset scanning is searching through
+the O(2n) possible subsets of n data elements (Neill
+and Moore, 2004; Agarwal et al., 2006; Duczmal et al.,
+2007; Wu et al., 2009). Neill (2012) shows that certain
+LLR statistics satisfying a linear-time subset scanning
+(LTSS) property can be optimized in O(n log n) by or-
+dering points according to a particular “priority func-
+tion” and evaluating only n of the 2n subsets. How-
+ever, LTSS assumes that we can compute the contribu-
+tions of individual points to the LLR. This is possible
+only when assuming that data is uncorrelated under
+the null (Neill, 2009), yet when applied to non-iid data
+this independence assumption would result in substan-
+tial false positive rates, as correlated fluctuations will
+be mistaken for anomalous movements.
+1.1 Contributions
+In this paper we introduce novel techniques for identi-
+fying anomalous patterns in non-iid data. Our meth-
+ods are powerful and interpretable. By combining nat-
+urally interpretable GPs with localized anomalous pat-
+terns we can describe the “regular” data dynamics as
+well as quantify and corroborate anomalous regions
+with domain experts. Our main contributions are:
+1. Combining GP modeling with subset scanning for
+powerful and interpretable detection of anomalous
+patterns in highly correlated data.
+2. Proposing a new likelihood ratio statistic and sub-
+set scan technique for correlated data that do not
+assume conditional independence.
+3. Performing hold-out GP inference while comput-
+ing our new likelihood ratio statistic conditioned
+on GP hyperparameters, to avoid corrupting the
+null model with anomalies.
+4. Developing two novel, principled approaches
+to the NP-hard problem of searching for the
+most anomalous subset, through a new iterative
+method and an application of the Generalized
+Rayleigh Quotient respectively.
+5. We demonstrate our methods on numeric simula-
+tions, opioid-related deaths, 311 calls for service
+data, and multiple streams of sewer flooding re-
+ports and tree damage reports, illustrating inter-
+pretable and policy-relevant results.
+The paper proceeds as follows: §2 provides background
+on GPs. §3 introduces a novel log-likelihood ratio
+statistic for non-iid data. §4 details the Gaussian Pro-
+cess Neighborhood Scan (GPNS) and the Gaussian
+Process Subset Scan (GPSS). Experimental results on
+numerical and real data are presented in §5.
+2 Gaussian Processes
+Consider data, (x, y), where x = {x1, . . . , xn}, xi ∈
+RD, are inputs or covariates, and y = {y1, . . . , yn},
+yi ∈ R are outputs or response variables indexed by
+x. We assume that y is generated from x by a latent
+function with a GP prior. In particular, y = f(x) + ,
+f(x) ∼ GP(m(x), k(x, x′))
+A GP is a nonparametric prior over functions com-
+pletely specified by mean and covariance functions.
+The mean function, m(x) = E[f(x)], is the prior ex-
+pectation of f(x). The covariance function is given by
+k(x, x′) = cov(f(x), f(x′)) (Rasmussen, 2006).
+In this paper we use three important properties of GPs.
+First, we can draw samples from a GP prior since con-
+ditional on GP hyperparameters any finite collection
+of function values is distributed N (m(x), k(x, x))
+Second, if a function has a Gaussian noise model,
+ ∼ N (0, σ2 ), then conditional on hyperparameters
+and data (x, y), we can derive a closed form expres-
+sion for the predictive distribution of f(x∗),
+f(x∗)|x, y, x∗ ∼ N
+(
+k(x∗, x)[k(x, x) + σ2 I]
+−1y,
+k(x∗, x∗)− k(x∗, x)[k(x, x) + σ2 I]−1k(x, x∗)
+) (1)
+Third, GP hyperparameters, θ, can be learned by max-
+imum likelihood optimization. While naively this re-
+quires O(n3) computations, we use scalable GP learn-
+ing in the structured kernel inference (SKI) frame-
+work (Wilson and Nickisch, 2015) for O(n) scalability.
+3 LLR statistic for non-iid data
+Considering (x, y) as defined in §2, we are interested in
+anomalous patterns that systematically differ from the
+William Herlands, Edward McFowland III, Andrew G. Wilson, Daniel B. Neill
+underlying data distribution. We frame this search as
+an LLR comparison between a null model of “regular”
+behavior and an alternative model of “anomalous” be-
+havior. A single latent GP defines both models. Sub-
+sets of data with the highest LLR scores are identified
+as the most anomalous.
+Using a GP as the foundational modeling technique
+enables us to learn complex covariance structure and
+seamlessly extend to high dimensions as well as missing
+data. GPs are also naturally interpretable, which can
+provide insight about the “regular” data dynamics.
+Consider a given subset of data points defined by the
+binary weighting vector w, where wi = 1 if (xi, yi) is
+included in the subset and wi = 0 if excluded. Our
+null model, H0, assumes that all points (regardless of
+wi) are drawn from a function with a GP prior: y =
+f(x)+, where f(x) ∼ GP (θ0) and  ∼ N (0, σ2 I). Our
+alternative model, H1(w), assumes that yi = f(xi) + 
+for wi = 0, and yi = g(f(xi), θ1) +  for wi = 1, where
+g(·) is any function of the latent GP.
+Here we focus on the case of a mean shift, g(f(x), θ1) =
+f(x)+β, β ∈ R1. The covariance structure remains the
+same in the null and alternative models. This allows
+us to efficiently compute the posterior mean vector µ
+and covariance matrix Σ through GP inference, where
+y ∼ N (µ,Σ) under H0, and y ∼ N (µ + βw,Σ) under
+H1(w). For posterior µ and Σ we condition on all
+data outside the subset of points represented by w,
+ensuring that null model estimates are not corrupted
+by anomalous observations. However, since anomalies
+are assumed to be rare, their influence on parameter
+estimation is minimal. Therefore we use all (x, y) for
+GP learning of the parameters of the null model θ0.
+We concentrate on mean changes since many real
+world cases concern anomalous levels of a quantity.
+Increases in localized drug overdoses, crime, and calls
+for city service are all mean shifts of great importance.
+Methods for identifying arbitrary changes in distribu-
+tion – while able to detect other sorts of patterns –
+have reduced power to detect such mean shifts, due
+to more diffuse inductive biases. Persistent changes in
+covariance structure are typically considered change-
+points and require substantial data in both regimes as
+opposed to the localized anomalous patterns we detect.
+To measure how anomalous is a subset defined by
+w, we compute the generalized log-likelihood ratio,
+LLR(w) = maxβ LLR(w | β), where:
+LLR(w | β) = log MNPDF(y − βw | µ,Σ)
+MNPDF(y | µ,Σ) (2)
+Here MNPDF is the multivariate normal probability
+density function. The most anomalous subset, w∗, is
+w∗ = argmax
+w
+LLR(w)
+= argmax
+w
+max
+β
+−β
+2
+2
+wTEw + βwTE(y − µ)
+(3)
+where E = Σ−1 for notational brevity. Con-
+ditional on w, the MLE β∗ = arg maxβ LLR(w)
+can be calculated in closed form, β∗ = [wTE(y −
+µ)]/[wTEw] (see Appendix A). Nevertheless, maxi-
+mizing LLR(w) is an NP-complete Integer Quadratic
+Program (Del Pia et al., 2014), so an optimal solution
+requires exponential-time computation. Note that the
+LTSS condition for a log linear-time subset search de-
+scribed in Neill (2012) does not apply, since it requires
+independent data with a diagonal covariance matrix.
+3.1 Randomization testing
+Given a method for finding anomalous subsets, the fol-
+lowing randomization testing procedure determines an
+α-level significance threshold for LLR(w) conditional
+on the parameters of the null model:
+1. Repeatedly draw y(r) ∼ GP (θ0), at the same co-
+variates, x, as the real data for r = 1...R.
+2. Scan over (x, y(r)) with the chosen subset search-
+ing method. For each randomization r save the
+most anomalous LLR value, LLR(w∗,(r)).
+3. Determine an α-level threshold for significance
+based on the (1− α) quantile of the R maximum
+LLR values, above which any LLR(w) from the
+original scan is considered statistically significant.
+4 Efficient subset scanning
+Having defined the LLR scan statistic to evaluate how
+anomalous is a given subset, we must now decide over
+which subsets to scan. Unconstrained optimization
+over O(2n) subsets is computationally infeasible for
+an exhaustive search. Additionally, an unconstrained
+search may return an unrelated set of points, reducing
+interpretability and increasing the potential for over-
+fitting. Anomalous events in human data, such as drug
+usage and requests for government services, often af-
+fect multiple nearby points. Thus we assume that
+anomalous points are near one another. For exam-
+ple, in spatiotemporal data we assume that anomalous
+points are clustered in space and time. Following Neill
+(2012), we define the local “k-neighborhood” of each
+data point, consisting of that point and its k−1 nearest
+neighbors, for some k. We propose two approaches for
+using these neighborhoods to identify anomalous pat-
+terns: Gaussian Process Neighborhood Scan (GPNS)
+and Gaussian Process Subset Scan (GPSS).
+Gaussian Process Subset Scanning for Anomalous Pattern Detection in Non-iid Data
+4.1 GP Neighborhood Scan (GPNS)
+Given a maximum neighborhood size kmax, GPNS
+searches over the O(nkmax) local neighborhoods con-
+sisting of the k-neighborhood for each point where k =
+{1, 2, . . . , kmax}. Where neighborhoods are defined by
+Euclidean distance, the set of search regions are cir-
+cular in shape. For each neighborhood, (x(n), y(n)),
+we obtain posterior µ and Σ conditional on θ0 and
+points (x(−n), y(−n)). We then compute LLR(w) for
+the neighborhood where w = ~1, i.e., we evaluate the al-
+ternative hypothesis of the entire neighborhood being
+anomalous. GPNS pseudocode is presented in Alg. 1.
+Algorithm 1: GPNS
+for k = 1 : kmax do
+for (xi, yi), i = 1 : n do
+Define k-neighborhood, n(k,i), and infer (µ,Σ);
+Set w(k,i) = ~1 ∈ {0, 1}k;
+Compute β∗ given w(k,i);
+Compute LLR(w(k,i));
+end
+end
+Choose n∗ = argmaxn(k,i) LLRn(k,i) ;
+Randomization testing for significance;
+4.2 GP Subset Scan (GPSS)
+While GPNS simplifies the exponential search, it re-
+quires constraining assumptions about the shape of
+neighborhoods and is only able to discover contigu-
+ous, spherical anomalous patterns. While there are
+approaches to increase the variety of neighborhood
+shapes without substantially degrading computational
+efficiency (Kulldorff et al., 2006; Neill and Moore, 2004;
+Kulldorff, 2001), these methods still require strict
+specification of potential anomalies. Such foreknowl-
+edge is unrealistic in real-world applications where
+natural boundaries, demographics, and stochastic ef-
+fects lead to irregularly-shaped patterns. In such cases
+GPNS has reduced detection and explanatory power.
+To flexibly detect irregularly-shaped patterns, GPSS
+conducts an unconstrained search for the most
+anomalous subset within neighborhoods of fixed size
+k. Specifically, we identify the subset of points
+(x(s), y(s)) ⊆ (x(n), y(n)) that maximize the LLR
+within each neighborhood. This allows us to iden-
+tify highly irregular and even non-contiguous anoma-
+lous patterns. By restricting the search within a local
+neighborhood, we ensure that the identified patterns
+are coherent and interpretable. GPSS requires evalu-
+ating O(n) neighborhoods, as presented in Alg. 2.
+Algorithm 2: GPSS
+Fix k at some size;
+for (xi, yi), i = 1 : n do
+Define k-neighborhood, n(i), and infer (µ,Σ);
+Approximate the optimal subset, s(i) ⊆ n(i);
+Set each w
+(i)
+j = 1(j ∈ s(i));
+Compute β∗ given w(i);
+Compute LLR(w(i));
+end
+Choose s∗ = argmaxs(i) LLRs(i) ;
+Randomization testing for significance;
+Unfortunately, this procedure requires finding w ∈
+{0, 1}k that maximizes the LLR of a subset within the
+neighborhood, argmaxw -
+1
+2w
+TβEwβ + wTβE(y(n)-µ).
+This is still an Integer Quadratic Program, whose op-
+timal solution is intractable even for moderately sized
+neighborhoods. Instead, below we formulate three ap-
+proaches for finding approximate solutions.
+4.2.1 βMAX for conditionally optimal subset
+Due to the full rank covariance matrix, we are unable
+to disentangle the individual contributions from each
+point to the LLR. However, if we condition on some
+subset of points, w, we are able to compute the con-
+ditional contribution of each point. First, note that
+conditional on w we can decompose w∗ from Eq. 3 into
+a sum over each of the m points in the neighborhood
+wTβE(y(n) − µ)− 1
+2
+wTβEwβ
+=
+∑
+i
+wi
+[
+β
+(
+E(y(n) − µ)
+)
+i
+− 1
+2
+(∑
+j 6=i
+wjEj,i + Ei,i
+)
+β2
+]
+(4)
+The contribution of point (xi, yi) to the LLR is the
+difference in LLR between wi = 0 and wi = 1. Due to
+the outer and inner sums, the change in the LLR is:
+β
+(
+E(y(n) − µ)
+)
+i
+− 1
+2
+(∑
+j 6=i
+2wjEj,i + Ei,i
+)
+β2 (5)
+To maximize the LLR a point is only added to the
+subset if its contribution is positive. By setting Eq. 5
+to zero we can compute βMAXi , the maximum β value
+for which to include point (xi, yi).
+βMAXi =
+[
+2
+(
+E(y(n)-µ)
+)
+i
+]
+/
+[∑
+j 6=i
+2wjEj,i + Ei,i
+]
+(6)
+As proved in Speakman et al. (2016), we obtain the
+conditional optimal subset by using βMAX as a prior-
+ity function, ranking each data point by βMAXi , and
+William Herlands, Edward McFowland III, Andrew G. Wilson, Daniel B. Neill
+iteratively compute the score function for subsets in-
+cluding each additional point. This yields a log linear
+search over data points. Such an approach identifies
+the most anomalous subset with a positive mean shift.
+To find the most anomalous subset with a negative
+mean shift we simply rank data points by −βMAXi
+Since the derivation of βMAX is conditional on a subset
+w, we obtain the conditional optimal subset. In order
+to approximate an optimal solution we iteratively com-
+pute the conditional optimal subset beginning with a
+null subset, w = ~0. This requires O(`k log(k)) compu-
+tation for some ` number of iterations. Pseudo-code
+for this algorithm can be found in Appendix B.
+For a diagonal Σ, βMAX orders points according to
+2(y
+(n)
+i − µi), which is equivalent to the LTSS pri-
+ority function for an independent Gaussian subset
+scan (Speakman et al., 2016). Thus βMAX approach
+identifies the optimal subset in the independent case
+and is conditionally optimal in the dependent case.
+4.2.2 Generalized Rayleigh Quotient method
+We consider an alternative optimization approach to
+obtain an approximately optimal subset. Consider
+plugging the MLE solution, β∗, into w∗ from Eq. 3,
+w∗ = argmax
+w
+[
+wT
+(
+E(y(n)-µ)(y(n)-µ)TE
+)
+w
+]
+/[
+wT
+(
+2E
+)
+w
+] (7)
+If we relax w such that w ∈ Rm, this can
+be re-written as the generalized Rayleigh quotient,
+(wTAw)/(wTBw), where A = E(y(n) − µ)(y(n) −
+µ)TE, and B = 2E. Note that A is a sym-
+metric matrix and B is a Hermitian positive-
+definite matrix. Taking the Cholesky decomposi-
+tion B = LLT , the generalized Rayleigh quotient
+can be written as a Rayleigh quotient (Yu et al.,
+2013), R(A′, w′) = (w′TA′w′)/(w′Tw′), where A′ =
+L−1ALT
+−1
+and w′ = LTw. The maximum w′ of
+the Rayleigh quotient, w′max = argmaxw′ R(A
+′, w′) =
+argmaxw′(w
+′TAw′)/(w′Tw′) = v(max), is the largest
+eigenvector of A′. Since we defined w′ = LTw, then
+the maximum wmax = L
+T−1v(max) is the relaxed solu-
+tion to our original optimization problem from Eq. 7.
+Although wmax has non-integer elements, the order-
+ing of the elements of this eigenvector corresponds to
+the importance of the data points in the neighborhood.
+Thus we scan over the ordered elements of wmax, itera-
+tively adding each to the subset. Maximizing LLR(w)
+over this linear number of subsets provides an approx-
+imate solution to the constrained integer program.
+4.2.3 Forward stepwise optimization
+A third approximation approach uses a greedy forward
+stepwise algorithm that iteratively sets one element
+wi = 1 such that the objective is minimized in each
+iteration. Once the objective cannot be further mini-
+mized the optimization is terminated, thereby provid-
+ing a greedy optimal solution. For a neighborhood of
+size k, the stepwise approach may require up to k it-
+erations, evaluating O(k) subsets at each iteration for
+a total of O(k2) computations.
+4.3 Efficient Multi-Stream Search
+Often we are interested in searching for anomalous
+patterns across multiple dimensions, or streams, of
+data. For example, anomalous patterns of damaged
+trees and sewer flooding can help localize severe storm
+damage. Multi-stream search can enhance the signal
+of subtle anomalies that affect multiple streams, and
+reduce false positive detections when perturbations in
+a single stream are not important to the application.
+In principle, GPNS and GPSS can handle multiple
+streams by stacking the data from each stream and
+adding a final dimension to indicate from which stream
+the data came. Yet naive GP inference requires O(n3)
+complexity, so repeatedly concatenating data from
+multiple streams quickly leads to scalability issues. On
+the other hand, Kronecker-based scalability require a
+kernel that is multiplicatively decomposable over the
+input dimensions (Saatçi, 2012). This implies that the
+prior correlation structure is the same over all data
+dimensions except for the stream indicator. For ex-
+ample, Kronecker structure in spatiotemporal settings
+constrains streams to have the same prior spatiotem-
+poral correlations. This assumption is overly restric-
+tive for the complex data in which we are interested.
+Instead, we learn independent GPs for each stream of
+data and then scan over neighborhoods in the data
+jointly for all streams. Posteriors for each stream are
+independently inferred from the associated GP. Thus
+for streams s = 1, ..., S, the posterior distribution for
+subset scanning contains a block diagonal covariance,
+N
+
+µ1...
+µS
+ ,
+Σ1 0 00 . . . 0
+0 0 ΣS
+
+
+In this manner each stream can flexibly learn different
+prior covariance structures while still ensuring scalabil-
+ity equivalent to single-stream GPNS and GPSS. The
+one drawback of this approach is that inter-stream co-
+variance information is not exploited for GP inference.
+Gaussian Process Subset Scanning for Anomalous Pattern Detection in Non-iid Data
+5 Experiments
+We evaluate GPNS and GPSS using numeric simula-
+tions and three urban spatiotemporal datasets. We
+compare the methods against a number of competi-
+tive baseline algorithms from contemporary literature.
+First, we compare to an independent Gaussian sub-
+set scan, a state of the art anomalous pattern detec-
+tion algorithm (Neill, 2009, 2012). Additionally, we
+compare against a standard GP anomaly detection ap-
+proach (Kowalska and Peel, 2012; Stegle et al., 2008),
+in which we use the posterior distribution of the null
+GP model θ0 regressed over the entire dataset to clas-
+sify points beyond a given level-α significance thresh-
+old as anomalies. While all GP methods in this paper
+are agnostic to kernel choice, an RBF kernel and linear
+mean function were used for all experiments.
+Although anomalous pattern detection is a distinct
+problem from outlier or anomalous point detection, we
+also compare against two commonly used outlier de-
+tection techniques: a one-class SVM (Schölkopf et al.,
+2001) and robust multivariate outlier detection us-
+ing the Mahalanobis distance (Rousseeuw and Leroy,
+2005; Rousseeuw and Van Zomeren, 1990).
+An additional real data analysis is in Appendix D.
+5.1 Numeric experiments
+For each numeric test, baseline data is drawn from a
+2D GP (Rasmussen and Nickisch, 2016). Multiplica-
+tive anomalies of arbitrary shape are injected by scal-
+ing randomly sampled points, within a randomly cho-
+sen neighborhood, by a factor of ≥ 1. (Note that this
+simulation does not correspond to our method’s as-
+sumption of an additive mean shift.) The most anoma-
+lous subset is computed using GPSS methods and
+baseline approaches. For the baseline GP approach
+and one-class SVM we provide additional information
+(the true percentage of the anomalous data) in order
+to determine their threshold levels.
+1 1.5 2
+Magnitude of anomaly
+0
+0.2
+0.4
+0.6
+0.8
+1
+%
+ c
+as
+es
+ re
+je
+ct
+ed
+ n
+ul
+l
+Power at ,=0.05
+1 1.5 2
+Magnitude of anomaly
+0
+0.2
+0.4
+0.6
+0.8
+1
+Pr
+ec
+is
+io
+n
+Precision
+1 1.5 2
+Magnitude of anomaly
+0
+0.2
+0.4
+0.6
+0.8
+1
+R
+ec
+al
+l
+Recall
+beta-MAX
+GRQ
+stepwise
+baseline indep SS
+baseline GP
+baseline SVM
+baseline RobustCov
+Figure 1: Precision, recall, and power at α = 0.05
+for GPSS methods and baseline anomaly detection ap-
+proaches. The three GPSS methods dominate in all
+cases with the βMAX performing best overall.
+Varying the multiplicative factor between 1 and 2 we
+compute the average precision and recall in Fig. 1 over
+50 tests in a 400 point grid for each multiplicative fac-
+tor. Randomization testing (α = .05) is performed for
+each synthetic test to determine the score threshold for
+significance. For precision and recall, truly anomalous
+points are “positive” and all other data is “negative.”
+The GPSS approaches dominate all other methods for
+nearly the entire test range, with βMAX performing
+best overall.
+Additionally, for each test we use an exhaustive search
+to find the subset with the highest LLR. The ratios of
+the LLR of approximate GPSS solutions to LLR(w∗)
+are shown in Fig. 2. Note that all approximation meth-
+ods are relatively close to the optimal value. While
+the βMAX approach dominates at large magnitudes,
+the GRQ dominates at small magnitudes and achieves
+a relatively stable ratio across all tests.
+1 1.2 1.4 1.6 1.8 2
+Magnitude of anomaly
+0.84
+0.86
+0.88
+0.9
+0.92
+0.94
+0.96
+0.98
+1
+R
+at
+io
+ o
+f L
+LR
+Ratio of detected max LLR to true max LLR
+beta-MAX
+GRQ
+stepwise
+0 20 40 60 80 100 120 140 160
+Size of Neighborhood
+0
+50
+100
+150
+200
+250
+300
+350
+400
+T
+im
+e 
+(s
+ec
+on
+ds
+)
+Time to Compute Subset Scan
+beta-MAX
+GRQ
+stepwise
+GPNS
+Exhaustive
+Figure 2: Numeric tests of GPNS and GPSS com-
+pared to exhaustive evaluation of LLR(w∗). Left plot:
+ratio of maximum LLR identified by GPSS to true
+maximum LLR. Right plot: run time.
+To test the methods’ scalability we vary the maximum
+neighborhood size and measure run time. In Fig. 2 we
+compare GPSS, GPNS, and an exhaustive search for
+the optimal subset. The exhaustive search quickly be-
+comes computationally intractable. Despite the added
+flexibility, GPSS is faster than GPNS because GP pos-
+terior inference is performed for fewer neighborhoods.
+We consider the effect of the density of anomalies
+on GPSS and GPNS where “density” is defined by
+the proportion of anomalous points in the true subset
+(Fig. 3). While the stepwise method is competitive
+with the βMAX and GRQ approaches at low densities,
+its precision and recall drop off steeply at high densi-
+ties. Additionally, in relatively low density anomalies,
+where the anomalous shapes may be highly irregular,
+GPNS has substantially reduced precision and recall.
+5.2 Urban opioid overdose deaths
+A recent United States opioid epidemic has garnered
+national attention (US Department of Health and Hu-
+William Herlands, Edward McFowland III, Andrew G. Wilson, Daniel B. Neill
+0 0.5 1
+Density of anomaly
+0
+0.2
+0.4
+0.6
+0.8
+1
+P
+re
+ci
+si
+on
+Precision
+0 0.5 1
+Density of anomaly
+0
+0.2
+0.4
+0.6
+0.8
+1
+R
+ec
+al
+l
+Recall
+0 0.5 1
+Density of anomaly
+0
+5
+10
+15
+20
+25
+S
+iz
+e 
+of
+ d
+et
+ec
+te
+d 
+su
+bs
+et
+Size of detected subset
+beta-MAX
+GRQ
+stepwise
+GPNS
+Figure 3: Precision, recall, and size of detected subset
+for GPSS and GPNS methods over subsets of varying
+density within a neighborhood.
+man Services, 2016). We study monthly opioid over-
+dose deaths in New York from 1999-2015 (US CDC,
+2017). Data is provided at a county level for Man-
+hattan, Brooklyn, Queens, the Bronx, Nassau County,
+and Suffolk County. Data is missing for some months
+in different counties. We apply GPSS and baseline ap-
+proaches jointly to data across all time, latitude, and
+longitude, with randomization testing at α = 0.05.
+All three GPSS approaches identify two statistically
+significant anomalous patterns. While precise points
+2000 2005 2010 2015
+10
+20
+30
+Nassau
+2000 2005 2010 2015
+10
+20
+30
+40
+Brooklyn
+2000 2005 2010 2015
+10
+15
+20
+25
+Queens
+2000 2005 2010 2015
+10
+20
+30
+40
+Manhattan
+2000 2005 2010 2015
+10
+20
+30
+40
+Bronx
+beta-MAX
+2000 2005 2010 2015
+10
+20
+30
+40
+Suffolk
+2000 2005 2010 2015
+10
+20
+30
+Nassau
+2000 2005 2010 2015
+10
+20
+30
+40
+Brooklyn
+2000 2005 2010 2015
+10
+15
+20
+25
+Queens
+2000 2005 2010 2015
+10
+20
+30
+40
+Manhattan
+2000 2005 2010 2015
+10
+20
+30
+40
+Bronx
+baseline SVM
+2000 2005 2010 2015
+10
+20
+30
+40
+Suffolk
+Figure 4: Monthly opioid overdose deaths in New
+York from 1999-2015. Top plot depicts the two statisti-
+cally significant anomalies detected by βMAX . Bottom
+plot depicts points detected by the one-class SVM.
+selected by the methods differ slightly, Fig. 4 depicts
+the two anomalous regions discovered by βMAX in blue
+circles and red crosses. With the exception of the in-
+dependent subset scan, the baseline methods failed to
+discover a coherent anomalous pattern. Instead they
+selected individual points across space and time. For
+example, see results from the one-class SVM in Fig. 4.
+The anomalies detected by GPSS correspond to im-
+portant public health events. The blue circles at the
+end of 2015 indicate a surge in opioid deaths corre-
+sponding to a well known plague of fentanyl-related
+deaths in NYC (City of New York Office of the Mayor,
+2017). The anomaly denoted by red crosses in 2006
+is particularly interesting since it indicates a spike in
+opioid deaths immediately preceding the introduction
+of community training programs to administer a life-
+saving naloxone drug. This may indicate a surge in
+fatalities that was cut short by making naloxone more
+widely available and educating communities in its use.
+5.3 Manhattan 311 requests
+New York City’s 311 system enables residents to re-
+quest government services. We consider a local pub-
+lic health event that occurred on 01/22/16 in up-
+per Manhattan. On that day, local news reported
+that residents were concerned due to brown tap wa-
+ter (Pichardo, 2016; CBS New York, 2016b). Detect-
+ing the extent of the residents’ concerns is important
+to help identify and mitigate public health risks.
+GRQ baseline RobustCov
+Figure 5: GPSS and robust covariance results for
+daily 311 requests in Manhattan on 01/22/16. Red
+squares indicate detected anomalies.
+We consider daily 311 requests in Manhattan for the
+month of January 2016, aggregated over a 0.08 mile2
+grid (City of New York, 2017). We apply GPSS meth-
+ods and baseline approaches with neighborhoods of up
+to 15 points. All GPSS methods identified an anoma-
+lous pattern around the locations and time of the water
+discoloration event. Baseline methods tended to sub-
+stantially overestimate the anomaly’s extent in both
+space and time. These results from January 22 are
+represented by the GRQ and the Robust baselines in
+Fig. 5. Blue and yellow squares indicate low and high
+volume of reports, respectively. Red squares indicate
+the top anomalous regions discovered by each method.
+Gaussian Process Subset Scanning for Anomalous Pattern Detection in Non-iid Data
+Ground truth does not exist for these hyper-local
+events so we cannot compute precision and recall.
+However, 311 requests have labeled types, although
+we used aggregated 311 calls as our data inputs. For
+each method we compute the ratio of water-related 311
+calls to non-water-related calls in the detected anoma-
+lies. This “water signal-to-noise” ratio, listed in Ta-
+ble 1, indicates how precisely each method identified
+regions associated with many water-related requests.
+The entire dataset has a water signal-to-noise of 0.07.
+Table 1: Signal-to-noise ratio of water-related 311
+calls to non-water-related 311 calls for all methods.
+Model Signal-to-Noise
+GRQ 7.22
+Stepwise 7.22
+βMAX 7.22
+Independent SS 7.06
+Baseline GP 0.44
+One-class SVM 0.23
+RobustCov 0.12
+5.4 Multi-stream: trees and sewers
+Using the multi-stream procedure from §4.3, we con-
+sider 311 reports of damaged trees and sewer issues.
+Both streams indicate weather-related issues: dam-
+aged trees indicate high winds while sewer calls in-
+dicate substantial precipitation. Together, these data
+identify areas with dangerous post-storm conditions.
+Each complaint type is fit with an independent GP
+and the entire data is scanned jointly for anomalies.
+07/13
+07/13
+07/20
+07/20
+07/27
+stepwise
+07/27
+Sewers: 
+07/13
+07/13
+07/20
+07/20
+07/27
+stepwise
+07/27
+Trees: 
+Figure 6: 311 calls for damaged trees and sewer issues
+from 2016 in Brooklyn. Red squares indicate the top
+anomalies discovered by the βmax approach.
+We analyze data in Brooklyn aggregated weekly over a
+0.08 mile2 grid (City of New York, 2017). We conduct
+analyses for 2016 and 2010 with results depicted in
+Figs. 6 and 7. The number of sewer reports (per week,
+per cell) are plotted on top, and damaged tree reports
+on bottom. Red squares indicate the top anomalous
+regions discovered using the βmax approach.
+The most anomalous regions in 2016 were all concen-
+trated during the week of July 20th when a significant
+summer storm felled trees and flooded sewers, thus
+jointly affecting both data streams (CBS New York,
+2016a). Conversely, although the week of July 13th
+experienced elevated reports of felled trees no anoma-
+lous region is detected since there is no correspond-
+ing increase in sewer flooding. This demonstrates how
+multi-stream search may help to regulate GPSS.
+09/08
+09/08
+09/15
+09/15
+09/22
+stepwise
+09/22
+09/08
+09/08
+09/15
+09/15
+09/22
+stepwise
+09/22
+Sewers: 
+Trees: 
+Figure 7: 311 calls for damaged trees and sewer issues
+from 2010 in Brooklyn. Red squares indicate the top
+anomalies discovered by the βmax approach.
+The most anomalous regions in 2010 were all concen-
+trated during the week of September 15th when an
+urban tornado cut through Brooklyn (AccuWeather,
+2013). Unlike the 2016 results, these anomalies only
+occurred in reports of damaged trees. Also note the
+lone yellow square in the sewer data of September 22.
+Though the square indicates elevated number of calls,
+GPSS does not consider it anomalous since it does not
+represent a systematic shift in space and time.
+6 Conclusions
+We develop two GP-based subset scanning approaches
+to accurately and efficiently detect anomalous patterns
+in complex, highly correlated data. The results of
+GPNS and GPSS are coherent, powerful, and inter-
+pretable. While the simpler GPNS method may be
+sufficient for circular clusters, GPSS provides addi-
+tional flexibility to accurately identify irregular cluster
+shapes. Unlike individual anomaly detection methods,
+the spatial locality enforced by our methods ensures
+coherent explanation of detected anomalous patterns.
+As the 311 and opioid applications demonstrate, our
+approaches can be used for studying and informing
+policy decisions. Future work could integrate categor-
+ical variables or extend to Student-t processes (Shah
+et al., 2014) for dealing with heavy-tailed noise.
+This work was supported by NSF awards GRFP DGE-
+1252522 and IIS-0953330, the RK Mellon Foundation,
+and NCSU Laboratory for Analytical Sciences.
+William Herlands, Edward McFowland III, Andrew G. Wilson, Daniel B. Neill
+A Alternative model MLE
+Given data, (x, y), we can determine the optimal mean
+shift, β∗ through maximum likelihood estimation as
+shown below. Let µ,Σ be the posterior mean and co-
+variance of the null model in the domain of x, and
+denote E = Σ−1 for brevity.
+β∗ = max
+β
+(
+(2π)−
+k
+2 |Σ|− 12 exp(−1
+2
+(y − wβ − µ)T
+E(y − wβ − µ))
+)
+= max
+β
+− 1
+2
+(y − wβ − µ)TE(y − wβ − µ)
+= max
+β
+(y − µ)TEwβ − 1
+2
+(wβ)TE(wβ)
+(8)
+We take the derivative with respect to β and set it to
+zero
+δLLR(w)
+δβ
+= (y − µ)TEw − (wβ∗)TE(w) = 0
+⇒ (wβ∗)TE(w) = (y − µ)TEw
+⇒ β∗ = w
+TE(y − µ)
+wTEw
+(9)
+B Iterative βMAX algorithm to
+approximate optimal subset
+Since the derivation of βMAXi is conditional on a sub-
+set w, we obtain the conditional optimal subset. In
+order to approximate an optimal solution we use iter-
+atively compute the conditional optimal subset begin-
+ning with a null subset, w = ~0. This is an O(`k log(k))
+algorithm for some ` number of iterations, where k is
+the size of the neighborhood. Pseudo-code is depicted
+in Alg. 3.
+Algorithm 3: Iterative βMAXi algorithm
+Result: Highest scoring subset w∗
+Initialize w = ~0;
+for l = 1 : ` do
+Compute βMAXi ∀i conditioned on the current
+value of w;
+Find highest scoring subset, w(l), using a linear
+search over sorted βMAXi ;
+Compute LLR(w(l));
+Set w = w(l);
+end
+Choose w∗ = argmaxw(l) LLR(w
+(l))
+C Constrained βMAX optimiza-
+tion over blocks
+Although we focus on unconstrained subsets searching
+within neighborhoods, real world applications some-
+times require a more constrained optimization. For
+example, in spatiotemporal phenomena it is often use-
+ful to consider anomalous patterns that are nearby in
+space and contiguous over time. We can enforce such
+constraints by predefining mutually exclusive blocks
+of points, (x(B), y(B)) ⊆ (x(n), y(n)) where points in a
+block must all either be included in, or excluded from,
+a subset.
+When considering blocks of points we can compute the
+total contribution from all points in the block, though
+we must also account for additional off-diagonal terms
+in E due to the blocking of data points. Following the
+derivation in Section 4.2.1 of the main paper, we can
+derive the βMAXb for each block,
+βMAXB =
+∑
+i∈B
+2
+(
+E(y(n) − µ)
+)
+i(∑
+j /∈B 2wjEj,i + Ei,i +
+∑
+k∈B Ek,i
+)
+(10)
+This can be used in a lightly modified version of Al-
+gorithm 3 where the βMAXb of blocks, not individual
+points, is iteratively computed.
+D School Absenteeism
+Public schools in New York City record and publish
+daily student attendance (NYC Department of Edu-
+cation, 2017). Given the importance of education on
+future outcomes there is tremendous interest in un-
+derstanding patterns of school absenteeism. We con-
+sider public school attendance data in Manhattan for
+the 2015-2016 school year. The data is messy, with
+missing entries and non-uniform placement of school
+locations. We aggregate data at weekly level and re-
+move the last four weeks of the school year since they
+contain known high absenteeism rates that are not of
+interest to Department of Education officials.
+We apply GPSS methods and baseline approaches
+with neighborhoods of up to ten local schools. All
+GPSS methods identified an anomaly around January
+to February 2016 concentrated on West Side of Man-
+hattan. The results from GRQ around the time of
+the detected anomaly are presented in Fig. 8. Each
+dot represents a school location, with yellow dots in-
+dicating high attendance and blue dots indicating low
+attendance. The space-time locations of schools in the
+top ten anomalous subsets are bordered in red.
+The detected anomalies correspond to a category five
+blizzard which may have disrupted teachers and stu-
+Gaussian Process Subset Scanning for Anomalous Pattern Detection in Non-iid Data
+01/18 01/25 02/02 02/09
+beta-MAX
+02/2201/18 01/25 02/02 02/09
+beta-MAX
+02/2201/18 01/25 02/02 02/09
+beta-MAX
+02/ 201/18 01/25 02/02 02/09
+beta-MAX
+02/ 201/18 01/25 02/02 02/09
+beta-MAX
+02/22
+Figure 8: School absenteeism results from Manhat-
+tan using GRQ. Each dot represents a school location,
+with yellow dots indicating high attendance and blue
+dots indicating low attendance. The space-time loca-
+tions of schools in the top ten anomalous subsets are
+bordered in red.
+dents from attending school even though no snow day
+closings were reported at the time. Further research is
+required to understand why the West Side of Man-
+hattan differed systematically from the rest of the
+borough. Baseline anomaly detection methods did
+not identify a coherent anomaly and instead detected
+anomalies throughout the year.
+References
+AccuWeather. Photos: Tornadoes ransacked
+Brooklyn, Queens in 2010, 2

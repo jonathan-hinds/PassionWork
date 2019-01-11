@@ -1,0 +1,389 @@
+1 
+ 
+Supplemental Materials 1 
+Title 2 
+The Irish DNA Atlas: Revealing Fine Scale Population Structure and History within Ireland 3 
+Authors 4 
+Edmund Gilbert1, Seamus O’Reilly2, Michael Merrigan2, Darren McGettigan2, Anne M Molloy3, Lawrence C 5 
+Brody4, Walter Bodmer5, Katarzyna Hutnik5, Sean Ennis6, Daniel J Lawson7, James F Wilson8,9, Gianpiero L 6 
+Cavalleri1* 7 
+Affiliations 8 
+1RCSI Molecular & Cellular Therapeutics, Royal College of Surgeons in Ireland, Dublin 2, Ireland. 9 
+2Genealogical Society of Ireland, Dún Laoghaire, County Dublin, Ireland. 3School of Medicine, Trinity 10 
+College, Dublin 2, Ireland. 4Genome Technology Branch, National Human Genome Research 11 
+Institute, National Institutes of Health, Bethesda, MD 20892. 5Weatherall Institute of Molecular 12 
+Medicine and Department of Oncology, University of Oxford, Oxford OX3 7DQ, UK. 6School of 13 
+Medicine and Medical Science, University College Dublin, Dublin, Ireland. 7University of Bristol, 14 
+Department of Mathematics, University Walk, Bristol BS8 1TW, UK. 8Centre for Global Health 15 
+Research, Usher Institute for Population Health Sciences and Informatics, University of Edinburgh, 16 
+Teviot Place, Edinburgh, Scotland. 9MRC Human Genetics Unit, Institute of Genetics and Molecular 17 
+Medicine, University of Edinburgh, Western General Hospital, Crewe Road, Edinburgh, Scotland. 18 
+  19 
+2 
+ 
+Contents Page 20 
+Contents 21 
+Supplemental Materials .......................................................................................................................... 1 22 
+Title ..................................................................................................................................................... 1 23 
+Authors ................................................................................................................................................ 1 24 
+Affiliations ....................................................................................................................................... 1 25 
+Contents Page ..................................................................................................................................... 2 26 
+Supplemental Data 1 – Study Populations .......................................................................................... 3 27 
+Supplemental Data 2 – Supplemental Methods ................................................................................. 4 28 
+Supplemental Data 2.1 – The fineStructure Population Structure analysis. .................................. 4 29 
+Supplemental Data 2.2 – EEMS Analysis Pipeline ........................................................................... 4 30 
+Supplemental Data 2.3 – The Ancestry Regression Method .......................................................... 5 31 
+Supplemental Data 3 – The Final Inferred Clustering of the Irish and British Datasets ..................... 6 32 
+Supplementary Figure 1 – The Final Inferred fineStructure Clustering within Ireland ................... 6 33 
+Supplementary Table 1 – Ireland Britain fineStructure Clustering Details ..................................... 7 34 
+Supplementary Figure 2 – Principal Component Analysis of the fineStructure Co-Ancestry Matrix . 8 35 
+Supplemental Data 4 – Comparison of fineStructure PCA to comparable methods .......................... 9 36 
+Supplementary Figure 3 – Comparison of fineStructure PCA and GCTA64 PCA........................... 10 37 
+Supplemental Data 5 – Comparison to Ancient Irish Genomes ....................................................... 11 38 
+Supplementary Table 3 – The overlap of common SNPs between two published ancient Irish 39 
+individuals and a dataset of Irish and British individuals .............................................................. 11 40 
+Supplementary Figure 4 – Haplotypic affinity of Irish and British clusters to two ancient Irish 41 
+genomes ........................................................................................................................................ 12 42 
+Supplementary Figure 5 – Estimated Effective Migration Surface Diagnostic Plots ........................ 13 43 
+Supplemental Data 6 – Checking Ancestry Proportions ................................................................... 14 44 
+Supplementary Figure 6 – Ancestry profiles of 12 Norwegian populations ................................. 14 45 
+Supplementary Data 7 – GLOBETROTTER Joint Probability Curves .................................................. 15 46 
+Supplementary Figure 7.1 – Joint Probability Curves of Irish clusters comparing Irish signal to 47 
+primary Norwegian signal ............................................................................................................. 16 48 
+ Supplementary Figure 7.2 – Joint Probability Curves of N Ireland I ............................................ 17 49 
+Supplementary Figure 7.3 – Joint Probability Curves of N Ireland II ............................................ 18 50 
+Supplementary Figure 7.4 – Joint Probability Curves of N Ireland III ........................................... 19 51 
+References ........................................................................................................................................ 21 52 
+ 53 
+3 
+ 
+Supplemental Data 1 – Study Populations 54 
+Irish DNA Atlas 55 
+ The Irish DNA Atlas (henceforth the Atlas) is a DNA cohort of individuals with Irish ancestry. 56 
+To be included into the study, a participant must have all eight great-grandparents born within 57 
+50km, in Ireland. Therefore each Atlas individual is a sample of the genetics of specific regions in 58 
+Ireland three generations ago. The Atlas is a collaborative project between the Royal College of 59 
+Surgeons in Ireland, and the Genealogical Society of Ireland, and recruitment was primarily based 60 
+through genealogical interest groups. Saliva samples were collected using Oragene OG-250 61 
+(DNAGenotek, Canada) collection devices, and DNA extracted according to standard protocol. 62 
+Additionally each participant provided date of birth, and birth place information for all eight 63 
+grandparents. Samples were then genotyped on the Illumina OmniExpress chip at Edinburgh 64 
+Genomics, according to manufacturer’s instructions. Informed consent was obtained from all 65 
+individuals, and the data collection and analysis of these individuals was carried out in accordance 66 
+with the relevant guidelines and regulations was approved by the Royal College of Surgeons in 67 
+Ireland Research Committee, reference number REC0020563. 68 
+Trinity Student Study Cohort 69 
+This cohort consisted of 2232 students with Irish genetic ancestry recruited from Trinity 70 
+College Dublin [1]. The sample was included as additional samples of the Irish population. Genotype 71 
+information was generated using the Illumina 1M HumanOmni1-Quad chip.  72 
+Peoples of the British Isles Cohort 73 
+This cohort consisted of British individuals from the People of the British Isles (POBI) 74 
+Study[2]. Individuals are phenotyped as having ancestry from 35 geographic regions across the 75 
+United Kingdom. Genotype information from Illumina 1.2M platform was accessed via EBI, accession 76 
+number EGAD00010000632. 77 
+WTCCC2 Project Multiple Sclerosis Cohort 78 
+In order to provide European haplotypes, we included European individuals from the 79 
+WTCCC2 Multiple Sclerosis (MS) Study[3]. Genotype information from Illumina Human660-Quad chip 80 
+platform was accessed via the European Genome and Phenome Archive, accession number 81 
+EGAD00000000120.  82 
+4 
+ 
+Supplemental Data 2 – Supplemental Methods 83 
+Supplemental Data 2.1 – The fineStructure Population Structure analysis. 84 
+Using the final combined dataset of 2,103 individuals and 256,379 common markers we 85 
+phased the dataset using SHAPEIT v2.r790[4] using an effective population size of 11,418 as 86 
+suggested for European populations by the authors. We converted the resultant haplotype files to 87 
+ChromoPainter format using the “impute2chromopainter2.pl” script (downloaded at 88 
+http://www.paintmychromosomes.com/). For the phasing and conversion we used genetic map 89 
+build 37 downloaded with SHAPEIT. 90 
+ Population structure analysis was performed by the combined software fineStructure (a pre-91 
+release version, 2.1.0.pre)[5], which includes the software ChromoPainter, Chromocombine, and 92 
+fineStructure. Chromopainter was applied using default settings, with the exception of specifying the 93 
+number of ‘chunks’ per region to 50 as other analyses[10] have found that British and Irish 94 
+individuals share relatively longer haplotypes than average. We ‘painted’ each individual using every 95 
+other individual in the analysis as a donor using the -a 0 0 switch. Principal component analysis (PCA) 96 
+was performed on the resultant co-ancestry matrix. We then performed fineStructure clustering 97 
+MCMC analysis on the resultant co-ancestry matrix; with 1,000,000 burnin iterations, 1,000,000 98 
+sampling iterations, and retaining 500 MCMC samples. With the MCMC sample with the highest 99 
+posterior probability we performed 1,000,000 additional hill climbing moves to reach the final 100 
+inferred clustering and tree. When tree building we utilised the -T 1 parameter within fs-2.1.0.pre, 101 
+which uses the Maximum Concordance State method first reported by Leslie et al[6]. 102 
+Supplemental Data 2.2 – EEMS Analysis Pipeline 103 
+Atlas individual latitude and longitude coordinates were were generated from the average of 104 
+their eight great-grandparents’ birth places. The coordinates for the habitat boundaries were 105 
+generated with an online Google Maps API tool (http://www.birdtheme.org/useful/v3tool.html), 106 
+and the matrix of average pair-wise genetic dissimilarities was generated from plink format data 107 
+using the bed2diffs software included in the EEMS download package. 108 
+ At the beginning of the analytical pipeline ten independent MCMC chains were started, each 109 
+with a random random-number-seed, for an initial 100,000 burnin and 100,000 sampling iterations 110 
+(thinning every 999 iterations), placing samples to the nearest of 600 demes. We chose the chain 111 
+with the highest final log-likelihood, and started 10 new EEMS chains, using this chain as a starting 112 
+point. This second round of chains were each started with a random random-number-seed, with 113 
+1,000,000 burnin iterations and 1,000,000 sampling iterations, sampling every 9,999 iteration – 114 
+placing samples to the nearest of 800 demes. We removed two chains (8 and 10) as these has 115 
+5 
+ 
+consistently lower log-likelihoods. We then checked whether their exclusion significantly changed 116 
+the predictive power of the EEMS model by noting the change in the r2 value of the expected versus 117 
+fitted dissimilarities between demes (0.326 verses 0.325 without). We plotted the results of our 118 
+EEMS analysis using the R[7] package, “rEEMSplots”, which is included in the EEMS software 119 
+download. We used all final eight EEMS runs as input, and plotted the average estimated migration 120 
+and diversity surfaces, the posterior probability trace log for all eight chains, and a scatter plot of 121 
+observed vs fitted genetic dissimilarities within demes. The dissimilarity between observed versus 122 
+fitted deme pairs show a general trend with some deviation (r2 = 0.325) (Supplementary Figure 5a) 123 
+and the log-posterior trace of the eight replicate MCMC chains (Supplementary Figure 5b) show 124 
+convergence of the independent EEMS runs. 125 
+Supplemental Data 2.3 – The Ancestry Regression Method 126 
+To investigate the genetic ancestry of any Irish clusters we observe we utilised a regression 127 
+based “ancestry profile” method first described by Leslie et al[6]. Briefly we estimated the 128 
+proportion of ancestry in each Irish and British individual that most closely resembles that 129 
+represented by different European, reference, individuals. These proportions can then be summed 130 
+across groups. We considered YP which is a vector of G length (where G is the number of European 131 
+reference populations), recording the average length of DNA genome-wide that each G-population 132 
+donates to Irish or British cluster P – which is then summed to unity across the vector. Additionally, 133 
+XG is a vector of G-length that records the average length of DNA genome-wide that each European 134 
+individual copies from each European G population (with individuals unable to copy their own 135 
+haplotype to themselves). With, 136 
+YP = 1X1 + X2 + … + GXG, 137 
+we solve g assuming g ≥ 0 and ∑ βg = 1
+𝐺
+𝑔=1 , using an adaptation of the non-negative-least-squares 138 
+(nnls) function in R[7, 8]. Each inferred value of g is interpreted as the average proportion of 139 
+ancestry of genome-wide DNA each Irish or British individual from cluster P that is most closely 140 
+related, ancestrally, to each European cluster g. 141 
+ To calculate confidence intervals we performed bootstrapping, resampling the 142 
+chromosomes of the Irish and British individuals and creating pseudo-individuals from the sampled 143 
+chromosomes. We recalculated our estimates of g from these pseudo-individuals to compute the 144 
+95% confidence intervals over 1000 bootstrap intervals.  145 
+6 
+ 
+Supplemental Data 3 – The Final Inferred Clustering of the Irish and British 146 
+Datasets 147 
+The final inferred state of fineStructure clusters in our analysis of Irish and British individuals 148 
+(see Methods and Supplemental Data 2.1) yielded a total of 48 clusters, with many of these clusters 149 
+numbers <10 individuals (n = 16). We investigated the clustering at each hierarchal value of k-150 
+clusters, paying attention to the cluster sizes and the degree of Irish substructure shown. We found 151 
+that at k = 30, the 7 major clusters of predominantly Irish membership are separated (with two 152 
+clusters of two Irish individuals each merged with the Connacht and the N Munster clusters 153 
+respectively).  154 
+We show the geographic distribution of Atlas samples according to cluster membership 155 
+(Figure S1A), the final inferred fineStructure tree at k = 48 (Figure S1B), and the membership of each 156 
+k = 48 cluster in each k = 30 cluster with cluster size shown (Table S1). 157 
+Supplementary Figure 1 – The Final Inferred fineStructure Clustering within Ireland 158 
+ 159 
+ 160 
+ 161 
+ 162 
+ 163 
+ 164 
+ 165 
+ 166 
+ 167 
+ 168 
+ 169 
+ 170 
+ 171 
+Supplementary Figure 1 - The final inferred fineStructure clustering state of 2,103 Irish and British 172 
+individuals. (a) The fineStructure dendrogram of the 48 final inferred clusters. (b) The geographic 173 
+spread of the clusters containing Atlas Irish individuals, colour and shaped coded according to 174 
+fineStructure cluster membership. Geographic location is the average of the Atlas individuals’ great-175 
+grandparental birth places. Open Street Map Ireland, Copyright OpenStreetMap Contributors, 176 
+(https://www.openstreetmap.ie/) - data available under the Open Database Licence. The figure was 177 
+plotted in the statistical software language R, version 3.4.1[7], with various packages.  178 
+a b 
+7 
+ 
+ 179 
+  180 
+Supplementary Table 1 – Ireland Britain fineStructure Clustering Details 
+ 
+The individual final inferred 48 clusters and which K30 cluster that cluster 
+is a member of. Also shown are the individual sizes for each K48 and K30 
+cluster. 
+K48 Cluster K48 Cluster Size K30 Cluster K30 Cluster Size 
+England 1 1 England I 
+536 
+England 2 1 England I 
+England 3 528 England I 
+England 4 3 England I 
+England 5 3 England I 
+N England 1 82 N England I 82 
+Devon 1 73 Devon I 73 
+N England 2 32 N England II 32 
+Marches 1 78 Marches I 78 
+Cornwall 1 5 Cornwall I 
+82 Cornwall 2 13 Cornwall I 
+Cornwall 3 64 Cornwall I 
+N England 3 2 N England III 
+153 N England 4 149 N England III 
+N England 5 2 N England III 
+N England 6 149 N England IV 149 
+N Scotland 1 6 N Scotland I 
+39 
+N Scotland 2 33 N Scotland I 
+N Scotland 3 7 N Scotland II 
+14 
+N Scotland 4 7 N Scotland II 
+N Ireland 1 33 N Ireland I 33 
+N Ireland 2 94 N Ireland II 94 
+N Ireland 3 38 N Ireland III 38 
+W Scotland 1 7 W Scotland I 23 
+W Scotland 2 16 W Scotland I 23 
+S Wales 1 11 S Wales I 11 
+S Wales 2 3 S Wales II 
+26 
+S Wales 3 23 S Wales II 
+S Wales 4 22 S Wales III 22 
+N Wales 1 63 N Wales I 75 
+N Wales 2 12 N Wales I 75 
+Sligo Outlier 2 Connacht 
+96 
+Connacht 94 Connacht 
+Dublin 48 Dublin 48 
+C Ireland 77 C Ireland 77 
+Leinster 62 Leinster 62 
+Ulster 61 Ulster 61 
+Outlier 2 N Munster 
+76 
+N Munster 74 N Munster 
+S Munster 28 S Munster 28 
+Orkney 1 2 Orkney I 
+38 
+Orkney 2 12 Orkney I 
+Orkney 3 4 Orkney I 
+Orkney 4 20 Orkney I 
+Orkney 5 13 Orkney II 13 
+Orkney 6 15 Orkney III 15 
+Orkney 7 13 Orkney IV 13 
+Orkney 8 16 Orkney V 16 
+8 
+ 
+Supplementary Figure 2 – Principal Component Analysis of the 181 
+fineStructure Co-Ancestry Matrix 182 
+ 183 
+ 184 
+Supplementary Figure 2 - The Principal component analysis of the fineStructure co-ancestry 185 
+matrix. Shown are the first and second principal components, with individuals labelled according to 186 
+k = 30 fineStructure cluster membership.  187 
+9 
+ 
+Supplemental Data 4 – Comparison of fineStructure PCA to comparable 188 
+methods 189 
+ To compare fineStructure’s ability to differentiate population structure to more 190 
+conventional methods we performed principal component analysis (PCA) of the Irish and British 191 
+dataset used in our analysis of Population Structure within Ireland using gcta64[9], and compared 192 
+this to the PCA of the fineStructure co-ancestry matrix. We generated principal components from 193 
+the co-ancestry matrix using methods previously described in Supplemental Data 2.1. In order to 194 
+generate the principal components using gcta64, we used plink 1.9[10, 11] formatted data of the 195 
+2,103 Irish and British individuals and the 256,379 common markers. We first pruned the dataset of 196 
+SNPs with the plink command --indep-pairwise 1000 50 0.2. Then, using a pruned dataset of 79,417 197 
+common markers, we generated a genetic relationship matrix (grm) with gcta64, and finally 198 
+generated the top 10 principal components from this matrix using gcta64’s “--pca” function. 199 
+ As previously reported[5, 6], the haplotype-based fineStructure shows a greater ability to 200 
+differentiate population structure than more conventional allele frequency based methods such as 201 
+gcta64. This is demonstrated at the higher components as well as lower principal components 202 
+(shown are principal components 7 and 8 in Figure S3). fineStructure’s ability to differentiate 203 
+population structure at lower components (where gcta64 is not able to detect structure) presumably 204 
+reflective of its ability to detect the fine scale structure that we observe within Ireland.  205 
+10 
+ 
+Supplementary Figure 3 – Comparison of fineStructure PCA and GCTA64 PCA 206 
+ 207 
+ 208 
+ 209 
+ 210 
+ 211 
+ 212 
+ 213 
+ 214 
+ 215 
+ 216 
+ 217 
+ 218 
+ 219 
+ 220 
+Supplementary Figure 3 – Comparison of fineStructure-based principal component analysis (PCA) 221 
+and conventional PCA methods. Shown are all individuals included in the Irish and British 222 
+fineStructure analysis that were placed in clusters on the Irish branch at k = 30. We show, with four 223 
+panels, their PCA coordinates along PC principal components 1 and 2 (upper two) and principal 224 
+components 7 and 8 (lower two) using fineStructure (left two) and gcta64 (right two).  225 
+11 
+ 
+Supplemental Data 5 – Comparison to Ancient Irish Genomes 226 
+ We decided to compare the Atlas Irish individuals in our sample to two previously 227 
+published[12] high coverage ancient Irish genomes; a Neolithic farmer (Ballynahatty) and a Bronze 228 
+Age individual (Rathlin1). The authors of the aforementioned authors found the greatest affinity to 229 
+the modern Irish was found in the Bronze Age individual studied. We set out to investigate whether 230 
+any particular region in Ireland as represented in our Atlas Irish individuals and Irish fineStructure 231 
+clusters shared an affinity to either of the ancient Irish individuals. 232 
+ We found the intersect of common shared SNPs between the individuals included in the 233 
+fineStructure analysis of Population Structure within Ireland (see methods for more detail) 234 
+individually for each ancient Irish individual (see Table S3 for SNP overlaps).  235 
+  236 
+ 237 
+ 238 
+ 239 
+ We merged the Irish and British dataset individually with each ancient individual, and as 240 
+each ancient individuals was of high coverage (>10x), we phased and performed fineStructure 241 
+analysis separately. We phased each of the datasets using SHAPEIT[4], using the same method 242 
+outlined by Cassidy et al[12]. We painted each individual donating haplotypes to every other 243 
+individual in the analysis (the “-a” switch). We report the average haplotypic donation from each 244 
+ancient Irish genome to each modern Irish or British cluster in cM. We calculated the standard error 245 
+for each Irish or British cluster from the standard error of the individual sample lengths within each 246 
+cluster.  247 
+Supplementary Table 3 – The overlap of common SNPs 
+between two published ancient Irish individuals and a 
+dataset of Irish and British individuals 
+Ancient Irish Ballynahatty Rathlin1 
+SNP Overlap 162,069 175,749 
+12 
+ 
+Supplementary Figure 4 – Haplotypic affinity of Irish and British clusters to two ancient 248 
+Irish genomes  249 
+250 
+ 251 
+Supplementary Figure 4 – Haplotypic Affinity of each Ancient Irish genome to each modern Irish 252 
+and British cluster. Shown is the average length of haplotype donation from each ancient individual, 253 
+Ballynahatty (a) and Rathlin (b), to each k = 30 Irish and British cluster in cM. Also shown are the 254 
+standard error bars calculated from the standard error of the sample lengths of the individuals 255 
+within each of the individual clusters.   256 
+a 
+b 
+13 
+ 
+Supplementary Figure 5 – Estimated Effective Migration Surface Diagnostic 257 
+Plots 258 
+ 259 
+ 260 
+Supplementary Figure 5 – Estimated Effective Migration Surface Diagnostic plots. (a) The observed 261 
+versus expect dissimilarity between pairs of demes (with demes with only one individual not 262 
+considered). Strong deviations from the fitted line (red) indicate pairs of demes much more 263 
+genetically distant than expected. (b) The posterior probability log of the six replicates of the EEMS 264 
+run, indicating whether the MCMC chains have converged.  265 
+  266 
+a 
+b 
+14 
+ 
+Supplemental Data 6 – Checking Ancestry Proportions 267 
+ Our regression based ancestry profile analysis of Irish and British haplotypes revealed a 268 
+surprising amount of Norwegian-like ancestry in our Irish samples. To investigate whether this was 269 
+due wholly or in part to Irish haplotypes existing in our modern Norwegian sample we performed an 270 
+additional regression based ancestry analysis. We modelled the Norwegian k = 51 clusters as a 271 
+mixture of the other k = 51 European clusters, as well as the k = 30 Irish and British clusters using the 272 
+same methodology as described in the Materials and Methods, as well as Supplementary Data 2.1. 273 
+We present the data as the average reference country contribution to each Norwegian cluster, 274 
+where Norwegian clusters are organised by region of origin within Norway. 275 
+Supplementary Figure 6 – Ancestry profiles of 12 Norwegian populations 276 
+ 277 
+Supplementary Figure 6 – Ancestry profiles of 13 Norwegian populations modelled as a mixture of 278 
+Irish and British, and mainland European populations. Shown are the average total ancestry 279 
+contributions of all reference fineStructure clusters where the majority of individuals originate from 280 
+each country, in each Norwegian cluster. Norwegian clusters are organised in three groups based on 281 
+where the majority of individuals are from in Norway in each cluster.282 
+15 
+ 
+Supplementary Data 7 – GLOBETROTTER Joint Probability Curves 283 
+ To investigate the evidence of admixture events within Ireland we performed 284 
+Globetrotter[13] analysis on a number of different fineStructure identified clusters of Irish 285 
+membership. Firstly, we inve

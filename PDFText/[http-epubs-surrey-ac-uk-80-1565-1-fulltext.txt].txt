@@ -1,0 +1,824 @@
+Measuring wiki viability∗
+An empirical assessment of the social dynamics of a large sample of wikis
+Camille Roth
+CAMS
+CNRS/EHESS
+96, Bd Raspail
+F-75006 Paris
+France
+camille.roth@polytechnique.edu
+Dario Taraborelli
+CRESS
+Department of Sociology
+University of Surrey
+Guildford GU2 7XH
+United Kingdom
+d.taraborelli@surrey.ac.uk
+Nigel Gilbert
+CRESS
+Department of Sociology
+University of Surrey
+Guildford GU2 7XH
+United Kingdom
+n.gilbert@surrey.ac.uk
+ABSTRACT
+This paper assesses the content- and population-dynamics of a large
+sample of wikis, over a timespan of several months, in order to
+identify basic features that may predict or induce different types
+of fate. We analyze and discuss, in particular, the correlation of
+various macroscopic indicators, structural features and governance
+policies with specific growth patterns. While recent analyses of
+wiki dynamics have mostly focused on popular projects such as
+Wikipedia, we suggest research directions towards a more general
+theory of the dynamics of such communities.
+Categories and Subject Descriptors
+H.3.3, H.3.4 [Information storage and retrieval]: systems and
+software, online information services; K.4.3 [Computers and so-
+ciety]: collaborative work; J.4 [Computer applications]: Social
+and behavioral sciences–sociology
+General Terms
+Human Factors, Measurement, Performance
+Keywords
+wikis, web 2.0, online communities, governance, moderation, met-
+rics, dynamics, viability.
+1. INTRODUCTION
+Mapping the wikisphere
+Online communities have demonstrated their potential to leverage
+a vast amount of collaboratively contributed content. Famous ex-
+amples include large open-source software development projects
+such as Mozilla Firefox or Linux [5] and wiki-based encyclopedias
+∗This work was supported by the EC-sponsored PATRES network
+(NEST-043268). We are grateful to s23.org for giving us the per-
+mission to harvest their MediaWiki statistics database.
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies are
+not made or distributed for profit or commercial advantage and that copies
+bear this notice and the full citation on the first page. To copy otherwise, to
+republish, to post on servers or to redistribute to lists, requires prior specific
+permission and/or a fee.
+WikiSym ’08, September 8-10, Porto, Portugal.
+Copyright 2008 ACM 1-60558-128-3/08/09 ...$5.00.
+such as Wikipedia [4]. However not all projects achieve such suc-
+cessful outcomes. Their destiny relies on the capacity of project
+maintainers to attract new members, to develop policies to secure
+contributors’ commitment, and to promote high standards.
+The question of forging a sustainable community of active con-
+tributors is particularly crucial for individuals, companies and orga-
+nizations willing to launch and develop wiki-based projects. This
+issue relates more broadly to the understanding of the general dy-
+namics of content-based communities and, therefore, calls for re-
+search on a wide range of wikis at various stages of development.
+Previous studies have mainly focused on Wikipedia. While of great
+interest, it seems difficult to build on this knowledge to develop
+a more comprehensive theory of the social structure and content
+dynamics of wikis—Wikipedia is a special case in many respects
+(population, maturity, topical range, and media attention, among
+other indicators). A comprehensive analysis of wiki dynamics is
+further hindered by the heterogeneity of wiki platforms and by the
+lack of tools and methods to collect data in a standardized way.
+Nevertheless, a first approach to generalisation can be achieved by
+examining a set of wikis that share the same platform.
+In the following sections, we present an analysis of the evolution
+of a large sample of wikis based on the MediaWiki engine. In par-
+ticular, we investigate some indicators that correlate with different
+growth rates, as a preliminary step towards a full-fledged under-
+standing of factors that determine different patterns of evolution.
+Wiki ecology: demographics and viability
+The literature on the dynamics of Web-based communities is rel-
+atively scarce [6, 9] and, to our knowledge, the present study rep-
+resents the first longitudinal analysis of the content and popula-
+tion dynamics of a large set of wikis over time using data retrieved
+via an API-based service. As well as almost always focusing on
+Wikipedia, previous quantitative wiki research has mainly exam-
+ined the topological structure of underlying interaction or hyperlink
+networks [3, 12] or article-level features [1, 11], with little interest
+in the specific dynamics of the demographic determinants them-
+selves (with the exception of [8] which investigates Wikipedia’s
+demographics of casual vs. committed contributors). In a previous
+study of a static dataset describing wikis we provided a glimpse of
+the demographic structure of a portion of the wikisphere in terms
+of both population and content sizes, but stopped short of investi-
+gating its evolution.[10]
+As content-based online communities, wikis most significantly
+vary in two dimensions: (i) contributors, who may or may not con-
+stitute an active community (as described e.g. in [2]); and (ii) pages,
+which may or may not amount to authoritative or useful content (as
+demonstrated for example by [4]). Users and pages are likely to
+obey a dual dynamic: while more users may contribute to more
+pages, content proliferation in turn seems to require more attention
+from users. As a first approximation, it may thus seem judicious
+to assess the healthiness of a wiki through these variables, taken as
+demographic proxies for its actual growth and activity.1
+2. EMPIRICAL PROTOCOL
+2.1 Dataset
+We constructed a dataset made of simple statistics gathered for
+a large number of MediaWiki-based wikis,2 which enabled us to
+consider the same set of variables across all wikis and make sure
+these variables were generally available. The data was collected
+over the period August 2007–April 2008 from a publicly-available
+database3 totaling 11 500+ wikis.
+2.2 Variables
+We considered a set of four quantitative variables:
+• population size (U ), measured by the number of registered
+users;
+• content size (P ), measured by the number of so-called “good”
+pages, hereafter indifferently called “pages”, “good pages”
+or “articles” ;
+• administrator population (A), or the number of users who
+are granted “administrator status”, i.e. special rights to mod-
+ify sensitive content and perform maintenance activity;
+• editing activity (E), measured by the total number of edits;
+as well as one qualitative variable related to the presence of an op-
+tional access control mechanism:4
+• editing permission (R), or editing access control, i.e. the pos-
+sibility of creating a page for unregistered/anonymous users.
+R ∈ {0, 1}, where 1 ≡ “anonymous editing allowed”.
+These variables provide simplistic yet key indicators of the global
+dynamics of a wiki, and shed light on diverse aspects of its struc-
+ture and evolution. We collected the values of these variables for
+each wiki on a daily basis and over a period of 250 days, i.e. ap-
+proximatively 8 months.
+2.3 Scope restrictions
+Platform exclusions
+A large number of wikis in the database are based on wikifarms, i.e.
+platforms hosting several wikis and providing services easing wiki
+creation and management. Some of these platforms return system-
+wide rather than wiki-specific figures when queried for wiki statis-
+tics, resulting in spurious data. To avoid this, all wikis explicitly
+hosted on platforms exhibiting this behavior (such as wikis hosted
+on wikia.com) were excluded from the dataset.
+1It should be noted however that raw content growth per se may not be a good indica-
+tor of a sustainable wiki, as studies on wiki proliferation seem to suggest. [7]
+2This initial dataset includes among others a large set of Wikipedias.
+3Available from http://s23.org. The database is maintained by a user called
+“Mutante” who graciously granted us the permission to automatically harvest this data.
+4This indicator was not part of the original dataset. To obtain this specific information
+we crawled each wiki in the dataset, at the beginning of the study, using a robot that
+attempted to determine whether page creation was possible without prior user regis-
+tration.
+Population range
+In [10] we observed, on a similar but static dataset, that a large
+majority of wikis are both thinly populated (i.e. often less than 10
+users) and/or do not have a significant number of pages (i.e. gener-
+ally less than 10 pages). In the present study, in order to focus on
+a relatively homogeneous wiki population, we excluded both wikis
+with very large populations and those with very few users, so as
+to avoid basing the analysis on data spanning too many orders of
+magnitude in terms of population. Included in the dataset, there-
+fore, were only wikis whose user population was within the range
+[400, 20 000] on the first day of data collection (note that in this
+region, content sizes are widely spread, from a few to hundreds of
+thousands of pages).
+Growth discontinuities
+Some wikis experience abrupt changes of one or even several or-
+ders of magnitude in population or content size. There are many
+possible causes of such changes, including spam attacks, and ad-
+ministrative decisions to transfer, create, merge or suppress pages
+in bulk or admit or expel classes of user.5 To exclude wikis ex-
+hibiting such a “suspicious” behavior, on the assumption that no
+recruitment of users or creation of pages of a significant magni-
+tude could “naturally” happen within a period as short as 24 hours,
+a threshold percentage of change α between two successive days,
+for both population and content sizes, was set. Wikis whose daily
+growth in either content or users was above the threshold were ex-
+cluded from the dataset. α was set to 0.05, i.e. wikis were excluded
+if they had ever experienced more than a 5% increase or decrease
+in users or pages over a period of 24 hours.
+Clean dataset
+To sum up, the final, “clean” dataset is thus made up of about
+360 wikis, all of which have an initial population between 400 and
+20 000 users, are not hosted by ‘wiki farms’ that do not report use-
+ful data, and which have no major discontinuity in the daily change
+of their population or content.
+3. WIKI DYNAMICS
+We assessed wiki dynamics by comparing their diverse paths with
+respect to a set of independent variables. ‘Growth’ is defined in
+terms of population and content size change: user growthGU (resp.
+page growth GP ) is the ratio between final and initial populations
+(resp. content sizes): GU = Ulast/Ufirst (resp. GP = Plast/Pfirst).
+Wiki dynamics were studied as a function of the variables listed in
+Section 2.2:
+(i) DESCRIPTIVE INDICATORS, i.e. variables on which wiki ad-
+ministrators have no direct control: (a) user activity, i.e. the
+proportion of edits per user (E/U ), (b) user density, i.e. the
+proportion of users per page (U/P ), and (c) editing density,
+i.e. the proportion of edits per page (E/P ).
+(ii) GOVERNANCE FACTORS, variables that wiki administrators
+can directly control: (a) administration ratio, i.e. the propor-
+tion of users who are granted administrator status (A/U ), (b)
+administration density, i.e. the proportion of administrators
+per page (A/P ), (c) editing permission (R).
+5We acknowledge that cases of spam attack are evidence that wiki sustainability is
+already highly damaged. However, without a method for systematically distinguishing
+these cases we prefer to leave aside this portion of the dataset for the sake of the present
+analysis.
+Variable Quantile #1 2 3 4 5
+edits per user [0.14, 3.67[ [3.67, 9.80[ [9.80, 24.8[ [24.8, 61.2[ [61.2, 1903]
+admins per user [.00169, .00192[ [.00192, .00347[ [.00347, .00576[ [.00576, .01[ [.01, 1.45]
+edits per page [0.12, 9.2[ [9.2, 14.3[ [14.3, 21.8[ [21.8, 35.1[ [35.1, 47 245]
+admins per page [4.16 · 10−6, .00103[ [.00103, .00309[ [.00309, .00926[ [.00926, .0299[ [.0299, 2.65]
+users per page [.00119, 0.22[ [.220, .728[ [.728, 2.07[ [2.07, 7.05[ [7.05, 363]
+phase diagram, boundaries: {0.00119497, .116, .307, .619, 1.24, 2.44, 4.99, 12.1, 363}
+population quantiles 1 2 3 4
+mean quantiles: [400, 615[ [615, 1075[ [1075, 2407[ [2407, 19909]
+phase diagram, mean boundaries over all ‘users/page’ quantiles:{400, 504, 676, 949, 1313, 2162, 3787, 19 909}
+Table 1: Quantile boundaries and sets
+For each continuous variable, instead of carrying out a delicate
+analysis by dealing with clouds of points, we adopted a more in-
+sightful approach by dividing wikis into five quantiles, each includ-
+ing exactly 20% of all wikis in the clean dataset (see Table 1). We
+then computed and compared growth ratio means over all wikis for
+each quantile. Additionally, we distinguished population quantiles
+in order to control for user size-related effects. To this end, we
+plotted a growth landscape that consists of a two-dimensional rep-
+resentation of the various growth ratios. This representation was
+applied to all the above-mentioned variables, except for R where
+there are only two “quantiles” (0 or 1). For each variable except R,
+the upper graphs indicate the mean values and confidence intervals
+(p < 0.05) of each quantile on the variable considered, while the
+lower graphs show contour plots for the same variable with brighter
+areas corresponding to higher growth ratios.
+1 2 3 4 5
+Quantile of
+edits per user1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+Growth ratio
+User growth
+1 2 3 4 5
+Quantile of
+edits per user
+0.95
+1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+1.30
+Growth ratio
+Page growth
+1.1
+1.11.1
+1.2
+1.2
+1.3
+1.3
+1.4
+1.4
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'edits per user'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+User growth
+1
+1
+1
+1.1
+1.1
+1.1
+1.1
+1.1
+1.2
+1.2
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'edits per user'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+Page growth
+Figure 1: Growth landscape with respect to the proportion of
+edits per user
+3.1 Significant descriptive indicators
+We found significant correlations between a number of descriptive
+indicators of wiki structure and their content and population growth
+rates. Figure 1 shows the effect of user activity (measured as the
+proportion of edits per user) on growth rates. The results suggest
+that user activity correlates very strongly with wiki growth, not only
+in terms of content production (which is to a certain extent unsur-
+prising) but also new member recruitment. The effect becomes
+stronger with initially more populated wikis: the more users are
+actively editing, the more a wiki grows in content and population.
+Figure 2 shows the impact of user density on growth. The results
+suggest that a higher number of contributors per page does not nec-
+essarily indicate mushrooming wikis: for an identical content size,
+we found a significant correlation between a lower number of users
+and higher growth ratios, both in content and new members.
+1 2 3 4 5
+Quantile of
+users per good page1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+Growth ratio
+User growth
+1 2 3 4 5
+Quantile of
+users per good page1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+1.30
+Growth ratio
+Page growth
+1
+1.1
+1.1
+1.2
+1.2
+1.3
+1.3
+1.41.4 1.5
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'users per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+User growth
+1
+1
+1
+1.1
+1.1
+1.1
+1.1
+1.2
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'users per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+Page growth
+Figure 2: Growth landscape with respect to the proportion of
+users per good page
+To better visualize the effect of user density on growth, we rep-
+resented the dependent variables GU and GP , independent vari-
+able U/P , and initial wiki positions Ufirst and Pfirst altogether on
+the same graph, yielding a phase diagram as plotted on Fig. 3.6 In
+this diagram, each dot (light color) corresponds to a wiki in the
+database. Each arrow corresponds to a pair of quantiles “users per
+page, population”. Widths and heights are proportional to user and
+content growth ratios, respectively. The size of the arrow represents
+the strength of the observed growth in content and population for
+wikis in a given region of the wikisphere.
+This graph should be regarded as a map of a portion of the wiki-
+sphere, showing the expected destiny of a wiki in terms of content
+and population growth as a function of its initial position in the
+same space. This diagram broadly suggests that a wiki’s position
+is correlated with its subsequent fate. More precisely, it illustrates
+that wikis in the upper/upper-right portion of the diagram are grow-
+ing faster, and more interestingly it provides an overview of demo-
+graphic dynamics in this region of the wikisphere.
+3.2 Effective governance factors
+Turning to governance features, we first analyzed the effects of
+the administrator population on wiki dynamics by looking at the
+overall proportion of administrators per page.
+Figure 4 shows that having a relatively high number of adminis-
+trators for a given content size is likely to reduce growth. There is a
+strong effect of the proportion of admins per page both on user and
+page growth. For instance, while the last quantile of admins/page
+ratio enjoys near-zero growth rates over 8 months, the first quantile
+tops overall rates (∼+50% for users, ∼+25% for pages). This ef-
+6For this diagram, an increased level of detail called for a larger grid, here of 8 × 7
+quantiles; U/P quantile means are represented by diagonal straight lines labelled “1–
+8”.
+1
+2
+3
+4
+5
+6
+7
+8
+U=P
+400 1000 10 000 20 000
+10
+100
+1000
+10 000
+100 000
+Population HusersL
+C
+on
+te
+nt
+Hgo
+od
+pa
+ge
+sL
+Figure 3: Phase diagram in the content/population space of
+wikis belonging to the clean dataset.
+fect may be interpreted as the impact of strong governance activity
+on the proliferation of content and users.
+We identified another significant effect when we considered edit-
+ing permission. As a binary variable, the editing permission vari-
+able generates only two groups of wikis (wikis that allow anony-
+mous editing versus wikis that restrict editing to registered users
+only). The growth landscape is consequently limited to a one-
+dimensional comparison over population quantiles. The results in
+Figure 5 show that for both dimensions—population and content—
+having no access control is likely to favour growth. While a stronger
+page growth is quite unsurprising in wikis where no registration is
+required, the fact that this factor also fuels user registration is more
+1 2 3 4 5
+Quantile of
+admins per good page1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+Growth ratio
+User growth
+1 2 3 4 5
+Quantile of
+admins per good page
+0.95
+1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+1.30
+Growth ratio
+Page growth
+1.1
+1.1
+1.2
+1.3
+1.3
+1.4
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'admins per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+User growth
+1
+1
+1
+1
+1.1
+1.1
+1.1
+1.1
+1.2
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'admins per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+Page growth
+Figure 4: Growth landscape with respect to the proportion of
+admins per good page
+1 2 3 4
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+Population quantiles
+G
+ro
+w
+th
+ra
+te
+User growth
+1 2 3 4
+1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+1.30
+1.35
+1.40
+Population quantiles
+G
+ro
+w
+th
+ra
+te
+Page growth
+Figure 5: Growth landscape with respect to editing permission:
+red dashed refers to anonymously editable wikis, blue solid to
+wikis editable by registered users only
+puzzling: one might think that if users can participate without reg-
+istration, few would be inclined to register. Our results suggest
+that wikis with unrestricted registration seem to trigger participa-
+tion more easily than wikis with relatively more restricted access.
+3.3 Neutral indicators
+1 2 3 4 5
+Quantile of
+edits per good page1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+Growth ratio
+User growth
+1 2 3 4 5
+Quantile of
+edits per good page1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+Growth ratio
+Page growth
+1.2
+1.2
+1.2
+1.3
+1.3 1.4
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'edits per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+User growth
+1.1
+1.1
+1.1
+1.1
+1.1
+1.1
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'edits per good page'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+Page growth
+Figure 6: Growth landscape with respect to the proportion of
+edits per good page
+Finally, we consider two indicators that showed a markedly milder
+correlation with wiki dynamics.
+On the one hand, we found that editing density (i.e. edits/page)
+correlates negatively with user growth in a moderate way—with
+a relatively stronger effect depending on initial population size—
+while there is surprisingly no significant correlation with page growth
+(Figure 6).
+On the other hand, higher administration ratios (i.e. admins/user)
+have no significant effect on content or population growth, as evi-
+denced by the contour plot on Figure 7.
+3.4 Summary of findings
+The results of this preliminary analysis suggest that different struc-
+tural and goverance-related factors have a significant effect on the
+dynamics of wikis, both in terms of content and population growth.
+Figure 8 summarizes the correlations found between growth ratios
+and each of the variables we considered, by comparing the gain in
+the population and content sizes between the last and the first quan-
+tile for each variable (variables are ranked from the most positively
+to the most negatively correlated). Some indicators
+As far as governance factors are concerned, we observed that
+population growth is more than 20% larger for anonymously ed-
+itable wikis. With respect to administration policies, while too
+many administrators per page may hinder the growth of a wiki (in
+terms of content size), the proportion of administrators per user
+1 2 3 4 5
+Quantile of
+admins per user1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+Growth ratio
+User growth
+1 2 3 4 5
+Quantile of
+admins per user1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+Growth ratio
+Page growth
+1.2
+1.2
+1.3
+1.3 1.4
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'admins per user'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+User growth
+1 11
+1.1
+1.1
+1.1
+1.1
+1.1
+1.1
+1.1
+1.1
+1.2
+1.2
+1.2
+1 2 3 4 5
+1
+2
+3
+4
+Quantiles of 'admins per user'
+Po
+pu
+la
+tio
+n
+qu
+an
+til
+es
+Page growth
+Figure 7: Growth landscape with respect to the proportion of
+admins per user
+Edits
+per user
+Edition
+permission
+Admins
+per user
+Edits per
+good page
+Users per
+good page
+Admins per
+good page
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+User growth
+Edits
+per user
+Edition
+permission
+Admins
+per user
+Edits per
+good page
+Users per
+good page
+Admins per
+good page
+0.9
+1.0
+1.1
+1.2
+Page growth
+Figure 8: Comparison of growth ratios between last and first
+quantiles, for each variable
+does not appear to show a significant influence.
+4. CONCLUDING REMARKS
+The main contribution of this study is an overview of which indica-
+tors wiki communities should take into account in order to control
+their demographics, by paying specific attention to some variables
+and consider acting upon them when possible, while neglecting
+others. In this respect, we drew attention to the remarkable dy-
+namical intertwinement of population and content growth, which
+suggests that models of wiki dynamics will probably need to focus
+on the strong interrelations between these two variables.
+Representing the impact of specific variables via phase diagrams
+can be a valuable solution for wiki administrators for monitoring
+purposes and for social scientists as a first step towards modeling.
+However, in order to develop more accurate models of wiki dy-
+namics, richer datasets with more detailed indicators and platform-
+independent data collection tools need to be developed. In order
+to make the data tractable for this initial analysis, we restricted the
+dataset in several ways and a more comprehensive study, beyond
+the scope of the present paper, should endeavor to investigate a
+larger spectrum of wiki-based communities.
+5. REFERENCES
+[1] U. Brandes and J. Lerner. Visual analysis of controversy in
+user-generated encyclopedias. 2007.
+[2] S. L. Bryant, A. Forte, and A. Bruckman. Becoming
+wikipedian: Transformation of participation in a
+collaborative online encyclopedia. In Group’05, Sanibel
+Island, FL, USA, Nov 6-9 2005.
+[3] A. Capocci, V. Servedio, F. Colaiori, L. Buriol, D. Donato,
+S. Leonardi, and G. Caldarelli. Preferential attachment in the
+growth of social networks: the internet encyclopedia
+wikipedia. PRE, 74(3):036116, 2006.
+[4] J. Giles. Internet encyclopaedias go head to head. Nature,
+438(7070):900–901, 2005.
+[5] M. W. Godfrey and Q. Tu. Evolution in open source
+software: A case study. ICSM, 00:131, 2000.
+[6] J. Golbeck. The dynamics of web-based social networks:
+Membership, relationships, and change. First Monday,
+12(11), November 2007.
+[7] H.-J. Happel and

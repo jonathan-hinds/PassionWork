@@ -1,0 +1,605 @@
+Alcohol Dependence Symptoms and Alcohol
+Dehydrogenase 2 Polymorphism: Israeli Ashkenazis,
+Sephardics, and Recent Russian Immigrants
+Deborah Hasin, Efrat Aharonovich, Xinhua Liu, Ziona Mamman, Karen Matseoane, Lucinda G. Carr, and Ting-Kai Li
+Background: Jews have lower rates of alcohol-related problems than other Caucasians. The ADH2*2
+allele of the alcohol dehydrogenase 2 (ADH2) gene protects against alcoholism in Asians and is found in
+approximately 20% of Jews. We studied the relationship of ADH2*2 to DSM-IV dependence severity in a
+random community sample of Israeli Ashkenazis, recent Russian immigrants (also Ashkenazis), and
+Sephardics.
+Methods: Subjects participated in a structured interview that included highly reliable questions on
+DSM-IV alcohol dependence symptoms. ADH2 genotype was determined for 68 subjects.
+Results: Recent Russian immigrants had more past and lifetime DSM-IV dependence symptoms.
+Sephardics had a higher prevalence of ADH2*2 than Ashkenazis. Controlling for group and other poten-
+tially confounding factors, ADH2*2 was associated with a lower lifetime DSM-IV alcohol dependence
+severity, although this differed somewhat within groups.
+Conclusions: ADH2*2 protects against dependence severity in Jewish samples. Future work in larger
+samples should address genetic and environmental factors that affect the relationship of ADH2*2 to alcohol
+consumption and dependence.
+Key Words: ADH2, Alcohol, Alcohol Dependence, Jews, Genetic.
+BOTH GENETIC AND environmental factors influ-ence the occurrence of alcoholism. Jewish individuals
+generally drink less and have lower rates of alcohol-use
+disorders than other Caucasians (Levav et al., 1997; Yeung
+and Greenwald, 1992). Older social explanations of the
+lower rates that are based on religious practices (Bales,
+1962; Snyder, 1958) are no longer accepted (Flasher and
+Maisto, 1984). Furthermore, empirical data (Hasin and
+Kohn, unpublished data, 2002) from the Epidemiologic
+Catchment Area study (Regier et al., 1990) show that the
+level of religiosity cannot explain the low level of alcohol
+problems in Jews compared with other groups. None of this
+work addressed variability in drinking within the Jewish
+population. Understanding this dimension may lead to a
+better understanding of Jewish/non-Jewish differences in
+drinking and of the etiology of alcoholism in general.
+The importance of genetic factors in the development of
+alcohol dependence has been well established (Heath et al.,
+1997). The clearest evidence for specific genes influencing
+this process comes from findings on alcohol-metabolizing
+genes (Li, 2000). The alcohol dehydrogenase (ADH) genes
+on chromosome 4 are involved in alcohol metabolism
+(Edenberg, 2000; Li, 2000). ADH2, found largely in the
+liver, converts ethanol to acetaldehyde. Polymorphisms in
+the ADH2 gene result in isozymes that have very different
+catalytic properties. A protective relationship has been
+found between ADH2*2 and alcoholism in Asians and Cau-
+casians (Li, 2000; Whitfield, 1997). In most European pop-
+ulations, ADH2*2 is rare (Goedde et al., 1992), but it is still
+generally protective against alcoholism and heavy drinking
+(Borras et al., 2000; Whitfield et al., 1998).
+Recently, reports have shown a relatively high prevalence
+of ADH2*2 in Jewish samples (Carr et al., 2002; Neumark
+et al., 1998; Shea et al., 2001), suggesting that ADH2*2
+might explain the low rates of alcoholism in this group. The
+relationship of ADH2*2 to drinking in Jews was first stud-
+ied in two independent Israeli samples: community resi-
+dents and treated heroin addicts. In these samples of men,
+ADH2*2 was associated with very infrequent drinking and
+lower peak alcohol consumption levels (Neumark et al.,
+1998). However, alcohol dependence was not measured in
+this study. Among Jewish college volunteers and adults in
+From the Divisions of Epidemiology (DH) and Biostatistics (XL), Mail-
+man School of Public Health, and the Department of Psychiatry (DH, EA),
+College of Physicians and Surgeons, Columbia University, and the New York
+State Psychiatric Institute (DH, EA, XL, KM), New York, New York; Ness-Ziona
+Psychiatric Hospital (ZM), Ness-Ziona, Israel; and the Department of Medicine
+(LGC, T-KL), Indiana University School of Medicine, Indianapolis, Indiana.
+Received for publication March 1, 2002; accepted June 6, 2002.
+Supported by NIAAA Grants K02AA00161 (DH) and AA 07611 (LGC,
+T-KL).
+Reprint requests: Deborah Hasin, PhD, Columbia University/New York
+State Psychiatric Institute, 1051 Riverside Dr., Box 123, New York, NY 10032;
+Fax: 212-543-5386; E-mail: dsh2@columbia.edu.
+Copyright © 2002 by the Research Society on Alcoholism.
+DOI: 10.1097/01.ALC.0000029597.07916.A9
+0145-6008/02/2609-1315$03.00/0
+ALCOHOLISM: CLINICAL AND EXPERIMENTAL RESEARCH
+Vol. 26, No. 9
+September 2002
+Alcohol Clin Exp Res, Vol 26, No 9, 2002: pp 1315–1321 1315
+the Midwestern US (Carr et al., 2002), ADH2*2 was pro-
+tective against frequent consumption in male adults. Al-
+though not protective against frequent consumption in
+college-age men, ADH2*2 was associated with unpleasant
+reactions to drinking in both male college students and
+adults. Alcohol dependence was not measured in this study
+either. In Jewish college volunteers in the Southwestern US
+(Shea et al., 2001), ADH2*2 was protective against frequent
+consumption in men, although it was not related to other
+consumption measures or DSM-IV alcohol dependence,
+which was rare. Thus, although significant relationships
+between ADH2*2 and alcohol use were found in all Jewish
+groups studied, the results were not consistent across all
+measures. Furthermore, dependence was measured in only
+one of the studies (Shea et al., 2001), in which it was rare.
+Assessing dependence in categorical rather than continu-
+ous form may have resulted in some loss of information.
+Inconsistencies between the studies could have occurred
+for several reasons, including differences in measurement
+of the phenotype, other methodological differences (e.g.,
+sampling or statistical analysis), or between-sample differ-
+ences in other influences on alcohol. Using consistent
+methods and continuous dependence measures in contrast-
+ing Jewish groups seemed to offer an opportunity to better
+understand the influence of ADH2*2 on the severity of
+alcohol dependence in Jews.
+A setting to study such groups exists in Israel. Since the
+founding of Israel in 1948, large waves of immigration have
+resulted in population subgroups from different areas of
+the world (Dohrenwend et al., 1992; Israeli Central Bureau
+of Statistics, 1999). Until the early 1990s, the two main
+population subgroups were Ashkenazis (European and
+Russian background) and Sephardics (Middle Eastern and
+North African background). Analyses of 1995 Israeli na-
+tional survey data indicated that Sephardics were less likely
+than Ashkenazis to be drinkers and to have gotten drunk
+recently (Aharonovich et al., 2001). Sephardics and Ash-
+kenazis also differ in some genetic respects (Pollack et al.,
+2000; Roitberg-Tambur et al., 1995).
+A third group has emerged more recently. Since late
+1989, approximately 780,000 immigrants from the former
+Soviet Union (FSU) arrived in Israel, many of them arriv-
+ing in the early 1990s. These immigrants now constitute
+approximately 15% of Israel’s population (Israeli Central
+Bureau of Statistics, 1999). Russia has one of the world’s
+highest levels of alcohol consumption (Treml, 1997),
+whereas Israel has one of the lowest (Verhoek, 1995). The
+1995 national survey data showed that recent Russian im-
+migrants were more likely to be drinkers and to become
+drunk than other Israelis (Rahav et al., 1999). Further-
+more, recent Russian immigrants were more likely to be
+drinkers than those from earlier waves of immigration from
+Russia to Israel (Hasin et al., 1998). The 1995 national data
+did not include information on alcohol dependence. How-
+ever, when summarized, the results indicated that Ashkena-
+zis, Sephardics, and recent Russian immigrants to Israel
+constituted contrasting groups in terms of drinking.
+Using standardized methodology across a small community
+sample of these three population subgroups, we previously
+showed that ADH2*2 was associated with a lower peak life-
+time alcohol consumption (Hasin et al., 2002). This relation-
+ship seemed to differ by population subgroup, because within-
+group exploration did not indicate decreased consumption
+among Russian subjects with ADH2*2. In this study, we ad-
+dressed the relationship of ADH2*2 to alcohol dependence in
+the three contrasting Jewish-Israeli groups: Ashkenazis, Seph-
+ardics, and recent Russian immigrants.
+METHODS
+Setting, Sample Design, and Procedures
+The study was conducted in an Israeli city of approximately 140,000. To
+balance the number of Ashkenazis, Sephardics, and recent Russian immi-
+grants, subjects were sampled from three neighborhoods, each identified
+(via census information) as having a high concentration of one of the
+groups. Households were sampled within these three neighborhoods, and
+introduction letters were sent to the households. Each household was then
+called, and adult household members from age 22 to 65 years were
+enumerated (individuals between the ages of 18 and 21 were unavailable
+due to military service). With oversampling for men, one member from
+each household was randomly chosen and invited to participate in a
+personal interview. Of 103 designated households, subjects from 75 par-
+ticipated (response rate, 73%). After obtaining written informed consent,
+nurses or physicians conducted in-person interviews in privacy, mainly in
+the subject’s home. Data verification was later conducted with a randomly
+selected subset of subjects by telephone from New York. DNA for geno-
+typing was obtained from 68 subjects (91% of those interviewed). ADH2
+genotype (ADH2*1 and ADH2*2) was determined by enzymatic amplifi-
+cation of genomic DNA followed by hybridization with allele-specific
+oligonucleotides (Xu et al., 1988). ADH2*3 was not tested, because it
+ordinarily occurs only in African Americans (Ehlers et al., 2001; Thomas-
+son et al., 1995) and Native Americans (Wall et al., 1997).
+Measures
+DSM-IV alcohol dependence and abuse criteria and diagnoses were
+derived from the Alcohol Use Disorders and Associated Disabilities In-
+terview Schedule (AUDADIS; Grant et al., 1995). This instrument, de-
+signed for lay interviewers, has been used in national and community
+epidemiological research in the US (Grant, 1997; Hasin et al., 1997c). The
+AUDADIS has excellent psychometric properties in US and international
+samples (Canino et al., 1999; Chatterji et al., 1997; Grant et al., 1995;
+Hasin et al., 1996, 1997a,b). AUDADIS items were translated into He-
+brew and Russian (available on request from DH). The AUDADIS
+interviewer training took 2 days and was based on procedures used in US
+and international studies.
+In the AUDADIS, detailed questions covered the seven symptoms used
+to diagnose DSM-IV alcohol dependence in two time frames: the last 12
+months (current) and prior to the last 12 months (past) (Grant et al., 1995;
+Hasin et al., 1997a). Computer algorithms combined this information to
+create current, past, and lifetime diagnoses of DSM-IV alcohol depen-
+dence (Grant et al., 1995; Hasin et al., 1997c). In addition to the diagnosis,
+a lifetime severity indicator was created from the AUDADIS dependence
+items consisting of a count of DSM-IV criteria for dependence (range,
+0–7). The  coefficient for the dependence severity indicator was 0.73. An
+interrater reliability study of dependence severity in 23 Israeli subjects
+showed excellent reliability (intraclass correlation coefficient, 0.93).
+1316 HASIN ET AL.
+Subjects
+Due to some mixing of population subgroups within the three neigh-
+borhoods, final determination of Ashkenazi, Sephardic, or recent Russian
+immigrant status used self-reported origin (Flasher and Maisto, 1984).
+Ashkenazi origin (n  23) included Europe, the Americas, Australia,
+South Africa, or the FSU (arriving before 1989). Sephardic origin (n  25)
+included those from North Africa or other Middle Eastern countries.
+Recent Russian immigrants (n  27) were those who had immigrated
+from the FSU since 1989. Among the Russians, 70.3% had been in Israel
+longer than 5 years; only one had immigrated to Israel within the last 12
+months. Of the full sample, approximately 70% of subjects were men.
+Most were married and working. More Russian immigrants finished col-
+lege (87%) than Ashkenazis (23%) or Sephardics (30%). Ashkenazis were
+older (48.7 years; SD, 9.8) than recent Russian immigrants (42.3 years;
+SD, 11.0) or Sephardics (36.3 years; SD, 10.8).
+Analysis
+To test differences in proportions, the 2 test was used when suitable.
+When a contingency table has more than 25% of cells with small expected
+values, the 2 test may not be valid. When this happened, a likelihood ratio
+test (LRT) based on the log-linear model was used (Fienberg, 1985).
+Group differences in count variables (e.g., number of alcohol-dependence
+symptoms) with skewed distributions and heterogeneous variances across
+groups were tested with the nonparametric Kruskal-Wallis test, which
+does not assume a given distribution or homogeneous variance across
+groups (Bickel and Doksum, 1977).
+To examine the relationship of ADH2 genotype to severity of DSM-IV
+dependence while controlling for population group and other variables,
+the Poisson regression model (McCullagh and Nelder, 1989) was used.
+This model was selected due to the form of the outcome variable and its
+distribution. Ordinary linear regression assumes a normal distribution and
+a constant variance. Poisson regression is suitable for outcome variables
+that are in count form, have an approximate Poisson distribution, are
+skewed, or have variance proportional to the mean. In our case, the
+outcome was in count form, the distribution was quite skewed and ap-
+proximated a Poisson distribution, and the variances of the three groups
+(Russian, other Ashkenazi, and Sephardic) increased with the group
+means. Thus, the Poisson regression model was the preferred statistical
+approach.
+The regression coefficient for a binary predictor variable in a Pois-
+son model is the log of the ratio of the means of the outcome (in this
+case, alcohol-dependence severity) for each of the two levels of the
+binary predictor. To aid in interpretation of the results, we also pre-
+sented the unlogged ratios of these two means for each of the binary
+predictor variables. These are interpreted similarly to an odds ratio (1.0
+indicates no association, 1.0 indicates a positive association, and 
+1.0 indicates an inverse relationship). In the model, the control variable
+represented by age was dichotomized at 33 years because among the
+Russians, this would differentiate subjects who immigrated as adults
+from others who immigrated at a younger age. Including other forms of
+the age variable in the model (e.g., dichotomizing at the median) did
+not affect the main results.
+Within-group associations between genotype and alcohol-
+dependence severity were explored with the Spearman rank correlation
+coefficient, which uses rank information in the two variables regardless
+of their joint distribution (Bickel and Doksum, 1977). This applies to
+the case of ADH2*1/*1, ADH2*1/*2, and ADH2*2/*2, considered to
+indicate ascending order of the ADH2 effect. All p levels reflect
+two-tailed tests.
+RESULTS
+Demographics and Drinking by Population Subgroup
+The Russians, other Ashkenazis, and Sephardics did
+not differ on gender, marital status, or employment, but
+the Russians were significantly more likely to have com-
+pleted college (as expected), and the Sephardics were
+significantly more likely to be younger (Table 1). A high
+proportion of all three groups were current or past drink-
+ers, variables on which the groups did not differ. In
+contrast, when heavier drinking was considered, signifi-
+cant differences between the Russians and the other
+groups emerged. This included ever having had five or
+more drinks on an occasion, an indicator of at-risk drink-
+ing in epidemiological samples (Caetano et al., 1997;
+Hasin et al., 1996). The Russians were also significantly
+more likely to have had a past period of heavier drinking
+and MAXDRINKS, an indicator of the largest number of
+drinks consumed on an occasion over the lifetime (Hasin
+et al., 2002; Saccone et al., 2000).
+Table 1. Israeli Population Groups: Demographics and Drinking, n  75
+Variable
+Population Group
+Ashkenazi,
+new Russian
+(n  27)
+Ashkenazi,
+all other
+(n  23)
+Sephardic
+(n  25) p Value
+Demographics
+Gender (male) 0.74 0.70 0.64 NSa
+Education (college or higher) 0.85 0.22 0.28 0.001a
+Marital status (married) 0.70 0.83 0.64 NSa
+Employment (full-time) 0.67 0.70 0.56 NSa
+Age [mean (SD)] 42.30 (11.0) 48.70 (9.8) 36.30 (10.8) 0.001b
+Drinking
+Current drinker (last 12 months) 0.81 0.65 0.64 NSa
+Past drinker 0.85 0.65 0.60 NSa
+Ever had five or more drinks 0.56 0.22 0.16 0.004a
+Past period of heavier drinking 0.63 0.26 0.20 0.002a
+MAXDRINKS [mean (SD)] 5.30 (3.3) 2.70 (2.5) 3.00 (0.4) 0.001d
+NS, not significant.
+a Result from 2 test.
+b Result from ANOVA test.
+c Hasin et al., 2002.
+d Kruskal-Wallis 2 test.
+ALCOHOL DEPENDENCE AND ALCOHOL DEHYDROGENASE 2 POLYMORPHISM 1317
+DSM-IV Alcohol Dependence by Population Subgroup
+Past DSM-IV alcohol dependence was found among
+14.8% (n  4), 4.4% (n  1), and 0% of the Russians,
+Ashkenazis, and Sephardics, respectively (LRT; 22  5.86;
+p  0.05). Current dependence was found among 4% (n 
+1), 0%, and 4% (n  1) of the Russians, Ashkenazis, and
+Sephardics, respectively (LRT; 22  1.49; p  0.47). Life-
+time dependence was found among 14.8% (n  4), 4.4%
+(n  1), and 4.0% (n  1) of the Russians, Ashkenazis, and
+Sephardics, respectively (LRT; 22  2.54; p  0.28). All
+subjects with current dependence had lifetime dependence,
+by definition. Of subjects with current dependence, one was
+a new-onset case, whereas the other (a Russian) had also
+met criteria in the past.
+DSM-IV Dependence Severity by Population Subgroup
+The mean number of past alcohol dependence criteria in
+the Russians, Ashkenazis, and Sephardics was 1.44 (SD,
+1.60), 0.57 (SD, 0.99), and 0.52 (SD, 1.29), respectively
+(Kruskal-Wallis test; 22  9.73; p  0.008). The level of
+current dependence severity in the three groups was much
+lower: 0.33 (SD, 0.78), 0.22 (SD, 0.060), and 0.28 (SD, 1.02)
+in the Russians, Ashkenazis, and Sephardics, respectively
+(Kruskal-Wallis test; 22  0.53; p  0.77). The mean
+number of lifetime alcohol dependence criteria in the Rus-
+sians, Ashkenazis, and Sephardics was 1.44 (SD, 1.60), 0.57
+(SD, 0.99), and 0.56 (SD, 1.29), respectively (Kruskal-
+Wallis test; 22  8.81; p  0.01). Thus, the Russians had
+significantly greater past and lifetime dependence severity
+than the other Israeli groups.
+ADH2 and Population Subgroup
+Table 2 shows the genotype and allele frequencies for
+ADH2 among the Russians, Ashkenazis, and Sephardics.
+The distribution of genotypes is consistent with Hardy-
+Weinberg equilibrium in all three groups. Sephardics were
+more likely to have ADH2*2 than the other two groups and,
+notably, had the most homozygous ADH2*2 subjects (21 
+6.75; p  0.009). The frequency of the ADH2*2 allele did
+not differ significantly between the Russian Ashkenazis and
+the other Ashkenazis (21  0.01; p  0.92).
+DSM-IV Alcohol Dependence by ADH2
+Lifetime DSM-IV alcohol dependence was rare, occur-
+ring in only 3 of the 68 subjects in whom there was ADH2
+genotype information. The percentage of subjects meeting
+criteria for lifetime DSM-IV alcohol dependence by geno-
+type was 5.3, 4.2, and 0.0% among subjects with ADH2*1/1,
+ADH2*1/2, and ADH2*2/2, respectively (LRT; 22  0.61;
+p  0.74).
+Regression Analysis
+Table 3 shows the Poisson regression model of the rela-
+tionship of ADH2 genotype to the outcome of lifetime
+DSM-IV dependence severity. In this analysis, a three-level
+ADH2 variable was not used, because of zero cells (no
+subject homozygous for ADH2*2 had dependence symp-
+toms, and no Russian was homozygous for ADH2*2).
+Therefore, ADH2 was dichotomized into homozygous
+ADH2*1/*1 versus homozygous or heterozygous ADH2*2.
+In this model, controlling for population subgroup and
+other variables, the ADH2*2 allele was significantly related
+to a lower lifetime DSM-IV alcohol dependence severity.
+Variance in current dependence severity was very low in
+this sample and was unrelated to ADH2 (not shown).
+Between-Group Exploration
+Although the sample size was limited, within-group tests
+of the ADH2/alcohol-dependence relationship were ex-
+plored with Spearman correlations to provide preliminary
+information. Among Israeli Ashkenazis, the relationship of
+ADH2 genotype and severity of alcohol dependence symp-
+toms was in the predicted direction at a trend level (r 
+0.39; p  0.07). Among Sephardics, results were also in
+the predicted direction but not statistically significant (r 
+0.28; p  0.19). Among recent Russian immigrants, the
+correlation was weaker than in the other two groups (r 
+0.12; p  0.57).
+DISCUSSION
+This is the first report to investigate ADH2 and depen-
+dence severity among contrasting Jewish groups. In the full
+Table 2. Genotype by Israeli Population Group, n  68
+ADH2
+Population group
+Ashkenazi,
+new Russian
+(n  23)
+Ashkenazi,
+all other
+(n  22)
+Sephardic
+(n  23)
+Genotypea
+ADH21/1 0.65 0.64 0.39
+ADH21/2 0.35 0.32 0.39
+ADH22/2 0.00 0.05 0.22
+Allele
+frequencyb
+ADH21 0.83 0.80 0.59
+ADH22 0.17 0.20 0.41
+a Likelihood ratio test; 2  9.72; df  4; p  0.045.
+b Chi-square test; 2  7.97; df  2; p  0.019.
+Table 3. Lifetime DSM-IV Alcohol-Dependence Symptoms by ADH2: Ratio of
+Means and Regression Parameters Estimated (SE) From the Poisson
+Regression Model
+Variable
+Ratio of mean
+number of
+symptoms
+Regression
+coefficient
+(SE)
+p
+Value
+Male versus female 2.99 1.10 (0.58) 0.058
+Age  33 years 1.82 0.60 (0.43) 0.158
+Married (y/n) 0.59 0.53 (0.40) 0.193
+Employed full-time (y/n) 1.90 0.64 (0.43) 0.131
+Education more than high school (y/n) 0.61 0.50 (0.40) 0.207
+Family history of alcohol disorder (y/n) 0.48 0.73 (0.58) 0.208
+Asheknazi versus recent Russian 0.39 0.94 (0.43) 0.029
+Sephardic versus recent Russian 0.29 1.25 (0.44) 0.004
+ADH2 (1/2 or 2/2 vs. 1/1) 0.46 0.78 (0.36) 0.032
+1318 HASIN ET AL.
+group, ADH2*2 was protective against the severity of
+DSM-IV alcohol-dependence symptoms, controlling for
+numerous environmental factors. The direction of the re-
+lationship was similar for a diagnosis of DSM-IV alcohol
+dependence but did not reach statistical significance. This
+indicates the value of incorporating more information into
+an analysis through an outcome variable in continuous or
+count form. Compared with other Caucasian populations
+(Borras et al., 2000; Heath et al., 2001), Ashkenazis, Seph-
+ardics, and recent Ashkenazi immigrants from the FSU had
+a higher prevalence of ADH2*2, the protective form of
+ADH2. This is consistent with other reports on ADH2 in
+Jewish groups in the United States and Israel. Further-
+more, the ADH2*2 allele frequency was higher in the Seph-
+ardics, a result not found in the one previous study that
+included both Ashkenazi and Sephardic Jews (Neumark et
+al., 1998). Because these Jewish groups differ in other
+genetic respects (Bonne-Tamir and Adam, 1992), this find-
+ing is not entirely surprising. However, it should be con-
+firmed in larger samples.
+Before this article, data comparing alcohol dependence
+in recent Russian immigrants and other Israelis have not
+been available. Consistent with their background in a coun-
+try with very high per capita alcohol consumption, the
+recent Russian immigrants had a higher prevalence of past
+DSM-IV alcohol-dependence diagnoses and greater mean
+past and lifetime dependence severity than the other two
+Israeli groups. However, the differences were found on past
+but not current dependence, consistent with their drinking
+histories. The lack of group differences in current drinking
+variables may have resulted from the general tendency for
+individuals to reduce their drinking as they age or from
+acculturation to Israeli drinking patterns after arrival in
+Israel. Further research in larger samples is needed to
+clarify these issues.
+Previously, we presented results suggesting that the ef-
+fects of ADH2*2 on peak alcohol consumption were incon-
+sistent in the recent Russian immigrants compared with the
+other Ashkenazis and Sephardics (Hasin et al., 2002).
+Within-group exploration suggested that ADH2*2 was pro-
+tective against peak lifetime alcohol consumption among
+the Ashkenazis and Sephardics, but not among the Rus-
+sians. This suggested that the immigrants’ exposure to the
+heavy-drinking environment of Russian culture, a powerful
+environmental factor, overcame genetic protective effects.
+In this study, within-group exploration showed a protective
+effect for ADH2 against alcohol dependence across all
+three groups—Ashkenazis, Sephardics, and recent Russian
+immigrants—although the correlation was smaller among
+the Russians. It is not clear why somewhat different results
+emerged for these two important types of alcohol variables.
+Reasons might include more pronounced cross-cultural in-
+fluences on drinking levels than dependence symptoms,
+cross-cultural differences in the emergence of dependence
+symptoms in the presence of heavy drinking, or instability
+due to small samples. Replication in a larger sample is
+definitely warranted; this would allow testing of interac-
+tions between ADH2*2 and population group by using both
+alcohol consumption and dependence as outcomes.
+It is possible to speculate that the higher mean depen-
+dence severity among the Russian subgroup can be attrib-
+uted to the absence of subjects with homozygous ADH2*2
+rather than environmental exposure to very heavy drinking.
+However, we favor the environmental explanation due to
+the within-genotype distribution of dependence severity
+when Russians were compared with the other two groups.
+Within subjects homozygous for ADH2*1 as well as within
+heterozygous subjects (ADH2*1/2), dependence severity
+was higher among the Russians than among the other
+subjects. However, the issue could usefully be addressed in
+future studies, in which larger samples of Russian-Jewish
+subjects should yield some with homozygous ADH2*2.
+Association studies of the relationship between an allele
+and a trait or disease can be powerful tools for gene map-
+ping (Risch and Merikangas, 1996). However, a disease or
+trait and an allele may both be increased within a subgroup
+of a sample for unrelated reasons. If such a subgroup is
+undetected, confounding due to population stratification
+can lead to spurious findings (Lander and Schork, 1996;
+Reich and Goldstein, 2001). This has led some investigators
+to conclude that association studies can be conducted only
+in related individuals (Ewens and Speilman, 1995). How-
+ever, such a restriction may lead to a different set of biases,
+and the issue remains controversial.
+Many factors suggest that the results of this study were
+not spurious due to undetected population stratification.
+First, the results on ADH2 remained significant even after
+the three main groups were identified and controlled in the
+analysis. Second, the ADH2 literature shows that ADH2
+effects on alcohol dependence are consistent in many coun-
+tries and population groups, including samples of twins
+(Heath et al., 2001; Neale et al., 1999). Third, methodolog-
+ical research (Wacholder et al., 2000) indicates that the
+degree of possible bias decreases as the number of unde-
+tected potential strata (population subgroups) increases. In
+this study, 18 countries of origin were reported among the
+68 subjects (including many European countries for the
+Ashkenazis and many countries in the Middle East and
+North Africa for the Ashkenazis). Therefore, if country of
+origin constituted strata, the large number of potential
+strata reduced the likelihood of confounding (Wacholder et
+al., 2000). Finally, the direction of results was consistent in
+all three of our main subgroups and thus could not have
+been determined entirely by an undetected trend among
+subjects from only one country (i.e., one undetected
+stratum).
+Other methodological aspects of the study warrant not-
+ing. Collaborative reports or biological indicators of
+alcohol-consumption or -dependence measures were not
+available. Although these could be included in future re-
+search on this topic, they are probably most useful in
+studies of current drinking. Our research pertained more to
+ALCOHOL DEPENDENCE AND ALCOHOL DEHYDROGENASE 2 POLYMORPHISM 1319
+peak times of heavier drinking in the past. In addition, the
+informed consent procedures on privacy of the data as well
+as the protection of privacy in the interview itself should
+have reduced underreporting caused by concerns about
+confidentiality. Also, future research on this topic would
+benefit from larger samples that would allow more detailed
+analysis of within- and between-group similarities and dif-
+ferences in alcohol consumption, alcohol dependence, and
+the relationship of ADH2 to these.
+As noted previously, we oversampled for men. In the
+previous study that showed ADH2 effects on drinking
+among Israelis, only men were included. In previous re-
+ports on American Jews (Carr et al., 2002; Shea et al.,
+2001), ADH2 effects were found only for men. The gener-
+ally light drinking among the American Jews was even
+lower among women than men, possibly limiting variance
+and making it more difficult to show effects among female
+American Jews. It was known from the outset that our
+sample of Israelis would be too small to detect weak effects,
+expected among women on the basis of the previous re-
+ports. Therefore, we oversampled for men to maximize the
+utility of this sample while including some women to check
+for consistency between Israeli and American Jewish
+women. Among the women in the sample, ADH2 effects
+were consistent with those found for men (not shown), but
+variance was very low. A future investigation of male-
+female differences in ADH2 effects would be helpful in
+elucidating this issue but will require a larger sample.
+We did not report on DSM-IV abuse. Although we col-
+lected data on this diagnosis, the  coefficient for current and
+past DSM-IV alcohol abuse was low, indicating poor internal
+consistency reliability. Other reports have also found poor
+reliability and validity for DSM-IV alcohol abuse.
+The results of this study indicate a protective effect of
+ADH2*2 against alcohol-dependence symptoms in Jewish
+samples. Thus, the ADH2*2 allele may constitute part of the
+explanation for low levels of alcoholism among Jewish groups.
+Work is needed in larger samples to clarify group similarities
+and differences in these effects, as well as variability in results
+when different alcohol phenotypes are studied. Furthermore,
+studies of gene-environment interactions can provide valuable
+general information on the relative contribution of genetic
+and environmental causes to etiology. Little research in the
+area of alcoholism has focused on the effects of a specific gene
+across contrasting environmental circumstances. Because con-
+sensus exists on the causal influence of both genetic and
+environmental factors in the etiology of alcohol dependence,
+consideration of both types of factors conjointly may provide
+a clearer understanding of the effects of each when studying
+disease etiology.
+ACKNOWLEDGMENT
+We thank Ms. Rina Mayer for her invaluable assistance.
+REFERENCES
+Aharonovich E, Hasin D, Rahav G, Meydan J, Neumark YD (2001)
+Differences in drinking patterns among Ashkenazi and Sephardic Is-
+raeli adults. J Stud Alcohol 62:301–305.
+Bales RF (1962) Society, Culture, and Drinking Patterns. John Wiley &
+Sons, New York.
+Bickel PJ, Doksum KA (1977) Mathematical Statistics. Holden-Day Inc,
+Oakland, CA.
+Bonne-Tamir B, Adam A (1992) Genetic Diversity Among Jews: Diseases
+and Markers at the DNA Level. Oxford University Press, New York.
+Borras E, Coutelle C, Rosell A, Fernandez-Muixi F, Broch M, Crosas B,
+Hjelmqvist L, Lorenzo A, Guitierrez C, Santos M, Szcepanek M, Heilig
+M, Quattrocchi P, Farras J, Vidal F, Richart C, Mach T, Bogdal J,
+Jornvall H, Seitz HK, Couzigou P, Pares X (2000) Genetic polymor-
+phism of alcohol dehydrogenase in Europeans: the ADH2*2 allele
+decreases the risk for alcoholism and is associated with ADH3*1. Hepa-
+tology 31:984–989.
+Caetano R, Tam T, Greenfield TK, Cherpitel C, Midanik LT (1997)
+DSM-IV alcohol dependence and drinking in the U.S. population: a risk
+analysis. Ann Epidemiol 7:542–549.
+Canino G, Bravo M, Ramírez R, Febo V, Fernández R, Hasin D, Grant
+BF (1999) The Span

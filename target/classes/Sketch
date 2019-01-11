@@ -7,3 +7,31 @@ features
 -scan pdfs with malware detection
 
 -parse pdf to xml, parse xml to words, get tags from pdf.
+
+
+File1: [http-arxiv-org-pdf-1504-08083-pdf].pdf, words: 1161
+File1: [http-acberg-com-papers-berg_action-pdf].pdf, words: 1082
+File1: [https-arxiv-org-pdf-1806-11538-pdf].pdf, words: 1145
+File1: [http-arxiv-org-pdf-1511-06856-pdf].pdf, words: 1143
+File1: [https-arxiv-org-pdf-1801-02381-pdf].pdf, words: 1848
+File1: [https-plone-org-plone-vpat-pdf].pdf, words: 0 todo is something wrong with this file?
+File1: [http-dspace-nbuv-gov-ua-bitstream-handle-123456789-70524-20-Kravchenko-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1802-08903-pdf].pdf, words: 0
+File1: [https-media-nature-com-original-nature-assets-nature-journal-v466-n7303-extref-nature09103-s1-pdf].pdf, words: 0
+File1: [https-static-content-springer-com-esm-art-3A10-1038-2Fs41590-018-0049-7-MediaObjects-41590_2018_49_MOESM3_ESM-pdf].pdf, words: 0
+File1: [https-vvdveen-com-publications-drammer-pdf].pdf, words: 0
+File1: [https-www-ncbi-nlm-nih-gov-pmc-articles-PMC4460020-pdf-pone-0128810-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1806-01261-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1811-00796-pdf].pdf, words: 0
+File1: [http-constitution-org-2ll-2ndschol-46hard-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1809-11165-pdf].pdf, words: 0
+File1: [https-upload-wikimedia-org-wikipedia-commons-a-ab-Key_theme_-_Global_South-2C_WMF_Metrics_Meeting_February_2015-pdf].pdf, words: 0
+File1: [http-acberg-com-papers-journal_berg-pdf].pdf, words: 0
+File1: [https-www-ftc-gov-sites-default-files-attachments-press-releases-ftc-staff-revises-online-advertising-disclosure-guidelines-130312dotcomdisclosures-pdf].pdf, words: 0
+File1: [https-www-nature-com-articles-6701369-pdf].pdf, words: 0
+File1: [http-acberg-com-papers-bb09iv-pdf].pdf, words: 0
+File1: [http-bioanthropology-huji-ac-il-pdf-Nebel-20_2005-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1803-07179-pdf].pdf, words: 0
+File1: [https-static-content-springer-com-esm-art-3A10-1038-2Fs41590-018-0049-7-MediaObjects-41590_2018_49_MOESM2_ESM-pdf].pdf, words: 0
+File1: [http-dfedorov-spb-ru-python3-book-pdf].pdf, words: 0
+File1: [https-arxiv-org-pdf-1711-05611-pdf].pdf, words: 0

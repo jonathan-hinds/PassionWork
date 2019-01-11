@@ -1,0 +1,587 @@
+Part-based R-CNNs for
+Fine-grained Category Detection
+Ning Zhang, Jeff Donahue, Ross Girshick, Trevor Darrell
+{nzhang,jdonahue,rbg,trevor}@eecs.berkeley.edu
+University of California, Berkeley
+Abstract. Semantic part localization can facilitate fine-grained catego-
+rization by explicitly isolating subtle appearance differences associated
+with specific object parts. Methods for pose-normalized representations
+have been proposed, but generally presume bounding box annotations at
+test time due to the difficulty of object detection. We propose a model for
+fine-grained categorization that overcomes these limitations by leverag-
+ing deep convolutional features computed on bottom-up region propos-
+als. Our method learns whole-object and part detectors, enforces learned
+geometric constraints between them, and predicts a fine-grained cate-
+gory from a pose-normalized representation. Experiments on the Caltech-
+UCSD bird dataset confirm that our method outperforms state-of-the-art
+fine-grained categorization methods in an end-to-end evaluation without
+requiring a bounding box at test time.
+Keywords: Fine-grained recognition, object detection, convolutional mod-
+els
+1 Introduction
+The problem of visual fine-grained categorization can be extremely challenging
+due to the subtle differences in the appearance of certain parts across related
+categories. In contrast to basic-level recognition, fine-grained categorization aims
+to distinguish between different breeds or species or product models, and often
+requires distinctions that must be conditioned on the object pose for reliable
+identification. Facial recognition is the classic case of fine-grained recognition,
+and it is noteworthy that the best facial recognition methods jointly discover
+facial landmarks and extract features from those locations.
+Localizing the parts in an object is therefore central to establishing corre-
+spondence between object instances and discounting object pose variations and
+camera view position. Previous work has investigated part-based approaches to
+this problem [7,16,30,44,47,22]. The bottleneck for many pose-normalized rep-
+resentations is indeed accurate part localization. The Poselet [8] and DPM [17]
+methods have previously been utilized to obtain part localizations with a modest
+degree of success; methods generally report adequate part localization only when
+given a known bounding box at test time [11,20,36,37,43]. By developing a novel
+ar
+X
+iv
+:1
+40
+7.
+38
+67
+v1
+  [
+cs
+.C
+V
+] 
+ 1
+5 
+Ju
+l 2
+01
+4
+2 Zhang, Donahue, Girshick, Darrell
+Input images with region proposals 
+Nearest neighbors used in geometric constraints 
+Top scored object and part detections 
+Object detection and part localizations Pose-normalized representation {	  	  	  	  	  	  	  	  	  	  	  	  	  	  	  	  	  }	  	   classifier 
+Northern 
+Flicker  
+Fig. 1. Overview of our part localization Starting from bottom-up region pro-
+posals (top-left), we train both object and part detectors based on deep convolutional
+features. During test time, all the windows are scored by all detectors (middle), and
+we apply non-parametric geometric constraints (bottom) to rescore the windows and
+choose the best object and part detections (top-right). The final step is to extract fea-
+tures on the localized semantic parts for fine-grained recognition for a pose-normalized
+representation and then train a classifier for the final categorization. Best viewed in
+color.
+deep part detection scheme, we propose an end-to-end fine grained categoriza-
+tion system which requires no knowledge of object bounding box at test time,
+and can achieve performance rivaling previously reported methods requiring the
+ground truth bounding box at test time to filter false positive detections.
+The recent success of convolutional networks, like [27], on the ImageNet Chal-
+lenge [23] has inspired further work on applying deep convolutional features to
+related image classification [14] and detection tasks [21]. In [21], Girshick et al.
+achieved breakthrough performance on object detection by applying the CNN
+of [27] to a set of bottom-up candidate region proposals [41], boosting PASCAL
+detection performance by over 30% compared to the previous best methods.
+Independently, OverFeat [38] proposed localization using a CNN to regress to
+object locations. However, the progress of leveraging deep convolutional fea-
+tures is not limited to basic-level object detection. In many applications such
+as fine-grained recognition, attribute recognition, pose estimation, and others,
+reasonable predictions demand accurate part localization.
+Feature learning has been used for fine-grained recognition and attribute esti-
+mation, but was limited to engineered features for localization. DPD-DeCAF [48]
+used DeCAF [14] as a feature descriptor, but relied on HOG-based DPM [17] for
+part localization. PANDA [49] learned part-specific deep convolutional networks
+Part-based R-CNNs for Fine-grained Category Detection 3
+whose location was conditioned on HOG-based poselet models. These models
+lack the strength and detection robustness of R-CNN [21]. In this work we ex-
+plore a unified method that uses the same deep convolutional representation for
+detection as well as part description.
+We conjecture that progress made on bottom-up region proposal methods,
+like selective search [41], could benefit localization of smaller parts in addition
+to whole objects. As we show later, average recall of parts using selective search
+proposals is 95% on the Caltech-UCSD bird dataset.
+In this paper, we propose a part localization model which overcomes the
+limitations of previous fine-grained recognition systems by leveraging deep con-
+volutional features computed on bottom-up region proposals. Our method learns
+part appearance models and enforces geometric constraints between parts. An
+overview of our method is shown in Figure 1. We have investigated different ge-
+ometric constraints, including a non-parametric model of joint part locations
+conditioned on nearest neighbors in semantic appearance space. We present
+state-of-the-art results evaluating our approach on the widely used fine-grained
+benchmark Caltech-UCSD bird dataset [42].
+2 Related work
+2.1 Part-based models for detection and pose localization
+Previous work has proposed explicit modeling of object part appearances and
+locations for more accurate recognition and localization. Starting with picto-
+rial structures [18,19], and continuing through poselets [8] and related work,
+many methods have jointly localized a set of geometrically related parts. The
+deformable parts model (DPM) [17], until recently the state-of-the-art PASCAL
+object detection method, models parts with additional learned filters in posi-
+tions anchored with respect to the whole object bounding box, allowing parts
+to be displaced from this anchor with learned deformation costs. The “strong”
+DPM [3] adapted this method for the strongly supervised setting in which part
+locations are annotated at training time. A limitation of these methods is their
+use of weak features (usually HOG [12]).
+2.2 Fine-grained categorization
+Recently, a large body of computer vision research has focused on the fine-
+grained classification problem in a number of domains, such as animal breeds
+or species [16,26,31,33,37,46], plant species [1,2,5,34,35,39], and man-made ob-
+jects [32,40].
+Several approaches are based on detecting and extracting features from cer-
+tain parts of objects. Farrell et al. [16] proposed a pose-normalized representation
+using poselets [8]. Deformable part models [17] were used in [37,48] for part lo-
+calization. Based on the work of localizing fiducial landmarks on faces [6], Liu
+et al. [31] proposed an exemplar-based geometric method to detect dog faces
+4 Zhang, Donahue, Girshick, Darrell
+and extract highly localized image features from keypoints to differentiate dog
+breeds. Furthermore, Berg et al. [7] learned a set of highly discriminative inter-
+mediate features by learning a descriptor for each pair of keypoints. Moreover,
+in [30], the authors extend the non-parametric exemplar-based method of [6] by
+enforcing pose and subcategory consistency. Yao et al. [45] and Yang et al. [44]
+have investigated template matching methods to reduce the cost of sliding win-
+dow approaches. Recent work by Göring et al. [22] transfers part annotations
+from objects with similar global shape as non-parametric part detections. All
+these part-based methods, however, require the ground truth bounding box at
+test time for part localization or keypoint prediction.
+Human-in-the-loop methods [9,13,15] ask a human to name attributes of the
+object, click on certain parts or mark the most discriminative regions to improve
+classification accuracy. Segmentation-based approaches are also very effective for
+fine-grained recognition. Approaches such as [11,20,36,37,43] used region-level
+cues to infer the foreground segmentation mask and to discard the noisy visual
+information in the background. Chai et al. [10] showed that jointly learning part
+localization and foreground segmentation together can be beneficial for fine-
+grained categorization. Similar to most previous part-based approaches, these
+efforts require the ground truth bounding box to initialize the segmentation
+seed. In contrast, the aim of our work is to perform end-to-end fine-grained
+categorization with no knowledge at test time of the ground truth bounding box.
+Our part detectors use convolutional features on bottom-up region proposals,
+together with learned non-parametric geometric constraints to more accurately
+localize object parts, thus enabling strong fine-grained categorization.
+2.3 Convolutional networks
+In recent years, convolutional neural networks (CNNs) have been incorporated
+into a number of visual recognition systems in a wide variety of domains. At
+least some of the strength of these models lies in their ability to learn discrim-
+inative features from raw data inputs (e.g., image pixels), in contrast to more
+traditional object recognition pipelines which compute hand-engineered features
+on images as an initial preprocessing step. CNNs were popularized by LeCun
+and colleagues who initially applied such models to digit recognition [28] and
+OCR [29] and later to generic object recognition tasks [24]. With the introduc-
+tion of large labeled image databases [23] and GPU implementations used to
+efficiently perform the massive parallel computations required for learning and
+inference in large CNNs, these networks have become the most accurate method
+for generic object classification [27].
+Most recently, generic object detection methods have begun to leverage deep
+CNNs and outperformed any competing approaches based on traditional fea-
+tures. OverFeat [38] uses a CNN to regress to object locations in a coarse
+sliding-window detection framework. Of particular inspiration to our work is
+the R-CNN method [21] which leverages features from a deep CNN in a re-
+gion proposal framework to achieve unprecedented object detection results on
+the PASCAL VOC dataset. Our method generalizes R-CNN by applying it to
+Part-based R-CNNs for Fine-grained Category Detection 5
+model object parts in addition to whole objects, which our empirical results will
+demonstrate is essential for accurate fine-grained recognition.
+3 Part-based R-CNNs
+While [21] demonstrated the effectiveness of the R-CNN method on a generic
+object detection task (PASCAL VOC), it did not explore the application of this
+method to simultaneous localization and fine-grained recognition. Because our
+work operates in this regime, we extend R-CNN to detect objects and localize
+their parts under a geometric prior. With hypotheses for the locations of indi-
+vidual semantic parts of the object of interest (e.g., the location of the head for
+an animal class), it becomes reasonable to model subtle appearance differences
+which tend to appear in locations that are roughly fixed with respect to these
+parts.
+In the R-CNN method, for a particular object category, a candidate detection
+x with CNN feature descriptor φ(x) is assigned a score of wᵀ0φ(x), where w0 is
+the learned vector of SVM weights for the object category. In our method, we
+assume a strongly supervised setting (e.g., [3]) in which at training time we have
+ground truth bounding box annotations not only for full objects, but for a fixed
+set of semantic parts {p1, p2, ..., pn} as well.
+Given these part annotations, at training time all objects and each of their
+parts are initially treated as independent object categories: we train a one-versus-
+all linear SVM on feature descriptors extracted over region proposals, where
+regions with ≥ 0.7 overlap with a ground truth object or part bounding box
+are labeled as positives for that object or part, and regions with ≤ 0.3 overlap
+with any ground truth region are labeled as negatives. Hence for a single object
+category we learn whole-object (“root”) SVM weights w0 and part SVM weights
+{w1, w2, ..., wn} for parts {p1, p2, ..., pn} respectively. At test time, for each region
+proposal window we compute scores from all root and part SVMs. Of course,
+these scores do not incorporate any knowledge of how objects and their parts are
+constrained geometrically; for example, without any additional constraints the
+bird head detector may fire outside of a region where the bird detector fires. Hence
+our final joint object and part hypotheses are computed using the geometric
+scoring function detailed in the following section, which enforces the intuitively
+desirable property that pose predictions are consistent with the statistics of poses
+observed at training time.
+3.1 Geometric constraints
+Let X = {x0, x1, . . . , xn} denote the locations (bounding boxes) of object p0
+and n parts {pi}ni=1, which are annotated in the training data, but unknown
+at test time. Our goal is to infer both the object location and part locations in
+a previously unseen test image. Given the R-CNN weights {w0, w1, . . . , wn} for
+object and parts, we will have the corresponding detectors {d0, d1, . . . , dn} where
+each detector score is di(x) = σ(w
+ᵀ
+i φ(x)), where σ(·) is the sigmoid function
+6 Zhang, Donahue, Girshick, Darrell
+and φ(x) is the CNN feature descriptor extracted at location x. We infer the
+joint configuration of the object and parts by solving the following optimization
+problem:
+X∗ = arg max
+X
+∆(X)
+n∏
+i=0
+di(xi) (1)
+where ∆(X) defines a scoring function over the joint configuration of the object
+and root bounding box. We consider and report quantitative results on several
+configuration scoring functions ∆, detailed in the following paragraphs.
+Box constraints. One intuitive idea to localize both the object and parts is to
+consider each possible object window and all the windows inside the object and
+pick the windows with the highest part scores. In this case, we define the scoring
+function
+∆box(X) =
+n∏
+i=1
+cx0(xi) (2)
+where
+cx(y) =
+{
+1 if region y falls outside region x by at most  pixels
+0 otherwise
+(3)
+In our experiments, we let  = 10.
+Geometric constraints. Because the individual part detectors are less than per-
+fect, the window with highest individual part detector scores is not always cor-
+rect, especially when there are occlusions. We therefore consider several scoring
+functions to enforce constraints over the layout of the parts relative to the object
+location to filter out incorrect detections. We define
+∆geometric(X) = ∆box(X)
+(
+n∏
+i=1
+δi(xi)
+)α
+(4)
+where δi is a scoring function for the position of the part pi given the train-
+ing data. Following previous work on part localization from, e.g. [4,17,19], we
+experiment with three definitions of δ:
+– δMGi (xi) fits a mixture of Gaussians model with Ng components to the train-
+ing data for part pi. In our experiments, we set Ng = 4.
+– δNPi (xi) finds the K nearest neighbors in appearance space to x̃0, where
+x̃0 = arg max d0(x0) is the top-scoring window from the root detector. We
+then fit a Gaussian model to these K neighbors. In our experiments, we set
+K = 20. Figure 2 illustrates some examples of nearest neighbors.
+The DPM [17] models deformation costs with a per-component Gaussian
+prior. R-CNN [21] is a single-component model, motivating the δMG or δNP
+definitions. Our δNP definition is inspired by Belhumeur et al. [4], but differs in
+that we index nearest neighbors on appearance rather than geometry.
+Part-based R-CNNs for Fine-grained Category Detection 7
+Fig. 2. Illustration of geometric constant δNP . In each row, the first column is the test
+image with an R-CNN bounding box detection, and the rest are the top-five nearest
+neighbors in the training set, indexed using pool5 features and cosine distance metric.
+3.2 Fine-grained categorization
+We extract semantic features from localized parts as well as the whole object.
+The final feature representation is [φ(x0) . . . φ(xn)] where x0 and x1...n are whole-
+object and part location predictions inferred using one of the models from the
+previous section and φ(xi) is the feature representation of part xi.
+In one set of experiments, we extract deep convolutional features φ(xi) from
+an ImageNet pre-trained CNN, similar to DeCAF [14]. In order to make the deep
+CNN-derived features more discriminative for the target task of fine-grained bird
+classification, we also fine-tune the ImageNet pre-trained CNN for the 200-way
+bird classification task from ground truth bounding box crops of the original
+CUB images. In particular, we replace the original 1000-way fc8 classification
+layer with a new 200-way fc8 layer with randomly initialized weights drawn
+from a Gaussian with µ = 0 and σ = 0.01. We set fine-tuning learning rates
+as proposed by R-CNN [21], initializing the global rate to a tenth of the initial
+ImageNet learning rate and dropping it by a factor of 10 throughout training,
+but with a learning rate in the new fc8 layer of 10 times the global learning
+rate. For the whole object bounding box and each of the part bounding boxes,
+we independently finetune the ImageNet pre-trained CNN for classification on
+ground truth crops of each region warped to the 227 × 227 network input size,
+always with 16 pixels on each edge of the input serving as context as in R-
+CNN [21]. At test time, we extract features for the predicted whole object or
+part region using the network fine-tuned for that particular whole object or part.
+For training the classifier, we employ a one-versus-all linear SVM using the
+final feature representation. For a new test image, we apply the whole and part
+detectors with the geometric scoring function to get detected part locations and
+use the features for prediction. If a particular part i was not detected anywhere
+8 Zhang, Donahue, Girshick, Darrell
+in the test image (due to all proposals falling below the part detector’s threshold,
+set to achieve high recall), we set its features φ(xi) = 0 (zero vector).
+4 Evaluation
+In this section, we present a comparative performance evaluation of our proposed
+method. Specifically, we conduct experiments on the widely-used fine-grained
+benchmark Caltech-UCSD birds dataset [42] (CUB200-2011). The classification
+task is to discriminate among 200 species of birds, and is challenging for computer
+vision systems due to the high degree of similarity between categories. It contains
+11,788 images of 200 bird species. Each image is annotated with its bounding
+box and the image coordinates of fifteen keypoints: the beak, back, breast, belly,
+forehead, crown, left eye, left leg, left wing, right eye, right leg, right wing, tail,
+nape and throat. We train and test on the splits included with the dataset, which
+contain around 30 training samples for each species. Following the protocol of
+[48], we use two semantic parts for the bird dataset: head and body.
+We use the open-source package Caffe [25] to extract deep features and fine-
+tune our CNNs. For object and part detections, we use the Caffe reference model,
+which is almost identical to the model used by Krizhevsky et al. in [27]. We refer
+deep features from each layer as convn, pooln, or fcn for the nth layer of the
+CNN, which is the output of a convolutional, pooling, or fully connected layer
+respectively. We use fc6 to train R-CNN object and part detectors as well as
+image representation for classification. For δNP , nearest neighbors are computed
+using pool5 and cosine distance metric.
+4.1 Fine-grained categorization
+We first present results on the standard fine-grained categorization task associ-
+ated with the Caltech-UCSD birds dataset. The first set of results in Table 1
+are achieved in the setting where the ground truth bounding box for the en-
+tire bird is known at test time, as most state-of-art methods assume, making
+the categorization task somewhat easier. In this setting, our part-based method
+with the local non-parametric geometric constraint δNP works the best without
+fine-tuning, achieving 68.1% classification accuracy without fine-tuning. Fine-
+tuning improves this result by a large margin, to over 76%. We compare our
+results against three state-of-the-art baseline approaches with results assuming
+the ground truth bounding box at test time. We use deep convolutional features
+as the authors of [14], but they use a HOG-based DPM as their part localization
+method. The increase in performance is likely due to better part localization
+(see Table 4). Oracle method uses the ground truth bounding box and part
+annotations for both training and test time.
+The second set of results is in the less artificial setting where the bird bound-
+ing box is unknown at test time. Most of the literature on this dataset doesn’t
+report performance in this more difficult, but more realistic setting. As Table 1
+Part-based R-CNNs for Fine-grained Category Detection 9
+Table 1. Fine-grained categorization results on CUB200-2011 bird dataset. -ft means
+extracting deep features from finetuned CNN models using each semantic part. Oracle
+method uses the ground truth bounding box and part annotations for both training
+and test time.
+Bounding Box Given
+DPD [48] 50.98%
+DPD+DeCAF feature [14] 64.96%
+POOF [7] 56.78%
+Symbiotic Segmentation [10] 59.40%
+Alignment [20] 62.70%
+Oracle 72.83%
+Oracle-ft 82.02%
+Ours (∆box) 67.55%
+Ours (∆geometric with δ
+MG) 67.98%
+Ours (∆geometric with δ
+NP ) 68.07%
+Ours-ft (∆box) 75.34%
+Ours-ft (∆geometric with δ
+MG) 76.37%
+Ours-ft (∆geometric with δ
+NP ) 76.34%
+Bounding Box Unknown
+DPD+DeCAF [14] with no bounding box 44.94%
+Ours (∆null) 64.57%
+Ours (∆box) 65.22%
+Ours (∆geometric with δ
+MG) 65.98%
+Ours (∆geometric with δ
+NP ) 65.96%
+Ours-ft (∆box) 72.73%
+Ours-ft (∆geometric with δ
+MG) 72.95%
+Ours-ft (∆geometric with δ
+NP ) 73.89%
+shows, in this setting our part-based method works much better than the base-
+line DPD model. We achieve 66.0% classification accuracy without finetuning ,
+almost as good as the accuracy we can achieve when the ground truth bounding
+box is given. This means there is no need to annotate any box during test time
+to classify the bird species. With finetuned CNN models, our method achieves
+73.89% classification accuracy. We are unaware of any other published results in
+this more difficult setting, but we note that our method outperforms previous
+state-of-the-art even without knowledge of the ground truth bounding box.
+Another interesting experiment we did is to remove the part descriptors by
+only looking at the image descriptors inside the predicted bounding box. By
+having geometric constraints over part locations relative to object location, our
+method is able to help localize the object. As Table 2 shows, our method out-
+performs a single object detector using R-CNN, which means the geometric
+constraints helps our method better localize the object window. The detection
+of strong DPM is not as accurate as our method, which explains the performance
+drop. The “oracle” method uses the ground truth bounding box and achieves
+57.94% accuracy, which is still much lower than the method in Table 1 of using
+both image descriptors inside object and parts.
+10 Zhang, Donahue, Girshick, Darrell
+Table 2. Fine-grained categorization results on CUB200-2011 bird dataset with no
+parts. We trained a linear SVM using deep features on all the methods. Therefore only
+the bounding box prediction is the factor of difference. -ft is the result of extracting
+deep features from fine-tuned CNN model on bounding box patches.
+Oracle (ground truth bounding box) 57.94%
+Oracle-ft 68.29%
+Strong DPM [3] 38.02%
+R-CNN [21] 51.05%
+Ours (∆box) 50.17%
+Ours (∆geometric with δ
+MG) 51.83%
+Ours (∆geometric with δ
+NP ) 52.38%
+Ours-ft (∆box) 62.13%
+Ours-ft (∆geometric with δ
+MG) 62.06%
+Ours-ft (∆geometric with δ
+NP ) 62.75%
+Table 3. Recall of region proposals produced by selective search methods on CUB200-
+2011 bird dataset. We use ground truth part annotations to compute the recall, as
+defined by the proportion of ground truth boxes for which there exists a region proposal
+with overlap at least 0.5, 0.6 and 0.7 respectively.
+Overlap 0.50 0.60 0.70
+Bounding box 96.70% 97.68% 89.50%
+Head 93.34% 73.87% 37.57%
+Body 96.70% 85.97% 54.68%
+4.2 Part localization
+We now present results evaluating in isolation the ability of our system to accu-
+rately localize parts. Our results in Table 4 are given in terms of the Percentage
+of Correctly Localized Parts (PCP) metric. For the first set of results, the whole
+object bounding box is given and the task is simply to correctly localize the
+parts inside of this bounding box, with parts having ≥ 0.5 overlap with ground
+truth counted as correct.
+For the second set of results, the PCP metric is computed on top-ranked
+parts predictions using the objective function described in Sec. 3.2. Note that
+in this more realistic setting we do not assume knowledge of the ground truth
+bounding box at test time – despite this limitation, our system produces accurate
+part localizations.
+As shown in Table 4, for both settings of given bounding box and unknown
+bounding box, our methods outperform the strong DPM [3] method. Adding a
+geometric constraint δNP improves our results (79.82% for body localization
+compared to 65.42%). In the fully automatic setting, the top ranked detec-
+tion and part localization performance on head is 65% better than the baseline
+method. ∆null = 1 is the appearance-only case with no geometric constraints
+applied. Although the fine-grained classification results don’t show a big gap
+between ∆geometric and ∆box, we can see the performance gap for part localiza-
+Part-based R-CNNs for Fine-grained Category Detection 11
+Table 4. Part localization accuracy in terms of PCP (Percentage of Correctly Localized
+Parts) on the CUB200-2011 bird dataset. There are two different settings: with given
+bounding box and without bounding box.
+Bounding Box Given
+Head Body
+Strong DPM [3] 43.49% 75.15%
+Ours (∆box) 61.40% 65.42%
+Ours (∆geometric with δ
+MG) 66.03% 76.62%
+Ours (∆geometric with δ
+NP ) 68.19% 79.82%
+Bounding Box Unknown
+Head Body
+Strong DPM [3] 37.44% 47.08%
+Ours (∆null ) 60.50% 64.43%
+Ours (∆box) 60.56% 65.31%
+Ours (∆geometric with δ
+MG) 61.94% 70.16%
+Ours (∆geometric with δ
+NP ) 61.42% 70.68%
+0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45
+40
+45
+50
+55
+60
+65
+alpha
+cr
+os
+s 
+va
+lid
+at
+io
+n 
+ac
+cu
+ra
+cy
+0 10 20 30 40 50 60 70 80 90
+40
+45
+50
+55
+60
+65
+K used in δ
+NP
+cr
+os
+s 
+va
+lid
+at
+io
+n 
+ac
+cu
+ra
+cy
+Fig. 3. Cross-validation results on fine-grained accuracy for different values of α (left)
+and K (right). We split the training data into 5 folds and use cross-validate each
+hyperparameter setting.
+tion. The reason for the small performance gap might be that deep convolutional
+features are invariant to small translations and rotations, limiting the impact of
+small localization errors on our end-to-end accuracy.
+We also evaluate the recall performance of selective search region proposals
+[41] for bounding box and semantic parts. The results of recall given different
+overlapping thresholds are shown in Table 3. Recall for the bird head and body
+parts is high when the overlap requirement is 0.5, which provides the foundation
+for localizing these parts given the region proposals. However, we also observe
+that the recall for head is below 40% when the overlap threshold is 0.7, indi-
+cating the bottom-up region proposals could be a bottleneck for precise part
+localization.
+Other visualizations are shown in Figure 4. We show three detection and part
+localization for each image, the first column is the output from strong DPM, the
+12 Zhang, Donahue, Girshick, Darrell
+second column is our methods with individual part predictions and the last
+column is our method with local prior. We used the model pretrained from [3]
+to get the results. We also show some failure cases of our method in Figure 5.
+4.3 Component Analysis
+To examine the effect of different values of α andK used in∆geometric, we conduct
+cross-validation experiments. Results are shown in Figure 3. We fix K = 20 in
+Figure 3, left and fix α = 0.1 in Figure 3, right. All the experiments on conducted
+on training data in a cross-validation fashion and we split the training data into
+5 folds. As the results show, the end-to-end fine-grained classification results are
+sensitive to the choice of α and α = 0 is the case of ∆box predictions without
+any geometric constraints. The reason why we have to pick a small α is the pdf
+of the Gaussian is large compared to the logistic score function output from our
+part detectors. On the other hand, the choice of K cannot be too small and it
+is not very sensitive when K is larger than 10.
+5 Conclusion
+We have proposed a system for joint object detection and part localization capa-
+ble of state-of-the-art fine-grained object recognition. Our method learns detec-
+tors and part models and enforces learned geometric constraints between parts
+and with the object frame. Our experimental results demonstrate that even with
+a very strong feature representation and object detection system, it is highly ben-
+eficial to additionally model an object’s pose by means of parts for the difficult
+task of fine-grained discrimination between categories with high semantic simi-
+larity. In future extensions of this work, we will consider methods which jointly
+model at training time the object category and each of its parts and deforma-
+tion costs. We also plan to explore the weakly supervised setting in which we
+automatically discover and model parts as latent variables from only the object
+bounding box annotations. Finally, we will consider relaxing the use of selective
+search for smaller parts and employing dense window sampling.
+Acknowledgments This work was supported in part by DARPA Mind’s Eye
+and MSEE programs, by NSF awards IIS-0905647, IIS-1134072, and IIS-1212798,
+and by support from Toyota.
+Part-based R-CNNs for Fine-grained Category Detection 13
+Strong DPM Ours (∆box) Ours (δ
+NP )
+Fig. 4. Examples of bird detection and part localization from strong DPM [3] (left);
+our method using ∆box part predictions (middle); and our method using δ
+NP (right).
+All detection and localization results without any assumption of bounding box.
+14 Zhang, Donahue, Girshick, Darrell
+Fig. 5. Failure cases of our part localization using δNP .
+References
+1. Angelova, A., Zhu, S.: Efficient object detection and segmentation for fine-grained
+recognition. In: CVPR (2013)
+2. Angelova, A., Zhu, S., Lin, Y.: Image segmentation for large-scale subcategory
+flower recognition. In: WACV (2013)
+3. Azizpour, H., Laptev, I.: Object detection using strongly-supervised deformable
+part models. In: ECCV (2012)
+4. Belhumeur, P., Jacobs, D., Kriegman, D., Kumar, N.: Localizing parts of faces
+using a consensus of exemplars. In: CVPR (2011)
+5. Belhumeur, P.N., Chen, D., Feiner, S., Jacobs, D., Kress, W.J., Ling, H., Lopez, I.,
+Ramamoorthi, R., Sheorey, S., White, S., Zhang, L.: Searching the worlds herbaria:
+a system for visual identification of plant species. In: ECCV (2008)
+6. Belhumeur, P.N., Jacobs, D.W., Kriegman, D.J., Kumar, N.: Localizing parts of
+faces using a consensus of exemplars. In: CVPR (2011)
+7. Berg, T., Belhumeur, P.N.: POOF: Part-based one-vs.-one features for fine-grained
+categorization, face verification, and attribute estimation. In: CVPR (2013)
+8. Bourdev, L., Malik, J.: Poselets: Body part detectors trained using 3d human
+pose annotations. In: ICCV (2009), http://www.eecs.berkeley.edu/~lbourdev/
+poselets
+9. Branson, S., Wah, C., Schroff, F., Babenko, B., Welinder, P., Perona, P., Belongie,
+S.: Visual recognition with humans in the loop. In: ECCV (2010)
+10. Cha

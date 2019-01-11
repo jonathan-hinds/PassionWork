@@ -1,0 +1,142 @@
+Power Simulations 
+We performed extensive power simulations to demonstrate that the analyses carried out in our 
+study are well powered. Our simulations indicate very high power for all experiments which test 
+for association between bacterial and ancestral similarity, and between microbiome composition 
+and ancestry proportions (where we define power as the proportion of simulations yielding 
+P<0.05). Specifically, we considered several simulation scenarios, generated multiple synthetic 
+phenotype vectors according to these scenarios, and tested for association between these vectors 
+and genetic/ancestry (depending on the simulation scenario). We then estimated statistical 
+power via the fraction of tests with P value < 0.05. 
+The simulation settings we considered are as follows: 
+1. Simulating a phenotype whose distribution depends on ancestry
+proportions. Here, we generated for every individual 𝑖 a synthetic phenotype 𝑦𝑖
+according to the formulas:
+𝑦𝑖 = 𝑐 ∑ 𝑎𝑖𝛽𝑎
+𝑎
++ 𝒙𝑖
+𝑇𝜸 + 𝜖𝑖
+𝛽𝑎 ∼ 𝒩(0, 𝜎
+2)
+𝜖𝑖 ∼ 𝒩(0,1 − 𝜎
+2)
+𝜸 ∼ 𝒩(𝟎, 𝐼). 
+Here, the summation is performed over ancestries, 𝑎𝑖 is the ancestry proportion of 
+individual  𝑖 for ancestry 𝑎 (the fraction of grandparents originating from this 
+ancestry) after centering to obtain a zero mean, 𝛽𝑎 is the coefficient of ancestry 𝑎, 
+𝒙𝑖 is the vector of covariates of individual 𝑖, 𝜸 is a vector of covariate effects, 𝜖𝑖 
+encodes a residual term, 𝜎2 ∈ (0,1) is the variance of 𝛽𝑎,  and 𝑐 is constant
+guaranteeing that 𝑦𝑖 has a unit variance on average after regressing out the 
+covariate effects. Hence, under this formulation 𝜎2 controls the fraction of the 
+variance of 𝑦𝑖 explained by ancestry (after regressing out the covariate effects). 
+We evaluated 𝜎2 values in the range [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.999] and 
+repeated each experiment 100 times, where in each experiment we (1) randomly 
+sampled 𝛽𝑎, 𝜖𝑖 and 𝜸 values from their distribution; (2) generated 𝑦𝑖 values based 
+on the true ancestry proportion values 𝑎𝑖 in our data; (3) regressed the covariates 
+𝑥𝑖 out of 𝑦𝑖; and (4) tested if the phenotypes vector 𝑦 is associated with ancestry 
+via a Mantel test with Spearman correlation, where we tested for association 
+between Euclidean ancestry distances of individuals 𝑖 and 𝑗 (given by ∑ [𝑎𝑖 − 𝑎𝑗]
+2
+𝑎 ) 
+and phenotypic differences (given by [𝑦𝑖 − 𝑦𝑗]
+2
+).
+Steps (3) and (4) in the above procedure mimic the ancestry-microbiome 
+association test described in the paper (Figure 1e, Extended Table 1 middle 
+column), with the difference that here we test for association with a single 
+phenotype 𝑦𝑖 instead of a vector of bacteria. The proposed formulation is designed 
+to simulate a genome wide association study, which enables evaluating the 
+WWW.NATURE.COM/NATURE | 1
+SUPPLEMENTARY INFORMATION
+doi:10.1038/nature25973
+model’s power in a well-known setting with a minimal set of assumptions. Although 
+the above model could be extended to simulate a multivariate vector instead of a 
+scalar phenotype 𝑦𝑖, this would require introducing additional assumptions into the 
+model which would detract from its generalizability.  
+The results indicate that our study is very well powered to identify a phenotype 
+whose distribution is given by the formulas above, even for small values of 𝜎2 
+(Supplementary Table 7).  
+2. Simulating a bacterial community based on genetic principal components.
+Here, we generated for every individual 𝑖, and for each of the 𝐾 = 184 bacterial
+species present in >5% of genotyped individuals, a vector of relative abundances
+𝑡𝑖
+1, … , 𝑡𝑖
+𝐾 defined as follows:
+𝑡𝑖
+1, … , 𝑡𝑖
+𝐾 ∼ Dir(𝛼𝑖
+1, … , 𝛼𝑖
+𝐾)
+𝛼𝑖
+𝑗
+= {[1 + exp (− ∑ 𝑃𝑖
+𝑚𝛽𝑗
+𝑚
+5
+𝑚=1
+)]
+−1
+𝑖 ≤ 𝑞
+0.5 𝑖 ≥ 𝑞
+ 
+𝛽𝑗
+𝑚 ∼ 𝒩(0, 𝑏).
+Here, 𝛼𝑖
+𝑗
+ is the Dirichlet concentration parameter of taxon 𝑗 in individual 𝑖 (where
+larger values indicate a larger tendency to carry taxon 𝑗), 𝑚 iterates over the top 
+five genetic principal components, 𝑃𝑖
+𝑚 is the 𝑚𝑡ℎ genetic principal component of
+individual 𝑖, 𝛽𝑗
+𝑚 is the weight of the 𝑚𝑡ℎ genetic principal component with respect
+to taxon 𝑗, 𝑏 is the variance of 𝛽𝑗
+𝑚, and 𝑞 is a tunable parameter controlling the
+number of species affected by genetic principal components. Hence, larger values 
+of 𝑞 and of 𝑏 indicate that a larger fraction of the microbiome composition is 
+affected by genetic ancestry, which should be reflected in the PCos of a microbial 
+β–diversity matrix. 
+We carried out experiments where we (1) generated bacterial taxa vectors 
+according to the model above, using 𝑏 values in the grid [5,10,20] and 𝑞 values 
+corresponding to 0%, 1%, 25%, 50%, 75%, 95% and 100% of 𝐾; (2) computed the 
+top PCos of a bacterial Bray-Curtis matrix; and (3) tested for a Spearman 
+correlation between the top genetic PCs and the corresponding top microbiome 
+PCos, with 100 experiments carried out for each evaluated value of 𝑞. We then 
+computed P values for association via the standard asymptotic formulas for either 
+a Spearman or a Pearson correlation of two multivariate random variables, and 
+performed a multiple hypothesis correction for testing five different hypotheses via 
+the Benjamini-Hochberg procedure. We measured power as the fraction of 
+experiments with P value < 0.05 (after multiple hypothesis correction). 
+The results indicate excellent power for finding correlations between genetic PCs 
+and bacterial PCos. (Supplementary Table 8). 
+WWW.NATURE.COM/NATURE | 2
+SUPPLEMENTARY INFORMATIONRESEARCHdoi:10.1038/nature25973
+3. Simulating a bacterial taxon based on ancestry proportions. Here, we
+generated for every individual 𝑖 a synthetic species 𝑡𝑖 whose relative abundance is
+given by:
+𝑡𝑖 ∼ Beta(1 + 𝑘𝒂𝑖, 1 + 𝑘(1 − 𝑎𝑖)),
+where 𝑎𝑖 is the ancestry proportion of individual 𝑖 for ancestry 𝑎, and 𝑘 ≥ 0 is a 
+tunable parameter which controls the association strength. After generating 𝑡𝑖, we 
+scaled all other bacterial species carried by the same individual so that their total 
+relative abundance (including 𝑡𝑖) sums to unity. Hence, when 𝑘 = 0 𝑡𝑖 is distributed 
+uniformly between 0 and 1, whereas larger values of 𝑘 induce a greater tendency 
+for individuals of ancestry 𝑎 to have a larger taxon abundance, and for individuals 
+from other ancestries to have a smaller taxon abundance. 
+As before, we repeated the experiment multiple times, where each experiment is 
+associated with different values of 𝑘 and of an ancestry 𝑎. Specifically, we 
+investigated values of 𝑘 in the grid [0,0.25,0.5,1,2,5], and repeated each experiment 
+100 times. As the above formulation simulates an association between a single 
+taxon and a single ancestry, we used our machine learning model to estimate 
+power. Specifically, in each experiment we trained a Ridge regression model to 
+estimate the ancestry proportions of individuals based on their microbiome, and 
+computed the coefficient of determination (𝑅2) via a 10-fold cross validation. This 
+test mimics the ancestry proportion prediction test described in the results section 
+of the main text. We computed approximate P values by generating a distribution 
+of 1,000 𝑅2 values obtained under 𝑘 = 0 (corresponding to the null hypothesis) for 
+each ancestry 𝑎, and computing the fraction of null 𝑅2 values greater than the one 
+obtained in practice. 
+The results indicate excellent power in the majority of studied settings, and 
+especially when 𝑎 corresponds to Ashkenazi ancestry (Supplementary Table 9). 
+4. Simulating a phenotype based on genetic kinship. Here, we generated a vector
+of synthetic phenotype 𝒚 according to the formula:
+𝒚 ∼ 𝒩(𝑿𝜸, 𝜎2𝑮 + (1 − 𝜎2)𝑰𝑛)
+𝜸 ∼ 𝒩(0, 𝑰𝑐)
+wh

@@ -1,0 +1,160 @@
+ResouRce
+https://doi.org/10.1038/s41590-018-0049-7
+Natural variation in the parameters of innate 
+immune cells is preferentially driven by genetic 
+factors
+Etienne Patin   1,2,3,26*, Milena Hasan4,26, Jacob Bergstedt   5,6,26, Vincent Rouilly3,4, Valentina Libri4, 
+Alejandra Urrutia4,7,8,9, Cécile Alanio   4,7,8, Petar Scepanovic10,11, Christian Hammer10,11,  
+Friederike Jönsson12,13, Benoît Beitz4, Hélène Quach1,2,3, Yoong Wearn Lim9, Julie Hunkapiller14,  
+Magge Zepeda15, Cherie Green16, Barbara Piasecka1,2,3,4, Claire Leloup14, Lars Rogge4,17,  
+François Huetz18,19, Isabelle Peguillet20,21, Olivier Lantz20,21,22,23, Magnus Fontes6,24, James P. Santo4,8,25, 
+Stéphanie Thomas4,7,8, Jacques Fellay   9,10, Darragh Duffy4,7,8, Lluís Quintana-Murci   1,2,3,27,  
+Matthew L. Albert   4,7,8,9,27* and The Milieu Intérieur Consortium28
+1Unit of Human Evolutionary Genetics, Department of Genomes & Genetics, Institut Pasteur, Paris, France. 2CNRS UMR 2000, Paris, France.  
+3Center of Bioinformatics, Biostatistics and Integrative Biology, Institut Pasteur, Paris, France. 4Center for Translation Research, Institut Pasteur, Paris, 
+France. 5Department of Automatic Control, Lund University, Lund, Sweden. 6International Group for Data Analysis, Institut Pasteur, Paris, France. 
+7Laboratory of Dendritic Cell Immunobiology, Department of Immunology, Institut Pasteur, Paris, France. 8INSERM U1223, Paris, France. 9Department 
+of Cancer Immunology, Genentech, South San Francisco, CA, USA. 10School of Life Sciences, École Polytechnique Fédérale de Lausanne, Lausanne, 
+Switzerland. 11Swiss Institute of Bioinformatics, Lausanne, Switzerland. 12Antibodies in Therapy and Pathology, Department of Immunology, Institut Pasteur, 
+Paris, France. 13INSERM U760, Paris, France. 14Department of Human Genetics, Genentech, South San Francisco, CA, USA. 15Employee Donation Program, 
+Genentech, South San Francisco, CA, USA. 16Department of Development Sciences, Genentech, South San Francisco, CA, USA. 17Immunoregulation Unit, 
+Department of Immunology, Institut Pasteur, Paris, France. 18INSERM U783, Faculté de Médecine, Site Necker-Enfants Malades, Université Paris Descartes, 
+Paris, France. 19Lymphocyte Population Biology, CNRS URA 1961, Institut Pasteur, Paris, France. 20Center of Clinical Investigations CIC-BT1428 IGR/Curie, 
+Paris, France. 21Department of Biopathology, Institut Curie, Paris, France. 22Equipe Labellisée de la Ligue de Lutte Contre le Cancer, Institut Curie, Paris, 
+France. 23INSERM/Institut Curie U932, Paris, France. 24Centre for Mathematical Sciences, Lund University, Lund, Sweden. 25Innate Immunity Unit, Institut 
+Pasteur, Paris, France. 26These authors contributed equally: Etienne Patin, Milena Hasan and Jacob Bergstedt. 27These authors jointly directed this work: 
+Lluís Quintana-Murci and Matthew L. Albert. 28A list of members and affiliations appears at the end of the paper. *e-mail: epatin@pasteur.fr; albertm7@
+gene.com
+SUPPLEMENTARY INFORMATION
+In the format provided by the authors and unedited.
+NATURE IMMUNOLOGY | www.nature.com/natureimmunology
+© 2018 Nature America Inc., part of Springer Nature. All rights reserved.
+ 
+ 
+ 
+Supplementary Figure 1 
+Gating strategy for the T cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 2 
+Gating strategy for the Treg cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 3 
+Gating strategy for the NKT/MAIT cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 4 
+Gating strategy for the NK cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 5 
+Gating strategy for the lineage cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 6 
+Gating strategy for the B cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 7 
+Gating strategy for the PMN cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 8 
+Gating strategy for the DC flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 9 
+Gating strategy for the TH cell flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 10 
+Gating strategy for the ILC flow cytometry panel 
+ 
+ 
+ 
+ 
+Supplementary Figure 11 
+Raw distributions of the 166 immunophenotypes studied in the Milieu Intérieur cohort 
+Distributions are shown before outlier removal, imputation, batch correction and transformation to normality. Transformed 
+distributions are shown in Supplementary Figure 15. 
+ 
+ 
+ 
+Supplementary Figure 12 
+Repeatability of semi-automated flow cytometry measurements 
+Repeatability of (a) absolute cell counts and (b) MFI estimated based on measurements performed at five different time points over 
+five months on the same five individuals. Points represent the average of measurements across replicates of the same individual, and 
+bars 3 times their standard deviation. 
+ 
+ 
+ 
+Supplementary Figure 13 
+Reproducibility of semi-automated flow cytometry measurements 
+Comparison of cell counts measured in different flow cytometry panels across the 1,000 Milieu Intérieur donors. Spearman’s ρ 
+correlation coefficients are shown. 
+ 
+ 
+ 
+Supplementary Figure 14 
+Batch effects on measured immunophenotypes 
+(a) Effect of the sampling hour on the absolute number of CD16hi NK cells. Whole blood samples were collected from the 1,000 
+Milieu Intérieur healthy subjects every working day from 8 to 11AM. The sampling hour has a significant effect on different immune 
+cell counts, such as the absolute number of CD16hi NK cells, which were adjusted for this batch effect. (b) Effect of the sampling day 
+on immunophenotypes measured in the Milieu Intérieur cohort. Whole blood samples were collected from the 1,000 Milieu Intérieur 
+healthy subjects every working day from September 2012 to august 2013. Variation in the mean fluorescence intensity (MFI) of 
+several protein markers was observed along the sampling period. All MFIs were corrected for this batch effect using the ComBat non-
+parametric Bayesian framework. Three examples of uncorrected (left column) and corrected (right columns) values are shown. 
+ 
+ 
+ 
+Supplementary Figure 15 
+Transformed distributions of the 166 immunophenotypes studied in the Milieu Intérieur cohort 
+Distributions are shown after outlier removal, imputation, batch correction and transformation to normality. Raw distributions are 
+shown in Supplementary Figure 11. 
+ 
+ 
+ 
+Supplementary Figure 16 
+Correlations among circulating levels of immune cell populations in the Milieu Intérieur cohort 
+Sample correlations were estimated between the residuals of the log-transformed immunophenotypes from a regression model that 
+included non-genetic covariates selected with the stability selection algorithm (described below) on the 39 non-genetic covariates, 
+together with the batch variables. Correlations between -0.3 and 0.3 were set to 0, to improve readability. 
+ 
+ 
+ 
+Supplementary Figure 17 
+Age, sex and CMV infection impact protein levels of immune cell markers in 1,000 healthy individuals 
+Significant multiplicative effects of (a) increasing age, (b) female sex and (c) CMV seropositivity on the mean fluorescence intensity 
+(MFI) of protein markers of immune cells of 1,000 healthy individuals, controlling for the two other factors, batch effects and 
+genome-wide significant SNPs The multiplicative effect sizes were estimated in a linear mixed model with a log-transformed response 
+variable, controlling for batch effects and genome-wide significant SNPs, and then transformed to the original data scale. The 99% 
+confidence intervals (99%CIs) were false coverage-adjusted, considering that only 99%CIs of effect sizes with a significant test 
+(adjusted P<0.01) are shown. Adaptive and innate immune cells are represented in grey and black, respectively. These analyses were 
+performed with the mmi R package (Online Methods). 
+ 
+ 
+ 
+Supplementary Figure 18 
+Estimated dependency matrix among 39 non-genetic variables analyzed in this study 
+Values are generalized R² measures from pairwise fitted generalized linear models (Online Methods). Variables listed in rows are 
+response variables and those listed in columns are predictor variables in the models. Categorical variables (i.e., exposure to dust, level 
+of education, income and smokin

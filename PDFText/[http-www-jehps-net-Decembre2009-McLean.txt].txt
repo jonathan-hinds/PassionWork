@@ -1,0 +1,717 @@
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+Journ@l Electronique d’Histoire des
+Probabilités et de la Statistique
+Electronic Journ@l for History of
+Probability and Statistics
+Vol 5, n°2; Décembre/December  2009
+�������������
+1
+Thomas Jefferson, James Madison, probability 
+and constitutions: at the intersection of the 
+Scottish, American, and French Enlightenments
+�����������
+�
+Résumé
+L’économie politique ainsi que le calcul des probabilités se développèrent en Ecosse au XVIII
+e
+ siècle 
+indépendamment de leur développement en France. Les penseurs et hommes politiques Thomas 
+Jefferson (ambassadeur des Etats Unis à Paris entre 1784 et 1789) et James Madison, tous deux inspirés 
+par des professeurs écossais, représentent un lien entre les Lumières écossaises et françaises. Cet article 
+examine la façon dont Jefferson et Madison comprenaient la révolution probabiliste de Condorcet, et le 
+rôle que joua Jefferson aux origines de la Déclaration des droits de l’homme et du citoyen de 1789.
+Abstract
+Economics, statistics, and probability were developed independently by thinkers of the Scottish and 
+French Enlightenments. The two traditions were brought together by the close friends Thomas 
+Jefferson and James Madison. Both were educated by professors steeped in Scottish thought; both 
+wrote fundamental American constitutional documents. Jefferson served as American Minister in Paris 
+from 1784 to 1789, where his thought developed through his active contacts with French 
+mathematicians and liberal politicians. Behind the scenes, he helped to draft the 1789 Declaration of 
+the Rights of Man and the Citizen. Based on Jefferson’s and Madison’s letters, the paper explicates 
+their thinking about probability, constitutionalism, and rights at this period: its Scottish roots, and its 
+consequences for the US and French constitutions.
+1
+Professor of Politics, Oxford University; professeur invité, EHESS, Paris, June 2009. Address: 
+Nuffield College, Oxford OX1 1NF, UK. iain.mclean@nuffield.ox.ac.uk
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+2
+I am among those who think well of the human character generally. I consider man 
+as formed for society, and endowed by nature with those dispositions which fit him 
+for society. I believe also, with Condorcet … that his mind is perfectible to a degree 
+of which we cannot as yet form any conception
+TJ to William Green Munford, 18.06.1799
+2
+I could not spare the time [to translate Condorcet’s New Haven Letters into English, 
+and]…  I did not approve the tendency of it. If your plan of a single Legislature etc. 
+as in Pen[nsylvani]a. were adopted, I sincerly [sic] believe that it would prove the 
+most deadly blow ever given to republicanism
+JM to F. Mazzei, 10.12.1788
+3
+�� ������� �������� ��� ���� ��������� ���� �������
+��������������
+Modern social science has its roots in the Enlightenment, which saw the birth of 
+economics and the development (and first practical applications) of demography, 
+statistics and probability. Game theory can also be traced to David Hume (1711-1776) 
+and social choice theory to Condorcet (1743-94), but these were not recognised as 
+separate disciplines until the 20
+th
+ century.
+The Scottish and French roots of economics are distinct. Adam Smith (1723-90) and 
+the Physiocrats, especially Quesnay and Turgot, developed their free-trade economics 
+separately. Smith visited France between 1764 and 1766, where he met Turgot and 
+Voltaire, but his view of the Physiocrats in the Wealth of Nations is quite critical. He 
+devotes a long chapter (WN, IV.ix) to his criticism of them. From time to time, writers 
+revive the idea that Smith and the French economists were in active contact in the 
+1780s. For instance, Elisabeth and Robert Badinter state (Badinter & Badinter 1988: 
+217) that Smith attended the salon of Sophie de Grouchy (the Marquise de Condorcet) 
+in 1786. She later translated Smith’s Theory of Moral Sentiments (1759) into French.
+If Smith had attended the salon, he would have met not only Sophie and her husband, 
+but also Thomas Jefferson, American Minister in Paris and a key link figure between 
+the Scots and the French. Unfortunately, the story is untrue. Smith never left Britain, 
+and left Scotland only for trips to London, after returning from France in 1766. He, 
+Jefferson, and Condorcet had some acquaintances in common, including the duc de la 
+Rochefoucauld [d’Anville] and P.-S. Dupont de Nemours. A letter from Smith to the 
+abbé Morellet in 1786 recalls the intellectuals whom Smith had met on his visit, 
+including Helvétius, Turgot, Julie de l’Espinasse, d’Alembert, Diderot and especially 
+Holbach (Mossner and Ross 1987 #259). Although Sophie’s translation proves that 
+she admired Smith, the Condorcets never met him. Nor did Jefferson.
+As with economics, so it was with statistics, demography, and probability. These 
+developed independently in Scotland and in France. In the early 18
+th
+ century, some 
+Scottish scholars, including John Arbuthnot, started to apply the emerging theory of 
+probability to demography. In a paper to the Philosophical Transactions of the Royal 
+Society in 1711, Arbuthnot argued that the observed regularity of the excess of male 
+2  Peterson 1984, p. 1064
+3
+JMP 11, 388–89; see also JM to Mazzei, Oct. 8, 1788, JMP 11, 278–79.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+3
+over female births in London was evidence for divine providence, because the excess 
+is required to keep the populations of the two sexes in balance (Meusnier 1999; 
+Daston 1988: 252). In practice this work led nowhere (because insurers failed to 
+understand probability – Daston 1988: 169) until the middle of the century, when two 
+Scottish ministers, Alexander Webster (1707–1784) and Robert Wallace (1697–
+1771), collaborated to draw up the first reliable population and actuarial tables. Their 
+fund for the support of widows of ministers was actuarially sound. It survived, unlike 
+contemporary insurance ventures in continental Europe. It is the distant ancestor of 
+the well-known modern life assurance company the Scottish Widows’ Fund (sources: 
+lives of Webster and Wallace in the Oxford Dictionary of National Biography; 
+Sakamoto and Tanaka 2003, chapters by Nagai and Amoh).
+�� ������������������
+The recently widowed Thomas Jefferson arrived in Paris in summer 1784 as part of a 
+three-man US mission to France. Jefferson and John Adams joined Benjamin 
+Franklin, who was already in Paris. Franklin had made extensive social - and sexual -
+contacts with the salons of the Enlightenment and was having an affair with Mme 
+Helvétius at her salon in Auteuil
+4
+. After a short time Franklin returned to the USA and 
+Adams went to London as American Minister. Jefferson stayed in Paris as American 
+Minister until fall 1789. 
+His official task was to represent the new Republic of the USA, which France had 
+helped to bring into existence after it decided to give military support to the American 
+revolutionaries. He had several difficult problems on his plate. One was opening 
+European markets to American exports. Another was apologising for the failure of the 
+US to pay the back salaries due to French officers in the American campaign. A third 
+was raising credit for the USA in European capital markets.
+But Jefferson’s five years were much more of a cultural and intellectual tour than 
+simply a diplomatic mission. His insatiable wide-ranging intellectual curiosity is 
+already evident from his writings before France, including the drafts of the Notes on 
+Virginia written before he reached Paris in reply to questions from a French diplomat 
+in Philadelphia, François de Marbois. He also undermined the government of Louis 
+XVI, to which he was accredited.
+Jefferson enjoyed the salons of Mme Helvétius and Sophie de Condorcet.  Jefferson 
+and the Marquis de Condorcet met regularly in Paris and admired one another. There 
+is enough human interest in the story of Jefferson in Paris to have persuaded Ismail 
+Merchant and James Ivory to film it (pretty accurately).  Jefferson arrived with his 
+oldest daughter Martha. On hearing in 1785 that his youngest daughter Lucy had died 
+of ‘a most unfortunate Hooping Cough’, he arranged for his remaining child Maria 
+(‘Polly’) to join them. After over a year of obstruction by the cousins who were 
+looking after Polly, she arrived in 1787 in the care of his young slave Sally Hemings 
+(a job she was too immature to do, according to Abigail Adams, the imperious wife of 
+4
+When Jefferson and Adams arrived, they both disapproved of Franklin’s behaviour. In 1786, 
+the young Sophie de Condorcet held a salon in her husband’s apartment at the Hotel des Monnaies 
+(Guilllois 1897, pp. 68-76). After the Terror and the death of her husband, Sophie moved into Mme 
+Helvétius’ old house at Auteuil and reopened her salon (Guillois 1897, pp. 94, 177). I read this as a 
+defiant statement of her radicalism and feminism.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+4
+John Adams
+5
+). Sally Hemings was TJ’s late wife’s half-sister. DNA (Y-chromosome) 
+analysis has proved that her last child, born many years after Paris, carried the 
+Jefferson genome (Foster 1998). She bore a child soon after Paris, presumably 
+Jefferson’s, but he died in infancy (Gordon-Reed 2008).  Before Sally Hemings’ 
+arrival, Jefferson had fallen in love with Maria Cosway, the Italian wife of a gay 
+English painter, but in his Dialogue between my Head and my Heart (1786) addressed 
+to her, Jefferson’s Head suppresses his Heart. 
+By 1784, Jefferson’s intellect had been largely shaped by Scottish thought, which 
+influenced his draft of the US Declaration of Independence in 1776. The Scots also 
+shaped James Madison, with whom Jefferson had worked in Virginia and 
+corresponded from Paris while Madison was a key member of the Convention that 
+wrote the US Constitution in 1787. Jefferson’s views were modified by his encounters 
+with the French Enlightenment, especially with Condorcet and Lafayette. A running 
+question is: how much of the new statistics and probability did Jefferson and/or 
+Madison understand? Table 1 gives a chronology of the careers of Jefferson and 
+Madison to 1802.
+�� ����������� ��������� ���� ���� ���������
+�������������
+Jefferson was a student at Virginia’s first university, the College of William & Mary. 
+Madison attended the College of New Jersey (now Princeton) under its austere Scots 
+principal John Witherspoon. They both absorbed the philosophy of the Scottish 
+Enlightenment, but with significantly different slants. When Jefferson went to Paris, 
+he was primed for his enthusiastic encounter with the mathematicians and 
+philosophers of the French Enlightenment. Madison was more sceptical – his only 
+exposure to French came from his Scottish schoolteacher and it is said he spoke 
+French with a Scots accent (Rakove 1990 p. 2). 
+The thought of the Scottish Enlightenment had a profound influence on US 
+constitutionalism (Adair 1974, 2000; McLean 2006). There were two immediate 
+routes: via William Small, Thomas Jefferson’s teacher at William & Mary; and via 
+Witherspoon. Small and Witherspoon stood for the liberal and conservative Scottish 
+traditions, respectively. Witherspoon nevertheless taught the work of the ‘infidel’ 
+David Hume (Adair 2000, p. 26;cf Witherspoon 1982). Adam Smith held a public 
+discussion with Hume in the pages of The Wealth of Nations (WN). Hume had argued 
+for church establishment; Smith argued against. Both TJ and JM sided with Smith.
+The Scottish Enlightenment started as a dialogue about church and state. There were 
+three camps: atheist (represented by Hume); deist/Moderate (represented by Smith 
+and Small); and Calvinist/evangelical (represented by Witherspoon). Calvinism 
+involves a set of beliefs about personal responsibility to a God who punishes 
+unrighteousness (especially, it seems, sexual) with eternal punishment, and rewards 
+5
+The Girl she [Polly Jefferson] has with her, wants more care than the child, and is wholly 
+incapable of looking properly after her, without some superiour to direct her’ (Abigail Adams to TJ, 
+July 6 1787), in Cappon 1959, p. 183.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+5
+ Date TJ JM
+1743 Born Shadwell, VA
+1751 Born King George County, VA
+1757 death of father
+1762-4 Attends College of Will iam & Mary. 
+Taught by Wil l iam Small and 
+(later) George Wythe 
+1767 Admitted to VA bar
+1768 Elected to VA House of Burgesses
+1769-72 Attends College of NJ, Princeton. Taught by 
+Principal John Witherspoon
+1770 Fire at Shadwell destroys his first 
+l ibrary. Monticel lo under construction
+1772 Marriage to Martha Wayles 
+Skelton: soon inherits her share of 
+Wayles family assets (inc. slaves)
+and l iabil i ties (to British traders). 
+Ultimately, these l iabil i ties are to 
+bankrupt him.
+1774 VA House dissolved by British; 
+reassembles as a convention. Elected 
+to First Continental Congress
+1775 ����������������������������������������
+�������
+1776 Drafts Declaration of Independence, 
+adopted on 4 July
+Elected delegate to VA convention, which turns 
+i tself into General Assembly. First known 
+meeting with TJ
+1777 Drafts VA Statute for Religious 
+Freedom
+1779-81 Governor of VA. Rescued by 
+Lafayette during British raid. 
+British free slaves from Monticel lo
+Elected to Continental Congress ti l l 1783
+1782 Death of Martha Wayles Skelton. 
+Plunged into depression; retires to 
+Monticello
+1783 Elected delegate to Congress
+1784-9 Serves as Commissioner, then 
+American Minister, to France
+1785 Re-elected to VA House of Delegates. Writes 
+‘Memorial and Remonstrance against Religious 
+assessments’
+1786 Shays’ Rebell ion
+1787 Publishes ������������������������������
+as propaganda to win British, French 
+hearts and minds. Much drafted 
+before he went to France
+Notes on ancient and modern confederacies; 
+‘Vices of the Politica l System of the US’. Main 
+author of VA Plan. VA delegate to, and records 
+proceedings of, Constitutional Convention. 
+Accepts (as Hamilton’s 3rd choice) position as 
+coauthor of ����������.
+1787-8 Sends JM his criticisms of draft 
+Constitution, a lso sends Abigai l 
+Adams response to Shays (‘I l ike a 
+l i ttle rebell ion now and then. It is 
+l ike a storm in the atmosphere’.)
+His numbers of ���������� appear. Elected to VA 
+ratifying convention
+1789 Elected to first House of Representatives; floor 
+manager for Bil l of Rights
+����������������������� �����������������������������
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+6
+those elected to it with eternal life. But it also encompasses a set of beliefs about 
+church and state. It is triply anti-hierarchical. First, there are no grades of clergymen –
+no bishops, archbishops, deans or cardinals. All ministers are of equal standing. (Thus 
+even a conservative Calvinist like Witherspoon could be a political radical). Secondly, 
+church government is in the hands of ministers and lay elders with equal authority. 
+Thirdly, the doctrine of the two kingdoms states that the civil magistrate has a duty to 
+protect the church but no right to interfere in it. 
+Seventeenth-century Scotland was an often terrifying Calvinist theocracy. In 1697, an 
+Edinburgh student, Thomas Aitkenhead, was hanged for blasphemy. But the 
+revolution settlement of 1689-1707 had a dramatic effect on state and church in 
+Scotland. It removed the threat of a hostile (i.e., Episcopalian) state church. William 
+III accepted the Presbyterians’ Claim of Right as a condition of becoming king of 
+Scotland in 1689. The position of the presbyterian Church of Scotland as the “true 
+Protestant Religion” in Scotland was guaranteed by the Act of Union 1707. But this, 
+paradoxically, removed the state altogether from Scottish public life. Scotland became 
+a weak state remotely governed. The state was unavailable to hang blasphemers.
+This vacuum allowed the liberals Francis Hutcheson (1694-1746) and Adam Smith, 
+and the atheist David Hume, to survive and to write. Hutcheson’s philosophy broke 
+free from theology. He, Smith and Hume took religion out of ethics altogether. Hume 
+was open about his scepticism in various writings, including the attack on miracles as 
+a ground of belief in the Essay on Human Understanding, and two later works, The 
+Natural History of Religion and the posthumous Dialogues concerning Natural 
+Religion. Unlike Arbuthnot, he did not interpret demographic history in the light of 
+Divine Providence. Hume had a dose of French scepticism. He may have bolstered his 
+atheism with his reading in Paris, Reims, and la Flèche while writing his fundamental 
+Treatise of Human Nature (1734-9) from which his later work derives. But he rejected 
+the rationalism of, e.g., Helvétius or Condorcet. Smith’s letters express his admiration 
+for Holbach (especially) and Helvétius; but, if he was an atheist, he was much more 
+cautious than Hume.
+Scottish philosophers therefore challenged orthodox Calvinism from both deist 
+(Hutcheson, Smith) and atheist (Hume) standpoints. Two of the three standpoints 
+formed factions of the Scottish church. (Hume was beyond the pale). The ‘Moderates’ 
+were a group of ministers in Edinburgh who seized control of the General Assembly 
+in 1750 and retained it until the 1830s, when they were overthrown by the majority 
+‘Popular’ or ‘Evangelical’ (i.e., orthodox Calvinist) party. In WN, Smith vividly 
+characterizes the Moderates and Evangelicals as ‘Loose’ and ‘Austere’ respectively, 
+and offers a Humean natural history of their religions. Austere Calvinists are austere 
+about drink and sex. This appeals to, and benefits, the poor, because they can be 
+ruined by drink and sex, and therefore they have a material interest in binding 
+themselves to the mast of austerity. The rich can afford to be Loose: drink and sex are 
+superior goods (WN V.i.g.10-14).
+In Aberdeen, there were two universities, one each for the Loose and Austere. 
+Jefferson’s teacher William Small, like Arbuthnot a generation earlier, attended the 
+Austere university (Marischal College) but he listened to Loose lecturers from the 
+other one (King’s College). When Small was a student, Thomas Reid at King’s was 
+developing what became Scottish ‘common sense’ philosophy, a middle way between 
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+7
+austere Calvinism and Humean scepticism. Small transmitted to Jefferson at William 
+& Mary what Jefferson describes as ‘the first … ever … regular lectures in Ethics, 
+Rhetoric & Belles Lettres’ given there (Jefferson, Autobiography, in Peterson 1984, p. 
+2).
+I hypothesize that Small’s W&M lectures on ethics, rhetoric, and belles letters derived 
+from Adam Smith. Smith had started giving such lectures in Edinburgh in the 1740s. 
+Student copies of them circulated around Scotland. The lectures on ethics found their 
+way into Smith’s Theory of Moral Sentiments (TMS). Those on rhetoric and belles-
+lettres were discovered, in a student copy, in 1958 and have now been published in 
+the collected works of Adam Smith.
+How much (if any) statistics and probability did Small teach Jefferson? The only 
+evidence is TJ’s brief statement in his Autobiography:
+It was my great good fortune, and what probably fixed the destinies of my life 
+that Dr. Wm. Small of Scotland was then professor of Mathematics, a man 
+profound in most of the useful branches of science (in Peterson 1984: 4).
+Small helped to mould Jefferson’s scientific cast of mind, which emerges from many 
+of his pre-Paris letters. As an empiricist, Jefferson refutes Buffon’s claim that animals 
+are smaller in the New World by drawing up descriptive statistics to the contrary 
+(Notes on Virginia, Query VI, in Peterson 1984)
+Madison’s writings, notably his numbers of The Federalist, show that he had a 
+Humean interest in (what we might now call) game theory. We do not know whether 
+Witherspoon taught him to understand this aspect of the thought of the infidel Hume. 
+But Hume was a polymath. One of his works was a multi-volume History of England
+which showed that Jefferson’s favourite version of English history was mythical. In 
+the myth beloved by 17
+th
+-century parliamentarians, at the time of the English Civil 
+War, the Anglo-Saxon peasant before the Norman invasion of 1066 was a free man, 
+oppressed since then by the ‘Norman yoke’ of royalty, feudalism, and the legal code. 
+Jefferson disapproved of Hume for casting doubt on this story. At the material time 
+therefore, Madison was a follower of Hume who became (as we shall see) sceptical of 
+Condorcet; Jefferson resisted Hume but became close to Condorcet.
+��� ����������
+As a member of the Académie royale des sciences, Franklin introduced Jefferson to 
+Condorcet and his circle. To the French, Franklin was a hero of the American 
+Revolution, who had been denounced and insulted by the British after breaking with 
+them. He had negotiated the American-French alliance. He was wrongly assumed to 
+be a Quaker because he did not wear a wig: and to be the main author of the 
+Constitution of Pennsylvania, which was widely studied in Paris. 
+Condorcet and his circle were fascinated by American politics. He wrote about it 
+copiously, and information on what was going on must have come from Jefferson or 
+one of his associates, such as Filippo Mazzei and la Rochefoucauld. The latter had 
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+8
+been Franklin’s secretary in Paris, and is a likely source of the following, from 
+Condorcet’s Eloge
+6
+ de Franklin:
+Franklin fut nommé, en 1776, un des représentants de la ville de Philadelphie 
+à la convention de Pensylvanie, qui le choisit pour président. La constitution 
+de cet Etat fut en partie son ouvrage. Elle se distingue de la plupart des autres 
+par une égalité plus grande, et de toutes, en ce que le pouvoir législatif y est 
+confié à une seule chambre de représentants; la voix de Franklin décida seule 
+cette dernière disposition.   (OC III 372-423)
+That was not how it seemed to John Adams, who had been closer to the event than 
+Condorcet or la Rochefoucauld. On the margin of a copy of a French translation of the 
+Constitution of Pennsylvania, Adams wrote:
+The following Constitution of Pa, was well known by such as were in the 
+secret, to have been principally prepared by Timothy Matlock, Jas. Gannon, 
+Thomas Paine and Thomas Young, all ingenious Men, but none of them 
+deeply read in the Science of Legislation. The Bill of Rights is taken almost 
+verbatim from that of Va…. The Form of Government, is the Worst that has 
+been established in America, & will be found so in Experience. It has 
+weakened that state, divided it, and by that Means embarrasses and obstructed 
+the American Cause more than any other thing (JA annotation in Adams 
+Library, Boston Public Library, 233.7.)
+This unicameral constitution of Pennsylvania is the target of Madison’s attacks in 
+Federalist 10, 48, and 51. On this, Jefferson agreed with Madison and Adams. But 
+Turgot, Condorcet, and la Rochefoucauld were attracted by the constitution of 
+unicameral Pennsylvania, backed by the supposed authority of the great Docteur 
+Franklin. Condorcet was wrong to attribute the PA constitution to him: he was rarely 
+there. La Rochefoucauld produced another translation of the US state constitutions in 
+1783.
+Adams and Jefferson - the two Americans to whom French constitution-writers turned 
+for advice
+7
+- therefore had very mixed feelings about the American state constitutions. 
+Condorcet’s endorsement of unicameralism created a barrier between him and the 
+Americans most likely to understand him.
+��� ����������������������t
+Jefferson and Condorcet both believed that science must banish human misery and 
+superstition. Condorcet coined the term ‘sciences morales et politiques’; Jefferson 
+may have been the first to translate the latter as political science. The mainspring of 
+6
+It was Condorcet’s job as secretaire perpetuel de l’Académie des sciences to write obituaries 
+of deceased academicians. They are masterly. Some criticize the subject gently, while advancing the 
+argument (e.g, Daniel Bernoulli, where Condorcet shows the limitations of Bernoulli’s arguments on 
+inoculation). Some are not so gentle under a mask of politesse (e.g., Buffon, whom Condorcet 
+detested). The Eloge of Franklin spends only a few pages on lightning-conductors and Franklin’s other 
+scientific achievements. It is mostly a celebration of American politics.
+7
+Tom Paine was in Paris in 1787 and again in 1789-90. But he spoke no French.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+9
+the moral and political sciences, according to Condorcet, was probability.  The 
+developing theory of probability drove the new actuarial science and made stable 
+insurance contracts possible. It powered Condorcet’s jury theorem. It spurred him to 
+produce the first axiomatic treatment of voting and majority rule. It informed his 
+attitude to justice and human rights.
+Condorcet used his position as Perpetual Secretary of the Academy of Sciences to 
+control European science policy. Jefferson was an enthusiastic amateur scientist. The 
+final speech of the Heart to the Head acknowledges the Head’s heroes: ‘Condorcet, 
+Rittenhouse, Madison, La Cretelle, or any other of those worthy sons of science 
+whom you so justly prize’
+8
+. In one of the last documents he wrote in hiding before 
+meeting his death in the Terror of 1794, Condorcet consigned his beloved daughter 
+Eliza, should she escape to the USA, to the care of Jefferson, or of Franklin’s 
+grandson B. F. Bache. She did not reach the USA, but she and her mother Sophie de 
+Grouchy survived the Terror. After Condorcet’s death, if TJ’s letter to William Green 
+Munford is to be taken at face value, Jefferson was reconciled to Condorcet’s values. 
+In his wonderful post-1812 correspondence with John Adams (Cappon 1959), 
+Jefferson never responded to Adams’ fierce and frequent attacks on Condorcet and his 
+fellow thinkers of the French Enlightenment. Adams thought that they were foolishly 
+optimistic about human nature. (So, more quietly, did Madison). Jefferson shared 
+Condorcet’s optimism.
+How far did TJ and/or JM understand Condorcet’s revolutionary, probabilistic, social 
+science? There are several pieces of evidence, and some non-evidence from which it 
+is impossible to prove a negative. Where there is no evidence, we must take a 
+historian’s rather than a statistician’s approach to probability.
+The best evidence that Jefferson understood Condorcet’s probabilism is in his letter to 
+Madison of 06.09.1789, anthologized as ‘The earth belongs in usufruct to the living’.
+TJ derives his data from mortality tables; his formulae and modes of reasoning from 
+Condorcet. Following are, first, the probabilistic parts of TJ’s argument; second, the 
+parallel passage in Condorcet.
+I set out on this ground which I suppose to be self evident, “that the earth belongs 
+in usufruct to the living;” that the dead have neither powers nor rights over it.... 
+[L]et us suppose a whole generation of men to be born on the same day, to attain 
+mature age on the same day, and to die on the same day.... Let the ripe age be 
+supposed of 21. years, and their period of life 34. years more, that being the 
+average term given by the bills of mortality to persons who have already attained 
+21. years of age.... A generation coming in and going out entire ... would have a 
+right in the 1
+st
+ year of their self dominion to contract a debt for 33. years, in the 
+10
+th
+ for 24. in the 20
+th
+ for 14. in the 30
+th
+ for 4. whereas generations changing daily, 
+by daily deaths and births, have one constant term  beginning at the date of their 
+contract, and ending when a majority of those of full age at that date shall be dead. 
+The length of that term may be estimated from the tables of mortality.... Take, for 
+instance, the tables of M. de Buffon.... [O]f those living at any one instant of time, 
+one half will be dead in 24. years 8. months... and the half of those of 21. years 
+8
+By Madison, Jefferson probably meant not the politician but his cousin Rev. James Madison, 
+president of William & Mary College. Jefferson called the Philadelphia scientist David Rittenhouse 
+‘second to no astronomer living; … in genius he must be the first, because he is self-taught’.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+10
+and upwards living at any one instant of time will be dead in 18. years 8. Months, 
+or say 19. years as the nearest integral number (Peterson 1984, pp. 959-64,
+retaining TJ’s eccentric punctuation).
+Les bornes de la durée des lois constitutionnelles ne doivent pas s’étendre au delà 
+d’une génération. En effet, on peut regarder comme unanimement reçue toute loi 
+acceptée par la pluralité de la nation, parce qu’on peut supposer que, vu la 
+nécessité de recevoir la loi ou de la rejeter, et celle de préférer l’opinion du plus 
+grand nombre, ceux qui rejetaient une loi proposée ont cependant formé le vœu de 
+s’y soumettre, si elle était conforme à l’opinion de la pluralité. Ainsi, 
+l’approbation donnée à une loi, par cette espèce d’unanimité, peut s’étendre à tout 
+le temps où ceux qui existaient à cette époque continuent de former la pluralité…. 
+Mais cette approbation cesse d’avoir la même valeur lorsque ces individus ne 
+forment plus la pluralité de la nation. La durée de toute loi constitutionnelle a 
+donc pour véritable limite le temps nécessaire pour que la moitié des citoyens 
+existants au moment de l’acceptation de la loi ait été remplacée par de nouveaux 
+citoyens;  espace facile à déterminer, et qui est de 20 ans environ, si la majorité est 
+fixée à 21 ans; de 18, si elle est fixée à 25. (Condorcet, Sur la nécessité de faire 
+ratifier la constitution par les citoyens, 1789, in OC IX 413-30, quoted at p. 415. 
+My italics. Condorcet spells out the numbers in this passage).
+The passages are so close that it is hard to avoid the conclusion that they were written 
+in collaboration. Following is another example. Jefferson in Paris took a very cheerful 
+view of Shays’ Rebellion against the government of Massachusetts in 1786-7. 
+Whereas Shays scared Madison sufficiently to give momentum to the Constitutional 
+Convention
+9
+, Jefferson insouciantly pointed out that 
+We have had 13. states independent 11. years. There has been one rebellion. 
+That comes to one rebellion in a century & a half for each state. What country 
+before ever existed a century & half without rebellion? … What signify a few 
+lives lost in a century or two? The tree of liberty must be refreshed from time 
+to time with the blood of patriots & tyrants. It is it’s natural manure (TJ to 
+William Stephens Smith (Adams’ son-in-law), Nov. 13, 1787; Peterson 1984, 
+910-912; TJ’s punctuation; cf also TJ to Abigail Adams, Feb. 22 1787, ibid., 
+889-90).
+Jefferson’s dubious statistical inference comes direct from Condorcet, who had 
+written, 
+Depuis onze ans que les treize gouvernements américains subsistent, un seul a 
+vu naître un soulèvement, et c’est celui dont je viens de parler. Supposons que 
+la même chose arrivât successivement dans les autres Etats après un même 
+espace de temps, il faudrait pour qu’il en arrivât un dans chacun, un laps de 
+cent quarante-trois années. Dans quels autres gouvernements les soulèvements 
+ont-ils été aussi rares? (OC VIII:44).
+The only difference is that Condorcet’s arithmetic is more exact than Jefferson’s.
+9
+‘The expedition under General Lincoln agst. the insurgents has effectually succeeded in 
+dispersing them. Whether the calm which he has restored will be durable or not is uncertain’. JM to TJ, 
+Mar.19 1787, in Rakove 1999, p. 67.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+11
+At the same time, TJ was helping the Marquis de Lafayette to draft a declaration of 
+rights which he hoped would be adopted in France. TJ chose Lafayette, not 
+Condorcet, because the former was more influential and less radical, therefore his 
+ideas were more likely to be adopted. Many of them were, in the Déclaration des 
+droits de l’homme et du citoyen adopted by the National Assembly in 1789 and still in 
+the preamble to the French constitution. (A fuller discussion is in my complementary 
+paper McLean 2009, which deals with the non-statistical sides of the relationship 
+between Jefferson and the French intellectuals he met). However, the following clause 
+of Lafayette’s was not adopted. Its lineage from Condorcet via Jefferson is 
+unmistakable.
+Et comme le progrès des lumières l’introduction des abus et le droit des 
+générations qui se succèdent nécessitent la révision de tout établissement 
+humain, il doit être indiqué des moyens constitutionnels qui assurent … une 
+convocation extraordinaire des représentants dont le seul objet soit d’examiner 
+et modifier, s’il le faut, la forme du Gouvernement. (Boyd 1950- ,15: 230-3.)
+However, Jefferson admired Condorcet’s mathematics much more than his politics. 
+Condorcet’s influence on Jefferson was limited, and on Madison, it was non-existent: 
+in both cases, because Condorcet endorsed unicameralism. Jefferson had made his 
+feelings known in his Notes on Virginia. He had brought the Notes, originally drafted 
+as replies to Marbois’ queries, with him to Paris, and published them there as part of 
+the campaign to recruit French intellectuals to the American revolutionary ideology. 
+Jefferson denounces the ‘173 despots’ who had replaced the solitary despot George III 
+in Virginia. Although bicameral, ‘the [VA] senate is, by its constitution, too 
+homogeneous with the house of delegates. Being chosen by the same electors, at the 
+same time, and out of the same subjects, the choice falls of course on men of the same 
+description…. An elective despotism was not the government we fought for’ (Peterson 
+1984, pp. 244-5).
+Another member of the Jefferson-Condorcet circle in Paris was Philip (Filippo) 
+Mazzei, an Italian-Virginian who wrote frequent begging letters to Madison and 
+Jefferson. Jefferson commissioned Mazzei to write a four volume Recherches 
+Historiques … sur les Etats-Unis in order to counter anti-American propaganda in 
+Paris (much the same motive as for publishing his own Notes on Virginia). Mazzei (or 
+Jefferson) inserted four chapters by Condorcet into this book, which Mazzei sent to 
+Madison, unsuccessfully asking Madison to arrange a translation. Condorcet’s four 
+chapters were called Lettres d’un bourgeois de New H[e]aven à un citoyen de 
+Virginie. Condorcet was one of ten distinguished Frenchmen made a Freeman of New 
+Haven at a town meeting in 1785. The citoyen de Virginie was Mazzei. These New 
+Haven Letters argue for a unicameral national legislature, with representatives 
+selected by a very complicated procedure. Madison refused Mazzei’s request to get 
+them translated, in the terms quoted at the head of this paper.
+We checked Jefferson’s library catalog for his copies of Condorcet’s works (Gilreath 
+and Wilson 1989). We examined all that are known to survive in the Library of 
+Congress (some were lost in a fire in 1851). Jefferson had a copy of the 1795 edition 
+of the Esquisse d’un tableau des progrès de l’esprit humain. He objects to 
+Condorcet’s claim that France was the first country to achieve religious freedom. No, 
+says TJ: Virginia was first.  But he wrote nothing apart from his characteristic 
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+12
+countersigning of the signatures
+10
+ on his copies of Condorcet’s work on voting theory. 
+I conclude that Condorcetian probability did not make a long-lasting impact on 
+Jefferson. For more evidence, relating to Jefferson’s career after he returned from 
+Paris, see McLean and Urken 1992; McLean and Hewitt 1994.
+��� ���������������������������������
+Madison and Jefferson had worked together in Virginia on the Virginia Declaration of 
+Religious Freedom (Rakove 1990, pp. 6-14). Jefferson’s pride in it equalled 
+Madison’s. As noted, he complained that Condorcet’s Esquisse wrongly credited 
+France, not Virginia, for pioneering religious freedom. Adams’ 1780 Constitution of 
+Massachusetts still recognised the role of the town church as guardian of public order 
+and social control. Virginia had disestablished the churches.
+When Jefferson saw the Constitution as reported out of the convention at 
+Philadelphia, he objected:
+I will now add what I do not like. First the omission of a bill of rights 
+providing clearly & without the aid of sophisms for freedom of religion, 
+freedom of the press, protection against standing armies, restriction against 
+monopolies, the eternal & unremitting force of the habeas corpus laws, and 
+trials by jury in all matters of fact…. Let me add that a bill of rights is what 
+the people are entitled to against every government on earth, general or 
+particular, & what no just government should refuse, or rest on inferences. The 
+second feature I dislike, and greatly dislike, is the abandonment in every 
+instance of the necessity of rotation in office, and most particularly in the case 
+of the President. Experience concurs with reason in concluding that the first 
+magistrate will always be re-elected if the Constitution permits it. He is then 
+an officer for life. (TJ to Madison, 12.20.1787, in Peterson 1984, p. 916).
+Jefferson’s first objection – the absence of a Bill of Rights – was widely shared. It 
+became clear to the Federalists that they would not get the required nine states to 
+ratify unless they promised to consider adding a bill of rights in the first Congress 
+(Riker 1996, pp. 203-28). Several reluctant ratifiers, including New Hampshire,
+Massachusetts, and Virginia, attached clauses for the bill that they would like to see 
+added. A committee chaired by Madison in the first House considered the proposed 
+clauses. Madison’s committee reported out 12 amendments, of which 10 were ratified 
+and became the US Bill of Rights. The Establishment and Free Exercise clauses of the 
+First Amendment were among those on Jefferson’s list that were ratified, and in 
+substantially the words of the Virginia Declaration of Religious Freedom.
+Lafayette was the president of the French chapter of the Society of the Cincinnati. 
+This was a veterans’ organisation for Revolutionary War officers, whose president 
+was George Washington. Jefferson and other republicans were deeply suspicious of 
+the Society, hence his second objection to the Constitution draft. They saw it as the 
+10
+ Every 16 or 32 pages, a book had a consecutive letter in the bottom margin to show the binder in 
+which order to bind the pages. These marginal letters are known as ‘signatures’. Jefferson marked his 
+ownership of books by writing a ‘T’ before signature J, and a ‘J’ after signature T.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+13
+nucleus of an American aristocracy, with Washington at its head set to become the 
+first monarch of the United States. They were even more alarmed when it was 
+proposed that membership of the Society should be hereditary (Gottschalk 1950 pp. 
+54-64). However, Washington settled the issue by retiring voluntarily after his second 
+term in the Presidency.
+Jefferson sent numerous batches of books from Paris to Madison in 1785-6, as he was 
+preparing for the Constitutional Convention. Norman Schofield has argued for some 
+years now (latest in Schofield 2006, pp. 120-5) that Madison as well as Jefferson was 
+influenced by Condorcet’s probabilism. It is a nice idea, but not, I think, supported by 
+the available documents. For instance, Jefferson sent Madison a copy of Condorcet’s 
+Essai sur l’application de l’analyse (Condorcet 1785) to pass on to Edmund 
+Randolph, governor of Virginia. Madison had it for nine days before passing it on. It 
+is improbable that Madison can have taken in its lessons (from a book that was not 
+destined for him) in that time. If Madison was a pioneer of game theory, I think he is a 
+Scot rather than a Frenchman – and that he got it from the one Scot whom Jefferson 
+disliked, namely David Hume.
+�� ����������
+Both Jefferson and Madison were profoundly influenced by the thought of the 
+Scottish Enlightenment. Jefferson was taught a more liberal version of Scottish 
+Enlightenment thought than Madison, because Jefferson’s teacher Small came from 
+the Moderate tradition in the Church of Scotland, whereas Madison’s teacher 
+Witherspoon came from the Evangelical tradition. But Jefferson, unlike Madison, 
+didn’t like Hume, because TJ accepted the opposition Whig view of British history, 
+which Hume’s History of England did not. Hence Jefferson hailed the French 
+Revolution as a new dawn of freedom and was singularly impervious to its death toll. 
+His insouciant letters about Shays to Abigail Adams and William Smith (‘The tree of 
+liberty must be refreshed from time to time with the blood of patriots & tyrants. It is 
+it’s natural manure’) foreshadow a still more alarming letter of January 1793 to 
+William Short, who had been his secretary in Paris. Secretary of State TJ chides US 
+diplomat Short for his hostility to the Jacobins:
+In the struggle which was necessary, many guilty persons fell without the 
+forms of trial, and with them some innocent. These I deplore as much as any 
+body, & shall deplore some of them to the day of my death. But I deplore them 
+as I should have done had they fallen in battle… Were there but an Adam & 
+an Eve left in every country, & left free, it would be better than as it now is. 
+(TJ to William Short Jan 3 1793 in Peterson 1984 p. 1004).
+Madison would not have written that letter. Jefferson was the more brilliant writer (by 
+far); Madison, the more careful thinker. When they built on their common Scots 
+heritage, they largely agreed. That heritage produced Madison’s numbers of The 
+Federalist and the First Amendment. But Madison did not follow Jefferson’s 
+francophilia. On moving to Paris, TJ eagerly absorbed the latest French 
+Enlightenment thought. Madison probably did not, to judge by his general silence and 
+occasional dismissive remarks when TJ sent him the latest pamphlets from Paris. 
+Despite Madison’s use of probabilistic arguments in his numbers of The Federalist, I 
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+14
+am not persuaded that Madison had read and understood the probabilistic thought of 
+Condorcet before writing them.
+Jefferson’s stay in Paris produced American architecture and American wine. It could 
+have led American thinkers to understand the revolutionary probabilism of French 
+Enlightenment thought if anyone had understood Jefferson’s transmission of it. We 
+have found no evidence that anybody else in America did (Urken and McLean 2007). 
+Its political legacy lay not in America but in France – with Jefferson’s contribution to 
+the Declaration of the Rights of Man & the Citizen. It is ironic that this represents 
+Jefferson at his most Madisonian, not his most Jeffersonian.
+����������
+Archives
+Boston, MA: John Adams Collection, Boston Public Library
+Washington DC: Library of Congress.
+Published works
+Note: OC means Arago and O’Connor. TJP means Boyd et al. JMP means Hutchison et al.
+Adair, D. (1974) Fame and the Founding Fathers ed. by T. Colburn New York: Published for 
+the Institute of Early American History and Culture at Williamsburg, Va., by Norton.
+Adair, D. (2000), The Intellectual Origins of Jeffersonian Democracy: republicanism, the 
+class struggle, and the virtuous farmer, Lanham, MD: Lexington Books.
+Arago, F.X. and O’Connor, A. Condorcet (ed.) (1847-9). Œuvres de Condorcet 13 vols. Paris: 
+Firmin Didot. Facsimile reprint 1968 Stuttgart : Friedrich Frommann Verlag.
+Badinter, E. and Badinter, R. (1988). Condorcet: un intellectuel en politique. Paris : Fayard.
+Boyd, J. P et al ed. (1950-), The papers of Thomas Jefferson Princeton: Princeton University 
+Press. Main series 28 vols to date.
+Cappon, L. J. ed. (1959), The Adams - Jefferson Letters: the complete correspondence 
+between Thomas Jefferson and Abigail and John Adams Chapel Hill: University of North 
+Carolina Press
+Condorcet, M.J.A.N., marquis de (1785) Essai sur l’application de l’analyse à la probabilité 
+des décisions rendues à la pluralité des voix Paris: Imprimerie Royale
+Condorcet, M.J.A.N., marquis de (1795/2004). Esquisse d’un tableau historique des progrès 
+de l’esprit humain ed. J.-P Schandeler and P. Crépel. Paris : Institut National d’Etudes 
+Démographiques.
+Daston, Lorraine (1988). Classical Probability in the Enlightenment. Princeton, NJ: Princeton 
+University Press.
+Foster, E. et al. (1998), "Jefferson Fathered Slave's Last Child," Nature, November 5.
+Gilreath, J. and Wilson, D. L. (1989). Thomas Jefferson’s Library: a catalog with the entries 
+in his own order Washington DC: Library of Congress
+Gordon-Reed, Annette (2008). The Hemingses of Monticello. New York: W.W. Norton.
+Journ@l électronique d’Histoire des Probabilités et de la Statistique/ Electronic Journal for 
+History of Probability and Statistics . Vol.5, n°2. Décembre/December 2009
+15
+Gottschalk, L. (1950), Lafayette between the American and the French Revolution Chicago: 
+University of Chicago Press.
+Guillois, A. (1897), La marquise de Condorcet: sa famille, son salon, ses amis, 1764-1822
+Paris: Paul Ollendorf.
+Haraszti, Z. (1952), John Adams & the prophets of progress Cambridge, MA : Harvard 
+University Press.
+Hutchinson W. T. et al. eds.(1962-  ). The Papers of James Madison Main series 17 vols to 
+date.  Vols 1-10 publ. by Chicago University Press, thereafter by University of Virginia Press
+Marchione, M. (1975). Philip Mazzei: Jefferson’s ‘zealous Whig’. New York: American 
+Institute of Italian Studies.
+McLean, Iain (2006). Adam Smith: Radical and Egalitarian. Edinburgh: Edinburgh 
+University Press.
+McLean, Iain (2009). Jefferson à Paris entre 1784 et 1789 : La rencontre des Lumières 
+écossaises, américaines et françaises, Paris: C.A.M.S, série «Histoire du Calcul des 
+Probabilités et de la Statistique », n
+o
+256.
+McLean, Iain and Urken, A. B. (1992), ‘Did Jefferson or Madison understand Condo

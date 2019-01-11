@@ -1,0 +1,242 @@
+SUPPLEMENTARY INFORMATION
+1www.nature.com/nature
+doi: 10.1038/nature08365
+1 Appendix
+We begin by giving new formulae for estimation of Fst. Suppose we have a
+biallelic marker in two populations in Hardy-Weinberg equilibrium. Choose the
+variant allele, and suppose that the allele has population frequency p1, p2 in
+populations 1 and 2 respectively Set qi = 1 − pi. Then we can define Wright’s
+Fst as
+Fst = N/D (1)
+where
+N = p1(q2 − q1) + p2(q1 − q2) (2)
+D = p1q2 + q1p2 = N + p1q1 + p2q2 (3)
+This is a definition of Fst, a parameter measuring divergence at a given locus,
+not a sample statistic. In this paper we are only interested in divergence mea-
+sures of biallelic markers and the theory will always assume the populations are
+homogeneous.
+Suppose we have a set S of markers Ak(k = 1, . . .M). For marker k we define
+now N [k] and D[k] in the obvious way. We now define F (S) = Fst for the marker
+set S by
+F (S) =
+N(S)
+D(S)
+(4)
+where
+N(S) =
+�M
+k=1 N
+[k]
+M
+(5)
+D(S) =
+�M
+k=1 D
+[k]
+M
+(6)
+Given the form of equation (4) it is highly desirable to find unbiased estimators
+of N [k],D[k] else the bias will eventually dominate the estimate. Fix for now,
+marker k, and suppose the population frequencies are p1, p2 for the variant allele,
+and we observe allele counts a1, a2 for the variant allele, b1, b2 for the reference
+allele. Take ni = ai + bi, i = 1, 2. N = N
+[k] is defined as (p1 − p2)
+2
+. A naive
+estimator for N is
+X = (a1/n1 − a2/n2)
+2
+We calculate the bias of X. Writing
+X = ((a1/n1 − p1)− (a2/n2 − p2) + (p1 − p2))
+2
+Then
+E(X) = (p1 − p2)
+2
++ V ar(a1/n1|p1) + V ar(a2/n2|p2) (7)
+= (p1 − p2)
+2
++ p1(1− p1)/n1 + p2(1− p2)/n2 (8)
+1
+2www.nature.com/nature
+doi: 10.1038/nature08365 SUPPLEMENTARY INFORMATION
+Define h1 = p1(1− p1) (2h1 is the heterozygosity at the marker for population
+1). Then a natural estimator for h1 is
+ĥ1 =
+a1(n1 − a1)
+n1(n1 − 1)
+(9)
+It is easy to check that ĥ1 is unbiased. Similarly define h2 for population 2,
+with a corresponding estimator ĥ2 This is enough to show that:
+N̂ = (a1/n1 − a2/n2)
+2
+− ĥ1/n1 − ĥ2/n2 (10)
+is an unbiased estimator for N . Now
+D = N + h1 + h2
+which shows
+D̂ = N̂ + ĥ1 + ĥ2 (11)
+is an unbiased estimator for D.
+By the Lehmann-Scheffé theorem [1, Theorem 4.2.2] N̂ and D̂ are uniformly
+minimum variance unbiased estimators. No longer fixing a marker and writing
+N̂ [k] for our estimator of N [k], and so on, we see that a natural estimator for
+F (S) is
+F̂ =
+�
+k N̂
+[k]
+�
+k D̂
+[k]
+(12)
+Note that (12) does not give an unbiased estimator. However the law of large
+numbers does imply that as sample size or the number of unlinked markers
+become large we get an estimator that is asymptotically consistent.
+Given our assumptions, our estimates of N [k], D[k] are exactly unbiased both
+here and in the section below. Our formulae are different from those of Weir
+and Cockerham [6], at least when population sample sizes differ.
+1.1 Estimators in the presence of inbreeding
+The estimators above are not correct if there is inbreeding. We continue to
+assume that within a population there is no structure, but no longer assume
+that the pair of chromosomes of each sample are unrelated. Thus we may have
+excess homozygosity compared with Hardy-Weinberg equilibrium.
+We extend our theory to this case. We give estimators ofN , D that are unbiased,
+without explicitly estimating the inbreeding coefficients. Let x0, x1, x2 be the
+number of samples of population 1 with 0, 1, 2 copies of the variant allele. Let
+y0, y1, y2 be the corresponding numbers for population 2. Let
+s = x0 + x1 + x2
+t = y0 + y1 + y2
+2
+3www.nature.com/nature
+SUPPLEMENTARY INFORMATIONdoi: 10.1038/nature08365
+We will require that s, t > 1. In the notation of the previous section:
+a1 = x1 + 2x2
+a2 = y1 + 2y2
+n1 = 2s
+n2 = 2t
+which will lead to estimators for N,D. In the presence of inbreeding, these
+estimators are incorrect. Note however that if we pick alleles randomly from
+each diplotype, then we will obtain valid unbiased estimators. We can of course
+then obtain more efficient estimators by averaging over our choice of alleles.
+Select an allele at random from each diploid genotype. Let u be the allele count
+for population 1, and v be the count for population 2. From equation (10) we
+want to compute expected values of:
+X = (u/s− v/t)
+2
+ĥ1 =
+u(s− u)
+s(s− 1)
+ĥ2 =
+v(t− v)
+t(t− 1)
+when our estimator for N is
+N̂ = E(X)−E(ĥ1)/s−E(ĥ2)/t (13)
+For X, we see that u has mean x1/2 + x2 and variance x1/4. Similarly v has
+mean y1/2 + y2 and variance y1/4. It follows that
+E(X) =
+�
+x1 + 2x2
+2s
+−
+y1 + 2y2
+2t
+�2
++
+x1
+4s2
++
+y1
+4t2
+For E(ĥ) we need the expected value of u(s− u). Standard binomial coefficient
+identities show that
+E(u(s− u)) = x0x2 + (x0 + x2)x1/2 + x1(x1 − 1)/4
+Now it follows that:
+E(ĥ1) =
+x0x2 + (x0 + x2)x1/2 + x1(x1 − 1)/4
+s(s− 1)
+(14)
+E(ĥ2) =
+y0y2 + (y0 + y2)y1/2 + y1(y1 − 1)/4
+t(t− 1)
+(15)
+We now can apply equation (13) to obtain N̂ . For D̂ we have, using D =
+N + h1 + h2 the equation
+D̂ = N̂ +E(ĥ1) +E(ĥ2) (16)
+3
+4www.nature.com/nature
+doi: 10.1038/nature08365 SUPPLEMENTARY INFORMATION
+These formulae are slightly different from those of [5] who correct for inbreeding
+by directly estimating an inbreeding ‘fixation index’ (see below) and state that
+their estimates of the numerator N and denominator D are only ‘approximately
+unbiased’. (see their equation (8)). We now obtain, using estimates over many
+markers
+F̂ =
+�
+k N̂
+[k]
+�
+k D̂
+[k]
+(17)
+where N̂ [k], D̂[k] are the estimators above, robust to inbreeding, for marker
+k. Just as before, the estimator of (17) is not unbiased but asymptotically
+consistent as the number of unlinked markers becomes large.
+The same ideas lead to a simple estimator of the inbreeding coefficient, pI . the
+probability, in a sample from a population, that the two alleles at a locus are
+identical by descent (IBD). For our case, with an assumed homogeneous popula-
+tion, this is the same as Wright’s fixation index F . (See [4, page 154]). Consider
+population 1, with the same notation as above. Let H be the probability that
+two alleles from an individual are heterozygous. Then
+H = (1− pI)h
+so that pI = (h−H)/h. An unbiased estimator of H is
+Ĥ =
+x1
+s
+Thus we obtain a natural estimate of pI :
+p̂I =
+�
+(ĥ− Ĥ)
+�
+ĥ
+(18)
+where we sum over all SNPs in our data.
+We have not yet worked out the theory, but it would appear that these estimators
+of Fst have, in the absence of inbreeding, standard errors that are only a little
+increased from the ‘optimal’ estimators using equations (10, 11).
+2 f-statistics
+We now discuss our f -statistics. f4 is the simplest. We have 4 distinct popu-
+lations W,X, Y, Z. An allele has population frequencies w, x, y, z respectively
+We observe counts w0, w1 of the allele and the complementary allele in a sample
+from population W. Similarly we observe counts x0, x1; y0, y1; z0, z1. We will
+assume that the total count for each population is at least 2. Thus the natural
+(naive) estimator of w is
+w� =
+w0
+(w0 + w1)
+4
+5www.nature.com/nature
+SUPPLEMENTARY INFORMATIONdoi: 10.1038/nature08365
+with similar definitions of x�, y�, z�. We wish to form unbiased estimates of
+quantities such as (w−x)(y− z) which we term an f4-statistic. It is easy to see
+that the naive estimate
+f4(W,X, Y, Z) = (w
+� − x�)(y� − z�)
+indeed is an unbiased estimator. Next suppose we want an estimator (f3-
+statistic) for (w−x)(w−y) where w appears twice. Consider the naive estimator:
+q = (w� − x�)(w� − y�) Then we can write q as
+q = ((w� − w)− (x� − x) + (w − x))((w� − w)− (y� − y) + (w − y))
+This shows that the bias of q is E(w� − w)
+2
+. Let nW = w0 + w1 be the total
+allele count for W. Then
+E(w� − w)
+2
+=
+w(1− w)
+nW
+Define hW = w(1− w)
+(2 hW is the heterozygosity at the marker for population W ). Then a natural
+estimator for hW is ĥW = defined analogously to h1.
+f3(W,X, Y ) = (w
+� − x�)(w� − y�)− ĥW /nW
+and f3 is an unbiased estimator of (w − x)(w − y). Similarly we can define
+f2(W,X) = (w
+� − x�)(w� − x�)−

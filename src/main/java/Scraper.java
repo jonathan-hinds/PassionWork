@@ -396,22 +396,27 @@ public class Scraper {
      */
     public Map<String, Frequency> wordCount(String XML){
         Map<String, Frequency> words = new HashMap<>();
-        int wordCount = 0;
         if(XML != null) {
             String text = parseHTML(XML);
-
+            int wordCount = text.split("\\s+").length;
             String filtered = filter(text);
-
             filtered = filtered.toLowerCase();
-            //text = text.toLowerCase();
 
             ArrayList<String> refineWords = getRegExList(filtered, "\\w+");
             for (String words1 : refineWords) {
-                wordCount ++;
                 if (!words.containsKey(words1)) {
-                    Frequency fq = new Frequency();
-                    fq.setTf(1);
-                    words.put(words1, fq);
+                    String POS = parsePOS(findPOS(words1));
+                    //remove this section if you don't want POS to be filtered
+                    if(POS != null){
+                        if (POS.equals("Noun") || POS.equals("Verb") || POS.equals("Adverb")  || POS.equals("Adjective") ) {
+                            if(words1.toCharArray().length > 3) {
+                                Frequency fq = new Frequency();
+                                fq.setTf(1);
+                                words.put(words1, fq);
+                            }
+                        }
+                    }
+
                 } else {
 
                     Integer amount = words.get(words1).getTf();
@@ -485,7 +490,6 @@ public class Scraper {
         return links;
     }
 
-
     /**
      * @param page the web page from which the scraper is ectracting text from.
      * @return a String representation of the XML / HTML scraped from the page, based on what kind of response
@@ -505,7 +509,6 @@ public class Scraper {
             return null;
         }
     }
-
 
     /**
      * @param html - String representation of an html page, to be stripped of all its html tags.
@@ -564,6 +567,7 @@ public class Scraper {
 
     /**
      * @param fileName pdf file name to be deleted if it could not be opened, or did not contain any text.
+     *                 used for filtering out unwated file when scraping sites for pdfs.
      */
     public void deleteFile(String fileName){
         File file = new File(fileName + ".pdf");
@@ -684,7 +688,7 @@ public class Scraper {
                 Map<String, Map<String, Frequency>> docMap = new HashMap<>();
                 String text = getPDFString(file);
                 count = wordCount(text);
-                System.out.println("File1: " + count.keySet().size());
+                System.out.println("File1: " + file.getName() + ", words: " + count.keySet().size());
                 //to each file here (file2)
                 for (File file2 : fileEntry) {
                     if (!file.getName().equals(".DS_Store")) {

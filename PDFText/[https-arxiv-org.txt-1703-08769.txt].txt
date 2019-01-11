@@ -1,0 +1,892 @@
+Open Vocabulary Scene Parsing
+Hang Zhao1, Xavier Puig1, Bolei Zhou1, Sanja Fidler2, Antonio Torralba1
+1Massachusetts Institute of Technology, USA
+2University of Toronto, Canada
+Abstract
+Recognizing arbitrary objects in the wild has been a
+challenging problem due to the limitations of existing clas-
+sification models and datasets. In this paper, we propose a
+new task that aims at parsing scenes with a large and open
+vocabulary, and several evaluation metrics are explored for
+this problem. Our proposed approach to this problem is a
+joint image pixel and word concept embeddings framework,
+where word concepts are connected by semantic relations.
+We validate the open vocabulary prediction ability of our
+framework on ADE20K dataset which covers a wide variety
+of scenes and objects. We further explore the trained joint
+embedding space to show its interpretability.
+1. Introduction
+One of the grand goals in computer vision is to recognize
+and segment arbitrary objects in the wild. Recent efforts
+in image classification/detection/segmentation have shown
+this trend: emerging image datasets enable recognition on
+a large-scale [6, 31, 33], while image captioning can be
+seen as a special instance of this task [12]. However, nowa-
+days most recognition models are still not capable of clas-
+sifying objects at the level of a human, in particular, taking
+into account the taxonomy of object categories. Ordinary
+people or laymen classify things on the entry-levels, and
+experts give more specific labels: there is no object with
+a single correct label, so the prediction vocabulary is inher-
+ently open-ended. Furthermore, there is no widely-accepted
+way to evaluate open-ended recognition tasks, which is also
+a main reason this direction is not pursued more often.
+In this work, we are pushing towards open vocabulary
+scene parsing: model predictions are not limited to a fixed
+set of categories, but also words in a larger dictionary,
+or even a knowledge graph. Considering existing image
+parsing datasets only contain a small number of categories
+(~100 classes), there is much more a model can learn from
+those images given extra semantic knowledge, like Word-
+Net dictionary (~100,000 synsets) or Word2Vec from exter-
+nal corpus.
+(d) Concept Synthesis(c) Concept Retrieval
+(a) Input Image (b) Scene Parsing
+Figure 1. We propose an open vocabulary framework such that
+given (a) an input image, we can perform (b) scene parsing, (c)
+concept retrieval (”table”), and (d) concept synthesis (both “game
+equipment” and “table”) through arithmetic operations in the joint
+image-concept embedding space.
+To solve this new problem, we propose a framework that
+is able to segment all objects in an image using open vocab-
+ulary labels. In particular, while the method strives to label
+each pixel with the same word as the one used by the human
+annotator, it resorts to a taxonomy when it is not sure about
+its prediction. As a result, our model aims to make plausi-
+ble predictions even for categories that have not been shown
+during training, e.g. if the model has never seen tricycle, it
+may still give a confident guess on vehicle, performing more
+like a human.
+Our framework incorporates hypernym/hyponym rela-
+tions from WordNet [19] to help parsing. More con-
+cretely, word concepts and image pixel features are embed-
+ded into a joint high-dimentional vector space so that (1) hy-
+pernym/hyponym relations are preserved for the concepts,
+(2) image pixel embeddings are close to concepts related
+to their annotations according to some distance measures.
+This framework offers three major advantages: (1) predic-
+tions are made in a structured way, i.e., they can be interme-
+diate nodes in WordNet, and thus yielding more reasonable
+mistakes; (2) it is an end-to-end trainable system, its vocab-
+1
+ar
+X
+iv
+:1
+70
+3.
+08
+76
+9v
+2 
+ [
+cs
+.C
+V
+] 
+ 4
+ A
+pr
+ 2
+01
+7
+ulary can be huge and is easily extensible; (3) the frame-
+work leaves more freedom to the annotations: inconsistent
+annotations from workers with different domain knowledge
+have less of an affect on the performance of the model.
+We additionally explored several evaluation metrics,
+which are useful measures not only for our open vocabu-
+lary parsing tasks, but also for any large-scale recognition
+tasks where confusions often exist.
+The open vocabulary parsing ability of the proposed
+framework is evaluated on the recent ADE20K dataset [34].
+We further explore the properties of the embedding space by
+concept retrieval, classification boundary loosing and con-
+cept synthesis with arithmetics.
+1.1. Related work
+Our work is related to different topics in literature which
+we briefly review below.
+Semantic segmentation and scene parsing. Due to
+astonishing performance of deep learning, in particular
+CNNs [14], pixel-wise dense labeling has received signif-
+icant amount of attention. Existing work include fully con-
+volutional neural network (FCN) [17], deconvolutional neu-
+ral network [20], encoder-decoder SegNet [2], dilated neu-
+ral network [3, 32], etc.
+These networks perform well on datasets like PAS-
+CAL VOC [8] with 20 object categories, Cityscapes [4]
+with 30 classes, and a recently released benchmark
+SceneParse150 [34] covering 150 most frequent daily ob-
+jects. However, these models are not easily adaptable to
+new objects. In this paper we aim at going beyond this limit
+and to make predictions in the wild.
+Zero-shot learning. Zero-shot learning addresses
+knowledge transfer and generalization [25, 10]. Models are
+often evaluated on unseen categories, and predictions are
+made based on the knowledge extracted from the training
+categories. Rohrbach [26] introduced the idea to transfer
+large-scale linguistic knowledge into vision tasks. Socher
+et al. [28] and Frome et al. [9] directly embedded visual
+features into the word vector space so that visual similari-
+ties are connected to semantic similarities. Norouzi et al.
+[21] used a convex combination of visual features of train-
+ing classes to represent new categories. Attribute-based
+methods are another major direction in zero-shot learning
+that maps object attribute labels or language descriptions to
+visual classifiers [23, 1, 16, 15].
+Hierarchical classifications. Hierarchical classification
+addresses the common circumstances that candidate cate-
+gories share hierarchical semantic relations. Zweig et al.
+[35] combined classifiers on different levels to help improve
+classification. Deng et al. [7] achieved hierarchical image-
+level classification by trading off accuracy and gain as an
+optimization problem. Ordonez et al. [22], on the other
+hand, proposed to make entry-level predictions when deal-
+Entity 
+Physical 
+entity Surface 
+Ceiling 
+Armchair 
+Sofa 
+Table 
+Seat 
+Furniture 
+Lamp 
+Figure 2. Jointly embedding vocabulary concepts and image pixel
+features.
+ing with a large number of categories. More recently, Deng
+et al. [5] formulated a label relation graph that could be di-
+rectly integrated with deep neural networks.
+Our approach on hierarchical parsing is inspired by the
+order-embeddings work [29], we attempt to construct an
+asymmetric embedding space, so that both image features
+and hierarchical information in the knowledge graph are
+effectively and implicitly encoded by the deep neural net-
+works. While most previous approaches combine deep neu-
+ral networks with optimization methods like conditional
+random fields so that the semantic relatedness is incorpo-
+rated into the framework, the advantage of our approach is
+that it makes an end-to-end trainable network, which is eas-
+ily scalable when dealing with larger datasets in practical
+applications.
+2. Learning joint embeddings for pixel features
+and word concepts
+We treat open-ended scene parsing as a retrieval prob-
+lem for each pixel, following the ideas of image-caption
+retrieval work [29]. Our goal is to embed image pixel fea-
+tures and word concepts into a joint high-dimensional posi-
+tive vector space RN+ , as illustrated in Figure 2. The guid-
+ing principle while constructing the joint embedding space
+is that image features should be close to their concept la-
+bels, and word concepts should preserve their semantic hy-
+pernym/hyponym relations. In this embedding space, (1)
+vectors close to origin are general concepts, and vectors
+with larger norms represent higher specificity; (2) hyper-
+nym/hyponym relation is defined by whether one vector is
+smaller/greater than another vector in all theN dimensions.
+A hypernym scoring function is crucial in building this em-
+bedding space, which will be detailed in Section 2.1.
+Figure 3 gives an overview of our proposed framework.
+It is composed of two streams: a concept stream and an
+Vehicle 
+Car 
+Concept pair 
+Hypernym Score 
+Image Stream 
+Concept Stream 
+entity 
+artifact 
+living thing 
+vessel 
+car 
+… 
+✔	
+✗	
+entity artifact vehicle car 
+… 
+vessel 
+Predictions Fully Convolutional Segmentation Network 
+Word Embedding Network 
+Image-Label 
+Score 
+vehicle 
+Figure 3. The open vocabulary parsing network. The concept stream encodes the word concept hierarchy based on dictionaries like
+WordNet. The image stream parses the images based on the learned hierarchy.
+image stream. The concept stream tries to encode the pre-
+defined semantics: it learns an embedding function f(·) that
+maps the words into RN+ so that they preserve the hyper-
+nym/hyponym relationship between word concepts. The
+image stream g(·) embeds image pixels into the same space
+by pushing them close to their labels (word concepts). We
+describe these two streams in more details in Section 2.2
+and 2.3.
+2.1. Scoring functions
+In this embedding problem, training is performed on
+pairs: image-label pairs and concept-concept pairs. For ei-
+ther of the streams, the goal is to maximize scores of match-
+ing pairs and minimize scores of non-matching pairs. So
+the choice of scoring functions S(x, y) becomes important.
+There are symmetric scoring functions like Lp distance and
+cosine similarity widely used in the embedding tasks,
+SLp(x, y) = −‖x− y‖p, Scos(x, y) = x · y. (1)
+In order to reveal the asymmetric hypernym/hyponym re-
+lations between word concepts, hypernym scoring func-
+tion [29] is indispensable,
+Shyper(x, y) = −‖max(0, x− y)‖p. (2)
+If x is hypernym of y (x  y), then ideally all the
+coordinates of x are smaller than y (
+∧
+i(xi ≤ yi)), so
+Shyper(x, y) = Shyper,max = 0. Note that due to asym-
+metry, swapping x and y will result in total different scores.
+2.2. Concept stream
+The objective of the concept stream is to build up seman-
+tic relations in the embedding space. In our case, the seman-
+tic structure is obtained from WordNet hypernym/hyponym
+relations. Consider all the vocabulary concepts form a di-
+rected acyclic graph (DAG) H = (V,E), sharing a com-
+mon root v̂ ∈ V “entity”, each node in the graph v ∈ V can
+be an abstract concept as the unions of its children nodes,
+or a specific class as a leaf. A visualization of part of the
+DAG we built based on WordNet and ADE20K labels can
+be found in Supplementary Materials.
+Internally, the concept stream include parallel layers of
+a shared trainable lookup table, mapping the word concepts
+u, v to f(u), f(v). And then they are evaluated on hyper-
+nym scores Sconcept(f(u), f(v)) = Shyper(f(u), f(v)),
+which tells how confident u is a hypernym of v. A max-
+margin loss is used to learn the embedding function f(·),
+Lconcept(u, v) ={
+−Sconcept(f(u), f(v)) if u  v,
+max{0, α+ Sconcept(f(u), f(v))} otherwise
+Note that positive samples u  v are the cases where u is
+an ancestor of v in the graph, so all the coordinates of f(v)
+are pushed towards values larger than f(u); negative sam-
+ples can be inverted pairs or random pairs, the loss function
+pushes them apart in the embedding space. In our training,
+we fix the root of DAG “entity” as anchor at origin, so the
+embedding space stays in RN+ .
+2.3. Image stream
+The image stream is composed of a fully convolutional
+network which is commonly used in image segmentation
+tasks, and a lookup layer shared with the word concept
+stream. Consider an image pixel at position (i, j) with
+label xi,j , its feature yi,j is the top layer output of the
+convolutional network. Our mapping function g(yi,j) em-
+beds the pixel features into the same space as their label
+f(xi,j), and then evaluate them with a scoring function
+Simage(f(xi,j), g(yi,j)).
+As label retrieval is inherently a ranking problem, neg-
+ative labels x′i,j are introduced in training. A max-margin
+ranking loss is commonly used [9] to encourage the scores
+of true labels be larger than negative labels by a margin,
+Limage(yi,j) =∑
+x′i,j
+max{0, β − Simage(f(xi,j), g(yi,j)) + Simage(f(x′i,j), g(yi,j))}.
+(3)
+In the experiment, we use a softmax loss for all our models
+and empirically find better performance,
+Limage(yi,j) =
+− log e
+Simage(f(xi,j),g(yi,j))
+eSimage(f(xi,j),g(yi,j)) +
+∑
+x′i,j
+eSimage(f(x
+′
+i,j),g(yi,j))
+.
+(4)
+This loss function is a variation of triplet ranking loss pro-
+posed in [11].
+The choice of scoring function here is flexible, we
+can either (1) simply make image pixel features “close”
+to the embedding of their labels by using symmetric
+scores SLp(f(xi,j), g(yi,j)), Scos(f(xi,j), g(yi,j)); (2) or
+use asymmetric hypernym score Shyper(f(xi,j), g(yi,j)).
+In the latter case, we treat images as specific instances or
+specializations of their label concepts, and labels as general
+abstraction of the images.
+2.4. Joint model
+Our joint model combines the two streams via a joint
+loss function to preserve concept hierarchy as well as visual
+feature similarities. In particular, we simply weighted sum
+the losses of two streams L = Limage + λLconcept(λ = 5)
+during training. We set the embedding space dimension to
+N = 300, which is commonly used in word embeddings.
+Training and model details are described in Section 4.2.
+3. Evaluation Criteria
+To better evaluate our models, metrics for different pars-
+ing tasks are explored in this section.
+3.1. Baseline flat metrics
+While working on a limited number of classes, four tra-
+ditional criteria are good measures of the scene parsing
+model performance: (1) pixel-wise accuracy: the propor-
+tion of correctly classified pixels; (2) mean accuracy: the
+proportion of correctly classified pixels averaged over all
+the classes; (3) mean IoU: the intersection-over-union be-
+tween the predictions and ground-truth, averaged over all
+the classes; (4) weighted IoU: the IoU weighted by pixel
+ratio of each class.
+3.2. Open vocabulary metrics
+Given the nature of open vocabulary recognition, select-
+ing a good evaluation criteria is non-trivial. Firstly, it should
+leverage the graph structure of the concepts to tell the dis-
+tance of the predicted class from the ground truth. Secondly,
+the evaluation should correctly represent the highly unbal-
+anced distribution of the dataset classes, which are also
+common in the objects seen in nature.
+To do so, for each sample/pixel, a score s(l, p) is used to
+measure the similarity between the ground truth label s and
+the prediction p. The total accuracy is the mean score over
+all the samples/pixels.
+3.2.1 Hierarchical precision, recall and F-score
+Hierarchical precision, recall and F-score were also known
+as Wu-Palmer similarity, which was originally used for lex-
+ical selection [30].
+For two given concepts l and p, we define the lowest
+common ancestor LCA as the most specific concept (i.e. fur-
+thest from the root Entity) that is an hypernym of both. Then
+hierarchical precision and recall are defined by the number
+of common hypernyms that prediction and label have over
+the vocabulary hierarchy H , formally:
+sHP (l, p) =
+dLCA
+dp
+, sHR(l, p) =
+dLCA
+dl
+. (5)
+where depth of the lowest common ancestor node dLCA is the
+number of hypernyms in common.
+Combining hierarchical precision and hierarchical recall,
+we get hierarchical F-score sHF (l, p) which defined as the
+depth of LCA node over the sum of depth of label and pre-
+diction nodes:
+sHF (l, p) =
+2sHP (l, p) · sHR(l, p)
+sHP (l, p) + sHR(l, p)
+=
+2 · dLCA
+dl + dp
+. (6)
+One prominent advantage of these hierarchical metrics
+is they penalize predictions when they go too specific. For
+example, “guitar” (dl=10) and “piano” (dp=10) are all “mu-
+sical instrument” (dLCA=8). When “guitar” is predicted as
+“piano”, sHF = 2·810+10 = 0.8; when “guitar” is predicted
+as “musical instrument”, sHF = 2·810+8 = 0.89. It agrees
+with human judgment that the prediction “musical instru-
+ment” is more accurate than “piano”.
+3.2.2 Information content ratio
+As mentioned before, unbalanced distribution of data points
+could make performance dominated by frequent classes.
+Information content ratio, which was also used in lexical
+search, addresses these problems effectively.
+According to information theory and statistics, the infor-
+mation content of a message is the inverse logarithm of its
+Te
+st
+ Im
+ag
+e 
+G
+ro
+un
+d 
+Tr
+ut
+h 
+Pr
+ed
+ic
+tio
+n 
+Figure 4. Scene parsing results on the most frequent 150 classes, images are nearly fully segmented.
+frequency I(c) = − logP (c). We inherit this idea and pre-
+process our image data to get the pixel frequency of each
+concept v ∈ H . Specifically, the frequency of a concept is
+the sum of its own frequency and all its descendents’ fre-
+quencies in the image dataset. It is expected that the root
+“entity” has frequency 1.0 and information content 0.
+During evaluations, we measure, for each testing sample,
+how much information our prediction gets out of the total
+amount of information in the label. So the final score is
+determined by the information of the LCA and that of the
+ground truth and predicted concepts.
+sI(l, p) =
+2 · ILCA
+Il + Ip
+=
+2 · logP (LCA)
+logP (l) + logP (p)
+(7)
+As information content ratio requires the statistics of the
+image dataset and the semantic hierarchy, it rewards both
+inference difficulty and hierarchical accuracy.
+4. Experiments
+4.1. Image label and concept association
+To learn the joint embedding, we associate each class in
+ADE20K dataset with a Synset in WordNet, representing a
+unique concept. The data association process requires se-
+mantic understanding, so we resort to Amazon Mechanical
+Turk (AMT). We develop a rigorous annotation protocol,
+which is detailed in Supplementary Materials.
+After association, we end up with 3019 classes in the
+dataset having synset matches. Out of these there are 2019
+unique synsets forming a DAG. All the matched synsets
+have entity.n.01 as the top hypernym and there are in av-
+erage 8.2 synsets in between. The depths of the ADE20K
+dataset annotations range from 4 to 19.
+4.2. Network implementations
+4.2.1 Concept stream
+The data layer of concept stream feeds the network with
+positive and negative vocabulary concept pairs. The posi-
+tive training pairs are found by traversing the graph H and
+find all the transitive closure hypernym pairs, e.g. “neck-
+wear” and “tie”, “clothing” and “tie”, “entity” and “tie”;
+negative samples are randomly generated before each train-
+ing epoch by excluding these positive samples. Using tran-
+sitive closure pair greatly improves the performance of em-
+bedding by providing us with more training data.
+4.2.2 Image stream
+Our core CNN in the image stream is adapted from VGG-16
+by taking away pool4 and pool5 and then making all the fol-
+lowing convolution layers dilated (or Atrous) [3, 32]. Con-
+sidering the features of an image pixel from the last layer
+of the fully convolutional network fc7 to be yi,j with di-
+mension 4096, we add a 1 × 1 convolution layer g(·) with
+weight dimension of 4096×300 to embed the pixel feature.
+To ensure positivity, we further add a ReLU layer.
+A technique we use to improve the training is to fix the
+norms of the embeddings of image pixelsto be 30, where a
+wide range of values will work. This technique stabilizes
+training numerically and speeds up the convergence. Intu-
+itively, fixing image to have a large norm makes sense in the
+hierarchical embedding space: image pixels are most spe-
+cific descriptions of concepts, while words are more gen-
+eral, and closer to the origin.
+4.2.3 Training and inference
+In all the experiments, we first train the concept stream
+to get the word embeddings, and then use them as ini-
+tializations in the joint training. Pre-trained weights from
+Table 1. Scene parsing performance on the 150 training classes, evaluated with the baseline flat metrics.
+Networks Pixel Accuracy Mean Accuracy Mean IoU Frequency Weighted IoU
+Softmax [34] 73.55% 44.59% 0.3231 0.6014
+Conditional Softmax [24] 72.23% 42.64% 0.3127 0.5942
+Word2Vec [9] 71.31% 40.31% 0.2918 0.5879
+Word2Vec+ 73.11% 42.31% 0.3160 0.5998
+Image-L2 70.18% 38.89% 0.2174 0.4764
+Image-Cosine 71.40% 40.17% 0.2803 0.5677
+Image-Hyper 67.75% 37.10% 0.2158 0.4692
+Joint-L2 71.48% 39.88% 0.2692 0.5642
+Joint-Cosine 73.15% 43.01% 0.3152 0.6001
+Joint-Hyper 72.74% 42.29% 0.3120 0.5940
+VGG-ImageNet [27] are used as initializations for the im-
+age stream.
+Adam optimizer [13] with learning rate 1e-3 is used to
+update weights across the model. The margin of loss func-
+tions is default to α = 1.0.
+In the inference stage, there are two cases: (1) While
+testing on the 150 training classes, the pixel embeddings
+are compared with the embeddings of all the 150 candidate
+labels based on the scoring function, the class with the high-
+est score is taken as the prediction; (2) While doing zero-
+shot predictions, on the other hand, we use a threshold on
+the scores to decide the cutoff score, concepts with scores
+above the cutoff are taken as predictions. This best thresh-
+old is found before testing on a set of 100 validation images.
+4.3. Results on SceneParse150
+In this section, we report the performance of our model
+on scene parsing task. The training is performed on the most
+frequent 150 classes of stuffs and objects in the ADE20K
+dataset, SceneParse150, where each of the class has at least
+0.02% of total pixels in the dataset.
+We have trained some models in the references and sev-
+eral variants of our proposed model, all of which share the
+same architecture of convolutional networks to make fair
+comparisons. Softmax is the baseline model that does clas-
+sical multi-class classification.
+Conditional Softmax is a hierarchical classification
+model proposed in [24]. It builds a tree based on the la-
+bel relations, and softmax is performed only between nodes
+of a common parent, so only conditional probabilities for
+each node are computed. To get absolute probabilities dur-
+ing testing, the conditional probabilities are multiplied fol-
+lowing the paths to root.
+Word2Vec is a model that simply regresses the image
+pixel features to pre-trained word embeddings, where we
+use the GoogleNews vectors. Since the dimensionality of
+GoogleNews vectors is 300, the weight dimension of the
+last convolution layer is a 1× 1× 4096× 300. Cosine sim-
+ilarity and max-margin ranking loss with negative samples
+are used during training. This model is a direct counterpart
+of DeViSe[9] in our scene parsing settings.
+Word2Vec+ is our improved version of Word2Vec model.
+There are two major modifications: (1) We replace the max
+margin loss with a softmax loss as mentioned in Section
+2.3; (2) We augment the GoogleNews vectors by finetuning
+them on domain specific corpus. Concretely, from AMT
+we collect 3 to 5 scene descriptive sentences for each im-
+age in the ADE20K training set (20,210 images). Then we
+finetune the pre-trained word vectors with skip-gram model
+[18] for 5 epochs, and these word vectors are finally fixed
+for regression like Word2Vec.
+There are 6 variants of our proposed model. Model
+names with Image-* refer to the cases where only image
+stream is trained, by fixing the concept embeddings. In
+models Joint-* we train two streams together to learn a joint
+embedding space. Three aforementioned scoring functions
+are used for the image stream, their corresponding models
+are marked as *-L2, *-Cosine and *-Hyper.
+4.3.1 On the training classes
+Evaluating on the 150 training classes, our proposed mod-
+els offer competitive results. Baseline flat metrics are used
+to compare the performance, as shown in Table 1. Without
+surprise, the best performance is achieved by the Softmax
+baseline, which agrees with the observation from [9], classi-
+fication formulations usually achieves higher accuracy than
+regression formulations. At the same time, our proposed
+models Joint-Cosine and Word2Vec+ fall short of Softmax
+by only around 1%, which is an affordable sacrifice given
+the zero-shot prediction capability and interpretability that
+will be discussed later. Visual results of the best proposed
+model Joint-Cosine are shown in Figure 4.
+4.3.2 Zero-shot predictions
+We then move to the zero-shot prediction tasks to fully
+leverage the hierarchical prediction ability of our mod-
+els. The models are evaluated on 500 less frequent object
+classes in the ADE20K dataset. Predictions can be in the
+500 classes, or their hypernyms, which could be compared
+based on our open vocabulary metrics.
+Softmax and Conditional Softmax models are not able
+to make inferences outside the training classes, so we take
+their predictions within the 150 classes for evaluation.
+Convex Combination [21] is another baseline model for
+comparison: we take the probability output from Softmax
+within the 150 classes, to form new embeddings in the word
+Ground Truth: 
+  - rocking chair 
+Predictions: 
+  - chair 
+  - furniture, piece of  
+   furniture 
+Ground Truth: 
+  - cliff, drop, drop-off 
+Predictions: 
+  - geological formation 
+  - cliff, drop, drop-off 
+  - location 
+Ground Truth: 
+  - trouser, pant 
+Predictions: 
+  - clothing, article of        
+   clothing 
+  - apparel, wearing apparel 
+Ground Truth: 
+  - deck chair, beach chair  
+Predictions: 
+  - chair 
+  - armchair 
+Ground Truth: 
+  - patty, cake 
+Predictions: 
+  - food 
+Ground Truth: 
+  - cart 
+Predictions: 
+  - wheeled vehicle 
+  - truck 
+Figure 5. Scene parsing results on the infrequent zero-shot object classes.
+Table 2. Zero-shot parsing performance, evaluated with hierarchical metrics.
+Networks Hierarchical Precision Hierarchical Recall Hierarchical F-score Information content ratio
+Softmax [34] 0.5620 0.5168 0.5325 0.1632
+Conditional Softmax [24] 0.5701 0.5146 0.5340 0.1657
+Word2Vec [9] 0.5782 0.5265 0.5507 0.1794
+Convex Combination [21] 0.5777 0.5384 0.5492 0.1745
+Word2Vec+ 0.6138 0.5248 0.5671 0.2002
+Image-L2 0.5741 0.5032 0.5375 0.1650
+Image-Hyper 0.6318 0.5346 0.5937 0.2136
+Joint-L2 0.5956 0.5385 0.5655 0.1945
+Joint-Hyper 0.6567 0.5838 0.6174 0.2226
+Figure 6. Diversity test, evaluated with hierarchical metrics.
+vector space, and then find the nearest neighbors in vector
+space. This approach does not require re-training, but still
+offers reasonable performance.
+Most of our proposed models can retrieve the hypernym
+of the testing classes, except *-Cosine as they throw away
+the norm information during scoring, which is important for
+hypernym predictions.
+Table 2 shows results on zero-shot predictions. In terms
+of the hierarchical metrics, Joint-Hyper gives the best per-
+formance. And our proposed models in general win by a
+large margin over baseline methods. It confirms us that
+modeling the asymmetric relations of data pairs better rep-
+resents the hierarchy. Figure 5 shows some prediction sam-
+ples of our best model Joint-Hyper (see Supplementary Ma-
+terials for full predictions of our model). In each image, we
+only show one ground truth category to make things clear,
+different colors represent different predictions. Though the
+model does not always get the ground truth labels exactly
+correct, it gives reasonable predictions. Another observa-
+tion is that predictions are sometimes noisy, we get 2-3 pre-
+dictions on a single objects. Some of the inconsistencies are
+plausible though, e.g. in the first row, the upper part of the
+“rocking chair” is predicted as “chair” while the lower part
+is predicted as “furniture”. As the pixels in the upper seg-
+ment are closer to ordinary chairs while the lower segment
+does not, so in the latter case the model gives a more general
+prediction.
+4.4. Diversity test
+The open vocabulary recognition problem naturally
+raises a question: how many training classes do we need
+to generalize well on zero-shot tasks? To answer this ques-
+tion, we do a diversity test in this section.
+Different from the previous experiments, we do not take
+the most frequent classes for training, instead uniformly
+sample training and testing classes from the histogram of
+pixel numbers. For better comparison, we fix the number of
+zero-shot test set classes to be 500, and the training classes
+range from 50 to 1500. In the training process, we offset
+Te
+st
+ Im
+ag
+e 
+“wheeled vehicle”    “furniture”      “artifact” 
+Increasing abstraction 
+W
+or
+d2
+Ve
+c+
+  
+Jo
+in
+t-H
+yp
+er
+ 
+Figure 7. Pixel-level concept search with increasing abstraction.
+Figure 8. Sittable objects have high scores while retrieving “chair”,
+indicating abstract attributes encoded in the embedding space.
+the unbalance in pixel numbers by weighting the training
+class loss with their corresponding information content, so
+the less frequent classes contribute higher loss.
+We only experiment with our best model Joint-Hyper for
+this diversity test. Results in Figure 6 suggest that per-
+formance could saturate after training with more than 500
+classes. We conjecture that training with many classes with
+few instances could introduce sample noise. So to further
+improve performance, more high quality data is required.
+5. Interpreting the embedding space
+The joint embedding space we trained earlier features
+different properties from known spaces like Word2Vec. In
+this section, we conduct three tests to explore them.
+Concept search. In our framework, the joint training does
+not require all the concepts to have corresponding image
+data, the semantics can be propagated. This enables us to
+train with all the WordNet synsets and search with concepts
+that are not trained with images. In Figure 7, we show some
+pixel-level concept search results. The heatmaps are the
+Query           Image    Score Map              
+max(“game equipment”, “table”) 
+min(“bicycle”, “canopy”) 
+“table” 
+“bicycle” 
+Test Image 
+Test Image 
+Figure 9. Pixel-level search with synthesized concepts through
+arithmetic operations. Intersections and unions are achieved in the
+embedding space by max and min.
+scores in corresponding embedding spaces. As the search
+concepts become increasingly abstract, our model far out-
+performs Word2Vec+, showing the effective encoding of hi-
+erarchical information in our embedding space.
+Implicit attributes encoding. One intriguing property of
+feature embeddings is that it is a continuous space, and clas-
+sification boundaries are flexible. So we explore the vicinity
+of some concepts. In Figure 8, we show score maps when
+searching for the concept “chair”. Interestingly, it is a com-
+mon phenomenon that objects like “bench” and “ottoman”,
+which are not hyponyms of “chair” in WordNet, get reason-
+able response. We conjecture that the embedding space im-
+plicitly encodes some abstract attributes by clustering them,
+e.g. sittable is an affordance attribute. So by simply loosing
+classification threshold of “chair”, one can detect regions
+where one can sit on.
+Synthesized concepts with arithmetics. Similar to
+Word2Vec, in our joint embedding space, new concepts or
+image detectors can be synthesized with arithmetics. As
+shown in Figure 9, we take elementwise min and max oper-
+ations on the word concepts, and then search for these syn-
+thesized concepts in the images. It can be found that max
+operation takes the intersection of the concepts, e.g. the
+pool table is the common hyponym of “table” and “game
+equipment”; and min takes the union, e.g. the cart is com-
+posed of attributes of “bicycle” and “canopy”.
+6. Conclusion
+We introduced a new challenging task: open vocabu-
+lary scene parsing, which aims at parsing images in the
+wild. And we proposed a framework to solve it by em-
+bedding concepts from a knowledge graph and image pixel
+features into a joint vector space, where the semantic hier-
+archy is preserved. We showed our model performs well on
+open vocabulary parsing, and further explored the seman-
+tics learned in the embedding space.
+Acknowledgement: This work was supported by Samsung
+and NSF grant No.1524817 to AT. SF acknowledges the
+support from NSERC. BZ is supported by Facebook Fel-
+lowship.
+References
+[1] Z. Akata, F. Perronnin, Z. Harchaoui, and C. Schmid. Label-
+embedding for attribute-based classification. In The IEEE Confer-
+ence on Computer Vision and Pattern Recognition (CVPR), June
+2013. 2
+[2] V. Badrinarayanan, A. Kendall, and R. Cipolla. Segnet: A deep
+convolutional encoder-decoder architecture for image segmentation.
+arXiv:1511.00561, 2015. 2
+[3] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L.
+Yuille. Deeplab: Semantic image segmentation with deep con-
+volutional nets, atrous convolution, and fully connected CRFs.
+arXiv:1606.00915, 2016. 2, 5
+[4] M. Cordts, M. Omran, S. Ramos, T. Scharwächter, M. Enzweiler,
+R. Benenson, U. Franke, S. Roth, and B. Schiele. The cityscapes
+dataset. In CVPR Workshop on The Future of Datasets in Vision,
+2015. 2
+[5] J. Deng, N. Ding, Y. Jia, A. Frome, K. Murphy, S. Bengio, Y. Li,
+H. Neven, and H. Adam. Large-scale object classification using label
+relation graphs. In European Conference on Computer Vision, pages
+48–64. Springer, 2014. 2
+[6] J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei. Ima-
+genet: A large-scale hierarchical image database. In Computer Vi-
+sion and Pattern Recognition, 2009. CVPR 2009. IEEE Conference
+on, pages 248–255. IEEE, 2009. 1
+[7] J. Deng, J. Krause, A. C. Berg, and L. Fei-Fei. Hedging your
+bets: Optimizing accuracy-specificity trade-offs in large scale visual
+recognition. In Computer Vision and Pattern Recognition (CVPR),
+2012 IEEE Conference on, pages 3450–3457. IEEE, 2012. 2
+[8] M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisser-
+man. The pascal visual object classes (voc) challenge. Int’l Journal
+of Computer Vision, 2010. 2
+[9] A. Frome, G. S. Corrado, J. Shlens, S. Bengio, J. Dean, T. Mikolov,
+et al. Devise: A deep visual-semantic embedding model. In Advances
+in neural information processing systems, pages 2121–2129, 2013. 2,
+4, 6, 7
+[10] M. Guillaumin and V. Ferrari. Large-scale knowledge transfer for ob-
+ject localization in imagenet. In Computer Vision and Pattern Recog-
+nition (CVPR), 2012 IEEE Conference on, pages 3202–3209. IEEE,
+2012. 2
+[11] E. Hoffer and N. Ailon. Deep metric learning using triplet network.
+In International Workshop on Similarity-Based Pattern Recognition,
+pages 84–92. Springer, 2015. 4
+[12] A. Karpathy and L. Fei-Fei. Deep visual-semantic alignments for
+generating image descriptions. In Proceedings of the IEEE Con-
+ference on Computer Vision and Pattern Recognition, pages 3128–
+3137, 2015. 1
+[13] D. Kingma and J. Ba. Adam: A method for stochastic optimization.
+arXiv preprint arXiv:1412.6980, 2014. 6
+[14] A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classifica-
+tion with deep convolutional neural networks. In Advances in neural
+information processing systems, 2012. 2
+[15] C. H. Lampert, H. Nickisch, and S. Harmeling. Attribute-based clas-
+sification for zero-shot visual object categorization. IEEE Transac-
+tions on Pattern Analysis and Machine Intelligence, 36(3):453–465,
+2014. 2
+[16] J. Lei Ba, K. Swersky, S. Fidler, et al. Predicting deep zero-shot
+convolutional neural networks using textual descriptions. In Pro-
+ceedings of the IEEE International Conference on Computer Vision,
+pages 4247–4255, 2015. 2
+[17] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional networks
+for semantic segmentation. In Proc. CVPR, 2015. 2
+[18] T. Mikolov, I. Sutskever, K. Chen, G. S. Corrado, and J. Dean. Dis-
+tributed representations of words and phrases and their composition-
+ality. In Advances in neural information processing systems, pages
+3111–3119, 2013. 6
+[19] G. A. Miller. Wordnet: a lexical database for english. Communica-
+tions of the ACM, 38(11):39–41, 1995. 1
+[20] H. Noh, S. Hong, and B. Han. Learning deconvolution network for
+semantic segmentation. In Proc. ICCV, 2015. 2
+[21] M. Norouzi, T. Mikolov, S. Bengio, Y. Singer, J. Shlens, A. Frome,
+G. S. Corrado, and J. Dean. Zero-shot learning by convex combina-
+tion of semantic embeddings. arXiv preprint arXiv:1312.5650, 2013.
+2, 6, 7
+[22] V. Ordonez, J. Deng, Y. Choi, A. C. Berg, and T. L. Berg. From
+large scale image categorization to entry-level categories. In Pro-
+ceedings of the IEEE International Conference on Computer Vision,
+pages 2768–2775, 2013. 2
+[23] D. Parikh and K. Grauman. Relative attributes. In Computer Vi-
+sion (ICCV), 2011 IEEE International Conference on, pages 503–
+510. IEEE, 2011. 2
+[24] J. Redmon and A. Farhadi. Yolo9000: Better, faster, stronger. arXiv
+preprint arXiv:1612.08242, 2016. 6, 7
+[25] M. Rohrbach, M. Stark, and B. Schiele. Evaluating knowledge trans-
+fer and zero-shot learning in a large-scale setting. In Computer Vision
+and Pattern Recognition (CVPR), 2011 IEEE Conference on, pages
+1641–1648. IEEE, 2011. 2
+[26] M. Rohrbach, M. Stark, G. Szarvas, I. Gurevych, and B. Schiele.
+What helps where–and why? semantic relatedness for knowledge
+transfer. In Computer Vision and Pattern Recognition (CVPR), 2010
+IEEE Conference on, pages 910–917. IEEE, 2010. 2
+[27] K. Simonyan and A. Zisserman. Very deep convolutional networks
+for large-scale image recognition. CoRR, abs/1409.1556, 2014. 6
+[28] R. Socher, M. Ganjoo, C. D. Manning, and A. Ng. Zero-shot learn-
+ing through cross-modal transfer. In Advances in neural information
+processing systems, pages 935–943, 2013. 2
+[29] I. Vendrov, R. Kiros, S. Fidler, and R. Urtasun. Order-embeddings of
+images and language. arXiv preprint arXiv:1511.06361, 2015. 2, 3
+[30] Z. Wu and M. Palmer. Verbs semantics and lexical selection. In
+Proceedings of the 32nd annual meeting on Association for Compu-
+tational Linguistics, pages 133–138. Association for Computational
+Linguistics, 1994. 4
+[31] J. Xiao, J. Hays, K. A. Ehinger, A. Oliva, and A. Torralba. Sun
+database: Large-scale scene recognition from abbey to zoo. In Com-
+puter vision and pattern recognition (CVPR), 2010 IEEE conference
+on, pages 3485–3492. IEEE, 2010. 1
+[32] F. Yu and V. Koltun. Multi-scale context aggregation by dilated con-
+volutions. In ICLR, 2016. 2, 5
+[33] B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva. Learn-
+ing deep features for scene recognition using places database. In
+Advances in neural information processing systems, pages 487–495,
+2014. 1
+[34] B. Zhou, H. Zhao, X. Puig, S. Fidler, A. Barriuso, and A. Torralba.
+Semantic understanding of scenes through the ade20k dataset. arXiv
+preprint arXiv:1608.05442, 2016. 2, 6, 7
+[35] A. Zweig and D. Weinshall. Exploiting object hierarchy: Combining
+models from different category levels. In 2007 IEEE 11th Interna-
+tional Conference on Computer Vision, pages 1–8. IEEE, 2007. 2
+Supplementary Materials
+1. Data association protocol
+To learn the joint embeddings of images and word con-
+cepts, we need to augment ADE20K dataset by adding in-
+formation about how the label classes (> 3000) are seman-
+tically related. We associate each class in ADE20K dataset
+with a synset in WordNet, representing a unique concept.
+The data association process requires semantic understand-
+ing, so we resort to Amazon Mechanical Turk (AMT). The
+annotation protocol is detailed as follows, and screen shots
+of our AMT interface are shown in Figure 10.
+We search for each class in the dataset, for all the synsets
+having the same name. We find 3 different cases: (1) a sin-
+gle synset is found for the given class; (2) multiple synsets
+are found due to polysemy; (3) no sysnets are found, either
+because the correct synset has a different name or because
+that concept is not in WordNet.
+In the first case, we automatically match classes in the
+dataset with the obtained synsets, and then ask workers on
+AMT to verify by looking at the image labels and the defi-
+nitions of synsets in the WordNet.
+In the second case where multiple synsets were found,
+we show an image displaying such concept and ask work-
+ers to select the synset whose definition matches the given
+class.
+In the last case where no synset candidate was found, we
+show an image with the concept and ask workers to find the
+best matching synset by looking over WordNet online API.
+They also have the option to indicate when no synset can
+match.
+2. Concept graph
+After data association, we end up getting 3019 classes
+in the dataset having synset matches. Out of these there
+are 2019 unique synsets forming a DAG. All the matched
+synsets have entity.n.

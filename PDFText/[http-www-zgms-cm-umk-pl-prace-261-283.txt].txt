@@ -1,0 +1,1901 @@
+Ann. Hum. Genet. (2002), 66, 261–283 ' University College London
+DOI: 10.1017}S0003480002001161 Printed in the United Kingdom
+261
+Mitochondrial DNA variability in Poles and Russians
+B. A. MALYARCHUK", T. GRZYBOWSKI#, M. V. DERENKO", J. CZARNY#, M. WOZ; NIAK#
+ D. MIS; CICKA-S; LIWKA#
+" Institute of Biological Problems of the North, Russian Academy of Sciences, Portovaya str. 18,
+685000 Magadan, Russia
+#The Ludwik Rydygier University School of Medical Sciences, Forensic Medicine Institute,
+ul. Sklodowskiej-Curie 9, 85-094 Bydgoszcz, Poland
+(Received 11.2.02. Accepted 11.4.02)
+
+Mitochondrial DNA (mtDNA) sequence variation was examined in Poles (from the Pomerania-
+Kujawy region; n¯ 436) and Russians (from three different regions of the European part of Russia;
+n¯ 201), for which the two hypervariable segments (HVS I and HVS II) and haplogroup-specific
+coding region sites were analyzed. The use of mtDNA coding region RFLP analysis made it possible
+to distinguish parallel mutations that occurred at particular sites in the HVS I and II regions during
+mtDNA evolution. In total, parallel mutations were identified at 73 nucleotide sites in HVS I
+(17±8%) and 31 sites in HVS II (7±73%). The classification of mitochondrial haplotypes revealed the
+presence of all major European haplogroups, which were characterized by similar patterns of
+distribution in Poles and Russians. An analysis of the distribution of the control region haplotypes
+did not reveal any specific combinations of unique mtDNA haplotypes and their subclusters that
+clearly distinguish both Poles and Russians from the neighbouring European populations. The only
+exception is a novel subcluster U4a within subhaplogroup U4, defined by a diagnostic mutation at
+nucleotide position 310 in HVS II. This subcluster was found in common predominantly between
+Poles and Russians (at a frequency of 2±3% and 2±0%, respectively) and may therefore have a
+central-eastern European origin.
+
+Analysis of mitochondrial DNA (mtDNA)
+polymorphism has become a useful tool for
+human population and molecular evolution
+studies, allowing researchers to infer the pattern
+of female migrations and peopling of different
+regions of the world (Wallace, 1995). The use of
+the phylogeographic approach has allowed refine-
+ment of the analysis of maternal mtDNA
+lineages, suggesting the current model of com-
+plex demographic scenarios for European
+peopling (Richards et al. 2000). Although linguis-
+tic, anthropological and archaeological data, as
+well as classical genetic data, cover most of the
+Correspondence: Dr Boris A. Malyarchuk, Genetics
+Laboratory, Institute of Biological Problems of the
+North, Portovaya str., 18, 685000 Magadan, Russia.
+Tel}Fax: 7 41322 34463.
+E-mail : mderenko!mail.ru
+Slavonic populations living in Europe, there are
+many unanswered questions about the origin and
+dispersal of Slavs.
+Archaeological studies indicate that the
+Lusatian culture (1300 to 1100 B.C.) emerged in
+central Europe, and later spread over a region
+that reached from the central basin of the Oder
+River and the Bohemian mountain ridge, as far
+east as the Ukraine, and as far north as the
+shores of the Baltic Sea (Sedov, 1979; SC avli et al.
+1996). Despite the divergent views on the ethnic
+affiliation of the Lusatian culture, it is often
+considered that this culture constituted the
+foundation of the historical development of the
+Proto-Slavs (SC avli et al. 1996). According to
+linguistic data, the split among Proto-Slavs, the
+bearers of the Lusatian culture, resulted in the
+three Slavonic language groups – Western, East-
+262 B. A. M  
+ern and Southern (SC avli et al. 1996). In the north,
+the Lusatian culture was succeeded by the
+Pomeranian culture, extending over the coastal
+region from the mouth of the Oder to the mouth
+of the Vistula. The Przeworsk group encom-
+passed the southern parts of present-day Poland.
+In the 2nd and 3rd centuries A.D., this group
+spread northward into the swampy Pripet and
+united there with the Zarubincy culture. It has
+been suggested that out of this culture the
+Eastern Slavonic language group developed
+(Rybakov, 1981; SC avli et al. 1996). Archae-
+ologists report that the Slavs invaded the Balkan
+peninsula as early as the 2nd century A.D., and
+since this settlement movement of the Southern
+Slavs gradually evolved (Sedov, 1979). All of
+these ‘migration’ hypotheses claim that modern
+Slavonic groups are the result of an admixture
+between pre-Slavonic European populations and
+Slavonic tribes, whose homeland was probably in
+central Europe (Sedov, 1979; Alekseeva &
+Alekseev, 1989). This theory also predicts that
+diverse modern Slavonic populations may have
+certain combinations of genetic markers derived
+from the gene pool of the assumed ancestral
+Proto-Slavonic population.
+A high-resolution analysis of maternal mtDNA
+lineages appears to be a highly informative
+approach in the reconstruction of the past
+demographic events, when large enough samples
+are available (Helgason et al. 2000). MtDNA
+sequences can be used to create a detailed pattern
+of the spatially resolved distribution of maternal
+lineages in Slavonic populations, and to trace a
+number of shared maternal lineages unique for
+Slavonic groups, connecting them among them-
+selves and to other neighbours such as present-
+day German and Finno-Ugric populations.
+However, the mtDNA data sets for Slavonic
+populations living in Southern, Central, and
+Eastern Europe are either incomplete or virtually
+non-existent for many regional groups of Slavs,
+especially for populations inhabiting the East
+European Plain. Population samples of Slavs
+have been analyzed in different ways: some
+covering only HVS I sequences, others also
+including coding-region RFLPs (Malyarchuk et
+al. 1995; Calafell et al. 1996; Orekhov et al. 1999;
+Richards et al. 2000; Tolk et al. 2000; Malyarchuk
+& Derenko, 2001). In addition, almost all of these
+mtDNA studies have not addressed specific
+questions about the origin and early dispersal of
+Slavs in Europe. To date, it is known that
+Slavonic populations sharing the same language
+group (such as Russians, Ukrainians, Bulgarians)
+display a large amount of interpopulation genetic
+variation (Malyarchuk & Derenko, 2001). More-
+over, we have not found any specific combi-
+nations of unique mtDNA types that clearly
+distinguish Russians from Germans and the
+neighboring Eastern European populations.
+To obtain a better characterization of Slavonic
+mtDNA variability, we present here mtDNA
+diversity data in Poles and Russians, based on
+the HVS I and HVS II sequences typed for the
+presence of major West Eurasian haplogroup-
+specific markers.
+  
+Population samples
+A population sample of 436 Poles from the
+Pomerania-Kujawy region of the northern part
+of Poland was studied. In addition, three popu-
+lation samples of Russians from the European
+region of Russia were analysed: 62 unrelated
+individuals from the south (Stavropol region), 76
+from the centre (Orel region) and 63 from the
+east (Saratov region).
+MtDNA analysis
+DNA samples from the blood of individuals
+studied were used for mtDNA amplification and
+sequencing. PCR amplification of the entire
+noncoding region was performed using the
+primers L15926 and H00580. The temperature
+profile for 30 cycles of amplification was 94 °C for
+20 sec, 50 °C for 30 sec, and 72 °C for 2±5 min
+(Thermal Cycler 9700; Perkin Elmer, USA). The
+resulting amplification product was diluted 1000-
+fold and 4 µl aliquots were added to an array of
+second-round, nested PCR reactions (32 cycles)
+to generate DNA templates for sequencing. The
+primer sets L15997}M13(®21)H16401 and
+M13(®21)L15997}H16401 were used to generate
+Polish and Russian MtDNAs 263
+both strands of the hypervariable segment I
+(HVS I). Similarly, the primer sets L00029}M13-
+(®21)H00408 and H00408}M13(®21)L00029
+were used for hypervariable segment II (HVS II).
+Both primer sequences, and nomenclature, were
+used according to Sullivan et al. (1992).
+Negative controls were prepared for both the
+DNA extraction and the amplification process.
+PCR products were purified by ultrafiltration
+(Microcon 100; Amicon) and sequenced directly
+from both strands with the (®21)M13 primer
+using the BigDye Primer Cycle Sequencing Kit
+(Perkin Elmer) according to the manufacturer’s
+protocol. Sequencing products were separated in
+a 4% PAGE gel on the ABI PrismTM 377
+DNA Sequencer. Data were analyzed using DNA
+Sequencing Analysis and Sequence Navigator
+programs (Perkin Elmer). The nucleotide se-
+quences obtained were compared with the
+Cambridge reference sequence (CRS; Anderson
+et al. 1981).
+To determine the haplogroup status of the
+control region (CR) sequences, RFLP typing was
+performed by restriction endonuclease analysis
+of PCR amplified mtDNA fragments using the
+same primer pairs and amplification conditions
+as described by Torroni et al. (1996, 1997),
+Macaulay et al. (1999), and Finnila$ et al. (2000).
+The samples were typed for a restricted set of
+RFLPs that were diagnostic of all major western
+Eurasian clusters, on the basis of the hierarchical
+mtDNA RFLP scheme (Macaulay et al. 1999).
+To determine haplogroup H sequences, all
+samples were tested for 14766MseI, 10394DdeI,
+and 7025AluI. Samples lacking these three sites
+were assigned to cluster H. All non-H samples
+harboring ®14766MseI and ®10394DdeI were
+tested for 15904MseI, and samples with
+­15904MseI site were classified as cluster pre-V,
+which is solely defined by the two CR mutations
+16298C and 72C (Torroni et al. 2001). All non-H
+and non-pre-V samples (®14766MseI and
+®10394DdeI) were determined as HV*.
+All non-HV samples were tested for
+12308HinfI. Those with ­12308HinfI were
+assigned to clusters U and K, and were further
+determined as belonging to haplogroup K or to
+subgroups of the haplogroup U on the basis of
+the HVS I motif information (Richards et al.
+1998; Macaulay et al. 1999). The phylogenetic
+status of subhaplogroup U4 was determined by
+RFLP screening of the 4643RsaI site (Macaulay
+et al. 1999).
+The remaining samples were tested for
+13366BamHI, 15606AluI, 15925MspI, and
+12629AvaII. Those with ­13366BamHI,
+­15606AluI, and ®15925MspI were assigned to
+cluster T. The haplogroup T sequences lacking
+the 12629AvaII site were classified as T1, whereas
+those with ­12629AvaII were declared as T*.
+The remaining samples were tested for
+13704BstOI, and those with ®13704BstOI and
+­10394DdeI were classified as J.
+Further, mtDNAs were classified as follows:
+­14465AccI to cluster X; ®4529HaeII, ­8249-
+AvaII, ­16389BamHI, and ­10032AluI to clus-
+ter I; ­8249 AvaII and ®8994HaeIII to cluster
+W; ­10394DdeI and ­10397AluI to cluster M.
+M-sequences were further classified as belonging
+to haplogroup C (®13259HincII, ­13262AluI),
+D (®5176AluI), E (®7598HhaI), or G
+(­4830HaeII, ­4831HhaI). The remaining con-
+trol region sequences were assigned to certain
+haplogroups (such as R*, N1b, N1c, L3, pre-HV)
+on the basis of the HVS I motifs classification
+(Macaulay et al. 1999; Richards et al. 2000).
+Sequence classification into subhaplogroups was
+based on the HVS I motifs and nomenclature of
+Richards et al. (1998, 2000) and Macaulay et al.
+(1999).
+Phylogenetic analysis
+For phylogenetic analysis, all available pub-
+lished data on HVS I-RFLP mtDNA variability
+in West Eurasian populations were used
+(Richards et al. 2000). To classify the Slavonic
+mtDNA haplotype diversity, a phylogeographic
+approach, based on the phylogenetic analysis of
+the spatial distribution of mitochondrial haplo-
+types and haplogroups determined as a mono-
+phyletic clade, was performed (Richards et al.
+1998). The phylogenetic relationships between
+mitochondrial haplotypes comprising various
+combinations of the HVS I and HVS II sequences
+and RFLPs were analyzed by the median-
+network method (Bandelt et al. 1995). To es-
+264 B. A. M  
+timate the diversity of mtDNA haplotypes, the
+average number of transitions on the recon-
+structed phylogeny from ancestral type to each
+sample (ρ) was used, according to the methods of
+Forster et al. (1996).
+For the CR sequence sharing analysis, HVS I
+and HVS II haplotypes of Poles and Russians, as
+well as other European populations, were com-
+pared. Data from the following populations were
+used: 200 Southern Germans (Lutz et al. 1998) ;
+101 Austrians (Parson et al. 1998) ; 150 Western
+Germans (Baasner et al. 1998; Baasner & Madea,
+2000) ; 109 North-Western Germans (Pfeiffer et
+al. 1999) ; and 192 Finns (Finnila$ et al. 2001b).
+  
+Sequence variability in Poles and Russians
+In the present study, the nucleotide sequences
+of HVS I from position 15991 to 16400 and HVS
+II from position 20 to 420 have been determined
+in 436 Poles and 201 Russians. Comparison to
+the Cambridge reference sequence (Anderson et
+al. 1981) showed that 140 nucleotide sites were
+polymorphic in HVS I (34±2%) and 79 sites in
+HVS II (19±7%). Transitions and transversions
+were found at 136 nps in HVS I and at 73 nps in
+HVS II. For each hypervariable region, tran-
+sitions predominate over transversions, being
+found with a ratio of 133:16 and 73:0 in HVS I
+and HVS II, respectively. Among the transitions,
+pyrimidine substitutions were observed with
+significantly higher frequency in HVS I (with a
+pyrimidine:purine ratio of 92:41), whereas in
+HVS II the pyrimidine:purine ratio was 42:31.
+Among the transversions in HVS I there is no
+predominating type: C!A transversions were
+found at 5 nps, A!C at 4 nps, C!G at 3 nps,
+AUT at 3 nps and G!C at one nucleotide
+position. It is interesting that multiple substi-
+tutions were found at 9 positions of HVS I – from
+C to T and A at np 16111; from C to T and A at
+np 16114; from G to A and C at np 16129; from
+C to T and G at np 16176; from C to T, G and A
+at np 16188; from C to T and G at np 16239; from
+A to G and T at np 16241; from A to G and C at
+np 16258; and from A to G, T and C at np 16318.
+Point deletion and insertion events were
+observed both in HVS I and HVS II. In HVS I
+an insertion polymorphism was found at np
+16193. The occurrence of such a type of poly-
+morphism is probably due to instability in the
+homopolymeric tract between nps 16184 and
+16193, which can be associated with a transition
+from T to C at np 16189 (Bendall & Sykes, 1995).
+Similarly, length polymorphism in the poly-C
+tract of HVS II at nps 303–315 was found in the
+majority of the mtDNA samples studied. In this
+tract, insertions of either one, two (at nps 309
+and 315), or three (at np 309) C-residues were
+identified. In addition, insertions of single nucleo-
+tides were observed at nps 42 (­T), 60 (­T), 270
+(­A) and 299 (­C). Deletions of nucleotides in
+the mtDNA control region appear to be rarer
+events, and they were found at nps 16073 (®C)
+and 16078 (®A) in HVS I, and at nps 249 (®A)
+and 315 (®C) in HVS II.
+Heteroplasmic positions were clearly detected
+in four instances at nps 16093, 16231, 16325 and
+72. The heteroplasmic status of these positions
+was confirmed several times by sequencing of
+both mtDNA strands.
+The use of RFLP analysis for mtDNA coding
+regions amplified via PCR has allowed us to
+determine the exact phylogenetic status of HVS
+I and II sequences and distinguish independent
+(parallel) mutations occurring at particular sites
+during the evolution mtDNA lineages (Macaulay
+et al. 1999; Richards et al. 2000; Finnila$ et al.
+2001b ; Malyarchuk & Derenko, 2001). As a
+result, we have identified a total of 73 hyper-
+variable sites in HVS I (17±8%) and 31 hyper-
+variable sites in HVS II (7±73%) at which more
+than one independent mutation is observed
+(Tables 1 and 2). However, in HVS II the
+number of parallel mutations is approximately
+1±8 times as high as the corresponding HVS I
+value (279 and 155, respectively). Accordingly,
+the ratio of the average number of parallel
+mutations per site in HVS II (5±0) and HVS I
+(3±82) is 1±31. This estimate ranges from 1±17 in
+Russians to 1±34 in Poles. Therefore, as was
+suggested previously (Bandelt et al. 2000),
+although on average HVS II seems to be less
+Polish and Russian MtDNAs 265
+Table 1. Parallel mutations detected in the mtDNA HVS I in Poles and Russians
+Position
+Nucleotide
+change Poles n Russians n Total
+16051 A!G H, U2, U5 3 H, U2 2 3
+16069 C!T J 1 K, J 2 2
+16071 C!T W 1 R* 1 2
+16086 T!C U*, I, X 3 0 3
+16092 T!C H, J1b, D 3 H, K, J* 3 5
+16093 T!C H, K, U4, U5, J1b, C, G 7 H, K, U2, U4,
+U5, J*, X
+7 10
+16126 T!C (J*, T*) 1 U7, (J*, T*),
+pre-HV, pre-V, X, D
+6 6
+16129 G!A H, U5, T*, T1, I, W, M* 7 H, U4, U1, I 4 9
+16140 T!C H, U5, T* 3 0 3
+16145 G!A J1b, J1a, N1b 3 U5, J*, J1b 3 5
+16146 A!G U8 1 T* 1 2
+16148 C!T H, M* 2 H, U7 2 3
+16150 C!T pre-V 1 U4 1 2
+16153 G!A H, pre-V 2 pre-V 1 2
+16168 C!T H, U3 2 0 2
+16169 C!T H, pre-V 2 0 2
+16170 A!G H, T1 2 0 2
+16172 T!C H, K, U5, J1b, T*, I 6 J1b, I 2 6
+16179 C!T H, U4, U5, U8, R* 5 0 5
+16186 C!T T1 1 J*, T1 2 2
+16189 T!C H, K, U4, U2, U5, J*, J1a, T*,
+T1, pre-V, X, C, D
+13 H, U1, U2, U5, J*,
+T1, I, W, X, D
+10 16
+16192 C!T H, K, U5, T*, W, M* 6 H, U5, J1b, W 4 7
+16193 C!T H, J2 2 H 1 2
+16213 G!A 0 H, J* 2 2
+16218 C!T H, pre-V 2 0 2
+16221 C!T H, U4 2 0 2
+16222 C!T H, U5, J*, J1b 4 U5, J1b, T* 3 5
+16223 C!T U4, (I, N1b,N1c, W, X, L3, C,
+D, G, M*, E)
+2 (I, W, X, D, G, M*) 1 2
+16224 T!C K 1 K, U1 2 2
+16227 A!G T*, R*, G 3 G 1 3
+16231 T!C H, J1a 2 H 1 2
+16234 C!T K, U4, U5, T*, C, G 6 HV*, G, M* 3 8
+16239 C!T H, U* 2 0 2
+16241 A!G J1a 1 X 1 2
+16243 T!C H 1 T1 1 2
+16249 T!C H, J* 2 H, U1 2 3
+16256 C!T H, K, U2, U5 4 H, U2, U5 3 4
+16260 C!T T 1 U5 1 2
+16261 C!T H, J1a, J1b 3 H, J*, J1b 3 4
+16265 A!G H, N1c 2 H 1 2
+16266 C!T H, U5, X, R*, D 5 0 5
+16270 C!T H, U5, pre-V 3 H, U5 2 3
+16271 T!C H, T* 2 T* 1 2
+16274 G!A H, K, X, R* 4 H 1 4
+16278 C!T H, J2, X, R*, G, E 6 H, X, G 3 6
+16286 C!T H, U5 2 0 2
+16288 T!C U5, C 2 H, U1 2 4
+16290 C!T H 1 H, J* 2 2
+16291 C!T H, K, U5, pre-V, M* 5 H, U5 2 5
+16292 C!T T*, W 2 U5, T*, W 3 3
+16293 A!G H, K, I 3 H, T1 2 4
+16294 C!T H, U4, U5, T 4 T, I 2 5
+16295 C!T W 1 HV*, W 2 2
+16298 T!C T*, pre-V, C, M* 4 pre-V 1 4
+16300 A!G X 1 H, X, M* 3 3
+16304 T!C H, T* 2 H, U5, T*, I 4 4
+16309 A!G U7, G 2 U7 1 2
+266 B. A. M  
+Table 1. (Cont.)
+Position
+Nucleotide
+change Poles n Russians n Total
+16311 T!C H, K, U*, U5, J*,
+T*, R*, HV*, pre-V, I, W
+11 H, K, J*, J1a, HV*, I 6 12
+16316 A!G 0 H, M* 2 2
+16318 A!G T* 1 H 1 2
+16318 A!C H 1 U7 1 2
+16319 G!A H, J*, J2, T1 4 H 1 4
+16320 C!T U*, U5, T*, W 4 0 4
+16324 T!C J*, T* 2 T* 1 2
+16325 T!C U5, W 2 H, U3, W 3 4
+16342 T!C H, U8 2 0 2
+16343 A!G H, U3 2 U3 1 2
+16355 C!T T*, HV* 2 R* 1 3
+16356 T!C H, U4 2 H, U4 2 2
+16360 C!T H 1 D 1 2
+16362 T!C H, U2, U5, U7, W, R*,
+D, G, E
+9 H, U4, U2, U5, J*, T*,
+pre-HV, D, G, M*
+10 14
+16390 G!A J*, N1b, X 3 U5 1 4
+16391 G!A I 1 H, I 2 2
+16399 A!G H, U5, T* 3 H, U5 2 3
+Mutations are shown indicating positions relative to the revised CRS (Andrews et al. 1999). Haplogroup name
+denotes the presence of mutation occurring in the background of this haplogroup. A numeral (n) denotes the number
+of parallel mutations observed. Haplogroups, which have shared ancestry for a certain nucleotide variant, are shown
+in parentheses.
+variable (per position) than HVS I, the homo-
+plasic events are more numerous in HVS II, but
+concentrated at fewer sites – such as 146, 150,
+152 and 195. These sites are at least as variable
+as the most variable positions (16093, 16189,
+16311 and 16362) in HVS I.
+The HVS I and HVS II regions differ slightly
+in the number of pyrimidine transitions at
+hypervariable sites, with a higher pyrimidine:
+purine ratio being found in HVS I (3±33 in total
+sample, 3±65 in Poles and 4±8 in Russians) in
+comparison with values for HVS II (2±52 in total
+sample, 2±68 in Poles and 2±63 in Russians).
+The molecular instability of the poly-
+pyrimidine tract (C5)-T-(C4) located between
+nps 16184 and 16193 of the L-strand is one of the
+most studied manifestations of mtDNA hyper-
+variability. It was found that a transition from T
+to C at np 16189 results in a continuous poly-C
+tract which may vary in length from 8 to 14
+nucleotides (Bendall & Sykes, 1995; Marchington
+et al. 1996). Table 3 shows examples of variation
+in the tract length found in Polish and Russian
+mtDNAs. Another example of a hypervariable
+polypyrimidine sequence is a (C7)-T-(C5) tract
+starting at np 303 in HVS II. In comparison with
+the CRS (Anderson et al. 1981), insertion of an
+additional C residue at np 315 is common in Poles
+and Russians as well as in other population
+groups studied (Budowle et al. 1999). It is well
+established that both poly-C portions in this
+tract are very unstable; the length of the (C7)-
+sequences vary from 7 to 10 nucleotides and (C5)-
+sequences vary from 5 to 7 nucleotides (Torroni
+et al. 1994; Howell & Smejkal, 2001). The longest
+polypyrimidine tract, which was identified in
+Poles and Russians, was (C10)-T-(C6). In the
+present study, however, we have observed a
+poly-C tract with a total length of 13 C-residues,
+generated by a transition from T to C at np 310.
+This (C13)-sequence was observed in different
+mitochondrial haplogroups – H, U4, T, C and
+M* (see Appendix).
+Haplogroup diversity in Poles and Russians and
+notes to mtDNA classification
+The analysis of HVS I and II variability, in
+combination with RFLP typing of the coding
+region haplogroup-diagnostic sites, in a total
+sample of 637 Polish and Russian individuals,
+Polish and Russian MtDNAs 267
+Table 2. Parallel mutations detected in the mtDNA HVS II in Poles and Russians
+Position
+Nucleotide
+change Poles n Russians n Total
+64 C!T H 1 pre-HV 1 2
+73 G!A H, HV*, U5, I, N1c 5 H, HV*, pre-HV 3 6
+93 A!G H, HV*, pre-V 3 H, pre-V 2 3
+143 G!A H, U4, W 3 0 3
+146 T!C H, K, U4, U5, J*,
+J1b, T*, W, X
+9 H, K, U7, T*, HV*, R* 6 12
+150 C!T H, K, U*, U3, U5,
+J1a, J2, T*, HV*, W, D
+11 H, U1, U3, U5, J1a, R* 6 13
+151 C!T H, K, pre-V, L3 4 H, U7, pre-HV 3 6
+152 T!C H, K, U2, U3, U4, U5,
+U7, J*, J1a, J2, T*, T1, I,
+N1b, W, X, L3, C, G
+19 H, K, U4, U2, U3, U5,
+U7, T*, T1, pre-HV, R*
+11 21
+153 A!G X 1 X, M* 2 2
+182 C!T H, X 2 0 2
+189 A!G K, pre-V, N1c, W 4 H, W 2 5
+194 C!T pre-V, W, R* 3 W 1 3
+195 T!C H, K, U4, U3, J1a, T*,
+T1, pre-V, N1c, W, X, R*, L3
+13 H, U4, U1, U5, U7,
+J1a, T1, pre-V, W, X
+10 16
+198 C!T H, X 2 U4, U5, pre-HV 3 5
+199 T!C H, T, I, W 4 T, I, X 3 5
+200 A!G U5, HV* 2 H 1 3
+204 T!C H, U4, U5, (I, N1c, W) 4 H, K, U5, J1a, (I, W), X 6 7
+207 G!A H, T*, (I, N1c, W) 3 H, (I, W) 2 3
+210 A!G J*, N1c 2 0 2
+215 A!G H, K, U4, J1a 4 U4, W 2 5
+228 G!A H, U2, U4, J*, pre-V 5 J*, pre-V 2 5
+236 T!C H 1 U4 1 2
+239 T!C H, I 2 H 1 2
+240 A!G T 1 H 1 2
+250 T!C K, I 2 I 1 2
+263 G!A 0 H, T* 2 2
+279 T!C H, T* 2 0 2
+295 C!T H, J, R* 3 J 1 3
+310 T!C U4, T*, C, M* 4 H, U4 2 5
+319 T!C H, J1a, T* 3 0 3
+385 A!G 0 U1, T1 2 2
+Mutations are shown indicating positions relative to the HVS II sequence that differs from the revised CRS at np
+73. For further information, see footnote to Table 1.
+Table 3. Instability of the polypyrimidine tracts in HVS I and II regions in Poles and Russians
+Nucleotide sequence Nucleotide changes Length of polypyrimidine tracts
+HVS I, nps 16180-16193
+AAAACCCCCTCCCC CRS C5-T-C4
+AAAACCCCCCCCCC 16189 T!C C10
+AAAACCCCCCCCCCC 16193­C C11
+AAAACCCCCCCCCCCC 16193­2C C12
+AAACCCCCCCCCCC 16183 A!C C11
+AAACCCCCCCCCCCC 16183 A!C, 16193 ­C C12
+AACCCCCCCCCCCC 16182 A!C, 16183 A!C C12
+AACCCCCCCCCCCCC 16182 A!C, 16183A!C, 16193­C C13
+HVS II, nps 300-315
+AAACCCCCCCTCCCCC CRS C7-T-C5
+AAACCCCCCCTCCCCCC 315­C C7-T-C6
+AAACCCCCCCCTCCCCCC 309­C, 315 ­C C8-T-C6
+AAACCCCCCCCCTCCCCCC 309­2C, 315­C C9-T-C6
+AAACCCCCCCCCCTCCCCCC 309­3C, 315­C C10-T-C6
+AAACCCCCCCTCCCCCCC 315­2C C7-T-C7
+AAACCCCCCCCCCCCC 310 T!C C13
+AAACCCCCCCCCCCC 310 T!C, 315 ®C C12
+268 B. A. M  
+Table 4. Haplogroup distributions (no. of indi-
+viduals and % values in parentheses) in Poles and
+Russians
+Haplogroup Poles (436) Russians (201)
+H 197 (45±18) 85 (42±29)
+HV* 4 (0±92) 4 (1±99)
+pre-V 21 (4±82) 11 (5±47)
+pre-HV 0 1 (0±50)
+J 34 (7±80) 16 (7±96)
+T* 41 (9±40) 18 (8±96)
+T1 9 (2±06) 4 (1±99)
+K 15 (3±44) 6 (2±99)
+U1 0 2 (1±00)
+U2 4 (0±92) 3 (1±49)
+U3 2 (0±46) 2 (1±00)
+U4 22 (5±05) 7 (3±48)
+U5 38 (8±72) 21 (10±45)
+U7 1 (0±23) 1 (0±50)
+U8 2 (0±46) 0
+U* 1 (0±23) 0
+I 8 (1±83) 5 (2±49)
+W 16 (3±67) 4 (1±99)
+X 8 (1±83) 7 (3±48)
+N1b 1 (0±23) 0
+N1c 1 (0±23) 0
+R* 2 (0±46) 1 (0±50)
+L3 1 (0±23) 0
+M 8 (1±83) 3 (1±49)
+allowed detection of 455 different mitochondrial
+haplotypes (see Appendix): 329 haplotypes
+among 436 Poles and 158 haplotypes among 201
+Russians. This high resolution ensured that only
+32 shared HVS I and II haplotypes were found
+between Poles and Russians.
+In order to determine the phylogenetic status
+of HVS I and II sequences, restriction analysis of
+the coding regions was performed. As a result, it
+was found that mitochondrial haplotypes in
+Poles and Russians are clustered, according to
+the mtDNA classification (Macaulay et al. 1999;
+Richards et al. 2000; Torroni et al. 2001), into
+haplogroups H, pre-V, HV*, pre-HV, U, K, J, T,
+I, X, N, R*, M, L3 and their subgroups (Table 4).
+The Polish and Russian samples studied are
+characterized by a similar pattern of mtDNA
+haplogroup distributions. Comparison between
+them did not reveal statistical differences (χ#¯
+23±33, 23 .., p¯ 0±44).
+The main mitochondrial haplogroup of the
+Polish and Russian sequences is group H, which
+is the most frequent haplogroup in Europe and
+also common in the Near East (Richards et al.
+1998, 2000). Haplogroup H comprises the ma-
+jority of the Russian (42±3%) and Polish (45±2%)
+samples. This haplogroup has been difficult to
+subdivide based on HVS I and II variation
+alone. A number of major clades within haplo-
+group H were revealed on the basis of high-
+resolution mtDNA analysis and complete or
+partial mtDNA sequencing (Macaulay et al. 1999;
+Torroni et al. 1999; Finnila$ et al. 2001b). Based
+on mtDNA HVS I and II sequencing data in
+Poles and Russians, only three clearly defined H-
+subgroups, which are characterized by HVS I
+and II motifs 16362-239, 16293-16311-195 and
+16162-73, respectively, were found. A transition,
+T!C at np 239, appears to be a relatively stable
+marker for H-16362 sequence types, being found
+only sparsely on the background of haplogroup I
+(Table 2). Variant 73G is a relatively stable
+marker for those HVS I types which distinguish
+themselves from the CRS by a variant 16162G.
+However, HVS I sequence types determined by
+motif 16293, 16311 exhibit diagnostic variant
+195C in a position that seems to be hypervariable
+(Table 2).
+The node designated as HV* (Richards et al.
+1998, 2000) is highly important in mtDNA
+phylogeny because two of the most frequent
+haplogroups in Europe, H and pre-V, descend
+from it. The haplogroup HV*, rare in European
+populations, was identified in Polish and Russian
+samples with low frequency (1% and 2%,
+respectively). However, these sequences are
+heterogeneous and belong to various HV*-
+subgroups, determined by variants 16067T,
+16311C or 73G. A single sequence type 16126C-
+16362C, which was found among Russians, is
+a member of cluster pre-HV (Richards et al.
+2000).
+Haplogroup pre-V sequences, defined by the
+CR motif 16298-72 (Torroni et al. 2001), were
+present in Poles and Russians at frequencies of
+4±8% and 5±5%, respectively. All of these
+samples harbored a full CR motif of haplogroup
+pre-V, with the exception of three Polish indi-
+viduals who do not have a marker at np 72, but
+belong nevertheless to the haplogroup pre-V,
+being found in association with RFLP variant
+Polish and Russian MtDNAs 269
+­15904MseI. In addition, the HVS I haplogroup
+pre-V sequences lacking 16298C variant were
+found in one Polish and one Russian individual.
+It may be noted that haplogroup pre-V fre-
+quencies in Poles and Russians correspond to
+those observed in other Western, Central and
+Northern European populations (Table 1 in
+Torroni et al. 2001).
+Phylogenetic studies have shown that haplo-
+groups J and T stem from a common node which
+is distinguished from the ancestral node R* by
+polymorphisms at nps 4216, 11251, 15452 and
+16126 (Macaulay et al. 1999; Finnila$ et al. 2001b).
+Both haplogroups are widely distributed in
+European populations as well as in the Polish
+and Russian samples presented here. Haplogroup
+T represents 11±5% of the Polish and 11% of the
+Russian mtDNAs, and includes two distinct
+subgroups, T* and T1, distributed among Poles
+and Russians with equal frequencies. On the
+basis of HVS I motifs, subhaplogroup T* may be
+further differentiated into several subclusters ;
+but their phylogenetic reliability appears to be
+ambiguous due to the influence of several
+unstable nucleotide positions, such as 16296,
+16292 and, possibly, 16304 (Malyarchuk &
+Derenko, 1999; Richards et al. 2000; Finnila$ &
+Majamaa, 2001).
+Haplogroup J sequences in Poles and Russians
+are characterized by similar frequencies of 7±8%
+and 8%, respectively. Based on HVS I poly-
+morphisms, this haplogroup can be divided into
+four subgroups, determined by motifs 16069-
+16126 (J*), 16069-16126-16145-16222-16261
+(J1b), 16069-16126-16145-16231-16261 (J1a),
+and 16069-16126-16278 (J2) (Richards et al.
+1998). Based on HVS II mutations, haplogroup J
+is characterized by marker variant 295T and can
+be further divided into subgroups, represented
+by additional motifs 185-228 (for J*), 242 (for
+J1b), 150-195 (for J1a), and 150 (for J2).
+Phylogenetic analysis of the complete mtDNA
+sequences revealed a subdivision of the haplo-
+group J into two major subclusters. One is
+determined by polymorphism at np 3010 and
+combines subgroups J* and J1b. The second
+subcluster is defined by polymorphisms at nps
+7476 and 15257, and consists of J1b and J2
+(Finnila$ & Majamaa, 2001). Therefore, com-
+parison of the mtDNA coding region with non-
+coding region variability data suggests that
+parallel mutations at nps 16145, 16172 and
+16261 should be assumed to obtain a concordant
+network for haplogroup J (Finnila$ & Majamaa,
+2001). In addition, np 16222 has undergone two
+independent mutations, being found in J1b and
+J* Polish sequences (Table 1). Similarly, identical
+HVS I sequence types 16069-16126-16311 were
+observed in Poles and Russians as belonging to
+two different subgroups, J* and J1a, based on
+HVS II information. Subgroup J* was found
+to be predominant among Poles and Russians
+and was present at population frequencies of
+4±6% and 5±5%, respectively. The remaining
+J-subclusters were found with lower frequencies,
+ranging from 0±9% for J1a and J2 and 1±4% for
+J1b in Poles, and from 0±5% for J1a and 2%
+for J1b in Russians.
+Haplogroup U and K sequences, which are
+defined by a variant ­12308HinfI, were found in
+19±5% of the Polish mtDNAs and in 20±0% of
+the Russian mtDNAs. Of these, haplogroup K
+sequences are relatively rare both in Poles and in
+Russians (3±4% and 3±0%, respectively). On the
+contrary, haplogroup U itself is widely distrib-
+uted in Slavonic populations and is represented
+by subgroups U*, U1, U2, U3, U4, U5, U7 and
+U8.
+U5, the most frequent and ancient subgroup of
+haplogroup U in Europe (Torroni et al. 1996;
+Richards et al. 1998, 2000), is represented in
+Poles and Russians by two main subgroups, U5a
+and U5b. On the basis of complete mtDNA
+sequence variation in Finns, Finnila$ et al. (2000)
+found mutations at np 14793 and at nps 7768
+and 14182 were shared, correspondingly, by
+subgroups U5a (with HVS I motif 16192-16256-
+16270) and U5b (with HVS I motif 16189-16192-
+16270). This subdivision of haplogroup U5 is
+confirmed by HVS II sequence data, since all of
+U5b-sequences which were observed in Poles and
+Russians have an additional marker mutation at
+np 150 (Appendix). Although HVS II site 150
+has undergone multiple mutations on the back-
+ground of different mitochondrial lineages (Table
+2), it nonetheless seems to be fixed for subgroup
+270 B. A. M  
+Table 5. U4a sequence types distribution in different populations
+HVS I sequence HVS II sequence Coding region markers Sample origin
+CRS 73 195 263 310 4646 12308 Poles"
+CRS 73 152 195 263 310 4646 12308 Russians"
+CRS 66 73 195 263 310 315D 4646 12308 Poles"
+CRS 73 195 263 310 ND Austrians#
+16129 16362 73 195 263 310 4646 12308 Russians"
+16189 73 195 263 310 4646 12308 Poles"
+16294 73 195 263 310 4646 12308 Poles"
+16294 ND 12308 Nenets$
+16263 73 195 263 310 4646 12308 Russians"
+16356 73 143 195 263 310 4646 12308 Poles"
+16356 73 195 263 310 315D ND Germans%
+16223 16356 73 195 263 310 4646 12308 Poles", Finns&
+Data from the following studies were analyzed: " Present study, # Parson et al. 1998, $ Saillard et al. 2000, % Baasner
+& Madea, 2000, & Finnila$ et al. 2001a. ND, not determined.
+U5b. The distribution of the subgroup U5a and
+U5b frequencies in Poles and Russians is approxi-
+mately equal, with the U5a subgroup prevailing
+over U5b – 5±3% and 3±4% in Poles, and 7±5%
+and 3% in Russians.
+U4 (with CR motif 16356-195) is the next
+relatively frequent subgroup in the populations
+studied, being found at a frequency of 5% in
+Poles and 3±5% in Russians. Phylogeographic
+studies revealed that two major founder clusters
+characterize U4, determined by HVS I motifs
+16356 and 16134-16356 (Richards et al.1998,
+2000) ; it was also suggested that the latter
+subgroup appears to be specific for Central and
+Eastern European populations. In this study,
+16134-16356 sequences with low frequencies of
+1±4% in Poles and 0±5% in Russians were
+observed. Perhaps more importantly, among
+Poles and Russians 14 HVS I sequences which
+belong to haplogroup U (­12308HinfI) have
+been identified, but they do not share any
+mutations with subgroup-specific poly-
+morphisms within haplogroup U (Table 5). All of
+these sequence types, as well as some members of
+subgroup U4, are characterized by HVS II motif
+73-310. These samples were tested for the
+presence of a U4-diagnostic site ­4643RsaI and
+it was found that all of them belong to the U4-
+subgroup. In accordance with the style of
+established mtDNA nomenclature (Richards et
+al. 1998; Macaulay et al. 1999) we designated U4-
+sequences with the 310C variant in HVS II as
+belonging to clade U4a. Analysis of the published
+HVS I and II data allowed us to reveal U4a
+sequence types, although at a low frequency, in
+populations of Finno-Ugric-speaking Finns and
+Nenets, and German-speaking populations of
+Austrians and Germans (Table 5). Nevertheless,
+the current data on population distribution of
+U4a sequences led us to assume that the majority
+of them are characteristic for Poles and Russians,
+where this U4-subcluster was found with a
+frequency of 2±3% and 2±0%, respectively.
+The geographic picture of the U4a sequence
+distribution remains unclear, since many pub-
+lished population data on the HVS I and II
+variability appear to be insufficient to determine
+an exact phylogenetic status of the CR sequences
+(such as CRS-73, for instance) without the
+support of coding-region sites. This study has
+observed CRS-73 sequences belonging to haplo-
+groups H and HV*. Therefore, additional
+detailed studies are required to elucidate the
+origin and diversification of the U4a subcluster
+in Europe. In addition, phylogenetic
+relationships between control region sequences
+belonging to the U4 subgroup remain ambiguous,
+and therefore, the branching order of these
+sequence types cannot be resolved (Figure 1).
+The median network demonstrates that two
+possible phylogenetic directions are possible. The
+first scenario suggests that mutation at np 310
+appeared later than marker mutation at np
+16356, and further diversification of the U4a
+occurred after back-mutation at np 16356. On
+the contrary, the second scenario suggests that
+mutation at np 310 outstripped change at np
+16356, and hence, the U4a subcluster may be
+Polish and Russian MtDNAs 271
+Fig. 1. Schematic phylogenetic network of the subhaplogroup U4 sequence types. The node U*, labelled by
+an asterisk (*), is defined by the RFLP variant ­12308HinfI and 73G variant in the HVS II, in comparison
+with the revised CRS (Andrews et al. 1999). The deletion event at np 315 was not considered. Any diversity
+within the node defined by 16356 variant alone is not shown. Reticulation in the network indicates
+ambiguity in the topology. RFLP variant is shown with the arrow pointing in the direction of a site gain.
+The nodes in the network represent the haplotypes found in populations (Table 5) as well as hypothetical
+intermediate haplotypes (empty nodes). Labelled nodes are U4a haplotypes observed in Poles (P), Russians
+(R), Germans (G), Austrians (A), Finns (F), Nenets (N), or in West Eurasians (WE).
+considered as an ancestral state for the U4-
+phylogeny. Unfortunately, with the data on
+nucleotide stability in HVS I and II regions, we
+were unable to resolve this inconsistency due to
+an almost equal instability of nps 16356 and 310
+(Tables 1 and 2). According to our data, the
+variant 16356C appeared twice and indepen-
+dently in the background of haplogroups U and
+H, but the variant 310C occurred independently
+in the background of haplogroup U, and rarely in
+association with H, T*, C, M* lineages. In
+addition, diversity estimates calculated for the
+two subsets of U4, with and without the 310C
+variant, gave similar values of ρ¯ 0±929 for U4a
+and ρ¯ 1±083 for the remaining U4-HVS I
+sequences found in Poles and Russians.
+Besides subgroups U5 and U4, several minor
+U-subclusters were found in Polish and Russian
+mtDNA pools. Subgroup U1 with HVS I motif
+16189-16249 (Macaulay et al. 1999), accompanied
+by variant 285T in HVS II, was present at a
+frequency of 1±0% in Russians. Subgroup U2
+sequences, characterized by HVS I and II motif
+16051-16129C-152-217-340, were observed at low
+frequencies, both in Poles (0±9%) and in Russians
+(1±5%). U3-sequences with CR motif 16343-150
+appear to be rare in Poles and Russians, being
+found at frequencies of 0±5% and 1±0%, re-
+spectively. Similarly, U7 sequences with CR
+motif 16309-16318T}C-152 were present in the
+populations studied at low frequency (less than
+1±0%). The U8-subgroup (Finnila$ et al. 2001b),
+which is defined by motif 16342-282, was
+observed only in Poles at a frequency of 0±5%.
+The remaining haplogroups I, W, X, N1b, N1c
+observed in Poles and Russians belong to the
+macro-haplogroup N, which also encompasses all
+aforementioned clusters of haplogroups (HV, JT,
+UK) as members of the macro-haplogroup R
+(Macaulay et al. 1999; Richards et al. 2000).
+Haplogroup I, characterized by CR motif 16129-
+16223-16391-199-204-250, occurred in Poles and
+Russians at a frequency of 1±8% and 2±5%,
+respectively. N1b and N1c sequences are defined
+by tentative HVS I motifs 16145-16176G-16223
+and 16223-16265, correspondingly (Richards et
+al. 2000), and were found as individual haplo-
+types in Poles. Haplogroup W sequences (CR
+motif 16223-16292-189-204-207) were observed
+in Poles and Russians at frequencies of 3±7% and
+2±0%. Topology of the phylogenetic network of
+haplogroups I and W was resolved based on
+mtDNA variability in the coding region, with the
+exception of reticulation composed of poly-
+morphisms at nps 1719 and 8251 (Finnila$ et al.
+2001b). According to the phylogeny suggested by
+272 B. A. M  
+Finnila$ et al. (2001b), variant 204C appears to be
+ancestral for the IW branch, but various 207A
+originated twice as a parallel mutation in
+haplogroups W and I. However, population data
+on HVS I and II variation presented here
+demonstrated that combination of the variants
+204C-207A is characteristic for mtDNA
+sequences from haplogroups W, I and N1c,
+implying that this motif may be considered as
+ancestral.
+Haplogroup X was found in Poles and
+Russians at a frequency of 1±8% and 3±5%,
+respectively. This haplogroup, rare in Europe, is
+determined by CR motif 16189-16223-16278-
+153-195-225 and further subdivided into two
+clusters defined by mutations at nps 226 and 227.
+Interestingly, both in Poles (0±5%) and in
+Russians (1±5%) several sequence types without
+HVS II diagnostic mutations at nps 153, 195,
+225 were observed. Several rare X-HVS I
+sequences defined by variants 16248T and
+16266T-16274A were previously revealed in
+southern West Eurasian populations (Richards
+et al. 2000). In addition, X-HVS I sequences
+determined by variant 16241G, rare in Russians
+(1%), were described recently among Gypsies at
+a frequency of 2±2% (Gresham et al. 2001).
+The remaining CR sequences found in Poles
+and Russians were classified as belonging to the
+East Eurasian macro-haplogroup M. Both
+macro-haplogroups M and N coalesce to the
+African cluster L3, which is considered as the
+most recent ancestor of all Eurasians (Quintana-
+Murci et al. 1999; Ingman et al. 2000). M-
+haplogroups such as C, D, E, G and Z are very
+rare in western European populations. We have
+observed members of the haplogroups C, D, E, G
+and M* in Poles and Russians at a frequency of
+1±8% and 1±5%, respectively. However, diver-
+sity of the M-CR sequence types was high, both
+in Poles and in Russians. Haplogroup C
+sequences defined by CR motif 16223-16298-
+16327-249D were present in Poles. Haplogroup C
+sequences were previously also described at low
+frequency in Russian populations (Orekhov et al.
+1999; Malyarchuk et al. 2001). In addition,
+haplogroup Z sequences were revealed in
+Russians at a frequency of 1±3% (Orekhov et
+al. 1999; Malyarchuk & Derenko, 2001).
+Interestingly, both haplogroup C and Z
+sequences are characterized by the deletion of an
+adenine residue at np 249 (variant 249D).
+According to the phylogenetic data based on
+variation in the complete mtDNA sequences,
+both haplogroups C and Z have shared poly-
+morphisms at nps 4715, 7196CA, and 8584
+(Finnila$ et al. 2001b ; Maca-Meyer et al. 2001) and
+should be considered as sister haplogroups
+(Kivisild et al. 2001). Haplogroup Z sequences
+were found in many Siberian}Central Asian
+populations (Kolman et al. 1996; Derenko &
+Shields, 1997; Schurr et al. 1999; Derenko et al.
+2000) as well as in Saami (Sajantila et al. 1995).
+The Saami gene pool is also characterized by the
+presence of the D-lineage with motif 16126-
+16136-16189-16223-16360-16362, found at a low
+frequency of 4±7% (Delghandi et al. 1998). In the
+present study, an identical sequence type was
+found among Russians. A similar CR sequence
+type, observed in Poles, belongs to the 16189-
+subcluster of haplogroup D. In addition, both
+Polish and Russian samples are characterized by
+the presence of the Saami-specific U5b-motif
+(16144-16189-16270) found at a frequency of
+0±5% in Poles and 1±5% in Russians. The
+presence of the Saami-specific mtDNAs from
+haplogroups D and U5b, as well as haplogroup Z
+sequences, in the mitochondrial gene pool of
+Russians was considered as a consequence of
+local Finno-Ugric tribe assimilation by Slavs
+during their movement to the north of Eastern
+Europe, a trend suggested previously by anthro-
+pologists (Alekseeva, 1973).
+The remaining M-sequences in Poles and
+Russians were identified as belonging to haplo-
+groups G, E and M*. In the case of haplogroup G,
+both Russian and Polish sequence types had
+both G and E specific RFLPs (­4830HaeII}
+­4831HhaI for G and ®7598HhaI for E); the
+latter marker originated on the background of
+haplogroup G due to mutation at np 7600,
+which gives a similar E-specific RFLP pattern
+(Kivisild et al. 2001).
+Therefore, the results of mtDNA variation
+study demonstrated that all major West
+Eurasian haplogroups and their subgroups were
+Polish and Russian MtDNAs 273
+Table 6. The frequency of shared haplotypes found in Poles (POL) and in Russians (RUS) in
+comparison with Germans (GER) and Finns (FIN)
+HG HVS I sequence HVS II sequence POL (436) RUS (201) GER (560) FIN (192)
+H CRS 263 9±4 8±0 8±9 0
+H CRS 146 195 263 0±2 0±5 0±2 0
+H CRS 152 263 1±4 1±0 2±7 0
+H CRS 195 263 0±2 0±5 0±5 0
+H 16093 263 0±5 2±5 0±2 0
+H 16129 263 0±7 1±0 0±2 0
+H 16274 146 263 0±2 0±5 0 0
+H 16304 263 1±6 1±5 1±1 1±0
+H 16051 16162 16259 73 263 0±2 0±5 0 0
+H 16189 16356 263 0±5 0±5 0±4 0
+H 16080 16189 16356 263 0±2 0±5 0 0
+H 16189 16356 16362 263 0±7 0±5 0±4 0
+H 16311 263 0±7 0±5 0±9 1±0
+H 16278 16293 16311 195 263 0±2 2±0 0 0
+H 16354 263 0±5 2±5 0 0
+H 16362 239 263 1±4 2±0 0±5 0
+HV* CRS 73 263 0±5 0±5 ? 0
+K 16224 16311 73 146 152 263 0±7 1±5 0±5 2±6
+U4 16093 16356 73 195 215 263 0±2 0±5 0 0
+U5 16192 16256 16270 73 263 1±0 0±5 0±7 0
+U5 16192 16256 16270
+16399
+73 152 263 0±2 0±5 0 0
+U5 16192 16222 16256
+16270 16399
+73 263 0±2 0±5 0±2 0
+U5 16256 16270 16399 73 263 0±2 1±5 0±5 0
+U5 16256 16270 16399 73 152 263 0±2 1±0 0 0
+J* 16069 16126 73 185 263 295 0±7 0±5 0±2 0
+J* 16069 16126 73 185 228 263 295 0±2 0±5 1±1 0
+J* 16069 16126 16311 73 185 263 295 0±2 0±5 0 0
+J1b 16069 16126 16145
+16172 16222 16261
+73 242 263 295 0±7 1±5 0±2 0
+T* 16126 16294 16296 73 263 0±5 1±0 1±3 0
+T* 16126 16294 16296
+16304
+73 263 1±6 3±0 1±4 0
+T1 16126 16163 16186
+16189 16294
+73 152 195 263 1±2 1±0 0±7 1±6
+pre-V 16298 72 263 2±1 1±5 1±3 2±1
+I 16129 16172 16223
+16311 16391
+73 199 203 204 250 263 0±2 0±5 0±4 3±1
+X 16189 16223 16255
+16278
+73 153 195 225 227 263 0±2 0±5 0±2 0±5
+HG denotes mitochondrial haplogroup. A question mark (?) denotes that haplogroup affiliation of the CR sequence
+type cannot be determined without additional coding-region markers.
+detected in Poles and Russians. It was also found
+that the East Asian admixture in Poles and
+Russians appears to be insignificant (less than
+2±0%).
+MtDNA haplotypes and subclusters shared
+between Poles and Russians
+It has been suggested, by means of phylo-
+genetic analysis (Comas et al. 1997; Richards et
+al. 1998; Simoni et al. 2000), that European
+populations demonstrate limited genetic differ-
+entiation and do not exhibit any obvious
+geographic patterns. However, the study by
+Helgason et al. (2000) indicated that European
+populations contain a large number of closely
+related mtDNA lineages, many of which have
+not yet been sampled in the current comparative
+data set. This means that geographic patterns of
+mtDNA variation may exist at the level of
+individual lineages or lineage subclusters.
+In the present study, a high level of mtDNA
+diversity in Poles and Russians sharing the same
+language group has been found. In order to
+274 B. A. M  
+Table 7. The frequency of shared HVS I subclusters found in Poles (POL) and in Russians (RUS) in
+comparison with Germans (GER) and Finns (FIN)
+HG HVS I subclusters POL (436) RUS (201) GER (560) FIN (192)
+H 16129, 16129-16316 0±7 2±5 0±7 0±5
+H 16256, 16256-16352, 16256-16319 0±2 2±5 0±4 0
+H 16291 0±2 0±5 0±4 0
+H 16278-16293-16311 0±7 1±5 0±2 0
+H 16092-16140-16265-16293-16311 2±8 0±5 0±2 0
+H 16192-16304-16311 0±2 1±0 0±5 0
+H 16189-16356 1±6 0±5 0±4 0
+H 16080-16189-16356 0±5 1±0 0±2 0
+H 16189-16356-16362 1±2 1±0 1±1 0
+H 16354 0±7 4±5 0 1±0
+pre-V 16153-16298 0±5 1±0 0±2 2±6
+J* 16069-16126-16311 0±2 0±5 0 1±0
+U2 16051-16129C-16189-16256 0±5 0±5 0±2 0
+U4 16093-16356 0±2 0±5 0 0
+U4a CRS, 16356 2±3 2±0 0±4 0±5
+U5 16192-16222-16256-16270-16399 0±2 1±0 0±2 0
+U5 16192-16256-16270-16291-16399 0±9 0±5 0±5 0
+W 16223-16292-16325 0±7 0±5 0 0
+HG denotes mitochondrial haplogroup.
+investigate genetic similarity between them at
+the level of shared mtDNA haplotypes and their
+subclusters, the total number of CR sequence
+types has been reduced by means of removing
+polymorphic variants at unstable sites (such as
+A!C transversions at nps 16182 and 16183) and
+insertions of additional C residues in the HVS I
+and II poly-C tracts. As a result, out of 297 and
+142 CR sequence types observed in Poles and
+Russians, respectively, 34 are shared between
+these population samples. Table 6 shows the
+distribution of shared haplotypes between Poles
+and Russians in comparison with Germans and
+Finns. The latter populations were selected in
+accordance with their geographic proximity and
+the historical evidence concerning their par-
+ticipation in the formation of modern Poles and
+Russians. The results of this analysis indicate
+that only a small fraction of the CR haplotypes
+(10 out of 34 haplotypes) appear to be actually
+shared between Poles and Russians, not being
+found in German and Finnish gene pools. These
+haplotypes belong to five different haplo-
+groups – H, HV*, U4, U5, and J*. It should be
+noted, however, that the majority of these
+haplotypes belong to subclusters which can be
+found in common among many West Eurasian
+populations.
+In order to identify subclusters of CR haplo-
+types which are specific mainly for Poles and
+Russians, the distribution of haplotypes that
+differ by the fewest number of base substitutions
+in Poles and Russians and their neighbours,
+Germans and Finns, were analyzed. Although
+almost all of the mtDNA subclusters observed in
+Poles and Russians can be accounted for in many
+European populations, this analysis allowed us
+to reveal at least 16 subclusters of relatively rare
+haplotypes which have a preferential distri-
+bution among Poles and Russians (Table 7). In
+Russians, H-subclusters determined by HVS I
+motifs 16129 (and 16129-16316), 16256 (and
+16256-16352, 16256-16319), and 16354 were
+found at a relatively high frequency, ranging
+from 2±5% to 4±5%. In Poles, sequence types
+with motif 16092-16140-16265-16293-16311 oc-
+curred at the frequency of 2±8%. Similar haplo-
+types, defined by motif 16293-16278-16311, were
+also common between Russians and Poles (1±5%
+and 0±7%, respectively). However, it is known
+that the subcluster of H-haplotypes determined
+by motif 16293-16311 has a pan-European
+distribution (Richards & Macaulay, 2000). More-
+over, the highest frequency (6±1%) of this H-
+subcluster was found in Estonians (Tambets et
+al. 2000). Another H-subcluster, defined by motif
+Polish and Russian MtDNAs 275
+16189-16356 and its branches 16080-16189-16356
+and 16189-16356-16362, was found frequently in
+Poles (3±3%) as well as in Russians (2±5%) and
+Germans (1±7%). A relatively high occurrence of
+H1-sequences determined by motif 16192-16304-
+16311 is characteristic for Russians in com-
+parison to Poles and Germans, but another H1-
+branch (with motif 16294-16304) is clearly com-
+mon between Germans and Poles.
+Taking into account the data presented in
+Tables 6 and 7, one can conclude that we were
+not able to find any specific combinations of
+unique mtDNA haplotypes and their subclusters
+clearly distinguishing Poles and Russians, as
+Slavonic-speaking populations, from the neigh-
+boring European populations such as Germans
+and Finns. This trend was also noted in a
+previous study on the HVS I-RFLP variation in
+Russians in comparison with Western and East-
+ern European populations (Malyarchuk &
+Derenko, 2001). One possible exception is sub-
+group U4a. This subgroup comprises 10 (2±3%)
+out of 436 Poles, 4 (2±0%) out of 201 Russians, 2
+(0±4%) out of 560 Germans (Parson et al. 1998;
+Baasner & Madea, 2000) and 1 (0±25%) out of
+403 Finns (Finnila$ et al. 2001a). Given the
+relatively high frequency and diversity of U4a
+among Poles and Russians and its low frequency
+in the neighbouring German and Finnish popu-
+lations, one can suggest a central-eastern
+European origin of U4a. It is possible that the
+subsequent dispersal of this mtDNA subgroup in
+Eastern European populations was due to
+Slavonic migrations. Undoubtedly, to elucidate
+the origin of the U4a subgroup, additional
+analysis is required followed by a much more
+extensive sampling of Slavonic and other
+European populations.
+
+Analysis of mtDNA variation, performed by
+means of sequencing two hypervariable segments
+and assaying of haplogroup-diagnostic poly-
+morphisms in the coding region, appears to be an
+effective genetic tool for inferring the genetic
+history of populations (Macaulay et al. 1999). In
+the present study, we have found that Poles and
+Russians are characterized by the same West
+Eurasian mtDNA haplogroups which describe at
+least 95% of mtDNA variations in Europe and
+the Near East (Torroni et al. 1996; Richards et al.
+1998, 2000). Although there is a good corre-
+spondence between CR sequences and RFLPs
+grouping into monophyletic mtDNA clusters,
+and this looks to be strongest when only HVS I
+sequences are used in comparison (Bandelt et al.
+2000) ; the addition of the HVS II sequences may
+be extremely useful in the resolution of the
+phylogenetic relationships among some uncer-
+tain mitochondrial lineages. A good example of
+this is subgroup U4a which does not have a
+certain HVS I motif, but can be recognized on
+the basis of HVS II information.
+Despite the high level of mtDNA variation in
+Poles and Russians, both populations exhibit a
+similar pattern of mtDNA haplogroup distri-
+bution, which is also typical for many European
+populations studied. Moreover, the analysis of
+distribution of CR haplotypes and subclusters
+shared between Poles and Russians has shown
+that both Slavonic populations share them
+mainly with Germans and Finns. These data
+allow us to suggest that Europeans, despite their
+linguistic differences, originated in the common
+genetic substratum which predates the formation
+of the most modern European populations. It
+seems that considerable genetic similarity be-
+tween European populations, which has been
+revealed by mtDNA variation studies, was
+further accelerated by a process of gene re-
+distribution between populations due to the
+multiple migrations occurring in Europe during
+the past millenia (Sykes, 1999; Helgason et al.
+2000; Richards et al. 2000). As for Slavonic-
+speaking populations, the evidence from the
+present study and our previous work
+(Malyarchuk & Derenko, 2001) suggests that the
+assumption of a common central European origin
+of Slavs should be tested with additional studies
+of mtDNA and Y chromosome variability in
+Slavonic populations inhabiting different regions
+of Europe.
+276 B. A. M  
+
+mtDNA haplotypes and their distribution in Polish and Russian populations
+HVS I (minus 16000) HVS II HG POL RUS
+CRS 263 309±1 315±1 H 12 8
+CRS 263 315±1 H 22 5
+CRS 263 309±1 309±2 315±1 H 7 3
+CRS 263 309±1 315±1 337 H 1
+CRS 143 228 263 309±1 315±1 H 1
+CRS 146 263 309±1 315±1 H 2
+CRS 146 152 263 309±1 315±1 H 1
+CRS 146 263 309±1 309±2 315±1 H 1
+CRS 146 195 263 309±1 315±1 H 1 1
+CRS 150 263 315±1 H 1
+CRS 93 152 263 309±1 315±1 H 1
+CRS 152 263 315±1 H 4 1
+CRS 152 263 309±1 315±1 H 2
+CRS 152 263 309±1 309±2 315±1 H 1
+CRS 152 195 263 309±1 315±1 H 1
+CRS 152 199 263 309±1 309±2 315±1 H 1
+CRS 152 204 309±1 309±2 315±1 H 1
+CRS 186 263 315±1 H 1
+CRS 186 263 309±1 315±1 H 1
+CRS 195 263 315±1 H 1
+CRS 195 263 309±1 309±2 315±1 H 1
+CRS 199 263 309±1 315±1 H 1
+CRS 228 263 309±1 315±1 H 1
+CRS 262 263 309±1 315±1 H 1
+CRS 263 269 315±1 H 1
+CRS 263 315±1 357 H 1
+CRS 73 146 263 309±1 309±2 315±1 H 1
+CRS 73 182 263 309±1 315±1 H 1
+066 172 218 318AC 328CA 195 198 263 309±1 309±2 315±1 H 1
+093 263 309±1 315±1 H 2 4
+093 263 315±1 H 1
+093 129 316 73 263 315±1 H 1
+093 129 189 193±1 316 207 263 309±1 309±2 315±1 H 1
+095 93 263 309±1 315±1 H 1
+111 189 193±1 152 182 263 309±1 309±2 315±1 H 1
+114 270 146 263 309±1 315±1 H 1
+129 263 315±1 H 1
+129 263 309±1 315±1 H 2 1
+129 N}A H 1
+129 210 263 309±1 309±2 315±1 H 1
+148 247 263 315±1 H 1
+168 152 263 309±1 315±1 H 1
+176 195 263 315±1 H 1
+179 263 309±1 315±1 H 1
+183 239CG 152 263 309±1 315±1 H 1
+209 263 315±1 H 1
+209 42±1 146 182 215 263 309±1 315±1 H 1
+111 209 218 263 309±1 315±1 H 1
+222 263 315±1 H 1
+231C}T 93 263 309±1 315±1 H 1
+189 291 263 309±1 315±1 H 1
+235 291 263 309±1 315±1 H 1
+239 263 315±1 H 1
+244 399 207 263 309±1 309±2 315±1 H 1
+250 263 309±1 309±2 315±1 H 1
+256 200 263 315±1 H 1
+256 263 309±1 315±1 H 1
+256 352 263 309±1 315±1 H 2
+261 263 309±1 315±1 H 1
+261 152 263 309±1 315±1 H 1
+265 152 263 309±1 309±2 315±1 H 1
+266 152 263 315±1 H 1
+270 315±1 H 1
+274 146 263 315±1 H 1
+274 146 263 309±1 315±1 H 1
+274 73 263 315±1 H 1
+278 263 309±1 315±1 H 1
+286 311 143 152 263 309±1 315±1 H 1
+304 263 309±1 315±1 H 4 2
+304 263 315±1 H 3 1
+304 146 263 309±1 315±1 H 1
+304 152 263 309±1 315±1 H 1
+304 195 263 315±1 H 1
+304 199 263 309±1 309±2 315±1 H 1
+093 304 263 309±1 309±2 315±1 H 1
+111CA 304 263 309±1 315±1 H 1
+153 304 263 315±1 H 1
+172 304 263 315±1 H 1
+213 304 263 309±1 315±1 H 1
+243 304 263 315±1 H 1
+271 304 263 309±1 309±2 315±1 H 1
+092 294 304 263 315±1 H 1
+294 304 263 315±1 H 1
+294 304 236 263 315±1 H 1
+192 304 195 240 263 315±1 H 1
+192 304 311 263 309±1 309±2 315±1 H 1
+167 192 304 311 263 309±1 315±1 H 1
+162 73 263 309±1 315±1 H 2
+Polish and Russian MtDNAs 277
+ (cont.)
+HVS I (minus 16000) HVS II HG POL RUS
+162 209 73 199 263 309±1 315±1 H 1
+162 258AC 73 263 309±1 315±1 H 1
+051 162 259 73 263 315±1 H 1 1
+051 162 291 304 73 263 315±1 H 1
+188CA 263 315±1 H 1
+188CG 263 315±1 H 1
+188 263 315±1 H 1
+188 263 309±1 309±2 315±1 H 1
+188CG 189 263 309±1 309±2 315±1 H 1
+189 152 263 309±1 315±1 H 1
+183C 189 193±1 263 309±1 315±1 H 1
+093C}T 183C 189 193±1 263 309±1 309±2 315±1 H 1
+189 193±1 152 263 309±1 315±1 H 1
+189 193±1 263 315±1 H 1
+189 193±1 193±2 263 315±1 H 1
+188 189 356 263 315±1 H 1
+169 183C 189 356 263 315±1 H 1
+189 193±1 356 152 263 315±1 H 2
+189 193±1 356 146 263 309±1 309±2 315±1 H 1
+080 189 356 263 309±1 315±1 H 1
+080 183C 189 356 151 263 309±1 309±2 315±1 H 1
+080 189 193±1 356 263 309±1 315±1 H 1
+080 189 193±1 193±2 231 356 146 263 309±1 309±2 315±1 H 1
+189 356 263 309±1 309±2 315±1 H 1
+183C 189 356 263 309±1 309±2 315±1 H 1
+183C 189 356 263 315±1 H 1
+183C 189 193±1 356 360 263 315±1 H 1
+093 183C 189 356 360 263 315±1 H 1
+183C 189 356 362 263 315±1 H 1
+182C 183C 189 356 362 263 315±1 H 1
+092 183C 189 193±1 356 362 263 315±1 H 1
+189 193±1 356 362 263 309±1 309±2 315±1 H 1
+189 356 362 263 315±1 H 1
+189 290 291 311 356 362 64 263 315±1 H 1
+189 318 356 263 315±1 H 1
+311 263 315±1 H 3 1
+311 152 263 315±1 H 1
+311 144 195 263 309±1 315±1 H 1
+311 195 263 309±1 315±1 H 1
+311 391 263 309±1 309±2 315±1 H 1
+093 311 263 315±1 H 1
+093 311 131 152 263 309±1 315±1 H 1
+157 311 263 309±1 315±1 H 1
+221 311 263 309±1 315±1 H 1
+249 152 263 309±1 315±1 H 1
+249 311 263 309±1 315±1 H 1
+042 288 290 311 263 309±1 315±1 H 1
+319 263 309±1 315±1 H 1
+148 256 319 146 189 193 263 309±1 309±2 315±1 H 1
+265 352 263 309±1 315±1 H 1
+278 293 195 263 315±1 H 1
+278 293 311 195 263 309±1 315±1 H 1 2
+278 293 311 195 263 315±1 H 2
+209 278 293 311 319 195 215 263 309±1 309±2 315±1 H 1
+129 293 263 315±1 H 1
+170 293 263 315±1 H 1
+293 311 143 195 263 309±1 315±1 H 1
+293 311 195 263 315±1 H 2
+293 311 195 263 309±1 315±1 H 1
+092 195 263 309±1 315±1 H 1
+092 263 309±1 315±1 H 1
+092 183 293 311 195 263 315±1 H 1
+092 140 265 293 311 195 263 315±1 H 8
+092 140 265 270 293 311 195 263 309±1 315±1 H 1
+092 140 265 293 311 195 204 263 315±1 H 1
+092 140 189 193±1 265 293 311 195 263 315±1 H 1
+342 263 309±1 315±1 H 1
+070 152 263 315±1 H 2
+070 343 152 263 309±1 309±2 315±1 H 1
+304 343 151 263 279 309±1 309±2 315±1 H 1
+354 263 309±1 315±1 H 1 4
+354 263 309±1 309±2 315±1 H 1 1
+167 354 263 309±1 309±2 315±1 H 1
+193 354 127 152 263 309±1 309±2 315±1 H 1
+354 399 150 263 310 H 1
+354 399 N}A H 1
+399 146 263 309±1 309±2 315±1 H 1
+362 239 263 315±1 H 1
+362 239 263 309±1 315±1 H 4 2
+362 239 258 263 309±1 309±2 309±3 315±1 319 H 1
+362 239 263 309±1 309±2 309±3 315±1 319 H 1
+362 239 263 309±1 309±2 315±1 H 1 2
+182C 183C 189 362 146 239 263 309±1 309±2 309±3 315±1 H 1
+193 219 362 93 204 239 263 309±1 315±1 H 1
+193 219 319 362 204 239 263 315±1 H 1
+300 325C}T 362 239 263 309±1 315±1 H 1
+137AT 176 256 311 73 152 263 295 309±1 315±1 H 1
+CRS 72 263 309±1 309±2 315±1 pre-V 1
+380 72 263 315±1 pre-V 1
+278 B. A. M  
+ (cont.)
+HVS I (minus 16000) HVS II HG POL RUS
+298 72 263 315±1 pre-V 1
+298 72C}T 195 263 309±1 315±1 pre-V 1
+298 72 195 263 309±1 309±2 315±1 pre-V 1
+298 72 263 309±1 315±1 pre-V 6 2
+298 72 263 309±1 309±2 315±1 pre-V 3
+298 72 195 228 263 309±1 315±1 pre-V 1
+104CA 298 72 151 228 263 309±1 315±1 pre-V 1
+126 298 72 263 309±1 315±1 pre-V 2
+150 298 42±1 72 263 309±1 309±2 315±1 pre-V 1
+169 298 72 263 309±1 315±1 pre-V 1
+216 298 263 309±1 309±2 315±1 pre-V 2
+218 298 72 189 194 263 309±1 309±2 315±1 pre-V 1
+270 298 72 263 315±1 pre-V 1
+298 311 195 263 309±1 309±2 315±1 pre-V 1
+153 298 72 93 263 309±1 315±1 pre-V 1
+153 298 72 93 195 263 309±1 315±1 pre-V 1
+153 298 72 93 195 263 315±1 pre-V 1
+153 189 298 72 93 195 263 309±1 315±1 pre-V 1
+291 298 72 93 195 263 309±1 309±2 315±1 pre-V 1
+CRS 73 263 315±1 HV* 1
+CRS 73 263 309±1 315±1 HV* 2
+067 355 150 200 263 309±1 315±1 HV* 1
+295 146 263 315±1 HV* 1
+295 263 309±1 309±2 315±1 HV* 1
+311 93 263 309±1 309±2 315±1 HV* 1
+234 311 263 315±1 HV* 1
+126 362 60±1 64 151 152 197 198 263 309±1 309±2 315±1 pre-HV 1
+069 126 73 146 185 188 222 228 263 295 315±1 J* 2
+069 126 73 185 188 228 263 295 309±1 315±1 J* 3
+069 126 73 185 263 295 315±1 J* 1
+069 126 73 185 263 295 309±1 315±1 J* 1 1
+069 126 73 185 263 295 309±1 309±2 315±1 J* 1
+069 126 73 146 185 188 228 263 295 315±1 J* 1
+069 126 73 185 228 263 295 315±1 J* 1 1
+069 126 73 185 210 228 263 295 315±1 J* 1
+063 069 126 73 228 263 295 315±1 J* 1
+069 078D 126 73 185 188 228 263 295 315±1 J* 1
+069 126 189 193±1 73 185 228 263 295 309±1 315±1 J* 1
+069 126 145 183C 189 73 185 228 263 295 315±1 J* 1
+069 126 213 73 146 185 188 228 263 295 315±1 J* 1
+069 126 222 73 185 228 263 295 315±1 J* 1
+069 126 230 73 185 228 263 295 315±1 J* 1
+069 126 249 73 185 188 228 263 295 315±1 J* 1
+069 092 126 261 73 185 228 263 295 315±1 J* 1
+069 093 126 290 73 185 188 228 263 295 309±1 315±1 J* 1
+069 126 311 73 185 263 295 315±1 J* 1 1
+069 126 319 73 152 185 228 263 295 315±1 J* 1
+069 126 319 73 185 228 263 295 315±1 J* 1
+069 126 186 362 73 185 188 228 263 295 309±1 309±2 315±1 J* 1
+069 126 324 366 73 185 188 228 263 295 309±1 315±1 J* 1
+069 126 366 73 185 188 228 263 295 315±1 J* 1
+069 126 366 390 73 185 188 263 295 309±1 315±1 J* 1
+069 126 145 172 222 261 73 242 263 295 309±1 315±1 J1b 1
+069 126 145 172 222 261 73 242 263 309±1 315±1 J1b 1
+069 126 145 172 222 261 73 242 263 295 315±1 J1b 3 2
+069 092 126 145 172 222 261 73 146 242 263 295 315±1 J1b 1
+069 093 126 145 172 222 261 73 242 263 295 309±1 309±2 315±1 J1b 1
+069 126 145 172 192 222 261 73 242 263 295 315±1 J1b 1
+069 126 145 231 261 73 150 152 195 215 263 295 309±1 315±1 319 J1a 2
+069 126 145 189 193±1 231 261 73 150 152 195 215 263 295 309±1 315±1 319 J1a 1
+069 126 311 73 150 195 204 263 295 309±1 315±1 J1a 1
+069 126 241 150 195 263 295 315±1 J1a 1
+069 126 193 278 73 150 263 295 309±1 315±1 J2 1
+069 126 193 278 73 150 152 263 295 309±1 315±1 J2 1
+069 126 193 278 319 73 150 263 295 309±1 315±1 J2 1
+069 126 278 73 263 315±1 J2 1
+126 294 73 152 263 315±1 T* 1
+126 185 294 73 152 263 309±1 315±1 T* 1
+126 192 292 294 73 146 152 263 279 309±1 315±1 T* 1
+126 146 284 292 294 296 73 263 315±1 T* 2
+126 294 296 73 263 315±1 T* 1 1
+126 294 296 73 263 309±1 315±1 T* 1 1
+126 209 294 296 73 263 315±1 T* 1
+126 294 296 301 73 263 310 T* 1
+126 294 296 320 73 263 315±1 T* 1
+126 171 294 296 324 73 263 315±1 T* 1
+126 294 296 324 73 152 263 309±1 315±1 T* 1
+126 294 304 73 263 315±1 T* 2
+126 294 304 73 263 309±1 309±2 315±1 T* 1
+126 294 304 73 263 309±1 315±1 T* 1
+126 294 304 355 73 152 263 309±1 315±1 T* 3
+126 172 192 294 304 73 263 309±1 315±1 T* 1
+126 172 189 214 294 304 73 263 309±1 315±1 T* 1
+126 222 294 304 73 263 309±1 315±1 T* 1
+126 294 296 304 73 146 263 309±1 315±1 T* 1
+126 294 296 304 73 150 263 315±1 T* 1
+126 294 296 304 73 152 263 315±1 T* 2
+126 294 296 304 73 263 315±1 T* 2 4
+126 294 296 304 73 263 309±1 315±1 T* 4 2
+126 294 296 304 73 263 309±1 309±2 315±1 T* 1
+Polish and Russian MtDNAs 279
+ (cont.)
+HVS I (minus 16000) HVS II HG POL RUS
+126 294 296 304 73 207 263 309±1 309±2 315±1 T* 1
+294 296 304 73 263 315±1 T* 2
+126 129 294 296 304 73 263 315±1 T* 1
+126 294 296 304 318 73 150 263 309±1 315±1 T* 1
+126 234 294 296 304 73 152 263 315±1 T* 1
+126 172 227 294 296 304 73 263 315±1 T* 1
+126 271 294 296 304 73 263 315±1 T* 1
+271 294 304 73 315±1 T* 1
+126 260 294 296 304 41 73 263 309±1 315±1 319 T* 1
+126 294 296 304 362 73 263 315±1 T* 1
+126 294 296 304 362 73 146 199 263 315±1 T* 1
+126 294 296 304 399 73 263 315±1 T* 1
+126 147 294 296 297 304 73 263 309±1 315±1 T* 1
+126 147 189 294 296 297 304 73 240 263 309±1 309±2 315±1 T* 1
+126 140 183C 189 193±1 294 296 311 73 195 263 309±1 315±1 T* 1
+126 182C 183C 189 294 296 298 73 195 263 309±1 309±2 315±1 T* 1
+126 294 296 298 73 199 263 309±1 315±1 T* 1
+126 129 163 189 243 294 73 263 309±1 315±1 385 T1 1
+126 163 186 189 294 73 152 195 263 309±1 315±1 T1 3 1
+126 163 186 189 294 73 152 195 263 315±1 T1 2
+126 163 186 189 294 73 195 263 315±1 T1 1
+126 163 186 189 294 73 152 195 263 309±1 309±2 315±1 T1 1
+126 163 170 186 189 294 73 152 195 263 315±1 T1 1
+126 186 189 209 294 73 152 195 263 309±1 315±1 T1 1
+126 163 186 189 293 294 73 152 195 263 315±1 T1 1
+126 163 186 189 294 319 73 263 309±1 315±1 T1 1
+224 311 73 204 263 315±1 K 1
+224 311 73 263 309±1 315±1 K 1
+224 311 73 195 263 315±1 K 1
+224 311 73 146 195 263 315±1 K 1
+224 311 73 146 152 263 315±1 K 2 3
+224 311 73 146 152 263 309±1 309±2 315±1 K 1
+093 224 311 73 247 250 263 315±1 K 1
+093 192 224 311 73 150 195 263 315±1 K 1
+093 224 256 311 73 263 309±1 315±1 K 1
+224 274 311 73 195 263 315±1 K 1
+224 291 311 73 263 309±1 309±2 315±1 K 1
+224 293 311 73 263 309±1 315±1 K 1
+189 192 224 311 73 195 263 309±1 309±2 315±1 K 1
+093 183C 189 193±1 224 311 73 189 195 215 263 315±1 K 1
+224 311 368 73 146 152 263 309±1 315±1 K 1
+069 092 224 311 73 146 152 263 315±1 324 K 1
+172 189 234 311 73 151 195 263 315±1 K 1
+086 239 311 320 73 150 263 315±1 U* 1
+129 183C 189 224 249 288 73 150 195 263 285 315±1 385 U1 1
+182C 183C 189 249 73 263 285 309±1 315±1 U1 1
+051 129C 183C 189 193±1 209 362 73 217 228 263 315±1 318 340 U2 1
+051 129C 183C 189 193±1 362 73 152 217 263 309±1 309±2 315±1 340 U2 1
+051 093 129C 182C 183C 189 193±1 362 73 152 217 263 309±1 309±2 315±1 340 U2 1
+051 093 129C 183C 189 362 73 152 217 263 309±1 315±1 U2 1
+051 129C 189 256 73 152 217 263 315±1 340 U2 1
+051 129C 189 209 256 73 152 217 263 315±1 340 U2 1
+129C 183C 189 256 73 152 217 263 315±1 340 U2 1
+343 73 150 152 263 315±1 U3 1
+343 73 150 179 195 263 315±1 U3 1
+168 343 73 150 152 263 309±1 315±1 U3 1
+325 343 73 150 263 315±1 U3 1
+CRS 73 195 263 310 U4a 3
+CRS 73 152 195 263 310 U4a 1
+CRS 66 73 195 263 310 315D U4a 1
+129 362 73 195 263 310 U4a 1
+189 73 195 263 310 U4a 1
+263 73 195 263 310 U4a 2
+294 73 195 263 310 U4a 1
+356 73 143 195 263 310 U4a 1
+223 356 73 195 263 310 U4a 3
+356 73 146 195 228 263 315±1 U4* 1
+356 73 146 195 263 309±1 315±1 U4* 1
+356 73 195 263 309±1 315±1 U4* 1
+356 73 195 236 263 309±1 315±1 U4* 1
+093 356 73 195 215 263 309±1 315±1 U4* 1 1
+134 73 152 195 263 296 315±1 U4* 1
+134 356 73 152 195 263 309±1 315±1 U4* 3
+134 150 356 73 152 195 198 263 309±1 309±2 315±1 U4* 1
+134 221 234 356 73 152 195 263 309±1 315±1 U4* 1
+134 207 356 73 152 195 204 263 315±1 U4* 1
+179 356 73 195 263 309±1 315±1 U4* 1
+179 356 73 195 263 315±1 U4* 1
+270 73 263 315±1 U5a 1
+192 256 270 73 263 315±1 U5a 4 1
+093 189 192 256 270 73 263 315±1 U5a 1
+192 256 270 399 73 152 263 315±1 U5a 1 1
+192 256 270 399 73 195 198 204 263 315±1 U5a 1
+192 222 256 270 399 73 263 309±1 315±1 U5a 1 1
+192 222 256 270 390 399 73 204 263 309±1 315±1 U5a 1
+192 256 270 291 399 73 263 315±1 U5a 1
+093 192 256 291 399 73 263 315±1 U5a 1
+172 192 256 270 291 399 73 200 263 315±1 U5a 1
+192 256 270 304 399 73 263 315±1 U5a 1
+192 256 270 304 399 73 263 309±1 315±1 U5a 1
+129 256 270 311 399 73 146 263 299±1 309±1 315±1 U5a 1
+280 B. A. M  
+ (cont.)
+HVS I (minus 16000) HVS II HG POL RUS
+192 256 270 286 320 399 73 183 263 315±1 U5a 2
+076 192 256 270 399 73 263 309±1 315±1 U5a 1
+145 189 192 256 270 399 73 195 263 309±1 315±1 U5a 1
+256 270 73 263 309±1 315±1 U5a 1
+256 270 73 263 315±1 U5a 1
+256 270 399 73 263 315±1 U5a 1
+256 270 399 73 263 309±1 315±1 U5a 3
+256 270 399 73 152 263 309±1 315±1 U5a 1 2
+051 256 270 399 73 263 309±1 315±1 U5a 1
+256 270 362 399 73 152 204 263 309±1 315±1 U5a 1
+256 260 270 291 399 73 263 309±1 315±1 U5a 1
+256 270 291 294 399 73 263 309±1 315±1 U5a 1
+114CA 192 256 270 294 73 263 309±1 315±1 U5a 1
+114CA 192 256 270 294 263 309±1 315±1 U5a 1
+189 270 73 150 263 315±1 U5b 1
+189 270 291 73 150 152 263 315±1 U5b 1
+093 189 270 73 150 152 263 315±1 U5b 2
+093 189 270 73 150 152 263 270±1 315±1 U5b 1
+093 189 193±1 270 73 150 263 309±1 315±1 U5b 1
+179 189 193 193±1 270 73 150 263 315±1 U5b 1
+183C 189 193±1 270 286 73 150 152 263 315±1 U5b 1
+093 182C 183C 189 193±1 270 73 150 152 263 315±1 315±2 U5b 1
+140 174 183C 189 193±1 270 288 311 73 150 263 309±1 315±1 U5b 1
+093 258 270 292 362 73 150 263 309±1 315±1 U5b 1
+189 325 73 150 152 263 315±1 U5b 1
+189 217 234 270 398 73 150 263 315±1 U5b 1
+189 192 270 398 73 150 263 315±1 U5b 2
+189 270 398 73 150 263 315±1 U5b 1
+144 189 270 73 150 263 315±1 U5b 2
+144 189 266 270 73 150 263 292 315±1 U5b 1
+144 183C 189 193±1 241AT 270 73 150 263 315±1 U5b 1
+144 189 193±1 270 73 150 152 243 263 315±1 U5b 1
+309 318AT 362 60 73 152 263 315±1 U7 1
+073D 126 148 309 318AC 73 146 151 152 195 263 315±1 U7 1
+146 342 73 263 282 309±1 315±1 U8 1
+179 342 73 263 282 309±1 315±1 U8 1
+179 187 227 245 266 274 278 362 73 194 195 246 315±1 R* 1
+071 355 357 73 81 146 150 152 263 283 309±1 315±1 R* 1
+311 73 263 295 315±1 R* 1
+129 223 391 73 152 199 204 207 250 263 315±1 I 1
+129 223 391 73 152 199 204 207 239 250 263 309±1 309±2 315±1 I 1
+129 223 391 73 152 199 204 207 250 263 309±1 309±2 315±1 I 1
+086 129 223 391 73 152 199 204 207 239 250 263 315±1 I 1
+129 223 304 391 73 199 204 250 263 315±1 I 1
+129 223 311 199 204 250 263 315±1 I 1
+129 223 311 391 73 199 204 250 263 309±1 315±1 I 1
+129 172 223 311 391 73 199 203 204 250 263 315±1 I 1
+129 172 223 311 391 73 199 203 204 250 263 309±1 315±1 I 1
+129 172 223 293 311 391 73 199 203 204 250 263 309±1 315±1 I 1
+129 172 223 311 391 73 199 204 250 263 315±1 I 1
+129 172 189 223 311 391 73 199 250 263 309±1 315±1 I 1
+129 172 223 294 311 391 73 199 203 204 250 263 309±1 315±1 I 1
+145 176G 223 390 73 152 263 315±1 N1b 1
+201 223 265 75 189 195 204 207 210 263 309±1 315±1 N1c 1
+223 292 73 189 194 195 204 207 263 309±1 315±1 W 1
+223 292 73 189 194 195 199 204 207 263 309±1 315±1 W 1
+223 292 73 146 195 204 207 263 309±1 315±1 W 1
+223 292 73 143 189 194 195 204 207 263 315±1 W 2
+223 292 73 119 189 195 204 207 263 315±1 W 1
+223 292 311 73 119 152 189 195 204 207 263 315±1 W 1
+223 292 311 73 189 195 204 207 263 309±1 315±1 W 1
+223 292 362 73 189 194 195 204 207 263 309±1 315±1 W 1
+223 292 362 73 189 194 195 207 263 315±1 W 2
+071 129 223 292 73 150 189 194 195 199 204 207 263 309±1 315±1 W 1
+178 223 292 73 189 194 195 204 207 263 315±1 W 1
+223 292 295 73 119 152 189 195 207 263 315±1 W 1
+192 223 292 325 73 189 194 195 204 207 263 309±1 315±1 W 1
+192 223 292 325 73 189 194 195 204 207 263 315±1 W 1
+192 223 325 73 189 194 195 204 207 215 263 309±1 315±1 W 1
+223 292 325 73 189 194 195 207 263 309±1 315±1 W 1
+189 223 292 295 73 189 195 204 207 263 315±1 W 1
+223 292 320 73 189 195 204 207 263 315±1 W 1
+223 278 73 153 195 225 226 263 309±1 315±1 X 1
+189 223 278 73 153 195 225 226 263 309±1 315±1 X 1
+183C 189 223 278 73 146 153 195 198 225 226 309±1 315±1 X 1
+183C 189 223 255 278 73 153 195 225 227 263 315±1 X 1
+183C 189 223 255 278 73 153 195 225 227 263 309±1 315±1 X 1
+183C 189 223 255 278 300 73 153 195 225 227 263 315±1 X 2
+086 182C 183C 189 223 255 278 300 73 153 195 225 227 263 315±1 X 1
+108 189 193±1 193±2 223 255 278 73 153 195 225 263 315±1 X 1
+183C 189 223 255 278 344 73 153 195 225 227 263 309±1 315±1 X 1
+189 223 248 278 73 153 195 199 263 309±1 315±1 X 1
+126 183C 189 223 241 278 73 263 315±1 X 1
+093 189 193±1 223 241 278 73 195 204 263 315±1 X 1
+183C 189 223 266 274 278 390 73 146 152 182 195 263 309±1 309±2 315±1 X 1
+183C 189 193±1 223 266 274 278 73 146 152 195 263 309±1 315±1 X 1
+124 223 73 151 152 195 263 315±1 L3 1
+093 223 234 288 298 327 73 249D 263 315±1 C 2
+093 223 234 288 298 327 54 73 249D 263 315±1 C 1
+189 193±1 223 288 298 327 73 152 249D 263 310 C 1
+126 136 182C 183C 189 193±1 223 360 362 73 150 263 309±1 309±2 315±1 D 1
+Polish and Russian MtDNAs 281
+ (cont.)
+HVS I (minus 16000) HVS II HG POL RUS
+092 102 164 182C 183C 189 193±1 223 266 362 42±1 73 150 263 309±1 309±2 315±1 D 1
+223 227 234 278 362 73 263 309±1 315±1 G 1
+093 209 223 227 234 278 309 362 73 152 263 315±1 G 1
+129 148 192 223 291 298 73 263 310 M* 1
+223 234 300 316 362 73 153 263 315±1 M* 1
+223 278 362 73 260 263 309±1 315±1 E 1
+Sample codes: POL, Poles ; RUS, Russians. Mutations are shown indicating positions relative to the CRS
+(Anderson et al. 1981). The nucleotide positions in HVS I and II sequences correspond to transitions; transversions
+are further specified. Haplogroup names (HG) are given in capital letters according to the mtDNA classification
+(Macaulay et al. 1999; Richards et al. 2000). The presence of insertions or deletions is referred by .1, .2 and .3 or D,
+respectively, following the nucleotide position.
+We are very grateful to Ewa Lewandowska for her
+excellent technical assistance. The authors would like to
+thank two anonymous reviewers for the useful comments.
+This work was supported by the Russian Foundation for
+Basic Research (grant 00-06-80448), and the grant from
+the Ludwik Rydygier Medical University in Bydgoszcz,
+Poland (BW66}02).
+
+Alekseeva, T. I. (1973). Ethnogenesis of Eastern Slavs.
+Moscow: Moscow State University (in Russian).
+Alekseeva, T. I. & Alekseev, V. P. (1989). Anthropo-
+logical view of the origin of Slavs. Priroda 881, 60–69
+(in Russian).
+Anderson, S., Bankier, A. T., Barrell, B. G., de Bruijn,
+M. H. L., Coulson, A. R., Drouin, J., et al. (1981).
+Sequence and organization of the human mito-
+chondrial genome. Nature 290, 457– 465.
+Andrews, R. M., Kubacka, I., Chinnery, P. F.,
+Lightowlers, R. N., Turnbull, D. M. & Howell, N.
+(1999). Reanalysis and revision of the Cambridge
+reference sequence for human mitochondrial DNA.
+Nature Genet. 23, 147.
+Baasner, A. & Madea, B. (2000). Sequence poly-
+morphisms of the mitochondrial DNA control region in
+100 German Caucasians. J. Forensic Sci. 45, 1343–1348.
+Baasner, A., Scha$ fer, C., Junge, A. & Burkhard, M.
+(1998). Polymorphic sites in human mitochondrial
+DNA control region sequences: population data and
+maternal inheritance. Forensic Sci. Int. 98, 169–178.
+Bandelt, H.-J., Forster, P., Sykes, B. C. & Richards,
+M. B. (1995). Mitochondrial portraits of human popu-
+lations using median networks. Genetics 141, 743–753.
+Bandelt, H.-J., Macaulay, V. & Richards, M. (2000).
+Median networks: speedy construction and greedy
+reduction, one simulation and two case studies from
+human mtDNA. Mol. Phylogenet. Evol. 16, 8–28.
+Bendall, K. E. & Sykes, B. C. (1995). Length hetero-
+plasmy in the first hypervariable segment of the
+human mtDNA control region. Am. J. Hum. Genet. 57,
+248–256.
+Budowle, B., Wilson, M. R., DiZinno, J. A., Stauffer, C.,
+Fasano, M. A., Holland, M. M. & Monson, K. L. (1999).
+Mitochondrial DNA regions HV I and HV II popu-
+lation data. Forensic Sci. Int. 103, 23–35.
+Calafell, F., Underhill, P., Tolun, A., Angelicheva, D. &
+Kalaydjieva, L. (1996). From Asia to Europe: mito-
+chondrial DNA sequence variability in Bulgarians and
+Turks. Ann. Hum. Genet. 60, 35–49.
+Comas, D., Calafell, F., Mateu, E., Perez-Lezaun, A.,
+Bosch, E. & Bertranpetit, J. (1997). Mitochondrial
+DNA variation and the origin of the Europeans. Hum.
+Genet. 99, 443–449.
+Delghandi, M., Utsi, E. & Krauss, S. (1998). Saami
+mitochondrial DNA reveals deep maternal lineage
+clusters. Hum. Hered. 48, 108–114.
+Derenko, M. V., Malyarchuk, B. A., Dambueva, I. K.,
+Shaikhaev, G. O., Dorzhu, C. M., Nimaev, D. D. &
+Zakharov, I. A. (2000). Mitochondrial DNA variation
+in two South Siberian aboriginal populations: Impli-
+cations for the genetic history of North Asia. Hum.
+Biol. 72, 945–973.
+Derenko, M. V. & Shields, G. F. (1997). Mitochondrial
+DNA sequence diversity in three North Asian ab-
+original population groups. Mol. Biol. (Moscow) 31,
+665–669.
+Finnila$ , S., Hassinen, I. E., Ala-Kokko, L. & Majamaa,
+K. (2000). Phylogenetic network of the mtDNA
+haplogroup U in northern Finland based on sequence
+analysis of the complete coding region by
+conformation-sensitive gel electrophoresis. Am. J.
+Hum. Genet. 66, 1017–1026.
+Finnila$ , S., Hassinen, I. E. & Majamaa, K. (2001a).
+Phylogenetic analysis of mitochondrial DNA in
+patients with an occipital stroke. Evaluation of
+mutations by using sequence data on the entire coding
+region. Mutat. Res. Genomics 458, 31–39.
+Finnila$ , S., Lehtonen, M. S. & Majamaa, K. (2001b).
+Phylogenetic network for European mtDNA. Am. J.
+Hum. Genet. 68, 1475–1484.
+Finnila$ , S. & Majamaa, K. (2001). Phylogenetic analysis
+of mtDNA haplogroup TJ in a Finnish population. J.
+Hum. Genet. 46, 64–69.
+Forster, P., Harding, R., Torroni, A. & Bandelt, H.-J.
+(1996). Origin and evolution of Native American
+mtDNA variation: a reappraisal. Am. J. Hum. Genet.
+59, 935–945.
+Gresham, D., Morar, B., Underhill, P. A., Passarino, G.,
+Lin, A. A., Wise, C., et al. (2001). Origins and
+divergence of the Roma (Gypsies). Am. J. Hum. Genet.
+69, 1314–1331.
+Helgason, A., Sigurdardo! ttir, S., Gulcher, J. R., Ward,
+R. & Stefa! nsson, K. (2000). mtDNA and the origin of
+the Icelanders: Deciphering signals of recent popu-
+lation history. Am. J. Hum. Genet. 66, 999–1016.
+282 B. A. M  
+Howell, N. & Smejkal, C. B. (2000). Persistent hetero-
+plasmy of a mutation in the human mtDNA control
+region: Hypermutation as an apparent consequence of
+simple-repeat expansion}contraction. Am. J. Hum.
+Genet. 66, 1589–1598.
+Ingman, M., Kaessmann, H., Pa$ a$ bo, S. & Gyllensten, U.
+(2000). Mitochondrial genome variation and the origin
+of modern humans. Nature 408, 708–713.
+Kivisild, T., Bandelt, H.-J., Wang, J., Derenko, M.,
+Malyarchuk, B., Golubenko, M., et al. (2001). Mito-
+chondrial DNA tree for Eastern Asian populations. In:
+Abstracts of the First workshop on information tech-
+nologies application to problems of biodiversity and
+dynamics of ecosystems in North Eurasia (WITA’2001),
+p. 302. Novosibirsk: Institute of Cytology and Gen-
+etics.
+Kolman, C. J., Sambuughin, N. & Bermingham, E.
+(1996). Mitochondrial DNA analysis of Mongolian
+populations and implications for the origin of New
+World founders. Genetics 142, 1321–1334.
+Lutz, S., Weisser, H.-J., Heizmann, J. & Pollak, S.
+(1998). Location and frequency of polymorphic
+positions in the mtDNA control region of individuals
+from Germany. Int. J. Legal Med. 111, 67–77.
+Maca-Meyer, N., Gonzalez, A. M., Larruga, J. M., Flores,
+C. & Cabrera, V. M. (2001). Major genomic mito-
+chondrial lineages delineate early human expansions.
+BMC Genetics 2, 13.
+Macaulay, V., Richards, M., Hickey, E., Vega, E.,
+Cruciani, F., Guida, V., et al. (1999). The emerging tree
+of West Eurasian mtDNAs: a synthesis of control-
+region sequences and RFLPs. Am. J. Hum. Genet. 64,
+232–249.
+Malyarchuk, B. A., Denisova, G. A., Derenko, M. V.,
+Rogaev, E. I., Vlasenko, L. V. & Zhukova, S. G.
+(2001). Mitochondrial DNA variation in Russian
+populations of Krasnodar krai, Belgorod, and Nizhnii
+Novgorod oblast. Russ. J. Genet. 37, 1411–1416.
+Malyarchuk, B. A. & Derenko, M. V. (1999). Molecular
+instability of the mitochondrial haplogroup T
+sequences at nucleotide positions 16292 and 16296.
+Ann. Hum. Genet. 63, 489–497.
+Malyarchuk, B. A. & Derenko, M. V. (2001). Mito-
+chondrial DNA variability in Russians and
+Ukrainians: Implication to the origin of the Eastern
+Slavs. Ann. Hum. Genet. 65, 63–78.
+Malyarchuk, B. A., Derenko, M. V. & Solovenchuk, L. L.
+(1995). Types of mitochondrial DNA control region in
+the Eastern Slavs. Russ. J. Genet. 31, 723–727.
+Marchington, D. R., Poulton, J. Sellar, A. & Holt, I. J.
+(1996). Do sequence variants in the major non-coding
+region of the mitochondrial genome influence mito-
+chondrial mutations associated with disease? Hum.
+Mol. Genet. 5, 473–479.
+Parson, W., Parsons, T. J., Scheithauer, R. & Holland,
+M. M. (1998). Population data for 101 Austrian
+Caucasian mitochondrial DNA d-loop sequences: Ap-
+plication of mtDNA sequence analysis to a forensic
+case. Int. J. Legal Med. 111, 124–132.
+Orekhov, V., Poltoraus, A., Zhivotovsky, L. A., Spitsyn,
+V., Ivanov, P. & Yankovsky, N. (1999). Mitochondrial
+DNA sequence diversity in Russians. FEBS Letters
+445, 197–201.
+Pfeiffer, H., Brinkmann, B., Hu$ hne, J., Rolf, B., Morris,
+A. A., Steighner, R., et al. (1999). Expanding the
+forensic German mitochondrial DN

@@ -1,0 +1,291 @@
+Simple Baseline for Visual Question Answering
+Bolei Zhou1, Yuandong Tian2, Sainbayar Sukhbaatar2, Arthur Szlam2, and Rob Fergus2
+1Massachusetts Institute of Technology
+2Facebook AI Research
+Abstract
+We describe a very simple bag-of-words baseline for visual question answering.
+This baseline concatenates the word features from the question and CNN features
+from the image to predict the answer. When evaluated on the challenging VQA
+dataset [2], it shows comparable performance to many recent approaches using
+recurrent neural networks. To explore the strength and weakness of the trained
+model, we also provide an interactive web demo1, and open-source code2.
+1 Introduction
+Combining Natural Language Processing with Computer Vision for high-level scene interpretation
+is a recent trend, e.g., image captioning [10, 15, 7, 4]. These works have benefited from the rapid
+development of deep learning for visual recognition (object recognition [8] and scene recognition
+[20]), and have been made possible by the emergence of large image datasets and text corpus (e.g.,
+[9]). Beyond image captioning, a natural next step is visual question answering (QA) [12, 2, 5].
+Compared with the image captioning task, in which an algorithm is required to generate free-form
+text description for a given image, visual QA can involve a wider range of knowledge and reasoning
+skills. A captioning algorithm has the liberty to pick the easiest relevant descriptions of the image,
+whereas as responding to a question needs to find the correct answer for *that* question. Further-
+more, the algorithms for visual QA are required to answer all kinds of questions people might ask
+about the image, some of which might be relevant to the image contents, such as “what books are
+under the television” and “what is the color of the boat”, while others might require knowledge or
+reasoning beyond the image content, such as “why is the baby crying?” and “which chair is the most
+expensive?”. Building robust algorithms for visual QA that perform at near human levels would be
+an important step towards solving AI.
+Recently, several papers have appeared on arXiv (after CVPR’16 submission deadline) proposing
+neural network architectures for visual question answering, such as [13, 17, 5, 18, 16, 3, 11, 1].
+Some of them are derived from the image captioning framework, in which the output of a recurrent
+neural network (e.g., LSTM [16, 11, 1]) applied to the question sentence is concatenated with visual
+features from VGG or other CNNs to feed a classifier to predict the answer. Other models integrate
+visual attention mechanisms [17, 13, 3] and visualize how the network learns to attend the local
+image regions relevant to the content of the question.
+Interestingly, we notice that in one of the earliest VQA papers [12], the simple baseline Bag-of-
+words + image feature (referred to as BOWIMG baseline) outperforms the LSTM-based models on
+a synthesized visual QA dataset built up on top of the image captions of COCO dataset [9]. For
+the recent much larger COCO VQA dataset [2], the BOWIMG baseline performs worse than the
+LSTM-based models [2].
+1http://visualqa.csail.mit.edu
+2https://github.com/metalbubble/VQAbaseline
+1
+ar
+X
+iv
+:1
+51
+2.
+02
+16
+7v
+2 
+ [
+cs
+.C
+V
+] 
+ 1
+5 
+D
+ec
+ 2
+01
+5
+are these people family? are
+ these
+ family
+ people
+...
+...
+...
+...
+...
+Softmax
+One-hot vector
+Word feature
+Image feature
+...
+yes:0.81
+no:0.15
+cafeteria:0.01
+people:0.02
+...
+...
+CNN
+Figure 1: Framework of the iBOWIMG. Features from the question sentence and image are con-
+catenated then feed into softmax to predict the answer.
+In this work, we carefully implement the BOWIMG baseline model. We call it iBOWIMG to avoid
+confusion with the implementation in [2]. With proper setup and training, this simple baseline model
+shows comparable performance to many recent recurrent network-based approaches for visual QA.
+Further analysis shows that the baseline learns to correlate the informative words in the question
+sentence and visual concepts in the image with the answer. Furthermore, such correlations can be
+used to compute reasonable spatial attention map with the help of the CAM technique proposed in
+[20]. The source code and the visual QA demo based on the trained model are publicly available. In
+the demo, iBOWIMG baseline gives answers to any question relevant to the given images. Playing
+with the visual QA models interactively could reveal the strengths and weakness of the trained
+model.
+2 iBOWIMG for Visual Question Answering
+In most of the recent proposed models, visual QA is simplified to a classification task: the number
+of the different answers in the training set is the number of the final classes the models need to
+learn to predict. The general pipeline of those models is that the word feature extracted from the
+question sentence is concatenated with the visual feature extracted from the image, then they are fed
+into a softmax layer to predict the answer class. The visual feature is usually taken from the top of
+the VGG network or GoogLeNet, while the word features of the question sentence are usually the
+popular LSTM-based features [12, 2].
+In our iBOWIMG model, we simply use naive bag-of-words as the text feature, and use the deep fea-
+tures from GoogLeNet [14] as the visual features. Figure 1 shows the framework of the iBOWIMG
+model, which can be implemented in Torch with no more than 10 lines of code. The input question
+is first converted to a one-hot vector, which is transformed to word feature via a word embedding
+layer and then is concatenated with the image feature from CNN. The combined feature is sent to
+the softmax layer to predict the answer class, which essentially is a multi-class logistic regression
+model.
+3 Experiments
+Here we train and evaluate the iBOWIMG model on the Full release of COCO VQA dataset [2],
+the largest VQA dataset so far. In the COCO VQA dataset, there are 3 questions annotated by
+Amazon Mechanical Turk (AMT) workers for each image in the COCO dataset. For each question,
+10 answers are annotated by another batch of AMT workers. To pre-process the annotation for
+training, we perform majority voting on the 10 ground-truth answers to get the most certain answer
+2
+Table 1: Performance comparison on test-dev.
+Open-Ended
+Overall yes/no number others
+IMG [2] 28.13 64.01 00.42 03.77
+BOW [2] 48.09 75.66 36.70 27.14
+BOWIMG [2] 52.64 75.55 33.67 37.37
+LSTMIMG [2] 53.74 78.94 35.24 36.42
+CompMem [6] 52.62 78.33 35.93 34.46
+NMN+LSTM [1] 54.80 77.70 37.20 39.30
+WR Sel. [13] - - - -
+ACK [16] 55.72 79.23 36.13 40.08
+DPPnet [11] 57.22 80.71 37.24 41.69
+iBOWIMG 55.72 76.55 35.03 42.62
+Multiple-Choice
+Overall yes/no number others
+30.53 69.87 00.45 03.76
+53.68 75.71 37.05 38.64
+58.97 75.59 34.35 50.33
+57.17 78.95 35.80 43.41
+- - - -
+- - - -
+60.96 - - -
+- - - -
+62.48 80.79 38.94 52.16
+61.68 76.68 37.05 54.44
+for each question. Here the answer could be in single word or multiple words. Then we have the
+3 question-answer pairs from each image for training. There are in total 248,349 pairs in train2014
+and 121,512 pairs in val2014, for 123,287 images overall in the training set. Here train2014 and
+val2014 are the standard splits of the image set in the COCO dataset.
+To generate the training set and validation set for our model, we first randomly split the images of
+COCO val2014 into 70% subset A and 30% subset B. To avoid potential overfitting, questions shar-
+ing the same image will be placed into the same split. The question-answer pairs from the images of
+COCO train2014 + val2014 subset A are combined and used for training, while the val2014 subset B
+is used as validation set for parameter tuning. After we find the best model parameters, we combine
+the whole train2014 and val2014 to train the final model. We submit the prediction result given by
+the final model on the testing set (COCO test2015) to the evaluation server, to get the final accuracy
+on the test-dev and test-standard set. For Open-Ended Question track, we take the top-1 predicted
+answer from the softmax output. For the Multiple-Choice Question track, we first get the softmax
+probability for each of the given choices then select the most confident one.
+The code is implemented in Torch. The training takes about 10 hours on a single GPU NVIDIA
+Titan Black.
+3.1 Benchmark Performance
+According to the evaluation standard of the VQA dataset, the result of the any proposed VQA models
+should report accuracy on the test-standard set for fair comparison. We report our baseline on the
+test-dev set in Table 1 and the test-standard set in Table 2. The test-dev set is used for debugging
+and validation experiments and allows for unlimited submission to the evaluation server, while test-
+standard is used for model comparison with limited submission times.
+Since this VQA dataset is rather new, the publicly available models evaluated on the dataset are all
+from non-peer reviewed arXiv papers. We include the performance of the models available at the
+time of writing (Dec.5, 2015) [2, 6, 1, 13, 16, 11]. Note that some models are evaluated on either
+test-dev or test-standard for either Open-Ended or Multiple-Choice track.
+The full set of the VQA dataset was released on Oct.6 2015; previously the v0.1 version and v0.9
+version had been released. We notice that some models are evaluated using non-standard setups,
+rendering performance comparisons difficult. [17] (arXiv dated at Nov.17 2015) used v0.9 version
+of VQA with their own split of training and testing; [18] (arXiv dated at Nov.7 2015) used their own
+split of training and testing for the val2014; [3] (arXiv dated at Nov.18 2015) used v0.9 version of
+VQA dataset. So these are not included in the comparison.
+Except for these IMG, BOW, BOWIMG baselines provided in the [2], all the compared methods
+use either deep or recursive neural networks. However, our iBOWIMG baseline shows comparable
+performances against these much more complex models, except for DPPnet [11] that is about 1.5%
+better.
+3
+Table 2: Performance comparison on test-standard.
+Open-Ended
+Overall yes/no number others
+LSTMIMG [2] 54.06 - - -
+NMN+LSTM [1] 55.10 - - -
+ACK [16] 55.98 79.05 36.10 40.61
+DPPnet [11] 57.36 80.28 36.92 42.24
+iBOWIMG 55.89 76.76 34.98 42.62
+Multiple-Choice
+Overall yes/no number others
+- - - -
+- - - -
+- - - -
+62.69 80.35 38.79 52.79
+61.97 76.86 37.30 54.60
+3.2 Training Details
+Learning rate and weight clip. We find that setting up a different learning rate and weight clipping
+for the word embedding layer and softmax layer leads to better performance. The learning rate for
+the word embedding layer should be much higher than the learning rate of softmax layer to learn
+a good word embedding. From the performance of BOW in Table 1, we can see that a good word
+model is crucial to the accuracy, as BOW model alone could achieve closely to 48%, even without
+looking at the image content.
+Model parameters to tune. Though our model could be considered as the simplest baseline so far
+for visual QA, there are several model parameters to tune: 1) the number of epochs to train. 2) the
+learning rate and weight clip. 3) the threshold for removing less frequent question word and answer
+classes. We iterate to search the best value of each model parameter separately on the val2014 subset
+B. In our best model, there are 5,746 words in the dictionary of question sentence, 5,216 classes of
+answers. The specific model parameters can be found in the source code.
+3.3 Understanding the Visual QA model
+From the comparisons above, we can see that our baseline model performs as well as the recurrent
+neural network models on the VQA dataset. Furthermore, due to its simplicity, the behavior of the
+model could be easily interpreted, demonstrating what it learned for visual QA.
+Essentially, the BOWIMG baseline model learns to memorize the correlation between the answer
+class and the informative words in the question sentence along with the visual feature. We split the
+learned weights of softmax into two parts, one part for the word feature and the other part for the
+visual feature. Therefore,
+r = Mwxw + Mvxv. (1)
+Here the softmax matrix M is decomposed into the weights Mw for word feature xw and the weights
+Mv for the visual feature xv whereas M = [Mw,Mv]. r is the response of the answer class before
+softmax normalization. Denote the response rw = Mwxw as the contribution from question words
+and rv = Mvxv as the contribution from the image contents. Thus for each predicted answer, we
+know exactly the proportions of contribution from word and image content respectively. We also
+could rank rw and rv to know what the predicted answer could be if the model only relies on one
+side of information.
+Figure 2 shows some examples of the predictions, revealing that the question words usually have
+dominant influence on predicting the answer. For example, the correctly predicted answers for the
+two questions given for the first image ‘what is the color of sofa’ and ‘which brand is the laptop’
+come mostly from the question words, without the need for image. This demonstrates the bias in the
+frequency of object and actions appearing in the images of COCO dataset. For the second image,
+we ask ‘what are they doing’: the words-only prediction gives ‘playing wii (10.62), eating (9.97),
+playing frisbee (9.24)’, while full prediction gives the correct prediction ‘playing baseball (10.67 =
+2.01 [image] + 8.66 [word])’.
+To further understand the answers predicted by the model given the visual feature and question
+sentence, we first decompose the word contribution of the answer into single words of the ques-
+tion sentence, then we visualize the informative image regions relevant to the answer through the
+technique proposed in [19].
+4
+  
+Question: what is the color of the sofa
+Predictions:
+brown (score: 12.89 = 1.01 [image] + 11.88 [word])
+red (score: 11.92 = 1.13 [image] + 10.79 [word])
+yellow (score: 11.91 = 1.08 [image] + 10.84 [word])
+Based on image only: books (3.15),   yes (3.14),   no (2.95)
+Based on word only: brown (11.88),   gray (11.18),   tan (11.16)
+Question: which brand is the laptop
+Predictions:
+apple (score: 10.87 = 1.10 [image] + 9.77 [word])
+dell (score: 9.83 = 0.71 [image] + 9.12 [word])
+toshiba (score: 9.76 = 1.18 [image] + 8.58 [word])
+Based on image only: books (3.15),   yes (3.14),   no (2.95)
+Based on word only: apple (9.77),   hp (9.18),   dell (9.12)
+Question: what are they doing
+Predictions:
+playing baseball (score: 10.67 = 2.01 [image] + 8.66 [word])
+baseball (score: 9.65 = 4.84 [image] + 4.82 [word])
+grazing (score: 9.34 = 0.53 [image] + 8.81 [word])
+Based on image only: umpire (4.85),   baseball (4.84),   batter (4.46)  
+Based on word only: playing wii (10.62), eating (9.97), 
+     playing frisbee (9.24)
+Question: how many people inside
+Predictions:
+3 (score: 13.39 = 2.75 [image] + 10.65 [word])
+2 (score: 12.76 = 2.49 [image] + 10.27 [word])
+5 (score: 12.72 = 1.83 [image] + 10.89 [word])
+Based on image only: umpire (4.85),  baseball (4.84),  batter (4.46)
+Based on word only: 8 (11.24),   7 (10.95),   5 (10.89)
+Question: what gaming system are they playing
+Predictions:
+wii (score: 19.35 = 0.64 [image] + 18.71 [word])
+soccer (score: 13.23 = 0.34 [image] + 12.89 [word])
+mario kart (score: 13.17 = 0.11 [image] + 13.06 [word])
+Based on image only: library (4.40),   yes (3.98),   i don't know (3.85)
+Based on word only: wii (18.71),   mario kart (13.06),   soccer (12.89)
+Question: are they having fun
+Predictions:
+yes (score: 10.65 = 3.98 [image] + 6.68 [word])
+no (score: 8.06 = 3.33 [image] + 4.73 [word])
+library (score: 6.20 = 4.40 [image] + 1.80 [word])
+Based on image only: library (4.40), yes (3.98), i don't know (3.85) 
+Based on word only: yes (6.68),   no (4.73),   fly kite (3.43)
+Figure 2: Examples of visual question answering from the iBOWIMG baseline. For each image
+there are two questions and the top 3 predicted answers from the model. The prediction score of
+each answer is decomposed into the contributions of image and words respectively. The predicted
+answers which rely purely on question words or image are also shown.
+Question: What is he eating?
+Prediction: hot dog (score: 13.01=5.02 [image] + 7.99 [word])
+Word importance: eating(4.12) what(2.81) is(0.74) he(0.30)
+Question: What are they doing?
+Prediction: texting (score: 12.02=3.78 [image] + 8.24 [word])
